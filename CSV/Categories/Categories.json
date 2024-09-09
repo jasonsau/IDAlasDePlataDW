@@ -1,0 +1,71 @@
+{
+    "code": 0,
+    "message": "success",
+    "categories": [
+      {
+        "category_id": "-1",
+        "name": "ROOT",
+        "visibility": true,
+        "show_in_menu": true,
+        "sibling_order": 1,
+        "created_time": "",
+        "parent_category_id": "-1",
+        "has_active_items": false,
+        "document_id": "",
+        "depth": 0,
+        "documents": [],
+        "ondc_category_type": ""
+      },
+      {
+        "category_id": "5382429000000100373",
+        "name": "Empaque",
+        "visibility": true,
+        "show_in_menu": true,
+        "sibling_order": 1,
+        "created_time": "2024-07-09T21:01:44-0600",
+        "parent_category_id": "-1",
+        "has_active_items": true,
+        "document_id": "",
+        "depth": 0,
+        "documents": [],
+        "ondc_category_type": ""
+      },
+      {
+        "category_id": "5382429000000100377",
+        "name": "Mudanza",
+        "visibility": true,
+        "show_in_menu": true,
+        "sibling_order": 2,
+        "created_time": "2024-07-09T21:02:02-0600",
+        "parent_category_id": "-1",
+        "has_active_items": false,
+        "document_id": "",
+        "depth": 0,
+        "documents": [],
+        "ondc_category_type": ""
+      },
+      {
+        "category_id": "5382429000000116161",
+        "name": "Organizador",
+        "visibility": true,
+        "show_in_menu": true,
+        "sibling_order": 3,
+        "created_time": "2024-07-09T21:47:43-0600",
+        "parent_category_id": "-1",
+        "has_active_items": false,
+        "document_id": "",
+        "depth": 0,
+        "documents": [],
+        "ondc_category_type": ""
+      }
+    ],
+    "page_context": {
+      "page": 1,
+      "per_page": 5000,
+      "has_more_page": false,
+      "report_name": "Categories",
+      "applied_filter": "All",
+      "sort_column": "sibling_order",
+      "sort_order": "A"
+    }
+  }

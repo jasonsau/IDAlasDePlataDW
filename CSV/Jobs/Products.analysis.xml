@@ -1,0 +1,256 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<job xmlns="http://eobjects.org/analyzerbeans/job/1.0">
+    <job-metadata>
+        <job-description>Created with DataCleaner Community edition 5.8.1</job-description>
+        <author>user</author>
+        <updated-date>2024-07-10-06:00</updated-date>
+        <metadata-properties>
+            <property name="CoordinatesX.Products.Products.json">40</property>
+            <property name="CoordinatesY.Products.Products.json">40</property>
+            <property name="CoordinatesY.Products.Products.csv">40</property>
+            <property name="CoordinatesX.Products.Products.csv">40</property>
+        </metadata-properties>
+    </job-metadata>
+    <source>
+        <data-context ref="Products.csv"/>
+        <columns>
+            <column id="col_code" path="code" type="STRING"/>
+            <column id="col_message" path="message" type="STRING"/>
+            <column id="col_products__product_id" path="products__product_id" type="STRING"/>
+            <column id="col_products__name" path="products__name" type="STRING"/>
+            <column id="col_products__product_type" path="products__product_type" type="STRING"/>
+            <column id="col_products__brand" path="products__brand" type="STRING"/>
+            <column id="col_products__manufacturer" path="products__manufacturer" type="STRING"/>
+            <column id="col_products__unit" path="products__unit" type="STRING"/>
+            <column id="col_products__category_id" path="products__category_id" type="STRING"/>
+            <column id="col_products__is_product_custom_fields_enabled" path="products__is_product_custom_fields_enabled" type="STRING"/>
+            <column id="col_products__is_input_custom_field_available" path="products__is_input_custom_field_available" type="STRING"/>
+            <column id="col_products__description" path="products__description" type="STRING"/>
+            <column id="col_products__product_description" path="products__product_description" type="STRING"/>
+            <column id="col_products__product_short_description" path="products__product_short_description" type="STRING"/>
+            <column id="col_products__attribute_id1" path="products__attribute_id1" type="STRING"/>
+            <column id="col_products__attribute_id2" path="products__attribute_id2" type="STRING"/>
+            <column id="col_products__attribute_id3" path="products__attribute_id3" type="STRING"/>
+            <column id="col_products__attribute_name1" path="products__attribute_name1" type="STRING"/>
+            <column id="col_products__attribute_name2" path="products__attribute_name2" type="STRING"/>
+            <column id="col_products__attribute_name3" path="products__attribute_name3" type="STRING"/>
+            <column id="col_products__url" path="products__url" type="STRING"/>
+            <column id="col_products__created_time" path="products__created_time" type="STRING"/>
+            <column id="col_products__last_modified_time" path="products__last_modified_time" type="STRING"/>
+            <column id="col_products__variant_type" path="products__variant_type" type="STRING"/>
+            <column id="col_products__is_returnable" path="products__is_returnable" type="STRING"/>
+            <column id="col_products__show_in_storefront" path="products__show_in_storefront" type="STRING"/>
+            <column id="col_products__show_in_ondc" path="products__show_in_ondc" type="STRING"/>
+            <column id="col_products__show_in_pos" path="products__show_in_pos" type="STRING"/>
+            <column id="col_products__show_in_both" path="products__show_in_both" type="STRING"/>
+            <column id="col_products__is_combo_product" path="products__is_combo_product" type="STRING"/>
+            <column id="col_products__document_id" path="products__document_id" type="STRING"/>
+            <column id="col_products__document_name" path="products__document_name" type="STRING"/>
+            <column id="col_products__alter_text" path="products__alter_text" type="STRING"/>
+            <column id="col_products__documents__can_send_in_mail" path="products__documents__can_send_in_mail" type="STRING"/>
+            <column id="col_products__documents__is_custom_field_document" path="products__documents__is_custom_field_document" type="STRING"/>
+            <column id="col_products__documents__file_name" path="products__documents__file_name" type="STRING"/>
+            <column id="col_products__documents__attachment_order" path="products__documents__attachment_order" type="STRING"/>
+            <column id="col_products__documents__source" path="products__documents__source" type="STRING"/>
+            <column id="col_products__documents__document_id" path="products__documents__document_id" type="STRING"/>
+            <column id="col_products__documents__file_size" path="products__documents__file_size" type="STRING"/>
+            <column id="col_products__documents__source_formatted" path="products__documents__source_formatted" type="STRING"/>
+            <column id="col_products__documents__uploaded_by" path="products__documents__uploaded_by" type="STRING"/>
+            <column id="col_products__documents__file_type" path="products__documents__file_type" type="STRING"/>
+            <column id="col_products__documents__file_size_formatted" path="products__documents__file_size_formatted" type="STRING"/>
+            <column id="col_products__documents__uploaded_on" path="products__documents__uploaded_on" type="STRING"/>
+            <column id="col_products__documents__alter_text" path="products__documents__alter_text" type="STRING"/>
+            <column id="col_products__documents__uploaded_on_date_formatted" path="products__documents__uploaded_on_date_formatted" type="STRING"/>
+            <column id="col_products__status" path="products__status" type="STRING"/>
+            <column id="col_products__min_rate" path="products__min_rate" type="STRING"/>
+            <column id="col_products__max_rate" path="products__max_rate" type="STRING"/>
+            <column id="col_products__is_featured" path="products__is_featured" type="STRING"/>
+            <column id="col_products__category_name" path="products__category_name" type="STRING"/>
+            <column id="col_products__has_variant" path="products__has_variant" type="STRING"/>
+            <column id="col_products__variant_count" path="products__variant_count" type="STRING"/>
+            <column id="col_products__overall_stock" path="products__overall_stock" type="STRING"/>
+            <column id="col_products__is_below_reorder_level" path="products__is_below_reorder_level" type="STRING"/>
+            <column id="col_products__variants__variant_id" path="products__variants__variant_id" type="STRING"/>
+            <column id="col_products__variants__name" path="products__variants__name" type="STRING"/>
+            <column id="col_products__variants__order" path="products__variants__order" type="STRING"/>
+            <column id="col_products__variants__status" path="products__variants__status" type="STRING"/>
+            <column id="col_products__variants__rate" path="products__variants__rate" type="STRING"/>
+            <column id="col_products__variants__purchase_rate" path="products__variants__purchase_rate" type="STRING"/>
+            <column id="col_products__variants__sku" path="products__variants__sku" type="STRING"/>
+            <column id="col_products__variants__upc" path="products__variants__upc" type="STRING"/>
+            <column id="col_products__variants__ean" path="products__variants__ean" type="STRING"/>
+            <column id="col_products__variants__isbn" path="products__variants__isbn" type="STRING"/>
+            <column id="col_products__variants__product_type" path="products__variants__product_type" type="STRING"/>
+            <column id="col_products__variants__documents__can_send_in_mail" path="products__variants__documents__can_send_in_mail" type="STRING"/>
+            <column id="col_products__variants__documents__is_custom_field_document" path="products__variants__documents__is_custom_field_document" type="STRING"/>
+            <column id="col_products__variants__documents__file_name" path="products__variants__documents__file_name" type="STRING"/>
+            <column id="col_products__variants__documents__attachment_order" path="products__variants__documents__attachment_order" type="STRING"/>
+            <column id="col_products__variants__documents__source" path="products__variants__documents__source" type="STRING"/>
+            <column id="col_products__variants__documents__document_id" path="products__variants__documents__document_id" type="STRING"/>
+            <column id="col_products__variants__documents__file_size" path="products__variants__documents__file_size" type="STRING"/>
+            <column id="col_products__variants__documents__source_formatted" path="products__variants__documents__source_formatted" type="STRING"/>
+            <column id="col_products__variants__documents__uploaded_by" path="products__variants__documents__uploaded_by" type="STRING"/>
+            <column id="col_products__variants__documents__file_type" path="products__variants__documents__file_type" type="STRING"/>
+            <column id="col_products__variants__documents__file_size_formatted" path="products__variants__documents__file_size_formatted" type="STRING"/>
+            <column id="col_products__variants__documents__uploaded_on" path="products__variants__documents__uploaded_on" type="STRING"/>
+            <column id="col_products__variants__documents__alter_text" path="products__variants__documents__alter_text" type="STRING"/>
+            <column id="col_products__variants__documents__uploaded_on_date_formatted" path="products__variants__documents__uploaded_on_date_formatted" type="STRING"/>
+            <column id="col_products__variants__part_number" path="products__variants__part_number" type="STRING"/>
+            <column id="col_products__variants__reorder_level" path="products__variants__reorder_level" type="STRING"/>
+            <column id="col_products__variants__minimum_order_quantity" path="products__variants__minimum_order_quantity" type="STRING"/>
+            <column id="col_products__variants__maximum_order_quantity" path="products__variants__maximum_order_quantity" type="STRING"/>
+            <column id="col_products__variants__initial_stock" path="products__variants__initial_stock" type="STRING"/>
+            <column id="col_products__variants__initial_stock_date" path="products__variants__initial_stock_date" type="STRING"/>
+            <column id="col_products__variants__attribute_option_id1" path="products__variants__attribute_option_id1" type="STRING"/>
+            <column id="col_products__variants__attribute_option_id2" path="products__variants__attribute_option_id2" type="STRING"/>
+            <column id="col_products__variants__attribute_option_id3" path="products__variants__attribute_option_id3" type="STRING"/>
+            <column id="col_products__variants__attribute_option_name1" path="products__variants__attribute_option_name1" type="STRING"/>
+            <column id="col_products__variants__attribute_option_data1" path="products__variants__attribute_option_data1" type="STRING"/>
+            <column id="col_products__variants__attribute_option_name2" path="products__variants__attribute_option_name2" type="STRING"/>
+            <column id="col_products__variants__attribute_option_data2" path="products__variants__attribute_option_data2" type="STRING"/>
+            <column id="col_products__variants__attribute_option_name3" path="products__variants__attribute_option_name3" type="STRING"/>
+            <column id="col_products__variants__attribute_option_data3" path="products__variants__attribute_option_data3" type="STRING"/>
+            <column id="col_products__variants__attribute_id1" path="products__variants__attribute_id1" type="STRING"/>
+            <column id="col_products__variants__attribute_id2" path="products__variants__attribute_id2" type="STRING"/>
+            <column id="col_products__variants__attribute_id3" path="products__variants__attribute_id3" type="STRING"/>
+            <column id="col_products__variants__attribute_name1" path="products__variants__attribute_name1" type="STRING"/>
+            <column id="col_products__variants__attribute_name2" path="products__variants__attribute_name2" type="STRING"/>
+            <column id="col_products__variants__attribute_name3" path="products__variants__attribute_name3" type="STRING"/>
+            <column id="col_products__variants__attribute_type1" path="products__variants__attribute_type1" type="STRING"/>
+            <column id="col_products__variants__attribute_type2" path="products__variants__attribute_type2" type="STRING"/>
+            <column id="col_products__variants__attribute_type3" path="products__variants__attribute_type3" type="STRING"/>
+            <column id="col_products__variants__stock_on_hand" path="products__variants__stock_on_hand" type="STRING"/>
+            <column id="col_products__variants__available_stock" path="products__variants__available_stock" type="STRING"/>
+            <column id="col_products__variants__actual_available_stock" path="products__variants__actual_available_stock" type="STRING"/>
+            <column id="col_products__variants__available_sale_stock" path="products__variants__available_sale_stock" type="STRING"/>
+            <column id="col_products__variants__variant_type" path="products__variants__variant_type" type="STRING"/>
+            <column id="col_products__variants__initial_stock_rate" path="products__variants__initial_stock_rate" type="STRING"/>
+            <column id="col_products__variants__label_rate" path="products__variants__label_rate" type="STRING"/>
+            <column id="col_products__variants__hsn_or_sac" path="products__variants__hsn_or_sac" type="STRING"/>
+            <column id="col_page_context__page" path="page_context__page" type="STRING"/>
+            <column id="col_page_context__per_page" path="page_context__per_page" type="STRING"/>
+            <column id="col_page_context__has_more_page" path="page_context__has_more_page" type="STRING"/>
+            <column id="col_page_context__report_name" path="page_context__report_name" type="STRING"/>
+            <column id="col_page_context__applied_filter" path="page_context__applied_filter" type="STRING"/>
+            <column id="col_page_context__sort_column" path="page_context__sort_column" type="STRING"/>
+            <column id="col_page_context__sort_order" path="page_context__sort_order" type="STRING"/>
+        </columns>
+    </source>
+    <transformation>
+        <transformer>
+            <descriptor ref="Convert to number"/>
+            <metadata-properties>
+                <property name="CoordinatesY">163</property>
+                <property name="CoordinatesX">413</property>
+            </metadata-properties>
+            <properties>
+                <property name="Decimal separator" value="."/>
+                <property name="Minus sign" value="-"/>
+                <property name="Null replacement" value="&lt;null&gt;"/>
+                <property name="Thousand separator" value="&amp;#44;"/>
+            </properties>
+            <input ref="col_products__product_id"/>
+            <input ref="col_products__category_id"/>
+            <input ref="col_products__attribute_id2"/>
+            <input ref="col_products__attribute_id3"/>
+            <input ref="col_products__document_id"/>
+            <input ref="col_products__documents__document_id"/>
+            <input ref="col_products__variants__variant_id"/>
+            <input ref="col_products__variants__documents__document_id"/>
+            <input ref="col_products__variants__attribute_option_id1"/>
+            <input ref="col_products__variants__attribute_option_id2"/>
+            <input ref="col_products__variants__attribute_option_id3"/>
+            <input ref="col_products__variants__attribute_id1"/>
+            <input ref="col_products__variants__attribute_id2"/>
+            <input ref="col_products__variants__attribute_id3"/>
+            <output id="col_products__product_idasnumber" name="products__product_id (as number)"/>
+            <output id="col_products__category_idasnumber" name="products__category_id (as number)"/>
+            <output id="col_products__attribute_id2asnumber" name="products__attribute_id2 (as number)"/>
+            <output id="col_products__attribute_id3asnumber" name="products__attribute_id3 (as number)"/>
+            <output id="col_products__document_idasnumber" name="products__document_id (as number)"/>
+            <output id="col_products__documents__document_idasnumber" name="products__documents__document_id (as number)"/>
+            <output id="col_products__variants__variant_idasnumber" name="products__variants__variant_id (as number)"/>
+            <output id="col_products__variants__documents__document_idasnumber" name="products__variants__documents__document_id (as number)"/>
+            <output id="col_products__variants__attribute_option_id1asnumber" name="products__variants__attribute_option_id1 (as number)"/>
+            <output id="col_products__variants__attribute_option_id2asnumber" name="products__variants__attribute_option_id2 (as number)"/>
+            <output id="col_products__variants__attribute_option_id3asnumber" name="products__variants__attribute_option_id3 (as number)"/>
+            <output id="col_products__variants__attribute_id1asnumber" name="products__variants__attribute_id1 (as number)"/>
+            <output id="col_products__variants__attribute_id2asnumber" name="products__variants__attribute_id2 (as number)"/>
+            <output id="col_products__variants__attribute_id3asnumber" name="products__variants__attribute_id3 (as number)"/>
+        </transformer>
+        <transformer>
+            <descriptor ref="Convert to date"/>
+            <metadata-properties>
+                <property name="CoordinatesY">63</property>
+                <property name="CoordinatesX">461</property>
+            </metadata-properties>
+            <properties>
+                <property name="Time zone" value="America/El_Salvador"/>
+                <property name="Null replacement" value="today()"/>
+                <property name="Date masks" value="[yyyy-MM-dd HH:mm:ss.S,yyyy-MM-dd HH:mm:ss,yyyy-MM-dd HH:mm,yyyyMMddHHmmssZ,yyMMddHHmmssZ,yyyy-MM-dd,yyyy.MM.dd,yyyy/MM/dd,dd-MM-yyyy,dd.MM.yyyy,dd/MM/yyyy,MM-dd-yyyy,MM.dd.yyyy,MM/dd/yyyy]"/>
+            </properties>
+            <input ref="col_products__created_time"/>
+            <input ref="col_products__last_modified_time"/>
+            <input ref="col_products__documents__uploaded_on_date_formatted"/>
+            <input ref="col_products__variants__documents__uploaded_on_date_formatted"/>
+            <input ref="col_products__variants__initial_stock_date"/>
+            <output id="col_products__created_timeasdate" name="products__created_time (as date)"/>
+            <output id="col_products__last_modified_timeasdate" name="products__last_modified_time (as date)"/>
+            <output id="col_products__documents__uploaded_on_date_formattedasdate" name="products__documents__uploaded_on_date_formatted (as date)"/>
+            <output id="col_products__variants__documents__uploaded_on_date_formattedasdate" name="products__variants__documents__uploaded_on_date_formatted (as date)"/>
+            <output id="col_products__variants__initial_stock_dateasdate" name="products__variants__initial_stock_date (as date)"/>
+        </transformer>
+    </transformation>
+    <analysis>
+        <analyzer>
+            <descriptor ref="Unique key check"/>
+            <metadata-properties>
+                <property name="CoordinatesY">350</property>
+                <property name="CoordinatesX">234</property>
+            </metadata-properties>
+            <properties>
+                <property name="Buffer size" value="20000"/>
+            </properties>
+            <input ref="col_products__product_id"/>
+        </analyzer>
+        <analyzer>
+            <descriptor ref="Number analyzer"/>
+            <metadata-properties>
+                <property name="CoordinatesY">485</property>
+                <property name="CoordinatesX">579</property>
+            </metadata-properties>
+            <properties>
+                <property name="Descriptive statistics" value="false"/>
+            </properties>
+            <input ref="col_products__product_idasnumber"/>
+            <input ref="col_products__category_idasnumber"/>
+            <input ref="col_products__attribute_id2asnumber"/>
+            <input ref="col_products__attribute_id3asnumber"/>
+            <input ref="col_products__document_idasnumber"/>
+            <input ref="col_products__documents__document_idasnumber"/>
+            <input ref="col_products__variants__variant_idasnumber"/>
+            <input ref="col_products__variants__documents__document_idasnumber"/>
+            <input ref="col_products__variants__attribute_option_id1asnumber"/>
+            <input ref="col_products__variants__attribute_option_id2asnumber"/>
+            <input ref="col_products__variants__attribute_option_id3asnumber"/>
+            <input ref="col_products__variants__attribute_id1asnumber"/>
+            <input ref="col_products__variants__attribute_id2asnumber"/>
+            <input ref="col_products__variants__attribute_id3asnumber"/>
+        </analyzer>
+        <analyzer>
+            <descriptor ref="Date/time analyzer"/>
+            <metadata-properties>
+                <property name="CoordinatesY">367</property>
+                <property name="CoordinatesX">704</property>
+            </metadata-properties>
+            <properties>
+                <property name="Descriptive statistics" value="false"/>
+            </properties>
+            <input ref="col_products__created_timeasdate"/>
+            <input ref="col_products__last_modified_timeasdate"/>
+            <input ref="col_products__documents__uploaded_on_date_formattedasdate"/>
+            <input ref="col_products__variants__documents__uploaded_on_date_formattedasdate"/>
+            <input ref="col_products__variants__initial_stock_dateasdate"/>
+        </analyzer>
+    </analysis>
+</job>

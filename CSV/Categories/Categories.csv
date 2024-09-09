@@ -1,0 +1,5 @@
+﻿"code","message","categories__category_id","categories__name","categories__visibility","categories__show_in_menu","categories__sibling_order","categories__created_time","categories__parent_category_id","categories__has_active_items","categories__document_id","categories__depth","categories__ondc_category_type","page_context__page","page_context__per_page","page_context__has_more_page","page_context__report_name","page_context__applied_filter","page_context__sort_column","page_context__sort_order"
+"0","success","-1","ROOT","True","True","1","","-1","False","","0","","1","5000","False","Categories","All","sibling_order","A"
+"","","5382429000000100373","Empaque","True","True","1","2024-07-09T21:01:44-0600","-1","True","","0","","","","","","","",""
+"","","5382429000000100377","Mudanza","True","True","2","2024-07-09T21:02:02-0600","-1","False","","0","","","","","","","",""
+"","","5382429000000116161","Organizador","True","True","3","2024-07-09T21:47:43-0600","-1","False","","0","","","","","","","",""

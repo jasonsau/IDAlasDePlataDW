@@ -1,0 +1,452 @@
+[
+    {
+        "useragentstats": {
+            "emailclients_percent": {
+                "Others": "0",
+                "Outlook": "0",
+                "Apple Mail": "0",
+                "Thunderbird": "0",
+                "Lotus Notes": "0"
+            },
+            "browsers_percent": {
+                "Others": "4",
+                "Internet Explorer": "0",
+                "Safari": "0",
+                "Chrome": "0",
+                "Opera": "0",
+                "Otros": "0",
+                "Firefox": "0"
+            },
+            "tablets_percent": {
+                "Others": "0",
+                "Blackberry": "0",
+                "iOS": "0",
+                "Android": "0"
+            },
+            "mobile_percent": {
+                "Others": "0",
+                "Blackberry": "0",
+                "iOS": "0",
+                "Android": "0"
+            },
+            "computer_percent": {
+                "Others": "4",
+                "Apple": "0",
+                "Linux": "0",
+                "Windows": "0"
+            }
+        },
+        "code": "0",
+        "campaign-details": [
+            {
+                "updated_time": "1720353195000",
+                "modified_time_gmt": "1720324395000",
+                "modifieddate": "06 Jul 2024, 09:53 PM",
+                "is_hybrid": "false",
+                "sender_name": "null",
+                "sent_time_zone": "America/El_Salvador",
+                "isGAConfig": "false",
+                "advanceTypeString": "",
+                "sent_time_zone_short": "CST",
+                "campaign_name": "Tercer",
+                "updated_time_gmt": "1720324395000",
+                "campaigntype": "normal",
+                "modified_time": "1720353195000",
+                "reply_to": "jason.guerra253@alasdeplata.shop",
+                "created_time_gmt": "1720323729000",
+                "is_advance": "true",
+                "topic_name": "Marketing",
+                "created_date_string": "06 Jul 2024, 09:42 PM",
+                "topic_id": "1304988000000047017",
+                "updated_date_string": "06 Jul 2024, 09:53 PM",
+                "created_time": "1720352529000",
+                "schedule_type": "",
+                "encodeName": "",
+                "email_type": "html_template_editor",
+                "email_options": "Both",
+                "sent_date_string": "06 Jul 2024, 09:53 PM",
+                "isReplyTrackingEnabled": "false",
+                "isWistia": "false",
+                "campaign_preview": "zcsub-cmpzourl.campaign-view.com/campaigns/SharedCampaignPreview.zc?c=html&cDgs=3z02491e436ec77bfd7aca6617a2217810dadeb8dc93bc15b3328fb955ad61e9e4",
+                "zuid": "857133841",
+                "webAutoStatus": "1",
+                "preheader": "",
+                "sent_time": "1720353195000",
+                "sent_time_gmt": "1720324395000",
+                "folder_id": "",
+                "email_subject": "Cupon3",
+                "isToNameConfig": "false",
+                "email_from": "jason.guerra253@alasdeplata.shop",
+                "campaign_key": "3z02491e436ec77bfd7aca6617a22178108564bfefe522e3f0a1050a271bbe683b"
+            }
+        ],
+        "associated_mailing_lists": [
+            {
+                "no_of_bounce": "0",
+                "contactscount": "14",
+                "liststatus": "active",
+                "listkey": "3z47b3e6864dd7b17f50f87a71f1896901b1d3b6c2a83279efafcfe575cbc6cfa3",
+                "listname": "My Sample List",
+                "no_of_unsubcontacts": "0"
+            }
+        ],
+        "version": "1.1",
+        "url": "/api/v1.1/getcampaigndetails",
+        "campaign-reports": [
+            {
+                "unique_clicked_percent": "0.0",
+                "opens_count": "7",
+                "delivered_percent": "100.0",
+                "spams_count": "0",
+                "unsent_count": "0",
+                "complaints_percent": "0.0",
+                "emails_sent_count": "13",
+                "forwards_count": "0",
+                "delivered_count": "13",
+                "autoreply_count": "0",
+                "unopened": "6",
+                "complaints_count": "0",
+                "open_percent": "53.8",
+                "unopened_percent": "46.2",
+                "bounce_percent": "0.0",
+                "spam_percent": "0.0",
+                "unsubscribe_percent": "0.0",
+                "hardbounce_count": "0",
+                "unsent_percent": "0.0",
+                "softbounce_count": "0",
+                "unsub_count": "0",
+                "clicksperopenrate": "0.0",
+                "forward_percent": "0.0",
+                "bounces_count": "0",
+                "unique_clicks_count": "0"
+            }
+        ],
+        "campaign-reach": [
+            {
+                "emails": "7",
+                "gplus": "0",
+                "twitter": "0",
+                "other": "0",
+                "total": "7",
+                "facebook": "0",
+                "tumblr": "0",
+                "pinterest": "0",
+                "linkedin": "0"
+            }
+        ],
+        "shopify-details": [
+            {
+                "totalQuantity": "0",
+                "avgRevenue": "0",
+                "service_name": "shopify",
+                "totalSales": "0",
+                "totalOrders": "0"
+            }
+        ],
+        "campaign_status": "Sent",
+        "segments_info": [],
+        "campaign-by-location": {},
+        "total_subscribers_count": 14,
+        "status": "success"
+    },
+    {
+        "useragentstats": {
+            "emailclients_percent": {
+                "Others": "0",
+                "Outlook": "0",
+                "Apple Mail": "0",
+                "Thunderbird": "0",
+                "Lotus Notes": "0"
+            },
+            "browsers_percent": {
+                "Internet Explorer": "0",
+                "Safari": "0",
+                "Chrome": "1",
+                "Opera": "0",
+                "Otros": "0",
+                "Firefox": "0"
+            },
+            "tablets_percent": {
+                "Others": "0",
+                "Blackberry": "0",
+                "iOS": "0",
+                "Android": "0"
+            },
+            "mobile_percent": {
+                "Others": "0",
+                "Blackberry": "0",
+                "iOS": "0",
+                "Android": "0"
+            },
+            "computer_percent": {
+                "Others": "0",
+                "Apple": "0",
+                "Linux": "1",
+                "Windows": "0"
+            }
+        },
+        "code": "0",
+        "campaign-details": [
+            {
+                "updated_time": "1720351340000",
+                "modified_time_gmt": "1720322540000",
+                "modifieddate": "06 Jul 2024, 09:22 PM",
+                "is_hybrid": "false",
+                "sender_name": "null",
+                "sent_time_zone": "America/El_Salvador",
+                "isGAConfig": "false",
+                "advanceTypeString": "",
+                "sent_time_zone_short": "CST",
+                "campaign_name": "Segunda",
+                "updated_time_gmt": "1720322540000",
+                "campaigntype": "normal",
+                "modified_time": "1720351340000",
+                "reply_to": "jason.guerra253@alasdeplata.shop",
+                "created_time_gmt": "1720322246000",
+                "is_advance": "true",
+                "topic_name": "Marketing",
+                "created_date_string": "06 Jul 2024, 09:17 PM",
+                "topic_id": "1304988000000047017",
+                "updated_date_string": "06 Jul 2024, 09:22 PM",
+                "created_time": "1720351046000",
+                "schedule_type": "",
+                "encodeName": "UTF-8",
+                "email_type": "html_template_editor",
+                "email_options": "Both",
+                "sent_date_string": "06 Jul 2024, 09:22 PM",
+                "isReplyTrackingEnabled": "false",
+                "isWistia": "false",
+                "campaign_preview": "zcsub-cmpzourl.campaign-view.com/campaigns/SharedCampaignPreview.zc?c=html&cDgs=3z47b3e6864dd7b17f50f87a71f1896901a172362ab8d6d174aa241a87ab4e1394",
+                "zuid": "857133841",
+                "webAutoStatus": "null",
+                "preheader": "",
+                "sent_time": "1720351340000",
+                "sent_time_gmt": "1720322540000",
+                "folder_id": "",
+                "email_subject": "Cupon1",
+                "isToNameConfig": "false",
+                "email_from": "jason.guerra253@alasdeplata.shop",
+                "campaign_key": "3z47b3e6864dd7b17f50f87a71f1896901bf433cf5a343a7bb6595946dae777892"
+            }
+        ],
+        "associated_mailing_lists": [
+            {
+                "no_of_bounce": "0",
+                "contactscount": "14",
+                "liststatus": "active",
+                "listkey": "3z47b3e6864dd7b17f50f87a71f1896901b1d3b6c2a83279efafcfe575cbc6cfa3",
+                "listname": "My Sample List",
+                "no_of_unsubcontacts": "0"
+            }
+        ],
+        "version": "1.1",
+        "url": "/api/v1.1/getcampaigndetails",
+        "campaign-reports": [
+            {
+                "unique_clicked_percent": "25.0",
+                "opens_count": "4",
+                "delivered_percent": "100.0",
+                "spams_count": "0",
+                "unsent_count": "0",
+                "complaints_percent": "0.0",
+                "emails_sent_count": "4",
+                "forwards_count": "0",
+                "delivered_count": "4",
+                "autoreply_count": "0",
+                "unopened": "0",
+                "complaints_count": "0",
+                "open_percent": "100.0",
+                "unopened_percent": "0.0",
+                "bounce_percent": "0.0",
+                "spam_percent": "0.0",
+                "unsubscribe_percent": "0.0",
+                "hardbounce_count": "0",
+                "unsent_percent": "0.0",
+                "softbounce_count": "0",
+                "unsub_count": "0",
+                "clicksperopenrate": "25.0",
+                "forward_percent": "0.0",
+                "bounces_count": "0",
+                "unique_clicks_count": "1"
+            }
+        ],
+        "campaign-reach": [
+            {
+                "emails": "4",
+                "gplus": "0",
+                "twitter": "0",
+                "other": "0",
+                "total": "4",
+                "facebook": "0",
+                "tumblr": "0",
+                "pinterest": "0",
+                "linkedin": "0"
+            }
+        ],
+        "shopify-details": [
+            {
+                "totalQuantity": "0",
+                "avgRevenue": "0",
+                "service_name": "shopify",
+                "totalSales": "0",
+                "totalOrders": "0"
+            }
+        ],
+        "campaign_status": "Sent",
+        "segments_info": [],
+        "campaign-by-location": {
+            "El Salvador": 1
+        },
+        "total_subscribers_count": 14,
+        "status": "success"
+    },
+    {
+        "useragentstats": {
+            "emailclients_percent": {
+                "Others": "0",
+                "Outlook": "0",
+                "Apple Mail": "0",
+                "Thunderbird": "0",
+                "Lotus Notes": "0"
+            },
+            "browsers_percent": {
+                "Internet Explorer": "0",
+                "Safari": "0",
+                "Chrome": "0",
+                "Opera": "0",
+                "Otros": "0",
+                "Firefox": "0"
+            },
+            "tablets_percent": {
+                "Others": "0",
+                "Blackberry": "0",
+                "iOS": "0",
+                "Android": "0"
+            },
+            "mobile_percent": {
+                "Others": "0",
+                "Blackberry": "0",
+                "iOS": "0",
+                "Android": "0"
+            },
+            "computer_percent": {
+                "Others": "0",
+                "Apple": "0",
+                "Linux": "0",
+                "Windows": "0"
+            }
+        },
+        "code": "0",
+        "campaign-details": [
+            {
+                "updated_time": "1720343471000",
+                "modified_time_gmt": "1720314671000",
+                "modifieddate": "06 Jul 2024, 07:11 PM",
+                "is_hybrid": "false",
+                "sender_name": "Alas de Plata",
+                "sent_time_zone": "America/El_Salvador",
+                "isGAConfig": "false",
+                "advanceTypeString": "",
+                "sent_time_zone_short": "CST",
+                "campaign_name": "primera campania",
+                "updated_time_gmt": "1720314671000",
+                "campaigntype": "normal",
+                "modified_time": "1720343471000",
+                "reply_to": "jason.guerra253@alasdeplata.shop",
+                "created_time_gmt": "1720312378000",
+                "is_advance": "true",
+                "topic_name": "Marketing",
+                "created_date_string": "06 Jul 2024, 06:32 PM",
+                "topic_id": "1304988000000047017",
+                "updated_date_string": "06 Jul 2024, 07:11 PM",
+                "created_time": "1720341178000",
+                "schedule_type": "",
+                "encodeName": "",
+                "email_type": "html_template_editor",
+                "email_options": "Both",
+                "sent_date_string": "06 Jul 2024, 07:11 PM",
+                "isReplyTrackingEnabled": "false",
+                "isWistia": "false",
+                "campaign_preview": "zcsub-cmpzourl.campaign-view.com/campaigns/SharedCampaignPreview.zc?c=html&cDgs=3z47b3e6864dd7b17f50f87a71f189690182c36f0e37204020e8b532c68f43c2df",
+                "zuid": "857133841",
+                "webAutoStatus": "1",
+                "preheader": "",
+                "sent_time": "1720343471000",
+                "sent_time_gmt": "1720314671000",
+                "folder_id": "",
+                "email_subject": "Promocion",
+                "isToNameConfig": "false",
+                "email_from": "jason.guerra253@alasdeplata.shop",
+                "campaign_key": "3z47b3e6864dd7b17f50f87a71f18969013370f91d543a473946215c9982d53776"
+            }
+        ],
+        "associated_mailing_lists": [
+            {
+                "no_of_bounce": "0",
+                "contactscount": "14",
+                "liststatus": "active",
+                "listkey": "3z47b3e6864dd7b17f50f87a71f1896901b1d3b6c2a83279efafcfe575cbc6cfa3",
+                "listname": "My Sample List",
+                "no_of_unsubcontacts": "0"
+            }
+        ],
+        "version": "1.1",
+        "url": "/api/v1.1/getcampaigndetails",
+        "campaign-reports": [
+            {
+                "unique_clicked_percent": "0.0",
+                "opens_count": "3",
+                "delivered_percent": "100.0",
+                "spams_count": "0",
+                "unsent_count": "0",
+                "complaints_percent": "0.0",
+                "emails_sent_count": "4",
+                "forwards_count": "0",
+                "delivered_count": "4",
+                "autoreply_count": "0",
+                "unopened": "1",
+                "complaints_count": "0",
+                "open_percent": "75.0",
+                "unopened_percent": "25.0",
+                "bounce_percent": "0.0",
+                "spam_percent": "0.0",
+                "unsubscribe_percent": "0.0",
+                "hardbounce_count": "0",
+                "unsent_percent": "0.0",
+                "softbounce_count": "0",
+                "unsub_count": "0",
+                "clicksperopenrate": "0.0",
+                "forward_percent": "0.0",
+                "bounces_count": "0",
+                "unique_clicks_count": "0"
+            }
+        ],
+        "campaign-reach": [
+            {
+                "emails": "3",
+                "gplus": "0",
+                "twitter": "0",
+                "other": "0",
+                "total": "3",
+                "facebook": "0",
+                "tumblr": "0",
+                "pinterest": "0",
+                "linkedin": "0"
+            }
+        ],
+        "shopify-details": [
+            {
+                "totalQuantity": "0",
+                "avgRevenue": "0",
+                "service_name": "shopify",
+                "totalSales": "0",
+                "totalOrders": "0"
+            }
+        ],
+        "campaign_status": "Sent",
+        "segments_info": [],
+        "campaign-by-location": {},
+        "total_subscribers_count": 14,
+        "status": "success"
+    }
+]

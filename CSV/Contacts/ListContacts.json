@@ -1,0 +1,140 @@
+{
+    "code": "0",
+    "uri": "/api/v1.1/getlistsubscribers",
+    "version": "1.1",
+    "list_of_details": [
+        {
+            "firstname": "Daniel",
+            "added_time": "10/07/2024",
+            "phone": "",
+            "companyname": "",
+            "contact_email": "jason.guerra253@outlook.com",
+            "lastname": "Martinez",
+            "zuid": "857133841"
+        },
+        {
+            "firstname": "eduardo",
+            "added_time": "07/07/2024",
+            "phone": "",
+            "companyname": "",
+            "contact_email": "joseeduardo.guerretta@alasdeplata.shop",
+            "lastname": "jose",
+            "zuid": "857133841"
+        },
+        {
+            "firstname": "Leonel",
+            "added_time": "07/07/2024",
+            "phone": "",
+            "companyname": "",
+            "contact_email": "po16015@ues.edu.sv",
+            "lastname": "Ramirez",
+            "zuid": "857133841"
+        },
+        {
+            "firstname": "Leonel",
+            "added_time": "07/07/2024",
+            "phone": "",
+            "companyname": "",
+            "contact_email": "alejandroplc3@gmail.com",
+            "lastname": "Palacios",
+            "zuid": "857133841"
+        },
+        {
+            "firstname": "Js",
+            "added_time": "07/07/2024",
+            "phone": "",
+            "companyname": "",
+            "contact_email": "ma17092@ues.edu.sv",
+            "lastname": "Martinez",
+            "zuid": "857133841"
+        },
+        {
+            "firstname": "Jose",
+            "added_time": "07/07/2024",
+            "phone": "",
+            "companyname": "",
+            "contact_email": "guerret98@gmail.com",
+            "lastname": "Hernandez",
+            "zuid": "857133841"
+        },
+        {
+            "firstname": "jason",
+            "added_time": "07/07/2024",
+            "phone": "",
+            "companyname": "",
+            "contact_email": "jason.guerra253@gmail.com",
+            "lastname": "Argueta",
+            "zuid": "857133841"
+        },
+        {
+            "firstname": "Eduardo",
+            "added_time": "07/07/2024",
+            "phone": "",
+            "companyname": "",
+            "contact_email": "edugamer1616@gmail.com",
+            "lastname": "Gutierres",
+            "zuid": "857133841"
+        },
+        {
+            "firstname": "Eduardo",
+            "added_time": "07/07/2024",
+            "phone": "",
+            "companyname": "",
+            "contact_email": "eduardoguerretta16@gmail.com",
+            "lastname": "Rivera",
+            "zuid": "857133841"
+        },
+        {
+            "firstname": "Eduardo",
+            "added_time": "07/07/2024",
+            "phone": "",
+            "companyname": "",
+            "contact_email": "og17006@ues.edu.sv",
+            "lastname": "Guerretta",
+            "zuid": "857133841"
+        },
+        {
+            "firstname": "",
+            "added_time": "07/07/2024",
+            "phone": "",
+            "companyname": "",
+            "contact_email": "jason.guerra253@alasdeplata.shop",
+            "lastname": "",
+            "zuid": "857133841"
+        },
+        {
+            "firstname": "Narmi",
+            "added_time": "07/07/2024",
+            "phone": "",
+            "companyname": "",
+            "contact_email": "narmi@zohocampaigns.com",
+            "lastname": "Demahom (Sample)",
+            "zuid": "857133841"
+        },
+        {
+            "firstname": "Bale",
+            "added_time": "07/07/2024",
+            "phone": "",
+            "companyname": "",
+            "contact_email": "bale@zohomarketingautomation.com",
+            "lastname": "Robinson (Sample)",
+            "zuid": "857133841"
+        },
+        {
+            "firstname": "Aron",
+            "added_time": "07/07/2024",
+            "phone": "",
+            "companyname": "",
+            "contact_email": "aron@zohocampaigns.com",
+            "lastname": "Randy (Sample)",
+            "zuid": "857133841"
+        }
+    ],
+    "requestdetails": {
+        "fromindex": 1,
+        "range": 20,
+        "sort": "Recently Created",
+        "status": "Active Contacts"
+    },
+    "status": "success"
+}
