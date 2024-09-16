@@ -56,7 +56,7 @@
           }
         ],
         "status": "active",
-        "min_rate": 3.990000,
+        "min_rate": 10.990000,
         "max_rate": 3.990000,
         "is_featured": false,
         "category_name": "",
@@ -70,7 +70,7 @@
             "name": ": Bandeja de Cartón para Exhibición de Joyas",
             "order": 1,
             "status": "active",
-            "rate": 3.990000,
+            "rate": 10.990000,
             "purchase_rate": 0.000000,
             "sku": "BJ9009",
             "upc": "901234567890",

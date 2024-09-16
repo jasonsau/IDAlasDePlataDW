@@ -1,4 +1,4 @@
-CREATE PROCEDURE UpdateDimProducto(
+ALTER PROCEDURE UpdateDimProducto(
 	@ProductoKey INT,
 	@NombreProducto VARCHAR(500),
 	@TipoProducto VARCHAR(50),
@@ -7,7 +7,8 @@ CREATE PROCEDURE UpdateDimProducto(
 	@CategoriaProducto VARCHAR(50),
 	@EstadoProducto VARCHAR(15),
 	@UnidadProducto VARCHAR(50),
-	@FechaModificacion DATE
+	@FechaModificacion DATE,
+	@PrecioProducto DECIMAL(10,2)
 ) AS
 BEGIN 
 	UPDATE DimProducto SET NombreProducto = @NombreProducto,
@@ -17,7 +18,8 @@ BEGIN
 		CategoriaProducto = @CategoriaProducto,
 		EstadoProducto = @EstadoProducto,
 		UnidadProducto = @UnidadProducto,
-		@FechaModificacion = @FechaModificacion
+		FechaModificacion = @FechaModificacion,
+		PrecioUnitario = @PrecioProducto
 		WHERE ProductoKey = @ProductoKey;
 END;
 

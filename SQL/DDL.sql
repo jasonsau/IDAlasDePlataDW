@@ -13,9 +13,11 @@ DROP TABLE Date_Dimension;
 DROP TABLE FactVentasPorCampania;
 */
 
+ALTER TABLE DimProducto ALTER COLUMN PrecioUnitario DECIMAL(10,2)
 CREATE TABLE DimProducto(
 	ProductoKey				INT				IDENTITY(1,1)				PRIMARY KEY,
 	ProductoId				VARCHAR(255),
+	VariantId				VARCHAR(255),
 	NombreProducto			VARCHAR(500)	NOT NULL,
 	TipoProducto			VARCHAR(50)		DEFAULT '',
 	MarcaProducto			VARCHAR(50)		DEFAULT '',
@@ -24,7 +26,8 @@ CREATE TABLE DimProducto(
 	EstadoProducto			VARCHAR(15)		DEFAULT 'ACTIVO',
 	UnidadProducto			VARCHAR(50)		DEFAULT '',
 	FechaCreacion			DATE,
-	FechaModificacion		DATE
+	FechaModificacion		DATE,
+	PrecioUnitario			DECIMAL(10,2)
 );
 GO
 CREATE TABLE DimCliente(
