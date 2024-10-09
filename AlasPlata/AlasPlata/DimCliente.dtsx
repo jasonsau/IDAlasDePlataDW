@@ -11,8 +11,8 @@
   DTS:LocaleID="1033"
   DTS:ObjectName="DimCliente"
   DTS:PackageType="5"
-  DTS:VersionBuild="18"
-  DTS:VersionGUID="{2D2DB2A1-10F8-4271-ACC3-06BB86A03EE5}">
+  DTS:VersionBuild="19"
+  DTS:VersionGUID="{1D663394-28C8-4F5F-9BD8-D83A56F00059}">
   <DTS:Property
     DTS:Name="PackageFormatVersion">8</DTS:Property>
   <DTS:ConnectionManagers>
@@ -27,7 +27,7 @@
           <DTS:Password
             DTS:Name="Password"
             Sensitive="1"
-            Encrypted="1">AQAAANCMnd8BFdERjHoAwE/Cl+sBAAAAVjEO+z0Wqk6tj7LRX+YGJAAAAAAIAAAARABUAFMAAAAQZgAAAAEAACAAAAARHgn1mVI8xjyvXL9QvNw/FjgHqjG7wPNWo6WjUqn+OAAAAAAOgAAAAAIAACAAAACUoWTXvdXvOIjRCtwRDB84ZPZFDGvGbAlOtblqc0viNiAAAABEeMnAsoY0zVSX/Rx6NKK1RuNXIF0x6Q8HKhxEOZZP1kAAAADgFZNv11ZNv5lgPs2fB8IsQZnxCq+IrERuDefQbTQ60IAiu2Npl0fzvpFKcQCpm59AzPT4OuCKxPHfugcI7146</DTS:Password>
+            Encrypted="1">AQAAANCMnd8BFdERjHoAwE/Cl+sBAAAA9/P1hSVza0Ck2thzhUOQ4QAAAAAIAAAARABUAFMAAAAQZgAAAAEAACAAAACNtgYE1duKX+s905Otx7rRxcoir3yPhOlwpCZfKU6qZgAAAAAOgAAAAAIAACAAAAA2ish8oH6/y/AtIY7L+KF8SYCTxC7iqmBUPgzJ4ZblGSAAAACi9Sj2+wMVRlb7VJ++Rqe39r5k3APo6zzyjFiduBZhYUAAAABGBevhahgPsBf2v9v1ygZoBufXgKdpFmzGancKvNDygbrXG89NNcSHlxdQS8G2tM9OnCa21jxYBx53iqxkAtWE</DTS:Password>
         </DTS:ConnectionManager>
       </DTS:ObjectData>
     </DTS:ConnectionManager>
@@ -40,11 +40,11 @@
         <DTS:ConnectionManager
           DTS:ConnectRetryCount="1"
           DTS:ConnectRetryInterval="5"
-          DTS:ConnectionString="Data Source=localhost;User ID=js;Initial Catalog=AlasDePlataDW;Provider=MSOLEDBSQL.1;Auto Translate=False;Application Name=SSIS-Package1-{C6D26B46-924A-4A1F-8A0F-72C3F32B6BB0}localhost.AlasDePlataDW.js1;">
+          DTS:ConnectionString="Data Source=localhost;User ID=js;Initial Catalog=AlasDePlataDW;Provider=MSOLEDBSQL.1;Persist Security Info=True;Auto Translate=False;Application Name=SSIS-Package1-{C6D26B46-924A-4A1F-8A0F-72C3F32B6BB0}localhost.AlasDePlataDW.js1;">
           <DTS:Password
             DTS:Name="Password"
             Sensitive="1"
-            Encrypted="1">AQAAANCMnd8BFdERjHoAwE/Cl+sBAAAAVjEO+z0Wqk6tj7LRX+YGJAAAAAAIAAAARABUAFMAAAAQZgAAAAEAACAAAACl1miP46jpNudaUb9ekBdqd6hSFtmAmrzyfBjeQU3KOwAAAAAOgAAAAAIAACAAAABA25vcReyBYeg8EEaygwmRLmRuG2ODu/QBghzqiR3QbSAAAAAGN8Rnw8/LH6iMjdud600NKdLJh57BD+4tSkakf7LI4EAAAACm/GswzurNOYD9mZyWuA7TBIuieLfQQZGQqhBvZ9HF9DfPQKJN1x2GAM03NzknPuo7BVrdIvqY4llPqavSJ33a</DTS:Password>
+            Encrypted="1">AQAAANCMnd8BFdERjHoAwE/Cl+sBAAAA9/P1hSVza0Ck2thzhUOQ4QAAAAAIAAAARABUAFMAAAAQZgAAAAEAACAAAADyqhXNWJDNpX/gCgKTicX7Vh967wbN7VHdXd2ioj/eEwAAAAAOgAAAAAIAACAAAAC0cRFnSpvlS9/05Eg0ZOSRfRvShmNe2xyiHTEgHLW/2yAAAADnLeuXGWuHB7IkcjUjgc7GOB5J435r1CRWdYTuX4NFvkAAAABVpefVesPevFiklo+a/uudbfXyeYAzxmFwrHfHYxKfcWZ9My+TpvxAgYROw4EwbV8giq7XykmMYGGJpdeMmPOr</DTS:Password>
         </DTS:ConnectionManager>
       </DTS:ObjectData>
     </DTS:ConnectionManager>
@@ -1752,12 +1752,12 @@ where [refTable].[Email] = ?</property>
     </DTS:Executable>
   </DTS:Executables>
   <DTS:DesignTimeProperties><![CDATA[<?xml version="1.0"?>
-<!--This CDATA section contains the layout information of the package. The section includes information such as (x,y) coordinates, width, and height.-->
-<!--If you manually edit this section and make a mistake, you can delete it. -->
-<!--The package will still be able to load normally but the previous layout information will be lost and the designer will automatically re-arrange the elements on the design surface.-->
+<!--Esta sección CDATA contiene la información de diseño del paquete. Esta sección incluye información como, por ejemplo, las coordenadas (x,y), el ancho y el alto.-->
+<!--Si edita manualmente esta sección y comete un error, puede eliminarlo. -->
+<!--El paquete podrá cargarse normalmente, pero se perderá la información de diseño anterior y el diseñador reorganizará los elementos automáticamente en la superficie de diseño.-->
 <Objects
   Version="8">
-  <!--Each node below will contain properties that do not affect runtime behavior.-->
+  <!--Cada uno de los nodos siguientes contiene propiedades que no afectan al comportamiento en tiempo de ejecución.-->
   <Package
     design-time-name="Package">
     <LayoutInfo>
@@ -1776,17 +1776,21 @@ where [refTable].[Email] = ?</property>
       <GraphLayout
         Capacity="8" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml" xmlns:mssgm="clr-namespace:Microsoft.SqlServer.Graph.Model;assembly=Microsoft.SqlServer.Graph">
         <NodeLayout
-          Size="188,42"
-          Id="Package\Data Flow Task\Lectura Archivo JSON"
-          TopLeft="214,151" />
+          Size="169,42"
+          Id="Package\Data Flow Task\Verificacion Existe"
+          TopLeft="573,152" />
         <NodeLayout
           Size="212,42"
           Id="Package\Data Flow Task\Insercion nuevos Registros"
           TopLeft="255,347" />
         <NodeLayout
-          Size="169,42"
-          Id="Package\Data Flow Task\Verificacion Existe"
-          TopLeft="573,152" />
+          Size="247,42"
+          Id="Package\Data Flow Task\Actualizacion Registros Existentes"
+          TopLeft="763,343" />
+        <NodeLayout
+          Size="188,42"
+          Id="Package\Data Flow Task\Lectura Archivo JSON"
+          TopLeft="214,151" />
         <EdgeLayout
           Id="Package\Data Flow Task.Paths[Output 0]"
           TopLeft="402,172.5">
@@ -1845,10 +1849,6 @@ where [refTable].[Email] = ?</property>
               RelativePosition="Any" />
           </EdgeLayout.Labels>
         </EdgeLayout>
-        <NodeLayout
-          Size="247,42"
-          Id="Package\Data Flow Task\Actualizacion Registros Existentes"
-          TopLeft="763,343" />
         <EdgeLayout
           Id="Package\Data Flow Task.Paths[Lookup Match Output]"
           TopLeft="684.333333333333,194">
@@ -1889,20 +1889,12 @@ where [refTable].[Email] = ?</property>
     </LayoutInfo>
   </TaskHost>
   <PipelineComponentMetadata
-    design-time-name="Package\Data Flow Task\Insercion nuevos Registros">
-    <Properties>
-      <Property>
-        <Name>DataSourceViewID</Name>
-      </Property>
-    </Properties>
-  </PipelineComponentMetadata>
-  <PipelineComponentMetadata
     design-time-name="Package\Data Flow Task\Verificacion Existe">
     <Properties>
       <Property>
         <Name>OverwriteParamsSQLProp</Name>
         <Value
-          type="q2:boolean">false</Value>
+          type="q2:string">false</Value>
       </Property>
       <Property>
         <Name>UsedTableName</Name>
@@ -1912,8 +1904,16 @@ where [refTable].[Email] = ?</property>
       <Property>
         <Name>TableInfoObjectType</Name>
         <Value
-          type="q4:int">0</Value>
+          type="q4:string">0</Value>
       </Property>
+      <Property>
+        <Name>DataSourceViewID</Name>
+      </Property>
+    </Properties>
+  </PipelineComponentMetadata>
+  <PipelineComponentMetadata
+    design-time-name="Package\Data Flow Task\Insercion nuevos Registros">
+    <Properties>
       <Property>
         <Name>DataSourceViewID</Name>
       </Property>

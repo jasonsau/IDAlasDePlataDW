@@ -1,8 +1,10 @@
 
 CREATE DATABASE AlasDePlataDW;
 GO
+
 USE AlasDePlataDW;
 GO
+
 /*
 DROP TABLE DimProducto;
 DROP TABLE DimCliente;
@@ -13,7 +15,6 @@ DROP TABLE Date_Dimension;
 DROP TABLE FactVentasPorCampania;
 */
 
-ALTER TABLE DimProducto ALTER COLUMN PrecioUnitario DECIMAL(10,2)
 CREATE TABLE DimProducto(
 	ProductoKey				INT				IDENTITY(1,1)				PRIMARY KEY,
 	ProductoId				VARCHAR(255),
@@ -30,6 +31,7 @@ CREATE TABLE DimProducto(
 	PrecioUnitario			DECIMAL(10,2)
 );
 GO
+
 CREATE TABLE DimCliente(
 	ClienteKey				INT				IDENTITY(1,1)				PRIMARY KEY,
 	ClienteId				VARCHAR(255),
@@ -38,6 +40,7 @@ CREATE TABLE DimCliente(
 	Email					VARCHAR(50)		NOT NULL
 );
 GO
+
 CREATE TABLE DimCoupon(
 	CouponKey				INT				IDENTITY(1,1)				PRIMARY KEY,
 	CouponId				VARCHAR(255)	NOT NULL,
@@ -53,6 +56,7 @@ CREATE TABLE DimCoupon(
 	FechaExpiracion			DATE
 );
 GO
+
 CREATE TABLE DimCampania(
 	CampaniaKey				INT				IDENTITY(1,1)				PRIMARY KEY,
 	CampaniaId				VARCHAR(500)	NOT NULL,
@@ -66,6 +70,7 @@ CREATE TABLE DimCampania(
 	VistaPrevia				VARCHAR(255),
 );
 GO
+
 CREATE TABLE DimTiempo(
 	TiempoKey				INT				PRIMARY KEY,
 	Fecha					DATETIME		NOT NULL,
@@ -74,11 +79,13 @@ CREATE TABLE DimTiempo(
 	Anio					SMALLINT		NOT NULL
 );
 GO
+
 CREATE TABLE FactVentasPorCampania(
 	ClienteKey				INT				FOREIGN KEY REFERENCES DimCliente(ClienteKey),
 	ProductoKey				INT				FOREIGN KEY REFERENCES DimProducto(ProductoKey),
 	CouponKey				INT				FOREIGN KEY REFERENCES DimCoupon(CouponKey),
 	CampaniaKey				INT				FOREIGN KEY REFERENCES DimCampania(CampaniaKey),
+	FechaDeOrdenKey		    INT				FOREIGN KEY REFERENCES DimTiempo(TiempoKey),
 	Cantidad				INT,
 	NumeroOrden				VARCHAR(100),
 	PrecioUnitario			FLOAT,
@@ -87,7 +94,8 @@ CREATE TABLE FactVentasPorCampania(
 	Subtotal				FLOAT,
 );
 GO
-create table Date_Dimension (
+
+CREATE TABLE Date_Dimension (
 date_key int not null,
 full_date smalldatetime,
 day_of_week tinyint,
@@ -112,5 +120,4 @@ fiscal_quarter tinyint,
 fiscal_year int,
 last_day_in_month_flag varchar(15),
 same_day_year_ago_date smalldatetime,
-primary key (date_key))
-;
+primary key (date_key));

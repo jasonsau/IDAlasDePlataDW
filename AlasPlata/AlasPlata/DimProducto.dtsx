@@ -11,8 +11,8 @@
   DTS:LocaleID="1033"
   DTS:ObjectName="Package1"
   DTS:PackageType="5"
-  DTS:VersionBuild="28"
-  DTS:VersionGUID="{C343458D-D2DC-40F2-8CAC-0E6CA1B3BFE1}">
+  DTS:VersionBuild="29"
+  DTS:VersionGUID="{40C0E4AB-5726-42FB-A505-95246ABA5ACF}">
   <DTS:Property
     DTS:Name="PackageFormatVersion">8</DTS:Property>
   <DTS:ConnectionManagers>
@@ -27,7 +27,7 @@
           <DTS:Password
             DTS:Name="Password"
             Sensitive="1"
-            Encrypted="1">AQAAANCMnd8BFdERjHoAwE/Cl+sBAAAAVjEO+z0Wqk6tj7LRX+YGJAAAAAAIAAAARABUAFMAAAAQZgAAAAEAACAAAAD26i0Ot6W99c0e41Fqg4J9/JDAfRHiYhMe6HEVhU7b0wAAAAAOgAAAAAIAACAAAACtKvEtEvlRApvjPyfzvmz/3hyLCWsEvHKgF5QRxbfIsSAAAAAUSwJNrfo4c4eHd2Fvce80BLKla3dm81hZlKL3yC7gikAAAACXbVIFZqa0WmM1DNOUPotGcAOAvTTdX9t2txj6v8eQigzu8F0Q1gxaG+ym+SUp7eYjcrDWe9BXYPwf0dvtcZgL</DTS:Password>
+            Encrypted="1">AQAAANCMnd8BFdERjHoAwE/Cl+sBAAAA9/P1hSVza0Ck2thzhUOQ4QAAAAAIAAAARABUAFMAAAAQZgAAAAEAACAAAABL1h6nZzs7zN+/XeXtaw18oU2LdQYE1id8pHMn/pEeqwAAAAAOgAAAAAIAACAAAAA+kMCtf3sq9f7Gz1HlWH8gZRXTyZ8o/XtKvne8AWZ1ziAAAADyvrGv5e/PJ3k9KbhQv0p9vWyUINHmTa6h1g+GQ05XBEAAAAAfoJphyxVrZNnuifxGKxGd2cTz3cxu1R0i6JeJRGz+2DWauC5cu1Ddrw4Xez8E/OhqcyZq4t9LWX8aBSw6Z+s5</DTS:Password>
         </DTS:ConnectionManager>
       </DTS:ObjectData>
     </DTS:ConnectionManager>
@@ -44,7 +44,7 @@
           <DTS:Password
             DTS:Name="Password"
             Sensitive="1"
-            Encrypted="1">AQAAANCMnd8BFdERjHoAwE/Cl+sBAAAAVjEO+z0Wqk6tj7LRX+YGJAAAAAAIAAAARABUAFMAAAAQZgAAAAEAACAAAAARHOgaH/y/T+L5+vW5pqGHeqR5G8cIUbR31sq/etNRewAAAAAOgAAAAAIAACAAAADAloINx80caKNMLz/8/MPUDrsG508asWWHotHp6x57hCAAAAAg3soS/Jv8cdr/1jyK37y6rIOJ6P9127iJq6Isy1VM2kAAAAAoWP4ArdkWidZh5g8YE+ffSI0iYX6hANB1lW/V1Ik71Csgs3MZaSNouwu5k5bCcRh2oRBgFVPsnJje9pXqsUik</DTS:Password>
+            Encrypted="1">AQAAANCMnd8BFdERjHoAwE/Cl+sBAAAA9/P1hSVza0Ck2thzhUOQ4QAAAAAIAAAARABUAFMAAAAQZgAAAAEAACAAAADWVoH320pB4ncDHvB9sPF18vwhhoTYg1p0KeS6bI60UQAAAAAOgAAAAAIAACAAAABh5qrXGKOlvDPjDfT2NbZmm1fc4vLXZfrwYesP6kdRiSAAAAD04tNXa1tlhJhpHQ6lGKL3etltxKAVLlDejR4yfzM6BkAAAACcXLEibxsL6kHxy8C4Z1PaqM/30L9rZaAOX1sKmbqSGFUI5+rwT5IoT/5KjUUHzrcn/MAoLuVvgh6ZPIC6xX3f</DTS:Password>
         </DTS:ConnectionManager>
       </DTS:ObjectData>
     </DTS:ConnectionManager>
@@ -2611,12 +2611,12 @@ where [refTable].[ProductoId] = ?</property>
     </DTS:Executable>
   </DTS:Executables>
   <DTS:DesignTimeProperties><![CDATA[<?xml version="1.0"?>
-<!--This CDATA section contains the layout information of the package. The section includes information such as (x,y) coordinates, width, and height.-->
-<!--If you manually edit this section and make a mistake, you can delete it. -->
-<!--The package will still be able to load normally but the previous layout information will be lost and the designer will automatically re-arrange the elements on the design surface.-->
+<!--Esta sección CDATA contiene la información de diseño del paquete. Esta sección incluye información como, por ejemplo, las coordenadas (x,y), el ancho y el alto.-->
+<!--Si edita manualmente esta sección y comete un error, puede eliminarlo. -->
+<!--El paquete podrá cargarse normalmente, pero se perderá la información de diseño anterior y el diseñador reorganizará los elementos automáticamente en la superficie de diseño.-->
 <Objects
   Version="8">
-  <!--Each node below will contain properties that do not affect runtime behavior.-->
+  <!--Cada uno de los nodos siguientes contiene propiedades que no afectan al comportamiento en tiempo de ejecución.-->
   <Package
     design-time-name="Package">
     <LayoutInfo>
@@ -2639,10 +2639,6 @@ where [refTable].[ProductoId] = ?</property>
           Id="Package\Data Flow Task\Verificacion Existe Registro"
           TopLeft="557,167" />
         <NodeLayout
-          Size="194,42"
-          Id="Package\Data Flow Task\Insertar nuevos registro"
-          TopLeft="332,352" />
-        <NodeLayout
           Size="225,42"
           Id="Package\Data Flow Task\Actualizar registros existentes"
           TopLeft="695,353" />
@@ -2650,6 +2646,44 @@ where [refTable].[ProductoId] = ?</property>
           Size="168,42"
           Id="Package\Data Flow Task\Lectura Data Json"
           TopLeft="191,156" />
+        <NodeLayout
+          Size="194,42"
+          Id="Package\Data Flow Task\Insertar nuevos registro"
+          TopLeft="332,352" />
+        <EdgeLayout
+          Id="Package\Data Flow Task.Paths[Output 0]"
+          TopLeft="359,177">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="198,11"
+              Start="0,0"
+              End="190.5,11">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="95,0" />
+                  <mssgle:CubicBezierSegment
+                    Point1="95,0"
+                    Point2="99,0"
+                    Point3="99,4" />
+                  <mssgle:LineSegment
+                    End="99,7" />
+                  <mssgle:CubicBezierSegment
+                    Point1="99,7"
+                    Point2="99,11"
+                    Point3="103,11" />
+                  <mssgle:LineSegment
+                    End="190.5,11" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
         <EdgeLayout
           Id="Package\Data Flow Task.Paths[Lookup No Match Output]"
           TopLeft="629.333333333333,209">
@@ -2722,40 +2756,6 @@ where [refTable].[ProductoId] = ?</property>
               RelativePosition="Any" />
           </EdgeLayout.Labels>
         </EdgeLayout>
-        <EdgeLayout
-          Id="Package\Data Flow Task.Paths[Output 0]"
-          TopLeft="359,177">
-          <EdgeLayout.Curve>
-            <mssgle:Curve
-              StartConnector="{assembly:Null}"
-              EndConnector="198,11"
-              Start="0,0"
-              End="190.5,11">
-              <mssgle:Curve.Segments>
-                <mssgle:SegmentCollection
-                  Capacity="5">
-                  <mssgle:LineSegment
-                    End="95,0" />
-                  <mssgle:CubicBezierSegment
-                    Point1="95,0"
-                    Point2="99,0"
-                    Point3="99,4" />
-                  <mssgle:LineSegment
-                    End="99,7" />
-                  <mssgle:CubicBezierSegment
-                    Point1="99,7"
-                    Point2="99,11"
-                    Point3="103,11" />
-                  <mssgle:LineSegment
-                    End="190.5,11" />
-                </mssgle:SegmentCollection>
-              </mssgle:Curve.Segments>
-            </mssgle:Curve>
-          </EdgeLayout.Curve>
-          <EdgeLayout.Labels>
-            <EdgeLabelCollection />
-          </EdgeLayout.Labels>
-        </EdgeLayout>
       </GraphLayout>
     </LayoutInfo>
   </TaskHost>
@@ -2765,7 +2765,7 @@ where [refTable].[ProductoId] = ?</property>
       <Property>
         <Name>OverwriteParamsSQLProp</Name>
         <Value
-          type="q2:boolean">false</Value>
+          type="q2:string">false</Value>
       </Property>
       <Property>
         <Name>UsedTableName</Name>
@@ -2775,7 +2775,7 @@ where [refTable].[ProductoId] = ?</property>
       <Property>
         <Name>TableInfoObjectType</Name>
         <Value
-          type="q4:int">0</Value>
+          type="q4:string">0</Value>
       </Property>
       <Property>
         <Name>DataSourceViewID</Name>

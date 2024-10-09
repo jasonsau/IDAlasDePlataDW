@@ -11,8 +11,8 @@
   DTS:LocaleID="1033"
   DTS:ObjectName="Package1"
   DTS:PackageType="5"
-  DTS:VersionBuild="17"
-  DTS:VersionGUID="{9F8F94AC-A956-4B39-B4F9-3CA9263B3EAA}">
+  DTS:VersionBuild="18"
+  DTS:VersionGUID="{F3A87B88-0B20-4AE1-9E89-DAEEDA8B1FE8}">
   <DTS:Property
     DTS:Name="PackageFormatVersion">8</DTS:Property>
   <DTS:ConnectionManagers>
@@ -27,7 +27,7 @@
           <DTS:Password
             DTS:Name="Password"
             Sensitive="1"
-            Encrypted="1">AQAAANCMnd8BFdERjHoAwE/Cl+sBAAAAVjEO+z0Wqk6tj7LRX+YGJAAAAAAIAAAARABUAFMAAAAQZgAAAAEAACAAAACHb9VTtcNBpGWAdFLNkIyc4OWn6bdFzXdbXyhsS0ykzwAAAAAOgAAAAAIAACAAAADXPG7c9gmg3hQIZ9EiDUKwRe3yDXzf5TOoHhYiUgvDxiAAAABPMkqVsD39Y6bgZYxY0+uFkkNkpUpUZxjeu8Zx/N2/bUAAAAAobYmN4KsPn3Rt4dMZcUBL4epgdm3p1GxJwzu8+yD9wQQTexd2vn0REaA0dlK342KjAS2n+OdLseXNFhZ/rM7a</DTS:Password>
+            Encrypted="1">AQAAANCMnd8BFdERjHoAwE/Cl+sBAAAA9/P1hSVza0Ck2thzhUOQ4QAAAAAIAAAARABUAFMAAAAQZgAAAAEAACAAAAAh0Iy+k8voYNKuNacmfIY1DA2H3KOhn8AkdtTcmjw05AAAAAAOgAAAAAIAACAAAAB63ubCSIWnKiW6+IMLGhmusvm/xJiAi9VmH51V5h1cLCAAAABL6Ua5tzNJTRUY33NALBu8H9hxHdB3M/kTjf0JE2llDkAAAADSYMevaqfVPxu1n+Dp7FPN1qRnqZBSxkRJ1YVHzClb/RFBTH5DvuQoQQDk5rt5U4Ez575qcpNDe7M+sWZe9MhB</DTS:Password>
         </DTS:ConnectionManager>
       </DTS:ObjectData>
     </DTS:ConnectionManager>
@@ -44,7 +44,7 @@
           <DTS:Password
             DTS:Name="Password"
             Sensitive="1"
-            Encrypted="1">AQAAANCMnd8BFdERjHoAwE/Cl+sBAAAAVjEO+z0Wqk6tj7LRX+YGJAAAAAAIAAAARABUAFMAAAAQZgAAAAEAACAAAACWq1AtE+iCy48ha+LsnP8Xc1vJXN+y3IUNsYXv027RQAAAAAAOgAAAAAIAACAAAADINW6Mo/l+Nzklg8ABLO6oywtEy8LNmBBr6XKOD/WmcCAAAAA2TTpMewfR8tSsyNKmEDvsKx1mRO+0m+mvluU9XklDPEAAAAAGZP1nUMvnvRhjVjYCsinOzhlb0Ob1Vr8diAWgMcCFJdvGhMeUCSDUv6whhaCu73SGDAKa1yWTRd7QmPgOZyPD</DTS:Password>
+            Encrypted="1">AQAAANCMnd8BFdERjHoAwE/Cl+sBAAAA9/P1hSVza0Ck2thzhUOQ4QAAAAAIAAAARABUAFMAAAAQZgAAAAEAACAAAADV+4gOMlbsCsswMlAXNsMDoBALI4khzePB1+nFAwSCeAAAAAAOgAAAAAIAACAAAACjSwmTwhdb2LRvSQ6DpFT/gjeW9xnXsl8mcNJj1aUYNCAAAADGsUGbV6nw6vU10goI1e4THZiMcEvA0bCNALzYy8PWTkAAAAA7+hr7VAaAz7olJrDiGz1dmG8FKXnlU7Qb5P52FLXy3+rkB4orrTpbkbd02EcDkwwzAcanJHmM61Q0RagTBPAE</DTS:Password>
         </DTS:ConnectionManager>
       </DTS:ObjectData>
     </DTS:ConnectionManager>
@@ -2332,12 +2332,12 @@ where [refTable].[CouponId] = ?</property>
     </DTS:Executable>
   </DTS:Executables>
   <DTS:DesignTimeProperties><![CDATA[<?xml version="1.0"?>
-<!--This CDATA section contains the layout information of the package. The section includes information such as (x,y) coordinates, width, and height.-->
-<!--If you manually edit this section and make a mistake, you can delete it. -->
-<!--The package will still be able to load normally but the previous layout information will be lost and the designer will automatically re-arrange the elements on the design surface.-->
+<!--Esta sección CDATA contiene la información de diseño del paquete. Esta sección incluye información como, por ejemplo, las coordenadas (x,y), el ancho y el alto.-->
+<!--Si edita manualmente esta sección y comete un error, puede eliminarlo. -->
+<!--El paquete podrá cargarse normalmente, pero se perderá la información de diseño anterior y el diseñador reorganizará los elementos automáticamente en la superficie de diseño.-->
 <Objects
   Version="8">
-  <!--Each node below will contain properties that do not affect runtime behavior.-->
+  <!--Cada uno de los nodos siguientes contiene propiedades que no afectan al comportamiento en tiempo de ejecución.-->
   <Package
     design-time-name="Package">
     <LayoutInfo>
@@ -2356,21 +2356,21 @@ where [refTable].[CouponId] = ?</property>
       <GraphLayout
         Capacity="8" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml" xmlns:mssgm="clr-namespace:Microsoft.SqlServer.Graph.Model;assembly=Microsoft.SqlServer.Graph">
         <NodeLayout
-          Size="201,42"
-          Id="Package\Data Flow Task\Actualizacion del registro"
-          TopLeft="997,328" />
-        <NodeLayout
           Size="174,42"
           Id="Package\Data Flow Task\Lectura Data JSON"
           TopLeft="362,225" />
         <NodeLayout
-          Size="187,42"
-          Id="Package\Data Flow Task\Inserccion del registro"
-          TopLeft="359,358" />
-        <NodeLayout
           Size="245,42"
           Id="Package\Data Flow Task\Verificacion de si existe el registro"
           TopLeft="730,225" />
+        <NodeLayout
+          Size="201,42"
+          Id="Package\Data Flow Task\Actualizacion del registro"
+          TopLeft="997,328" />
+        <NodeLayout
+          Size="187,42"
+          Id="Package\Data Flow Task\Inserccion del registro"
+          TopLeft="359,358" />
         <EdgeLayout
           Id="Package\Data Flow Task.Paths[Output 0]"
           TopLeft="536,246">
@@ -2425,7 +2425,7 @@ where [refTable].[CouponId] = ?</property>
           </EdgeLayout.Curve>
           <EdgeLayout.Labels>
             <mssgm:EdgeLabel
-              BoundingBox="-244.9250390625,41.7542579075426,129.350078125,16"
+              BoundingBox="-244.9250390625,41.7542579075426,111.6127734375,11.609375"
               RelativePosition="Any" />
           </EdgeLayout.Labels>
         </EdgeLayout>
@@ -2469,14 +2469,6 @@ where [refTable].[CouponId] = ?</property>
     </LayoutInfo>
   </TaskHost>
   <PipelineComponentMetadata
-    design-time-name="Package\Data Flow Task\Inserccion del registro">
-    <Properties>
-      <Property>
-        <Name>DataSourceViewID</Name>
-      </Property>
-    </Properties>
-  </PipelineComponentMetadata>
-  <PipelineComponentMetadata
     design-time-name="Package\Data Flow Task\Verificacion de si existe el registro">
     <Properties>
       <Property>
@@ -2494,6 +2486,14 @@ where [refTable].[CouponId] = ?</property>
         <Value
           type="q4:string">0</Value>
       </Property>
+      <Property>
+        <Name>DataSourceViewID</Name>
+      </Property>
+    </Properties>
+  </PipelineComponentMetadata>
+  <PipelineComponentMetadata
+    design-time-name="Package\Data Flow Task\Inserccion del registro">
+    <Properties>
       <Property>
         <Name>DataSourceViewID</Name>
       </Property>

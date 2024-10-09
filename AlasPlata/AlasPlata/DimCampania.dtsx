@@ -11,8 +11,8 @@
   DTS:LocaleID="1033"
   DTS:ObjectName="Package1"
   DTS:PackageType="5"
-  DTS:VersionBuild="9"
-  DTS:VersionGUID="{96529E52-E472-48A1-B9CD-133A7544A001}">
+  DTS:VersionBuild="11"
+  DTS:VersionGUID="{13CEDBE0-424A-4F82-AD90-16EF80247BDF}">
   <DTS:Property
     DTS:Name="PackageFormatVersion">8</DTS:Property>
   <DTS:ConnectionManagers>
@@ -23,11 +23,11 @@
       DTS:ObjectName="DestinationDW">
       <DTS:ObjectData>
         <DTS:ConnectionManager
-          DTS:ConnectionString="Data Source=localhost;User ID=js;Initial Catalog=AlasDePlataDW;Application Name=SSIS-Package1-{7D53BFE3-33D2-4A88-BBD8-01C01E497338}localhost.AlasDePlataDW.js;">
+          DTS:ConnectionString="Data Source=localhost;User ID=js;Initial Catalog=AlasDePlataDW;Persist Security Info=True;Application Name=SSIS-Package1-{7D53BFE3-33D2-4A88-BBD8-01C01E497338}localhost.AlasDePlataDW.js;">
           <DTS:Password
             DTS:Name="Password"
             Sensitive="1"
-            Encrypted="1">AQAAANCMnd8BFdERjHoAwE/Cl+sBAAAAVjEO+z0Wqk6tj7LRX+YGJAAAAAAIAAAARABUAFMAAAAQZgAAAAEAACAAAAACS4Q4tcrzcgk57aUELgzVs8Mf+4c0RM0kQZo9/shJjwAAAAAOgAAAAAIAACAAAADTxevOGDvM+HqvHfEJR0gHWdJJ9gQ/JC5OYGL25MfiXSAAAAAHkxY1JrHjZHAXgpokGn/GB5p48tn8lTILfQI4H3BGp0AAAAA8s4ApTZOdY42RwewQh13y39BPonw9tOj4ck0xz7w4RRQKyohkxc424kCa0BgDPke3/7C0N22aa2PeVgzvfvIQ</DTS:Password>
+            Encrypted="1">AQAAANCMnd8BFdERjHoAwE/Cl+sBAAAA9/P1hSVza0Ck2thzhUOQ4QAAAAAIAAAARABUAFMAAAAQZgAAAAEAACAAAAAc0yhDZRJd6R3volUoPcvvTxa9PcLFrgzrsLlMLIJn0wAAAAAOgAAAAAIAACAAAABTDdGffOj7GoVbaXTO/tFgp6rl+dcOtYg/mkxpSiHx6yAAAABHaLKoZUb5XqCC/GahxojmBx/ABM7re0l2nn/ivMDWRkAAAACb+IjpcgFQMdqx6SSXzH1q0iwLNCsCKYeTkdrSV3NPE6jUsBYfzz9fquEUs6nsG8bxcVqX2a2a0knok8bRc1bS</DTS:Password>
         </DTS:ConnectionManager>
       </DTS:ObjectData>
     </DTS:ConnectionManager>
@@ -44,7 +44,7 @@
           <DTS:Password
             DTS:Name="Password"
             Sensitive="1"
-            Encrypted="1">AQAAANCMnd8BFdERjHoAwE/Cl+sBAAAAVjEO+z0Wqk6tj7LRX+YGJAAAAAAIAAAARABUAFMAAAAQZgAAAAEAACAAAAAkUW/ZHzwxfqVOzs8A5ez1bKcRre1TqgaXKuBhoNctuQAAAAAOgAAAAAIAACAAAAAgn9upzr41TBtVOUZVCXEKHtq4cGlbCZpg/iB0b2UKGyAAAAAhvWvVziHHBOXaJtWnxe12koN6n3su5k/pPFdtAB2a0UAAAADIVtb0unvA1b/DfjazgMFksb2aVZqKURroKrkVpCTegdQfUuG9wnoS3l83Q4u8A3luJMVyRZ+KYHeY6Knfflrf</DTS:Password>
+            Encrypted="1">AQAAANCMnd8BFdERjHoAwE/Cl+sBAAAA9/P1hSVza0Ck2thzhUOQ4QAAAAAIAAAARABUAFMAAAAQZgAAAAEAACAAAACAKOIf7Lf1UDK9PR1s+ihkw9Y4//QU/i4MtvH0VDFSoQAAAAAOgAAAAAIAACAAAADBqPfWUVabrKZ1mzlZcxoOwfkKi3d+b7HpkKxcAsdZ+yAAAAByQ5upXcckWkgmMgOkIpWRqghZAmHh/HuICWg/UwZm6UAAAABW+LpUjppXMIQhdMwtZhT3Rh2shOGcP73IWsAlPW6cU3zYONBMp91x77lp5+is1+tKxhR4zP2ZQwgc3eAAbAdU</DTS:Password>
         </DTS:ConnectionManager>
       </DTS:ObjectData>
     </DTS:ConnectionManager>
@@ -808,7 +808,7 @@ public class ScriptMain : UserComponent
 
     public override void CreateNewOutputRows()
     {
-        String contentJson = File.ReadAllText(@"C:\Users\js\Documents\ID\Proyecto\CSV\Campaings\RecentCampaigns.json");
+        String contentJson = File.ReadAllText(@"C:\UES\IDAlasDePlataDW\CSV\Campaings\RecentCampaigns.json");
         JavaScriptSerializer jsonSerializer = new JavaScriptSerializer();
         MainJson mainJson = jsonSerializer.Deserialize<MainJson>(contentJson);
 
@@ -872,7 +872,7 @@ public class Output0Buffer: ScriptBuffer
             }
             else
             {
-                throw new InvalidOperationException("IsNull property cannot be set to False. Assign a value to the column instead.");
+                throw new InvalidOperationException("La propiedad IsNull no puede establecerse en False. En su lugar, asigne un valor a la columna.");
             }
         }
     }
@@ -894,7 +894,7 @@ public class Output0Buffer: ScriptBuffer
             }
             else
             {
-                throw new InvalidOperationException("IsNull property cannot be set to False. Assign a value to the column instead.");
+                throw new InvalidOperationException("La propiedad IsNull no puede establecerse en False. En su lugar, asigne un valor a la columna.");
             }
         }
     }
@@ -916,7 +916,7 @@ public class Output0Buffer: ScriptBuffer
             }
             else
             {
-                throw new InvalidOperationException("IsNull property cannot be set to False. Assign a value to the column instead.");
+                throw new InvalidOperationException("La propiedad IsNull no puede establecerse en False. En su lugar, asigne un valor a la columna.");
             }
         }
     }
@@ -938,7 +938,7 @@ public class Output0Buffer: ScriptBuffer
             }
             else
             {
-                throw new InvalidOperationException("IsNull property cannot be set to False. Assign a value to the column instead.");
+                throw new InvalidOperationException("La propiedad IsNull no puede establecerse en False. En su lugar, asigne un valor a la columna.");
             }
         }
     }
@@ -960,7 +960,7 @@ public class Output0Buffer: ScriptBuffer
             }
             else
             {
-                throw new InvalidOperationException("IsNull property cannot be set to False. Assign a value to the column instead.");
+                throw new InvalidOperationException("La propiedad IsNull no puede establecerse en False. En su lugar, asigne un valor a la columna.");
             }
         }
     }
@@ -982,7 +982,7 @@ public class Output0Buffer: ScriptBuffer
             }
             else
             {
-                throw new InvalidOperationException("IsNull property cannot be set to False. Assign a value to the column instead.");
+                throw new InvalidOperationException("La propiedad IsNull no puede establecerse en False. En su lugar, asigne un valor a la columna.");
             }
         }
     }
@@ -1004,7 +1004,7 @@ public class Output0Buffer: ScriptBuffer
             }
             else
             {
-                throw new InvalidOperationException("IsNull property cannot be set to False. Assign a value to the column instead.");
+                throw new InvalidOperationException("La propiedad IsNull no puede establecerse en False. En su lugar, asigne un valor a la columna.");
             }
         }
     }
@@ -1026,7 +1026,7 @@ public class Output0Buffer: ScriptBuffer
             }
             else
             {
-                throw new InvalidOperationException("IsNull property cannot be set to False. Assign a value to the column instead.");
+                throw new InvalidOperationException("La propiedad IsNull no puede establecerse en False. En su lugar, asigne un valor a la columna.");
             }
         }
     }
@@ -1048,7 +1048,7 @@ public class Output0Buffer: ScriptBuffer
             }
             else
             {
-                throw new InvalidOperationException("IsNull property cannot be set to False. Assign a value to the column instead.");
+                throw new InvalidOperationException("La propiedad IsNull no puede establecerse en False. En su lugar, asigne un valor a la columna.");
             }
         }
     }
@@ -1264,7 +1264,7 @@ public class Variables
     <msb:CodeName>SC_e6e06b7dcde54c089016673a834e033b</msb:CodeName>
     <msb:Language>msBuild</msb:Language>
     <msb:DisplayName>SC_e6e06b7dcde54c089016673a834e033b</msb:DisplayName>
-    <msb:ProjectId>{7BCC2A35-EE04-4478-8FC4-A7811AE9FFD3}</msb:ProjectId>
+    <msb:ProjectId>{19070C6E-8071-4F53-848E-76F74E71789D}</msb:ProjectId>
   </msb:PropertyGroup>
   <msb:ItemGroup>
     <msb:Project Include="SC_e6e06b7dcde54c089016673a834e033b.csproj" />
@@ -1479,28 +1479,28 @@ namespace SC_e6e06b7dcde54c089016673a834e033b
                     <arrayElement
                       dataType="System.String"><![CDATA[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
-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
+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
-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
+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
-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
+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
-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
+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
-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
+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
-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
+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
-LgQGlA4Eck0BAHAoJAAACjMZAgUGmgIEBpQoJQAACg4EcwUAAAZ9AwAABAYXWAoGAzLOAm8fAAAG
+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
@@ -1511,10 +1511,10 @@ excAAAQqIgIDfRcAAAQqHgJ7GAAABCoiAgN9GAAABCoeAnsZAAAEKiICA30ZAAAEKh4CexoAAAQq
 IgIDfRoAAAQqHgJ7GwAABCoiAgN9GwAABCoeAnscAAAEKiICA30cAAAEKh4Cex0AAAQqIgIDfR0A
 AAQqHgJ7HgAABCoiAgN9HgAABCoeAnsfAAAEKiICA30fAAAEKh4CeyAAAAQqIgIDfSAAAAQqHgJ7
 IQAABCoiAgN9IQAABCoeAnsiAAAEKiICA30iAAAEKh4CeyMAAAQqIgIDfSMAAAQqHgJ7JAAABCoi
-AgN9JAAABCqufiUAAAQtHnJfAQBw0AkAAAIoJwAACm8oAAAKcykAAAqAJQAABH4lAAAEKhp+JgAA
+AgN9JAAABCqufiUAAAQtHnJqAQBw0AkAAAIoJwAACm8oAAAKcykAAAqAJQAABH4lAAAEKhp+JgAA
 BCoeAoAmAAAEKhp+JwAABCoeAigqAAAKKi5zZwAABoAnAAAEKkJTSkIBAAEAAAAAAAwAAAB2NC4w
-LjMwMzE5AAAAAAUAbAAAADwRAAAjfgAAqBEAAFAQAAAjU3RyaW5ncwAAAAD4IQAA1AEAACNVUwDM
-IwAAEAAAACNHVUlEAAAA3CMAACQCAAAjQmxvYgAAAAAAAAACAAABVxWiCQkJAAAA+gEzABYAAAEA
+LjMwMzE5AAAAAAUAbAAAADwRAAAjfgAAqBEAAFAQAAAjU3RyaW5ncwAAAAD4IQAA3AEAACNVUwDU
+IwAAEAAAACNHVUlEAAAA5CMAACQCAAAjQmxvYgAAAAAAAAACAAABVxWiCQkJAAAA+gEzABYAAAEA
 AAAnAAAACgAAACcAAABoAAAAOwAAACoAAABtAAAAAgAAAAUAAAA0AAAAVAAAAAIAAAABAAAABQAA
 AAEAAAABAAAAAABzCQEAAAAAAAYAkgdNDAYAJghNDAYA3gYhDA8AwQwAAAYACwcMCwYAdQcMCwYA
 VgcMCwYADQgMCwYAsgcMCwYAywcMCwYAIgcMCwYAPQdtCAoA5gfVBQYADwC+AAYAQw59CgoAugvV
@@ -1665,30 +1665,30 @@ c2V0X2NhbXBhaWduX2NvdW50AE1pY3Jvc29mdC5TcWxTZXJ2ZXIuVHhTY3JpcHQATWljcm9zb2Z0
 LlNxbFNlcnZlci5QaXBlbGluZUhvc3QAUHJpbWVPdXRwdXQATW92ZU5leHQAUmVhZEFsbFRleHQA
 Z2V0X2NhbXBhaWduX3ByZXZpZXcAc2V0X2NhbXBhaWduX3ByZXZpZXcAQWRkUm93AGdldF9mcm9t
 aW5kZXgAc2V0X2Zyb21pbmRleABnZXRfY2FtcGFpZ25fa2V5AHNldF9jYW1wYWlnbl9rZXkAZ2V0
-X0Fzc2VtYmx5AAAAAICJQwA6AFwAVQBzAGUAcgBzAFwAagBzAFwARABvAGMAdQBtAGUAbgB0AHMA
-XABJAEQAXABQAHIAbwB5AGUAYwB0AG8AXABDAFMAVgBcAEMAYQBtAHAAYQBpAG4AZwBzAFwAUgBl
-AGMAZQBuAHQAQwBhAG0AcABhAGkAZwBuAHMALgBqAHMAbwBuAAAjUwBpAG4AIAB0AGkAcABvACAA
-ZABlACAARQBtAGEAaQBsAACAm0kAcwBOAHUAbABsACAAcAByAG8AcABlAHIAdAB5ACAAYwBhAG4A
-bgBvAHQAIABiAGUAIABzAGUAdAAgAHQAbwAgAEYAYQBsAHMAZQAuACAAQQBzAHMAaQBnAG4AIABh
-ACAAdgBhAGwAdQBlACAAdABvACAAdABoAGUAIABjAG8AbAB1AG0AbgAgAGkAbgBzAHQAZQBhAGQA
-LgAAEU8AdQB0AHAAdQB0ACAAMAAAcVMAQwBfAGUANgBlADAANgBiADcAZABjAGQAZQA1ADQAYwAw
-ADgAOQAwADEANgA2ADcAMwBhADgAMwA0AGUAMAAzADMAYgAuAFAAcgBvAHAAZQByAHQAaQBlAHMA
-LgBSAGUAcwBvAHUAcgBjAGUAcwAAAAAA524Ay7wOdkS0zsIB4hMTyAAEIAEBCAMgAAEFIAEBEREE
-IAEBDgUgAQERbQ0HBA4VEjkBEiASIBE9BAABDg4GMAEBHgAOBAoBEhwHFRKAgQESIAggABUSOQET
-AAYVEjkBEiAEIAATAAQAAQoOBQABET0KBCAAEU0DIAACCSADARJFHQgSSQUgAgEIHAMHAQgGAAII
-EkkOBSABHQgICAABEoCVEYCZBSAAEoCdByACAQ4SgJ0It3pcVhk04IkIiYRdzYCAzJEIMb84Vq02
-TjUDBhIUAwYSGAMGEgwDBhJRAgYOBwYVEl0BEiADBhFNAwYSZQMGEmkDBhIoBCABAQIFIAEBEU0L
-IAQBCB0IHRJFEkkFIAEBElEDIAAOCCAAFRJdARIgCSABARUSXQESIAQAABJlBAAAEmkFAAEBEmkE
-AAASKAMAAAEDKAAOAygAAgQoABFNCCgAFRJdARIgBAgAEmUECAASaQQIABIoCAEACAAAAAAAHgEA
-AQBUAhZXcmFwTm9uRXhjZXB0aW9uVGhyb3dzAQgBAAIAAAAAACgBACNTQ19lNmUwNmI3ZGNkZTU0
-YzA4OTAxNjY3M2E4MzRlMDMzYgAABQEAAAAAFgEAEUNvcHlyaWdodCBAICAyMDI0AABJAQAaLk5F
-VEZyYW1ld29yayxWZXJzaW9uPXY0LjcBAFQOFEZyYW1ld29ya0Rpc3BsYXlOYW1lEi5ORVQgRnJh
-bWV3b3JrIDQuNwQBAAAAAAAAtAAAAM7K774BAAAAkQAAAGxTeXN0ZW0uUmVzb3VyY2VzLlJlc291
-cmNlUmVhZGVyLCBtc2NvcmxpYiwgVmVyc2lvbj00LjAuMC4wLCBDdWx0dXJlPW5ldXRyYWwsIFB1
-YmxpY0tleVRva2VuPWI3N2E1YzU2MTkzNGUwODkjU3lzdGVtLlJlc291cmNlcy5SdW50aW1lUmVz
-b3VyY2VTZXQCAAAAAAAAAAAAAABQQURQQURQtAAAANBMAAAAAAAAAAAAAOpMAAAAIAAAAAAAAAAA
-AAAAAAAAAAAAAAAAAADcTAAAAAAAAAAAAAAAAF9Db3JEbGxNYWluAG1zY29yZWUuZGxsAAAAAAD/
-JQAgABAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+X0Fzc2VtYmx5AAAAAHNDADoAXABVAEUAUwBcAEkARABBAGwAYQBzAEQAZQBQAGwAYQB0AGEARABX
+AFwAQwBTAFYAXABDAGEAbQBwAGEAaQBuAGcAcwBcAFIAZQBjAGUAbgB0AEMAYQBtAHAAYQBpAGcA
+bgBzAC4AagBzAG8AbgAAI1MAaQBuACAAdABpAHAAbwAgAGQAZQAgAEUAbQBhAGkAbAAAgL1MAGEA
+IABwAHIAbwBwAGkAZQBkAGEAZAAgAEkAcwBOAHUAbABsACAAbgBvACAAcAB1AGUAZABlACAAZQBz
+AHQAYQBiAGwAZQBjAGUAcgBzAGUAIABlAG4AIABGAGEAbABzAGUALgAgAEUAbgAgAHMAdQAgAGwA
+dQBnAGEAcgAsACAAYQBzAGkAZwBuAGUAIAB1AG4AIAB2AGEAbABvAHIAIABhACAAbABhACAAYwBv
+AGwAdQBtAG4AYQAuAAARTwB1AHQAcAB1AHQAIAAwAABxUwBDAF8AZQA2AGUAMAA2AGIANwBkAGMA
+ZABlADUANABjADAAOAA5ADAAMQA2ADYANwAzAGEAOAAzADQAZQAwADMAMwBiAC4AUAByAG8AcABl
+AHIAdABpAGUAcwAuAFIAZQBzAG8AdQByAGMAZQBzAAAkkwaJL3pZQ7lWdSJ0l5bTAAQgAQEIAyAA
+AQUgAQEREQQgAQEOBSABARFtDQcEDhUSOQESIBIgET0EAAEODgYwAQEeAA4ECgESHAcVEoCBARIg
+CCAAFRI5ARMABhUSOQESIAQgABMABAABCg4FAAERPQoEIAARTQMgAAIJIAMBEkUdCBJJBSACAQgc
+AwcBCAYAAggSSQ4FIAEdCAgIAAESgJURgJkFIAASgJ0HIAIBDhKAnQi3elxWGTTgiQiJhF3NgIDM
+kQgxvzhWrTZONQMGEhQDBhIYAwYSDAMGElECBg4HBhUSXQESIAMGEU0DBhJlAwYSaQMGEigEIAEB
+AgUgAQERTQsgBAEIHQgdEkUSSQUgAQESUQMgAA4IIAAVEl0BEiAJIAEBFRJdARIgBAAAEmUEAAAS
+aQUAAQESaQQAABIoAwAAAQMoAA4DKAACBCgAEU0IKAAVEl0BEiAECAASZQQIABJpBAgAEigIAQAI
+AAAAAAAeAQABAFQCFldyYXBOb25FeGNlcHRpb25UaHJvd3MBCAEAAgAAAAAAKAEAI1NDX2U2ZTA2
+YjdkY2RlNTRjMDg5MDE2NjczYTgzNGUwMzNiAAAFAQAAAAAWAQARQ29weXJpZ2h0IEAgIDIwMjQA
+AEkBABouTkVURnJhbWV3b3JrLFZlcnNpb249djQuNwEAVA4URnJhbWV3b3JrRGlzcGxheU5hbWUS
+Lk5FVCBGcmFtZXdvcmsgNC43BAEAAAAAAAC0AAAAzsrvvgEAAACRAAAAbFN5c3RlbS5SZXNvdXJj
+ZXMuUmVzb3VyY2VSZWFkZXIsIG1zY29ybGliLCBWZXJzaW9uPTQuMC4wLjAsIEN1bHR1cmU9bmV1
+dHJhbCwgUHVibGljS2V5VG9rZW49Yjc3YTVjNTYxOTM0ZTA4OSNTeXN0ZW0uUmVzb3VyY2VzLlJ1
+bnRpbWVSZXNvdXJjZVNldAIAAAAAAAAAAAAAAFBBRFBBRFC0AAAA2EwAAAAAAAAAAAAA8kwAAAAg
+AAAAAAAAAAAAAAAAAAAAAAAAAAAAAORMAAAAAAAAAAAAAAAAX0NvckRsbE1haW4AbXNjb3JlZS5k
+bGwAAAAAAP8lACAAEAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
 AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
 AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
 AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
@@ -1719,7 +1719,7 @@ AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
 AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
 AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
 AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
-AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAEAAAAwAAAD8PAAAAAAAAAAAAAAAAAAAAAAA
+AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAEAAAAwAAAAEPQAAAAAAAAAAAAAAAAAAAAAA
 AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
 AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
 AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
@@ -2023,12 +2023,12 @@ where [refTable].[CampaniaId] = ?</property>
     </DTS:Executable>
   </DTS:Executables>
   <DTS:DesignTimeProperties><![CDATA[<?xml version="1.0"?>
-<!--This CDATA section contains the layout information of the package. The section includes information such as (x,y) coordinates, width, and height.-->
-<!--If you manually edit this section and make a mistake, you can delete it. -->
-<!--The package will still be able to load normally but the previous layout information will be lost and the designer will automatically re-arrange the elements on the design surface.-->
+<!--Esta sección CDATA contiene la información de diseño del paquete. Esta sección incluye información como, por ejemplo, las coordenadas (x,y), el ancho y el alto.-->
+<!--Si edita manualmente esta sección y comete un error, puede eliminarlo. -->
+<!--El paquete podrá cargarse normalmente, pero se perderá la información de diseño anterior y el diseñador reorganizará los elementos automáticamente en la superficie de diseño.-->
 <Objects
   Version="8">
-  <!--Each node below will contain properties that do not affect runtime behavior.-->
+  <!--Cada uno de los nodos siguientes contiene propiedades que no afectan al comportamiento en tiempo de ejecución.-->
   <Package
     design-time-name="Package">
     <LayoutInfo>
@@ -2054,6 +2054,14 @@ where [refTable].[CampaniaId] = ?</property>
           Size="258,42"
           Id="Package\Data Flow Task\Verificacion de existencia de registro"
           TopLeft="595,158" />
+        <NodeLayout
+          Size="207,42"
+          Id="Package\Data Flow Task\Insercion nuevos registros"
+          TopLeft="184,361" />
+        <NodeLayout
+          Size="254,42"
+          Id="Package\Data Flow Task\Actualzicacion del registro existente"
+          TopLeft="938,354" />
         <EdgeLayout
           Id="Package\Data Flow Task.Paths[Output 0]"
           TopLeft="367,176">
@@ -2076,10 +2084,6 @@ where [refTable].[CampaniaId] = ?</property>
             <EdgeLabelCollection />
           </EdgeLayout.Labels>
         </EdgeLayout>
-        <NodeLayout
-          Size="207,42"
-          Id="Package\Data Flow Task\Insercion nuevos registros"
-          TopLeft="184,361" />
         <EdgeLayout
           Id="Package\Data Flow Task.Paths[Lookup No Match Output]"
           TopLeft="682.333333333333,200">
@@ -2116,10 +2120,6 @@ where [refTable].[CampaniaId] = ?</property>
               RelativePosition="Any" />
           </EdgeLayout.Labels>
         </EdgeLayout>
-        <NodeLayout
-          Size="254,42"
-          Id="Package\Data Flow Task\Actualzicacion del registro existente"
-          TopLeft="938,354" />
         <EdgeLayout
           Id="Package\Data Flow Task.Paths[Lookup Match Output]"
           TopLeft="765.666666666667,200">
@@ -2165,7 +2165,7 @@ where [refTable].[CampaniaId] = ?</property>
       <Property>
         <Name>OverwriteParamsSQLProp</Name>
         <Value
-          type="q2:boolean">false</Value>
+          type="q2:string">false</Value>
       </Property>
       <Property>
         <Name>UsedTableName</Name>
@@ -2175,7 +2175,7 @@ where [refTable].[CampaniaId] = ?</property>
       <Property>
         <Name>TableInfoObjectType</Name>
         <Value
-          type="q4:int">0</Value>
+          type="q4:string">0</Value>
       </Property>
       <Property>
         <Name>DataSourceViewID</Name>
