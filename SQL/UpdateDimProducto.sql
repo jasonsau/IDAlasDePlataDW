@@ -3,6 +3,7 @@ ALTER PROCEDURE UpdateDimProducto(
 	@NombreProducto VARCHAR(500),
 	@TipoProducto VARCHAR(50),
 	@MarcaProducto VARCHAR(50),
+	@FabricanteProducto VARCHAR(50),
 	@DescripcionProducto VARCHAR(max),
 	@CategoriaProducto VARCHAR(50),
 	@EstadoProducto VARCHAR(15),
@@ -14,7 +15,8 @@ BEGIN
 	UPDATE DimProducto SET NombreProducto = @NombreProducto,
 		TipoProducto = @TipoProducto,
 		MarcaProducto = @MarcaProducto,
-		DescripccionProducto = @DescripcionProducto,
+		FabricanteProducto = @FabricanteProducto,
+		DescripcionProducto = @DescripcionProducto,
 		CategoriaProducto = @CategoriaProducto,
 		EstadoProducto = @EstadoProducto,
 		UnidadProducto = @UnidadProducto,
@@ -23,4 +25,6 @@ BEGIN
 		WHERE ProductoKey = @ProductoKey;
 END;
 
-EXECUTE UpdateDimProducto ?, ?, ?, ?, ?, ?, ?, ?, ?
+EXECUTE UpdateDimProducto ?,?,?,?,?,?,?,?,?,?,?;
+
+DROP PROCEDURE UpdateDimProducto;

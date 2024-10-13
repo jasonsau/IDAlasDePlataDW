@@ -1,15 +1,19 @@
 
 CREATE PROCEDURE UpdateDimCliente(
-	@clienteKey INT,
-	@email VARCHAR(50),
-	@Nombre VARCHAR(255),
-	@Telefono VARCHAR(50)
+	@ClienteKey INT,
+	@Email VARCHAR(50),
+	@NombreCliente VARCHAR(255),
+	@Telefono VARCHAR(50),
+	@NombreEmpresa VARCHAR(50)
 ) AS BEGIN 
 	UPDATE DimCliente SET 
-	NombreCliente=@Nombre,
+	NombreCliente=@NombreCliente,
 	Telefono=@Telefono,
-	Email=@email
-	WHERE ClienteKey = @clienteKey;
+	Email=@Email,
+	NombreEmpresa=@NombreEmpresa
+	WHERE ClienteKey = @ClienteKey;
 END;
 
-EXEC UpdateDimCliente ?, ?, ?,
+EXEC UpdateDimCliente ?,?,?,?,?;
+
+DROP PROCEDURE UpdateDimCliente;
