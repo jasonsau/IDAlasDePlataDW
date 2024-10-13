@@ -11,8 +11,8 @@
   DTS:LocaleID="1033"
   DTS:ObjectName="DimCliente"
   DTS:PackageType="5"
-  DTS:VersionBuild="19"
-  DTS:VersionGUID="{1D663394-28C8-4F5F-9BD8-D83A56F00059}">
+  DTS:VersionBuild="28"
+  DTS:VersionGUID="{9428C83C-1DDE-4C10-985A-D67D52641E11}">
   <DTS:Property
     DTS:Name="PackageFormatVersion">8</DTS:Property>
   <DTS:ConnectionManagers>
@@ -27,7 +27,7 @@
           <DTS:Password
             DTS:Name="Password"
             Sensitive="1"
-            Encrypted="1">AQAAANCMnd8BFdERjHoAwE/Cl+sBAAAA9/P1hSVza0Ck2thzhUOQ4QAAAAAIAAAARABUAFMAAAAQZgAAAAEAACAAAACNtgYE1duKX+s905Otx7rRxcoir3yPhOlwpCZfKU6qZgAAAAAOgAAAAAIAACAAAAA2ish8oH6/y/AtIY7L+KF8SYCTxC7iqmBUPgzJ4ZblGSAAAACi9Sj2+wMVRlb7VJ++Rqe39r5k3APo6zzyjFiduBZhYUAAAABGBevhahgPsBf2v9v1ygZoBufXgKdpFmzGancKvNDygbrXG89NNcSHlxdQS8G2tM9OnCa21jxYBx53iqxkAtWE</DTS:Password>
+            Encrypted="1">AQAAANCMnd8BFdERjHoAwE/Cl+sBAAAA9/P1hSVza0Ck2thzhUOQ4QAAAAAIAAAARABUAFMAAAAQZgAAAAEAACAAAABX2NnyRCB95GGNaHCYfUKmI95Nb3tUOCfkHX4uTN7qmwAAAAAOgAAAAAIAACAAAADESSqXJwpQTjEb8LTKP3dR80sZvn2tcDSg06bQH9O8qiAAAACDXE5PFsFYsdVcef7c0Bd407qQTq/WvPkY2Zgq3gZXaEAAAABuI4U3ao+vI4FvN5rJHqkTwCs3SUg7lbXS5McaiJaI0EQErRonw5egQ+EtN9IRvxPKYWEVuddzacEf74rosaxk</DTS:Password>
         </DTS:ConnectionManager>
       </DTS:ObjectData>
     </DTS:ConnectionManager>
@@ -44,11 +44,22 @@
           <DTS:Password
             DTS:Name="Password"
             Sensitive="1"
-            Encrypted="1">AQAAANCMnd8BFdERjHoAwE/Cl+sBAAAA9/P1hSVza0Ck2thzhUOQ4QAAAAAIAAAARABUAFMAAAAQZgAAAAEAACAAAADyqhXNWJDNpX/gCgKTicX7Vh967wbN7VHdXd2ioj/eEwAAAAAOgAAAAAIAACAAAAC0cRFnSpvlS9/05Eg0ZOSRfRvShmNe2xyiHTEgHLW/2yAAAADnLeuXGWuHB7IkcjUjgc7GOB5J435r1CRWdYTuX4NFvkAAAABVpefVesPevFiklo+a/uudbfXyeYAzxmFwrHfHYxKfcWZ9My+TpvxAgYROw4EwbV8giq7XykmMYGGJpdeMmPOr</DTS:Password>
+            Encrypted="1">AQAAANCMnd8BFdERjHoAwE/Cl+sBAAAA9/P1hSVza0Ck2thzhUOQ4QAAAAAIAAAARABUAFMAAAAQZgAAAAEAACAAAABIG32TbXlWKJQ3WXBdGcM14DlTwJAQA3We6Q1c+NvHwwAAAAAOgAAAAAIAACAAAACLshljPsru0jJg/zI7H6Hqc8coV2AOuHLWnfMLZXmhFyAAAACIIoZBj1mhks7N9EZtr+qQ/yMdU6TXG6ZnJTuIudOvk0AAAAD5Elkls9VZd5sINoYIaDcXlUgPKPfge8HFz7N7CjSu9rRS3L8nPnArmrbL6jwiZ+bdDkF/9mKR78+V27FdFwcz</DTS:Password>
         </DTS:ConnectionManager>
       </DTS:ObjectData>
     </DTS:ConnectionManager>
   </DTS:ConnectionManagers>
+  <DTS:PackageParameters>
+    <DTS:PackageParameter
+      DTS:CreationName=""
+      DTS:DataType="8"
+      DTS:DTSID="{B2E8B3DB-6B7D-4852-B8E7-5F12BD365516}"
+      DTS:ObjectName="JsonFilePath">
+      <DTS:Property
+        DTS:DataType="8"
+        DTS:Name="ParameterValue">C:\UES\IDAlasDePlataDW\CSV\Contacts\ListContacts.json</DTS:Property>
+    </DTS:PackageParameter>
+  </DTS:PackageParameters>
   <DTS:Variables />
   <DTS:Executables>
     <DTS:Executable
@@ -83,7 +94,7 @@
                   description="The SQL command to be executed."
                   expressionType="Notify"
                   name="SqlCommand"
-                  UITypeEditor="Microsoft.DataTransformationServices.Controls.ModalMultilineStringEditor">EXEC UpdateDimCliente ?, ?, ?, ?</property>
+                  UITypeEditor="Microsoft.DataTransformationServices.Controls.ModalMultilineStringEditor">EXEC UpdateDimCliente ?, ?, ?, ?,?</property>
                 <property
                   dataType="System.Int32"
                   description="Specifies the column code page to use when code page information is unavailable from the data source."
@@ -106,42 +117,63 @@
                   name="OLE DB Command Input">
                   <inputColumns>
                     <inputColumn
+                      refId="Package\Data Flow Task\Actualizacion Registros Existentes.Inputs[OLE DB Command Input].Columns[Telefono]"
+                      cachedCodepage="1252"
+                      cachedDataType="str"
+                      cachedLength="50"
+                      cachedName="Telefono"
+                      externalMetadataColumnId="Package\Data Flow Task\Actualizacion Registros Existentes.Inputs[OLE DB Command Input].ExternalColumns[@Telefono]"
+                      lineageId="Package\Data Flow Task\Lectura Archivo JSON.Outputs[Output 0].Columns[Telefono]" />
+                    <inputColumn
                       refId="Package\Data Flow Task\Actualizacion Registros Existentes.Inputs[OLE DB Command Input].Columns[ClienteKey]"
                       cachedDataType="i4"
                       cachedName="ClienteKey"
-                      externalMetadataColumnId="Package\Data Flow Task\Actualizacion Registros Existentes.Inputs[OLE DB Command Input].ExternalColumns[@clienteKey]"
+                      externalMetadataColumnId="Package\Data Flow Task\Actualizacion Registros Existentes.Inputs[OLE DB Command Input].ExternalColumns[@ClienteKey]"
                       lineageId="Package\Data Flow Task\Verificacion Existe.Outputs[Lookup Match Output].Columns[ClienteKey]" />
                     <inputColumn
-                      refId="Package\Data Flow Task\Actualizacion Registros Existentes.Inputs[OLE DB Command Input].Columns[contact_email]"
+                      refId="Package\Data Flow Task\Actualizacion Registros Existentes.Inputs[OLE DB Command Input].Columns[Email]"
                       cachedCodepage="1252"
                       cachedDataType="str"
                       cachedLength="50"
-                      cachedName="contact_email"
-                      externalMetadataColumnId="Package\Data Flow Task\Actualizacion Registros Existentes.Inputs[OLE DB Command Input].ExternalColumns[@email]"
-                      lineageId="Package\Data Flow Task\Lectura Archivo JSON.Outputs[Output 0].Columns[contact_email]" />
+                      cachedName="Email"
+                      externalMetadataColumnId="Package\Data Flow Task\Actualizacion Registros Existentes.Inputs[OLE DB Command Input].ExternalColumns[@Email]"
+                      lineageId="Package\Data Flow Task\Lectura Archivo JSON.Outputs[Output 0].Columns[Email]" />
                     <inputColumn
-                      refId="Package\Data Flow Task\Actualizacion Registros Existentes.Inputs[OLE DB Command Input].Columns[firstname]"
+                      refId="Package\Data Flow Task\Actualizacion Registros Existentes.Inputs[OLE DB Command Input].Columns[NombreCliente]"
                       cachedCodepage="1252"
                       cachedDataType="str"
                       cachedLength="50"
-                      cachedName="firstname"
-                      externalMetadataColumnId="Package\Data Flow Task\Actualizacion Registros Existentes.Inputs[OLE DB Command Input].ExternalColumns[@Nombre]"
-                      lineageId="Package\Data Flow Task\Lectura Archivo JSON.Outputs[Output 0].Columns[firstname]" />
+                      cachedName="NombreCliente"
+                      externalMetadataColumnId="Package\Data Flow Task\Actualizacion Registros Existentes.Inputs[OLE DB Command Input].ExternalColumns[@NombreCliente]"
+                      lineageId="Package\Data Flow Task\Lectura Archivo JSON.Outputs[Output 0].Columns[NombreCliente]" />
                     <inputColumn
-                      refId="Package\Data Flow Task\Actualizacion Registros Existentes.Inputs[OLE DB Command Input].Columns[phone]"
+                      refId="Package\Data Flow Task\Actualizacion Registros Existentes.Inputs[OLE DB Command Input].Columns[NombreEmpresa]"
                       cachedCodepage="1252"
                       cachedDataType="str"
-                      cachedLength="50"
-                      cachedName="phone"
-                      externalMetadataColumnId="Package\Data Flow Task\Actualizacion Registros Existentes.Inputs[OLE DB Command Input].ExternalColumns[@Telefono]"
-                      lineageId="Package\Data Flow Task\Lectura Archivo JSON.Outputs[Output 0].Columns[phone]" />
+                      cachedLength="255"
+                      cachedName="NombreEmpresa"
+                      externalMetadataColumnId="Package\Data Flow Task\Actualizacion Registros Existentes.Inputs[OLE DB Command Input].ExternalColumns[@NombreEmpresa]"
+                      lineageId="Package\Data Flow Task\Lectura Archivo JSON.Outputs[Output 0].Columns[NombreEmpresa]" />
                   </inputColumns>
                   <externalMetadataColumns
                     isUsed="True">
                     <externalMetadataColumn
-                      refId="Package\Data Flow Task\Actualizacion Registros Existentes.Inputs[OLE DB Command Input].ExternalColumns[@clienteKey]"
+                      refId="Package\Data Flow Task\Actualizacion Registros Existentes.Inputs[OLE DB Command Input].ExternalColumns[@Telefono]"
+                      codePage="1252"
+                      dataType="str"
+                      length="50"
+                      name="@Telefono">
+                      <properties>
+                        <property
+                          dataType="System.Int32"
+                          description="Parameter information.  Matches OLE DB's DBPARAMFLAGSENUM values."
+                          name="DBParamInfoFlags">65</property>
+                      </properties>
+                    </externalMetadataColumn>
+                    <externalMetadataColumn
+                      refId="Package\Data Flow Task\Actualizacion Registros Existentes.Inputs[OLE DB Command Input].ExternalColumns[@ClienteKey]"
                       dataType="i4"
-                      name="@clienteKey">
+                      name="@ClienteKey">
                       <properties>
                         <property
                           dataType="System.Int32"
@@ -150,11 +182,11 @@
                       </properties>
                     </externalMetadataColumn>
                     <externalMetadataColumn
-                      refId="Package\Data Flow Task\Actualizacion Registros Existentes.Inputs[OLE DB Command Input].ExternalColumns[@email]"
+                      refId="Package\Data Flow Task\Actualizacion Registros Existentes.Inputs[OLE DB Command Input].ExternalColumns[@Email]"
                       codePage="1252"
                       dataType="str"
                       length="50"
-                      name="@email">
+                      name="@Email">
                       <properties>
                         <property
                           dataType="System.Int32"
@@ -163,11 +195,11 @@
                       </properties>
                     </externalMetadataColumn>
                     <externalMetadataColumn
-                      refId="Package\Data Flow Task\Actualizacion Registros Existentes.Inputs[OLE DB Command Input].ExternalColumns[@Nombre]"
+                      refId="Package\Data Flow Task\Actualizacion Registros Existentes.Inputs[OLE DB Command Input].ExternalColumns[@NombreCliente]"
                       codePage="1252"
                       dataType="str"
                       length="255"
-                      name="@Nombre">
+                      name="@NombreCliente">
                       <properties>
                         <property
                           dataType="System.Int32"
@@ -176,11 +208,11 @@
                       </properties>
                     </externalMetadataColumn>
                     <externalMetadataColumn
-                      refId="Package\Data Flow Task\Actualizacion Registros Existentes.Inputs[OLE DB Command Input].ExternalColumns[@Telefono]"
+                      refId="Package\Data Flow Task\Actualizacion Registros Existentes.Inputs[OLE DB Command Input].ExternalColumns[@NombreEmpresa]"
                       codePage="1252"
                       dataType="str"
                       length="50"
-                      name="@Telefono">
+                      name="@NombreEmpresa">
                       <properties>
                         <property
                           dataType="System.Int32"
@@ -273,37 +305,51 @@
                   name="ADO NET Destination Input">
                   <inputColumns>
                     <inputColumn
-                      refId="Package\Data Flow Task\Insercion nuevos Registros.Inputs[ADO NET Destination Input].Columns[zuid]"
+                      refId="Package\Data Flow Task\Insercion nuevos Registros.Inputs[ADO NET Destination Input].Columns[NombreCliente]"
                       cachedCodepage="1252"
                       cachedDataType="str"
                       cachedLength="50"
-                      cachedName="zuid"
-                      externalMetadataColumnId="Package\Data Flow Task\Insercion nuevos Registros.Inputs[ADO NET Destination Input].ExternalColumns[ClienteId]"
-                      lineageId="Package\Data Flow Task\Lectura Archivo JSON.Outputs[Output 0].Columns[zuid]" />
-                    <inputColumn
-                      refId="Package\Data Flow Task\Insercion nuevos Registros.Inputs[ADO NET Destination Input].Columns[firstname]"
-                      cachedCodepage="1252"
-                      cachedDataType="str"
-                      cachedLength="50"
-                      cachedName="firstname"
+                      cachedName="NombreCliente"
                       externalMetadataColumnId="Package\Data Flow Task\Insercion nuevos Registros.Inputs[ADO NET Destination Input].ExternalColumns[NombreCliente]"
-                      lineageId="Package\Data Flow Task\Lectura Archivo JSON.Outputs[Output 0].Columns[firstname]" />
+                      lineageId="Package\Data Flow Task\Lectura Archivo JSON.Outputs[Output 0].Columns[NombreCliente]" />
                     <inputColumn
-                      refId="Package\Data Flow Task\Insercion nuevos Registros.Inputs[ADO NET Destination Input].Columns[phone]"
+                      refId="Package\Data Flow Task\Insercion nuevos Registros.Inputs[ADO NET Destination Input].Columns[ClienteId]"
                       cachedCodepage="1252"
                       cachedDataType="str"
                       cachedLength="50"
-                      cachedName="phone"
-                      externalMetadataColumnId="Package\Data Flow Task\Insercion nuevos Registros.Inputs[ADO NET Destination Input].ExternalColumns[Telefono]"
-                      lineageId="Package\Data Flow Task\Lectura Archivo JSON.Outputs[Output 0].Columns[phone]" />
+                      cachedName="ClienteId"
+                      externalMetadataColumnId="Package\Data Flow Task\Insercion nuevos Registros.Inputs[ADO NET Destination Input].ExternalColumns[ClienteId]"
+                      lineageId="Package\Data Flow Task\Lectura Archivo JSON.Outputs[Output 0].Columns[ClienteId]" />
                     <inputColumn
-                      refId="Package\Data Flow Task\Insercion nuevos Registros.Inputs[ADO NET Destination Input].Columns[contact_email]"
+                      refId="Package\Data Flow Task\Insercion nuevos Registros.Inputs[ADO NET Destination Input].Columns[Email]"
                       cachedCodepage="1252"
                       cachedDataType="str"
                       cachedLength="50"
-                      cachedName="contact_email"
+                      cachedName="Email"
                       externalMetadataColumnId="Package\Data Flow Task\Insercion nuevos Registros.Inputs[ADO NET Destination Input].ExternalColumns[Email]"
-                      lineageId="Package\Data Flow Task\Lectura Archivo JSON.Outputs[Output 0].Columns[contact_email]" />
+                      lineageId="Package\Data Flow Task\Lectura Archivo JSON.Outputs[Output 0].Columns[Email]" />
+                    <inputColumn
+                      refId="Package\Data Flow Task\Insercion nuevos Registros.Inputs[ADO NET Destination Input].Columns[Telefono]"
+                      cachedCodepage="1252"
+                      cachedDataType="str"
+                      cachedLength="50"
+                      cachedName="Telefono"
+                      externalMetadataColumnId="Package\Data Flow Task\Insercion nuevos Registros.Inputs[ADO NET Destination Input].ExternalColumns[Telefono]"
+                      lineageId="Package\Data Flow Task\Lectura Archivo JSON.Outputs[Output 0].Columns[Telefono]" />
+                    <inputColumn
+                      refId="Package\Data Flow Task\Insercion nuevos Registros.Inputs[ADO NET Destination Input].Columns[NombreEmpresa]"
+                      cachedCodepage="1252"
+                      cachedDataType="str"
+                      cachedLength="255"
+                      cachedName="NombreEmpresa"
+                      externalMetadataColumnId="Package\Data Flow Task\Insercion nuevos Registros.Inputs[ADO NET Destination Input].ExternalColumns[NombreEmpresa]"
+                      lineageId="Package\Data Flow Task\Lectura Archivo JSON.Outputs[Output 0].Columns[NombreEmpresa]" />
+                    <inputColumn
+                      refId="Package\Data Flow Task\Insercion nuevos Registros.Inputs[ADO NET Destination Input].Columns[FechaCreacion]"
+                      cachedDataType="date"
+                      cachedName="FechaCreacion"
+                      externalMetadataColumnId="Package\Data Flow Task\Insercion nuevos Registros.Inputs[ADO NET Destination Input].ExternalColumns[FechaDeCreacion]"
+                      lineageId="Package\Data Flow Task\Lectura Archivo JSON.Outputs[Output 0].Columns[FechaCreacion]" />
                   </inputColumns>
                   <externalMetadataColumns
                     isUsed="True">
@@ -331,6 +377,15 @@
                       dataType="wstr"
                       length="50"
                       name="Email" />
+                    <externalMetadataColumn
+                      refId="Package\Data Flow Task\Insercion nuevos Registros.Inputs[ADO NET Destination Input].ExternalColumns[NombreEmpresa]"
+                      dataType="wstr"
+                      length="255"
+                      name="NombreEmpresa" />
+                    <externalMetadataColumn
+                      refId="Package\Data Flow Task\Insercion nuevos Registros.Inputs[ADO NET Destination Input].ExternalColumns[FechaDeCreacion]"
+                      dataType="dbTimeStamp"
+                      name="FechaDeCreacion" />
                   </externalMetadataColumns>
                 </input>
               </inputs>
@@ -621,21 +676,43 @@ public class ScriptMain : UserComponent
          */
     }
 
+    private string GetContactName(string firstName, string lastName)
+    {
+        firstName = string.IsNullOrWhiteSpace(firstName) ? null : firstName.Trim();
+        lastName = string.IsNullOrWhiteSpace(lastName) ? null : lastName.Trim();
+
+        if (firstName == null && lastName == null)
+            return "Sin Nombre";
+
+        if (firstName == null)
+            return lastName;
+        if (lastName == null)
+            return firstName;
+
+        return $"{firstName} {lastName}";
+    }
+
+
     public override void CreateNewOutputRows()
     {
-        String jsonContent = File.ReadAllText(@"C:\Users\js\Documents\ID\Proyecto\CSV\Contacts\ListContacts.json");
-        JavaScriptSerializer js = new JavaScriptSerializer();
-        MainJson mainJson = js.Deserialize<MainJson>(jsonContent);
-        foreach(Contacts contact in mainJson.list_of_details)
+        try
         {
-            Output0Buffer.AddRow();
-            Output0Buffer.firstname = contact.firstname + " " + contact.lastname;
-            Output0Buffer.lastname = contact.lastname;
-            Output0Buffer.phone = contact.phone;
-            Output0Buffer.zuid = contact.zuid;
-            Output0Buffer.contactemail = contact.contact_email;
-            Output0Buffer.addedtime = contact.added_time;
-            Output0Buffer.companyname = contact.companyname;
+            String jsonContent = File.ReadAllText(Variables.JsonFilePath);
+            JavaScriptSerializer js = new JavaScriptSerializer();
+            MainJson mainJson = js.Deserialize<MainJson>(jsonContent);
+            foreach (Contacts contact in mainJson.list_of_details)
+            {
+                Output0Buffer.AddRow();
+                Output0Buffer.NombreCliente = GetContactName(contact.firstname, contact.lastname);
+                Output0Buffer.Telefono = string.IsNullOrEmpty(contact.phone) ? "Sin Telefono" : contact.phone;
+                Output0Buffer.ClienteId = contact.zuid;
+                Output0Buffer.Email = contact.contact_email;
+                Output0Buffer.NombreEmpresa = string.IsNullOrEmpty(contact.companyname) ? "Sin Empresa" : contact.companyname;
+                Output0Buffer.FechaCreacion = DateTime.Parse(contact.added_time);
+            }
+        } catch (Exception ex)
+        {
+            throw new Exception("Error al leer datos", ex);
         }
     }
 
@@ -666,14 +743,14 @@ public class Output0Buffer: ScriptBuffer
     {
     }
 
-    public String firstname
+    public String NombreCliente
     {
         set
         {
             this[0] = value;
         }
     }
-    public bool firstname_IsNull
+    public bool NombreCliente_IsNull
     {
         set
         {
@@ -683,19 +760,19 @@ public class Output0Buffer: ScriptBuffer
             }
             else
             {
-                throw new InvalidOperationException("IsNull property cannot be set to False. Assign a value to the column instead.");
+                throw new InvalidOperationException("La propiedad IsNull no puede establecerse en False. En su lugar, asigne un valor a la columna.");
             }
         }
     }
 
-    public String zuid
+    public String ClienteId
     {
         set
         {
             this[1] = value;
         }
     }
-    public bool zuid_IsNull
+    public bool ClienteId_IsNull
     {
         set
         {
@@ -705,19 +782,19 @@ public class Output0Buffer: ScriptBuffer
             }
             else
             {
-                throw new InvalidOperationException("IsNull property cannot be set to False. Assign a value to the column instead.");
+                throw new InvalidOperationException("La propiedad IsNull no puede establecerse en False. En su lugar, asigne un valor a la columna.");
             }
         }
     }
 
-    public String lastname
+    public String Email
     {
         set
         {
             this[2] = value;
         }
     }
-    public bool lastname_IsNull
+    public bool Email_IsNull
     {
         set
         {
@@ -727,19 +804,19 @@ public class Output0Buffer: ScriptBuffer
             }
             else
             {
-                throw new InvalidOperationException("IsNull property cannot be set to False. Assign a value to the column instead.");
+                throw new InvalidOperationException("La propiedad IsNull no puede establecerse en False. En su lugar, asigne un valor a la columna.");
             }
         }
     }
 
-    public String contactemail
+    public String Telefono
     {
         set
         {
             this[3] = value;
         }
     }
-    public bool contactemail_IsNull
+    public bool Telefono_IsNull
     {
         set
         {
@@ -749,19 +826,19 @@ public class Output0Buffer: ScriptBuffer
             }
             else
             {
-                throw new InvalidOperationException("IsNull property cannot be set to False. Assign a value to the column instead.");
+                throw new InvalidOperationException("La propiedad IsNull no puede establecerse en False. En su lugar, asigne un valor a la columna.");
             }
         }
     }
 
-    public String companyname
+    public DateTime FechaCreacion
     {
         set
         {
             this[4] = value;
         }
     }
-    public bool companyname_IsNull
+    public bool FechaCreacion_IsNull
     {
         set
         {
@@ -771,19 +848,19 @@ public class Output0Buffer: ScriptBuffer
             }
             else
             {
-                throw new InvalidOperationException("IsNull property cannot be set to False. Assign a value to the column instead.");
+                throw new InvalidOperationException("La propiedad IsNull no puede establecerse en False. En su lugar, asigne un valor a la columna.");
             }
         }
     }
 
-    public String phone
+    public String NombreEmpresa
     {
         set
         {
             this[5] = value;
         }
     }
-    public bool phone_IsNull
+    public bool NombreEmpresa_IsNull
     {
         set
         {
@@ -793,29 +870,7 @@ public class Output0Buffer: ScriptBuffer
             }
             else
             {
-                throw new InvalidOperationException("IsNull property cannot be set to False. Assign a value to the column instead.");
-            }
-        }
-    }
-
-    public String addedtime
-    {
-        set
-        {
-            this[6] = value;
-        }
-    }
-    public bool addedtime_IsNull
-    {
-        set
-        {
-            if (value)
-            {
-                SetNull(6);
-            }
-            else
-            {
-                throw new InvalidOperationException("IsNull property cannot be set to False. Assign a value to the column instead.");
+                throw new InvalidOperationException("La propiedad IsNull no puede establecerse en False. En su lugar, asigne un valor a la columna.");
             }
         }
     }
@@ -956,6 +1011,14 @@ public class Variables
         ParentComponent = Component;
     }
 
+    public String JsonFilePath
+    {
+        get
+        {
+            return (String)(ParentComponent.ReadOnlyVariables["JsonFilePath"].GetValueWithContext(ScriptComponent.EvaluatorContext));
+        }
+    }
+
 }
 ]]></arrayElement>
                     <arrayElement
@@ -969,7 +1032,7 @@ public class Variables
     <msb:CodeName>SC_63a64f4921f348eebedb80c1309f33c9</msb:CodeName>
     <msb:Language>msBuild</msb:Language>
     <msb:DisplayName>SC_63a64f4921f348eebedb80c1309f33c9</msb:DisplayName>
-    <msb:ProjectId>{F0AC55F4-BD3F-45FE-9BF0-B3C12A579BB3}</msb:ProjectId>
+    <msb:ProjectId>{9D621459-6469-4776-9A52-05AE7C7BE341}</msb:ProjectId>
   </msb:PropertyGroup>
   <msb:ItemGroup>
     <msb:Project Include="SC_63a64f4921f348eebedb80c1309f33c9.csproj" />
@@ -1274,185 +1337,203 @@ namespace SC_63a64f4921f348eebedb80c1309f33c9
                     <arrayElement
                       dataType="System.String"><![CDATA[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
-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
+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
-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
+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
-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
-igUAAAEAigUAAAEAigUAAAEA4gkAAAIAMggAAAMAywkAAAQArgcAAAEAYQoAAAEAYQoAAAEAigUA
-AAEAigUAAAEAigUAAAEAigUAAAEAigUAAAEAigUAAAEAigUAAAEAigUAAAEAigUAAAEAigUAAAEA
-igUAAAEAigUAAAEAigUAAAEAigUAAAEAigUAAAEAigUAAAEAigUAAAEAigUJACUIAQARACUIBgAZ
-ACUICgApACUIEAAxACUIEAA5ACUIEABBACUIEABJACUIEABRACUIEABZACUIEABhACUIEABpACUI
-BgChACUIBgCxACUIBgDRACUIFQCRAHMFBgCRAH4FBgDhANwKJwDpACUIBgDpAJAFLAAMABcIPwAU
-AGsKTwD5ABQKVAABAdMKWwAJAbgDBgB5ACUIXwB5ANYGaQB5AM4GAQARASUIEAB5AOgKBgB5ACIK
-BgB5ACUKWwCRACUIBgCRAFIAcwCRAB8JegCZACUIBgAZAaUCgAAZAQsLiQC5ACUIjwDZACUIBgAu
-AAsAXwEuABMAaAEuABsAhwEuACMAkAEuACsAuQEuADMAuQEuADsAuQEuAEMAkAEuAEsAvwEuAFMA
-uQEuAFsA1gFDAGMAIALBAGsAIALhAGsAIAIBAWsAIAIhAWsAIAJBAWsAIAJDAXMAIAJhAWsAIAKB
-AWsAIAKhAWsAIALBAWsAIALhAWsAIAIBAmsAIAIhAmsAIAJBAmsAIAJhAmsAIAKBAmsAIAKhAmsA
-IALBAmsAIAIhA2sAIALAA2sAIALgA2sAIAIABGsAIAIJBHsAhwEgBGsAIAIpBHsAhwFABGsAIAJg
-BGsAIAKABGsAIAKgBGsAIALABGsAIALgBGsAIAIABWsAIAIgBWsAIAJgBWsAIAKABWsAIAKgBWsA
-IALABWsAIALgBWsAIAIABmsAIAIgBmsAIAJABmsAIAKABmsAIAKgBmsAIALABmsAIALgBmsAIAIA
-B2sAIAIgB2sAIAJAB2sAIAJgB2sAIAKAB2sAIAKgB2sAIALAB2sAIALgB2sAIAIACGsAIAIgCGsA
-IAIbAG8AAwABAAcADwAIABUACQAZAAoAIAALACIAAADoAjYBAABoBjoBAACtADYBAABEBjoBAADN
-AjYBAABUBjoBAAALBjYBAAC6BjoBAAAGAzYBAAB9BjoBAABtAzYBAACpBjoBAAA0AzYBAACUBjoB
-AABuAjYBAADJBTYBAAANBzYBAABgCT4BAACHCUcBAAD5CTYBAAABC0wBAACBAkwBAAChCjYBAAD5
-CTYBAADoAjYBAAAlAzYBAABtAzYBAAAGAzYBAAD5BTYBAADNAjYBAACtADYBAADmB1ABAACYA1UB
-AAA1CloBAQAGAAMAAQAHAAUAAQAIAAcAAQAJAAkAAQAKAAsAAQALAA0AAQAMAA8AAQANABEAAQAO
-ABMAAQAPABUAAQAQABcAAQARABkAAQASABsAAQATAB0AAgAeAB8AAQAfAB8AAgAgACEAAQAhACEA
-AgAiACMAAQAjACMAAgAkACUAAQAlACUAAgAmACcAAQAnACcAAgAoACkAAQApACkAAgArACsAAQAs
-ACsAAgAtAC0AAQAuAC0AAgAvAC8AAQAwAC8AAgAxADEAAQAyADEAAgA0ADMAAQA1ADMAAgA2ADUA
-AQA3ADUAAgA4ADcAAQA5ADcAAgA6ADkAAQA7ADkAAgA8ADsAAQA9ADsAAgA+AD0AAQA/AD0AAgBA
-AD8AAQBBAD8AAgBEAEEAAgBFAEMAAQBGAEMAAgBHAEUAOABIAASAAAABAAAAAAAAAAAAAAAAACUA
-AAAEAAAAAAAAAAAAAACXAGgAAAAAABAAAAAAAAAAAAAAAKAAdwoAAAAAEAAAAAAAAAAAAAAAoACm
-CgAAAAAEAAAAAAAAAAAAAACXAN8GAAAAAAQAAAAAAAAAAAAAAKkAlgkAAAAAAAAAAAEAAACACAAA
-KQAzAAAAAAAASUVudW1lcmFibGVgMQBJRW51bWVyYXRvcmAxAElMaXN0YDEAU0NfNjNhNjRmNDky
-MWYzNDhlZWJlZGI4MGMxMzA5ZjMzYzkAPE1vZHVsZT4AR2V0T3V0cHV0SUQAU3lzdGVtLklPAG1z
-Y29ybGliAFN5c3RlbS5Db2xsZWN0aW9ucy5HZW5lcmljAE1hcmtPdXRwdXRzRmluaXNoZWQAZ2V0
-X3p1aWQAc2V0X3p1aWQAPHp1aWQ+a19fQmFja2luZ0ZpZWxkADxjb2RlPmtfX0JhY2tpbmdGaWVs
-ZAA8cmFuZ2U+a19fQmFja2luZ0ZpZWxkADxsYXN0bmFtZT5rX19CYWNraW5nRmllbGQAPGZpcnN0
-bmFtZT5rX19CYWNraW5nRmllbGQAPGNvbXBhbnluYW1lPmtfX0JhY2tpbmdGaWVsZAA8YWRkZWRf
-dGltZT5rX19CYWNraW5nRmllbGQAPHBob25lPmtfX0JhY2tpbmdGaWVsZAA8dXJpPmtfX0JhY2tp
-bmdGaWVsZAA8Y29udGFjdF9lbWFpbD5rX19CYWNraW5nRmllbGQAPHZlcnNpb24+a19fQmFja2lu
-Z0ZpZWxkADxsaXN0X29mX2RldGFpbHM+a19fQmFja2luZ0ZpZWxkADxyZXF1ZXN0ZGV0YWlscz5r
-X19CYWNraW5nRmllbGQAPHN0YXR1cz5rX19CYWNraW5nRmllbGQAPHNvcnQ+a19fQmFja2luZ0Zp
-ZWxkADxmcm9taW5kZXg+a19fQmFja2luZ0ZpZWxkAGRlZmF1bHRJbnN0YW5jZQBnZXRfY29kZQBz
-ZXRfY29kZQBnZXRfcmFuZ2UAc2V0X3JhbmdlAElEaXNwb3NhYmxlAFJ1bnRpbWVUeXBlSGFuZGxl
-AEdldFR5cGVGcm9tSGFuZGxlAEZpbGUAZ2V0X2xhc3RuYW1lAHNldF9sYXN0bmFtZQBnZXRfZmly
-c3RuYW1lAHNldF9maXJzdG5hbWUAZ2V0X2NvbXBhbnluYW1lAHNldF9jb21wYW55bmFtZQBnZXRf
-YWRkZWRfdGltZQBzZXRfYWRkZWRfdGltZQBzZXRfYWRkZWR0aW1lAE1pY3Jvc29mdC5TcWxTZXJ2
-ZXIuRHRzLlBpcGVsaW5lAGdldF9waG9uZQBzZXRfcGhvbmUAVHlwZQBnZXRfQ3VsdHVyZQBzZXRf
-Q3VsdHVyZQByZXNvdXJjZUN1bHR1cmUAQXBwbGljYXRpb25TZXR0aW5nc0Jhc2UARGlzcG9zZQBF
-ZGl0b3JCcm93c2FibGVTdGF0ZQBDb21waWxlckdlbmVyYXRlZEF0dHJpYnV0ZQBEZWJ1Z2dlck5v
-blVzZXJDb2RlQXR0cmlidXRlAERlYnVnZ2FibGVBdHRyaWJ1dGUARWRpdG9yQnJvd3NhYmxlQXR0
-cmlidXRlAEFzc2VtYmx5VGl0bGVBdHRyaWJ1dGUAQXNzZW1ibHlUcmFkZW1hcmtBdHRyaWJ1dGUA
-VGFyZ2V0RnJhbWV3b3JrQXR0cmlidXRlAEFzc2VtYmx5Q29uZmlndXJhdGlvbkF0dHJpYnV0ZQBB
-c3NlbWJseURlc2NyaXB0aW9uQXR0cmlidXRlAENvbXBpbGF0aW9uUmVsYXhhdGlvbnNBdHRyaWJ1
-dGUAQXNzZW1ibHlQcm9kdWN0QXR0cmlidXRlAEFzc2VtYmx5Q29weXJpZ2h0QXR0cmlidXRlAFNT
-SVNTY3JpcHRDb21wb25lbnRFbnRyeVBvaW50QXR0cmlidXRlAEFzc2VtYmx5Q29tcGFueUF0dHJp
-YnV0ZQBSdW50aW1lQ29tcGF0aWJpbGl0eUF0dHJpYnV0ZQBQcmVFeGVjdXRlAFBvc3RFeGVjdXRl
-AHZhbHVlAERlc2VyaWFsaXplAFN5c3RlbS5SdW50aW1lLlZlcnNpb25pbmcAU3RyaW5nAGdldF91
-cmkAc2V0X3VyaQBTeXN0ZW0uQ29tcG9uZW50TW9kZWwAZ2V0X2NvbnRhY3RfZW1haWwAc2V0X2Nv
-bnRhY3RfZW1haWwAc2V0X2NvbnRhY3RlbWFpbABTQ182M2E2NGY0OTIxZjM0OGVlYmVkYjgwYzEz
-MDlmMzNjOS5kbGwAc2V0X3p1aWRfSXNOdWxsAHNldF9sYXN0bmFtZV9Jc051bGwAc2V0X2ZpcnN0
-bmFtZV9Jc051bGwAc2V0X2NvbXBhbnluYW1lX0lzTnVsbABzZXRfYWRkZWR0aW1lX0lzTnVsbABz
-ZXRfcGhvbmVfSXNOdWxsAHNldF9jb250YWN0ZW1haWxfSXNOdWxsAFNldE51bGwAc2V0X0l0ZW0A
-U3lzdGVtAHJlc291cmNlTWFuAFNjcmlwdE1haW4AZ2V0X3ZlcnNpb24Ac2V0X3ZlcnNpb24AU3lz
-dGVtLkNvbmZpZ3VyYXRpb24AU3lzdGVtLkdsb2JhbGl6YXRpb24AU3lzdGVtLldlYi5TY3JpcHQu
-U2VyaWFsaXphdGlvbgBTeXN0ZW0uUmVmbGVjdGlvbgBJbnZhbGlkT3BlcmF0aW9uRXhjZXB0aW9u
-AE1haW5Kc29uAEN1bHR1cmVJbmZvAE91dHB1dE5hbWVNYXAAT3V0cHV0TWFwAE91dHB1dDBCdWZm
-ZXIAUGlwZWxpbmVCdWZmZXIAU2NyaXB0QnVmZmVyAGdldF9SZXNvdXJjZU1hbmFnZXIASmF2YVNj
-cmlwdFNlcmlhbGl6ZXIASUVudW1lcmF0b3IAR2V0RW51bWVyYXRvcgAuY3RvcgAuY2N0b3IAT3V0
-cHV0SURzAFN5c3RlbS5EaWFnbm9zdGljcwBTeXN0ZW0uUnVudGltZS5Db21waWxlclNlcnZpY2Vz
-AFN5c3RlbS5SZXNvdXJjZXMAU0NfNjNhNjRmNDkyMWYzNDhlZWJlZGI4MGMxMzA5ZjMzYzkuUHJv
-cGVydGllcy5SZXNvdXJjZXMucmVzb3VyY2VzAERlYnVnZ2luZ01vZGVzAFNDXzYzYTY0ZjQ5MjFm
-MzQ4ZWViZWRiODBjMTMwOWYzM2M5LlByb3BlcnRpZXMAVmFyaWFibGVzAEJ1ZmZlckNvbHVtbklu
-ZGV4ZXMAR2V0Q29sdW1uSW5kZXhlcwBTZXR0aW5ncwBSZXF1ZXN0RGV0YWlscwBnZXRfbGlzdF9v
-Zl9kZXRhaWxzAHNldF9saXN0X29mX2RldGFpbHMAZ2V0X3JlcXVlc3RkZXRhaWxzAHNldF9yZXF1
-ZXN0ZGV0YWlscwBTeXN0ZW0uV2ViLkV4dGVuc2lvbnMAU3lzdGVtLkNvbGxlY3Rpb25zAENvbm5l
-Y3Rpb25zAEJ1ZmZlcnMAQ29udGFjdHMARmluaXNoT3V0cHV0cwBnZXRfc3RhdHVzAHNldF9zdGF0
-dXMAQ3JlYXRlTmV3T3V0cHV0Um93cwBDb25jYXQAT2JqZWN0AFNldEVuZE9mUm93c2V0AGdldF9E
-ZWZhdWx0AFVzZXJDb21wb25lbnQAUGFyZW50Q29tcG9uZW50AFNjcmlwdENvbXBvbmVudABnZXRf
-Q3VycmVudABNaWNyb3NvZnQuU3FsU2VydmVyLlR4U2NyaXB0AGdldF9zb3J0AHNldF9zb3J0AE1p
-Y3Jvc29mdC5TcWxTZXJ2ZXIuUGlwZWxpbmVIb3N0AFByaW1lT3V0cHV0AE1vdmVOZXh0AFJlYWRB
-bGxUZXh0AEFkZFJvdwBnZXRfZnJvbWluZGV4AHNldF9mcm9taW5kZXgAZ2V0X0Fzc2VtYmx5AACA
-gUMAOgBcAFUAcwBlAHIAcwBcAGoAcwBcAEQAbwBjAHUAbQBlAG4AdABzAFwASQBEAFwAUAByAG8A
-eQBlAGMAdABvAFwAQwBTAFYAXABDAG8AbgB0AGEAYwB0AHMAXABMAGkAcwB0AEMAbwBuAHQAYQBj
-AHQAcwAuAGoAcwBvAG4AAAMgAACAm0kAcwBOAHUAbABsACAAcAByAG8AcABlAHIAdAB5ACAAYwBh
-AG4AbgBvAHQAIABiAGUAIABzAGUAdAAgAHQAbwAgAEYAYQBsAHMAZQAuACAAQQBzAHMAaQBnAG4A
-IABhACAAdgBhAGwAdQBlACAAdABvACAAdABoAGUAIABjAG8AbAB1AG0AbgAgAGkAbgBzAHQAZQBh
-AGQALgAAEU8AdQB0AHAAdQB0ACAAMAAAcVMAQwBfADYAMwBhADYANABmADQAOQAyADEAZgAzADQA
-OABlAGUAYgBlAGQAYgA4ADAAYwAxADMAMAA5AGYAMwAzAGMAOQAuAFAAcgBvAHAAZQByAHQAaQBl
-AHMALgBSAGUAcwBvAHUAcgBjAGUAcwAAAAAAP4QKaDHUMk6zDmOXu9us6QAEIAEBCAMgAAEFIAEB
-EREEIAEBDgUgAQERZQsHAw4VEjkBEiQSJAQAAQ4OBjABAR4ADgQKARIcBhUSeQESJAggABUSOQET
-AAYVEjkBEiQEIAATAAYAAw4ODg4DIAACCSADARJBHQgSRQUgAgEIHAMHAQgGAAIIEkUOBSABHQgI
-CAABEoCNEYCRBSAAEoCVByACAQ4SgJUIt3pcVhk04IkIiYRdzYCAzJEIMb84Vq02TjUDBhIUAwYS
-GAMGEgwDBhJJAgYOBwYVElUBEiQDBhIgAgYIAwYSXQMGEmEDBhIsBCABAQILIAQBCB0IHRJBEkUF
-IAEBEkkDIAAOCCAAFRJVARIkCSABARUSVQESJAQgABIgBSABARIgAyAACAQAABJdBAAAEmEFAAEB
-EmEEAAASLAMAAAEDKAAOAygAAggoABUSVQESJAQoABIgAygACAQIABJdBAgAEmEECAASLAgBAAgA
-AAAAAB4BAAEAVAIWV3JhcE5vbkV4Y2VwdGlvblRocm93cwEIAQACAAAAAAAoAQAjU0NfNjNhNjRm
-NDkyMWYzNDhlZWJlZGI4MGMxMzA5ZjMzYzkAAAUBAAAAABYBABFDb3B5cmlnaHQgQCAgMjAyNAAA
-SQEAGi5ORVRGcmFtZXdvcmssVmVyc2lvbj12NC43AQBUDhRGcmFtZXdvcmtEaXNwbGF5TmFtZRIu
-TkVUIEZyYW1ld29yayA0LjcEAQAAAAAAALQAAADOyu++AQAAAJEAAABsU3lzdGVtLlJlc291cmNl
-cy5SZXNvdXJjZVJlYWRlciwgbXNjb3JsaWIsIFZlcnNpb249NC4wLjAuMCwgQ3VsdHVyZT1uZXV0
-cmFsLCBQdWJsaWNLZXlUb2tlbj1iNzdhNWM1NjE5MzRlMDg5I1N5c3RlbS5SZXNvdXJjZXMuUnVu
-dGltZVJlc291cmNlU2V0AgAAAAAAAAAAAAAAUEFEUEFEULQAAAB8QQAAAAAAAAAAAACWQQAAACAA
-AAAAAAAAAAAAAAAAAAAAAAAAAAAAiEEAAAAAAAAAAAAAAABfQ29yRGxsTWFpbgBtc2NvcmVlLmRs
-bAAAAAAA/yUAIAAQAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
-AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAABABAA
-AAAYAACAAAAAAAAAAAAAAAAAAAABAAEAAAAwAACAAAAAAAAAAAAAAAAAAAABAAAAAABIAAAAWGAA
-AOwDAAAAAAAAAAAAAOwDNAAAAFYAUwBfAFYARQBSAFMASQBPAE4AXwBJAE4ARgBPAAAAAAC9BO/+
-AAABAAAAAQAAAAAAAAABAAAAAAA/AAAAAAAAAAQAAAACAAAAAAAAAAAAAAAAAAAARAAAAAEAVgBh
-AHIARgBpAGwAZQBJAG4AZgBvAAAAAAAkAAQAAABUAHIAYQBuAHMAbABhAHQAaQBvAG4AAAAAAAAA
-sARMAwAAAQBTAHQAcgBpAG4AZwBGAGkAbABlAEkAbgBmAG8AAAAoAwAAAQAwADAAMAAwADAANABi
-ADAAAAAaAAEAAQBDAG8AbQBtAGUAbgB0AHMAAAAAAAAAIgABAAEAQwBvAG0AcABhAG4AeQBOAGEA
-bQBlAAAAAAAAAAAAcAAkAAEARgBpAGwAZQBEAGUAcwBjAHIAaQBwAHQAaQBvAG4AAAAAAFMAQwBf
-ADYAMwBhADYANABmADQAOQAyADEAZgAzADQAOABlAGUAYgBlAGQAYgA4ADAAYwAxADMAMAA5AGYA
-MwAzAGMAOQAAADAACAABAEYAaQBsAGUAVgBlAHIAcwBpAG8AbgAAAAAAMQAuADAALgAwAC4AMAAA
-AHAAKAABAEkAbgB0AGUAcgBuAGEAbABOAGEAbQBlAAAAUwBDAF8ANgAzAGEANgA0AGYANAA5ADIA
-MQBmADMANAA4AGUAZQBiAGUAZABiADgAMABjADEAMwAwADkAZgAzADMAYwA5AC4AZABsAGwAAABI
-ABIAAQBMAGUAZwBhAGwAQwBvAHAAeQByAGkAZwBoAHQAAABDAG8AcAB5AHIAaQBnAGgAdAAgAEAA
-IAAgADIAMAAyADQAAAAqAAEAAQBMAGUAZwBhAGwAVAByAGEAZABlAG0AYQByAGsAcwAAAAAAAAAA
-AHgAKAABAE8AcgBpAGcAaQBuAGEAbABGAGkAbABlAG4AYQBtAGUAAABTAEMAXwA2ADMAYQA2ADQA
-ZgA0ADkAMgAxAGYAMwA0ADgAZQBlAGIAZQBkAGIAOAAwAGMAMQAzADAAOQBmADMAMwBjADkALgBk
-AGwAbAAAAGgAJAABAFAAcgBvAGQAdQBjAHQATgBhAG0AZQAAAAAAUwBDAF8ANgAzAGEANgA0AGYA
-NAA5ADIAMQBmADMANAA4AGUAZQBiAGUAZABiADgAMABjADEAMwAwADkAZgAzADMAYwA5AAAANAAI
-AAEAUAByAG8AZAB1AGMAdABWAGUAcgBzAGkAbwBuAAAAMQAuADAALgAwAC4AMAAAADgACAABAEEA
-cwBzAGUAbQBiAGwAeQAgAFYAZQByAHMAaQBvAG4AAAAxAC4AMAAuADAALgAwAAAAAAAAAAAAAAAA
+AAAAIAAACAAAAAAAAAAAAAAACCAAAEgAAAAAAAAAAAAAAC50ZXh0AAAAiCQAAAAgAAAAJgAAAAIA
+AAAAAAAAAAAAAAAAACAAAGAucnNyYwAAAEgEAAAAYAAAAAYAAAAoAAAAAAAAAAAAAAAAAABAAABA
+LnJlbG9jAAAMAAAAAIAAAAACAAAALgAAAAAAAAAAAAAAAAAAQAAAQgAAAAAAAAAAAAAAAAAAAABk
+RAAAAAAAAEgAAAACAAUAMCUAAEgeAAABAAAAAAAAAHhDAAC4AAAAAAAAAAAAAAAAAAAAAAAAAAAA
+AAAAAAAAAAAAAAAAAAAAAAAAAAAAAB4CKBAAAAoqHgIoEQAACioTMAMASQAAAAAAAAADKBIAAAot
+CANvEwAACisBFBABBCgSAAAKLQgEbxMAAAorARQQAgMtCQQtBnIBAABwKgMtAgQqBC0CAyoDchcA
+AHAEKBQAAAoqAAAAGzAEAAQBAAABAAARAnsCAAAEbx0AAAYoFQAACgpzFgAACgZvAQAAK28kAAAG
+bxgAAAoLOLEAAAAHbxkAAAoMAnsDAAAEbxMAAAYCewMAAAQCCG80AAAGCG8+AAAGKAMAAAZvBwAA
+BgJ7AwAABAhvOAAABigaAAAKLQgIbzgAAAYrBXIbAABwbw0AAAYCewMAAAQIb0AAAAZvCQAABgJ7
+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
+ABUlAAAAAJYIVwtoASoAHCUAAAAAhhg/CQYAKgAkJQAAAACRGEUJbQEqAAAAAQBAAwAAAgA3AwAA
+AQDNCAAAAgAxCgAAAwB9CAAAAQArBgAAAQArBgAAAQArBgAAAQArBgAAAQArBgAAAQArBgAAAQAr
+BgAAAQArBgAAAQArBgAAAQArBgAAAQArBgAAAQArBgAAAQAICwAAAgBMCQAAAwDxCgAABAB9CAAA
+AQCHCwAAAQCHCwAAAQArBgAAAQArBgAAAQArBgAAAQArBgAAAQArBgAAAQArBgAAAQArBgAAAQAr
+BgAAAQArBgAAAQArBgAAAQArBgAAAQArBgAAAQArBgAAAQArBgAAAQArBgAAAQArBgAAAQArBgAA
+AQArBgkAPwkBABEAPwkGABkAPwkKACkAPwkQADEAPwkQADkAPwkQAEEAPwkQAEkAPwkQAFEAPwkQ
+AFkAPwkQAGEAPwkQAGkAPwkGALEAPwkGAMEAPwkGAOEAPwkVAKEAFAYGAKEAHwYGAPEAqgIbAPEA
+kQcgAPEAOgskAPkAAgw5AAEBPwkGAAEBMQY+AAwAMQlSABQAkQtiAPEAggwbAJkASQRnABEB+Qtt
+ABkBQQQGAHkAPwlxAIEAPwl4AIEAgQeCAIEAcAcBACEBPwkQAIEAUgwGAIEASAsGAIEASwttAKEA
+PwkGAKEAiwCMAKEARQqTAKkAPwkGAKEAGwqZACkBeAefAKEAPQymADEBDgysAEkBEQOzAEkBdQy8
+AMkAPwnCAOkAPwkGAC4ACwCfAS4AEwCoAS4AGwDHAS4AIwDQAS4AKwD5AS4AMwD5AS4AOwD5AS4A
+QwDQAS4ASwD/AS4AUwD5AS4AWwAWAkMAYwBgAsEAawBgAuEAawBgAgEBawBgAiEBawBgAkEBawBg
+AkMBcwBgAmEBawBgAoEBawBgAqEBawBgAsEBawBgAuEBawBgAgECawBgAiECawBgAkECawBgAmEC
+awBgAoECawBgAqECawBgAsECawBgAiEDawBgAsADawBgAuADawBgAukDewDHAQAEawBgAgkEewDH
+ASAEawBgAkAEawBgAmAEawBgAoAEawBgAqAEawBgAsAEawBgAuAEawBgAgAFawBgAiAFawBgAmAF
+awBgAoAFawBgAqAFawBgAsAFawBgAuAFawBgAgAGawBgAiAGawBgAkAGawBgAoAGawBgAqAGawBg
+AsAGawBgAuAGawBgAgAHawBgAiAHawBgAkAHawBgAmAHawBgAoAHawBgAqAHawBgAsAHawBgAuAH
+awBgAgAIawBgAiAIawBgAisAiAADAAEABgANAAcADgAIABQACQAYAAoAHwALACEAAABoBHEBAAAd
+B3UBAADbAHEBAAAIB3UBAACZBnEBAAA2B3UBAABmCHEBAABgB3UBAACxB3kBAABHB3UBAAClAHEB
+AADvBnUBAABiBnEBAADaAnEBAAB7BnEBAADPB3EBAACGCn4BAACtCocBAAAfC3EBAABrDIwBAADt
+AowBAADHC3EBAAAfC3EBAAB2A3EBAAC8A3EBAAD2A3EBAACUA3EBAAC1BnEBAABbA3EBAAAGAXEB
+AADYCJABAAAhBJUBAABbC5oBAQAHAAMAAQAIAAUAAQAJAAcAAQAKAAkAAQALAAsAAQAMAA0AAQAN
+AA8AAQAOABEAAQAPABMAAQAQABUAAQARABcAAQASABkAAgAdABsAAgAeAB0AAQAfAB0AAgAgAB8A
+AQAhAB8AAgAiACEAAQAjACEAAgAkACMAAQAlACMAAgAmACUAAQAnACUAAgAoACcAAQApACcAAgAr
+ACkAAQAsACkAAgAtACsAAQAuACsAAgAvAC0AAQAwAC0AAgAxAC8AAQAyAC8AAgA0ADEAAQA1ADEA
+AgA2ADMAAQA3ADMAAgA4ADUAAQA5ADUAAgA6ADcAAQA7ADcAAgA8ADkAAQA9ADkAAgA+ADsAAQA/
+ADsAAgBAAD0AAQBBAD0AAgBEAD8AAgBFAEEAAQBGAEEAAgBHAEMASgBbAASAAAABAAAAAAAAAAAA
+AAAAAF4AAAAEAAAAAAAAAAAAAADKALMAAAAAABAAAAAAAAAAAAAAANMAnQsAAAAAEAAAAAAAAAAA
+AAAA0wDMCwAAAAAEAAAAAAAAAAAAAADKAIoHAAAAAAQAAAAAAAAAAAAAANwAvAoAAAAAEAAAAAAA
+AAAAAAAA0wCHCAAAAAAAAAAAAQAAAJoJAAAvAEUAAAAASURUU1ZhcmlhYmxlMTAwAElEVFNWYXJp
+YWJsZXMxMDAASURUU0V2YWx1YXRvckNvbnRleHQxMDAASUVudW1lcmFibGVgMQBJRW51bWVyYXRv
+cmAxAElMaXN0YDEAU0NfNjNhNjRmNDkyMWYzNDhlZWJlZGI4MGMxMzA5ZjMzYzkAPE1vZHVsZT4A
+R2V0T3V0cHV0SUQAU3lzdGVtLklPAHNldF9Ob21icmVFbXByZXNhAG1zY29ybGliAFN5c3RlbS5D
+b2xsZWN0aW9ucy5HZW5lcmljAHNldF9DbGllbnRlSWQATWFya091dHB1dHNGaW5pc2hlZABnZXRf
+enVpZABzZXRfenVpZAA8enVpZD5rX19CYWNraW5nRmllbGQAPGNvZGU+a19fQmFja2luZ0ZpZWxk
+ADxyYW5nZT5rX19CYWNraW5nRmllbGQAPGxhc3RuYW1lPmtfX0JhY2tpbmdGaWVsZAA8Zmlyc3Ru
+YW1lPmtfX0JhY2tpbmdGaWVsZAA8Y29tcGFueW5hbWU+a19fQmFja2luZ0ZpZWxkADxhZGRlZF90
+aW1lPmtfX0JhY2tpbmdGaWVsZAA8cGhvbmU+a19fQmFja2luZ0ZpZWxkADx1cmk+a19fQmFja2lu
+Z0ZpZWxkADxjb250YWN0X2VtYWlsPmtfX0JhY2tpbmdGaWVsZAA8dmVyc2lvbj5rX19CYWNraW5n
+RmllbGQAPGxpc3Rfb2ZfZGV0YWlscz5rX19CYWNraW5nRmllbGQAPHJlcXVlc3RkZXRhaWxzPmtf
+X0JhY2tpbmdGaWVsZAA8c3RhdHVzPmtfX0JhY2tpbmdGaWVsZAA8c29ydD5rX19CYWNraW5nRmll
+bGQAPGZyb21pbmRleD5rX19CYWNraW5nRmllbGQASXNOdWxsT3JXaGl0ZVNwYWNlAGRlZmF1bHRJ
+bnN0YW5jZQBnZXRfY29kZQBzZXRfY29kZQBnZXRfcmFuZ2UAc2V0X3JhbmdlAElEaXNwb3NhYmxl
+AFJ1bnRpbWVUeXBlSGFuZGxlAEdldFR5cGVGcm9tSGFuZGxlAEZpbGUAR2V0Q29udGFjdE5hbWUA
+bGFzdE5hbWUAZmlyc3ROYW1lAGdldF9sYXN0bmFtZQBzZXRfbGFzdG5hbWUAZ2V0X2ZpcnN0bmFt
+ZQBzZXRfZmlyc3RuYW1lAGdldF9jb21wYW55bmFtZQBzZXRfY29tcGFueW5hbWUARGF0ZVRpbWUA
+Z2V0X2FkZGVkX3RpbWUAc2V0X2FkZGVkX3RpbWUATWljcm9zb2Z0LlNxbFNlcnZlci5EdHMuUGlw
+ZWxpbmUAZ2V0X3Bob25lAHNldF9waG9uZQBUeXBlAGdldF9DdWx0dXJlAHNldF9DdWx0dXJlAHJl
+c291cmNlQ3VsdHVyZQBBcHBsaWNhdGlvblNldHRpbmdzQmFzZQBEaXNwb3NlAFBhcnNlAEVkaXRv
+ckJyb3dzYWJsZVN0YXRlAHNldF9Ob21icmVDbGllbnRlAENvbXBpbGVyR2VuZXJhdGVkQXR0cmli
+dXRlAERlYnVnZ2VyTm9uVXNlckNvZGVBdHRyaWJ1dGUARGVidWdnYWJsZUF0dHJpYnV0ZQBFZGl0
+b3JCcm93c2FibGVBdHRyaWJ1dGUAQXNzZW1ibHlUaXRsZUF0dHJpYnV0ZQBBc3NlbWJseVRyYWRl
+bWFya0F0dHJpYnV0ZQBUYXJnZXRGcmFtZXdvcmtBdHRyaWJ1dGUAQXNzZW1ibHlDb25maWd1cmF0
+aW9uQXR0cmlidXRlAEFzc2VtYmx5RGVzY3JpcHRpb25BdHRyaWJ1dGUAQ29tcGlsYXRpb25SZWxh
+eGF0aW9uc0F0dHJpYnV0ZQBBc3NlbWJseVByb2R1Y3RBdHRyaWJ1dGUAQXNzZW1ibHlDb3B5cmln
+aHRBdHRyaWJ1dGUAU1NJU1NjcmlwdENvbXBvbmVudEVudHJ5UG9pbnRBdHRyaWJ1dGUAQXNzZW1i
+bHlDb21wYW55QXR0cmlidXRlAFJ1bnRpbWVDb21wYXRpYmlsaXR5QXR0cmlidXRlAFByZUV4ZWN1
+dGUAUG9zdEV4ZWN1dGUAdmFsdWUARGVzZXJpYWxpemUAU3lzdGVtLlJ1bnRpbWUuVmVyc2lvbmlu
+ZwBTdHJpbmcAZ2V0X0pzb25GaWxlUGF0aABnZXRfdXJpAHNldF91cmkAU3lzdGVtLkNvbXBvbmVu
+dE1vZGVsAHNldF9FbWFpbABnZXRfY29udGFjdF9lbWFpbABzZXRfY29udGFjdF9lbWFpbABTQ182
+M2E2NGY0OTIxZjM0OGVlYmVkYjgwYzEzMDlmMzNjOS5kbGwAc2V0X05vbWJyZUVtcHJlc2FfSXNO
+dWxsAHNldF9DbGllbnRlSWRfSXNOdWxsAHNldF9Ob21icmVDbGllbnRlX0lzTnVsbABzZXRfRW1h
+aWxfSXNOdWxsAHNldF9GZWNoYUNyZWFjaW9uX0lzTnVsbABzZXRfVGVsZWZvbm9fSXNOdWxsAFNl
+dE51bGwAZ2V0X0l0ZW0Ac2V0X0l0ZW0AU3lzdGVtAFRyaW0AcmVzb3VyY2VNYW4AU2NyaXB0TWFp
+bgBzZXRfRmVjaGFDcmVhY2lvbgBnZXRfdmVyc2lvbgBzZXRfdmVyc2lvbgBTeXN0ZW0uQ29uZmln
+dXJhdGlvbgBTeXN0ZW0uR2xvYmFsaXphdGlvbgBTeXN0ZW0uV2ViLlNjcmlwdC5TZXJpYWxpemF0
+aW9uAFN5c3RlbS5SZWZsZWN0aW9uAEludmFsaWRPcGVyYXRpb25FeGNlcHRpb24ATWFpbkpzb24A
+Q3VsdHVyZUluZm8Ac2V0X1RlbGVmb25vAE91dHB1dE5hbWVNYXAAT3V0cHV0TWFwAE1pY3Jvc29m
+dC5TcWxTZXJ2ZXIuRFRTUnVudGltZVdyYXAAT3V0cHV0MEJ1ZmZlcgBQaXBlbGluZUJ1ZmZlcgBT
+Y3JpcHRCdWZmZXIAZ2V0X1Jlc291cmNlTWFuYWdlcgBNaWNyb3NvZnQuU3FsU2VydmVyLkR0cy5S
+dW50aW1lLldyYXBwZXIASmF2YVNjcmlwdFNlcmlhbGl6ZXIASUVudW1lcmF0b3IAR2V0RW51bWVy
+YXRvcgAuY3RvcgAuY2N0b3IAT3V0cHV0SURzAFN5c3RlbS5EaWFnbm9zdGljcwBTeXN0ZW0uUnVu
+dGltZS5Db21waWxlclNlcnZpY2VzAFN5c3RlbS5SZXNvdXJjZXMAU0NfNjNhNjRmNDkyMWYzNDhl
+ZWJlZGI4MGMxMzA5ZjMzYzkuUHJvcGVydGllcy5SZXNvdXJjZXMucmVzb3VyY2VzAERlYnVnZ2lu
+Z01vZGVzAFNDXzYzYTY0ZjQ5MjFmMzQ4ZWViZWRiODBjMTMwOWYzM2M5LlByb3BlcnRpZXMAZ2V0
+X1JlYWRPbmx5VmFyaWFibGVzAEJ1ZmZlckNvbHVtbkluZGV4ZXMAR2V0Q29sdW1uSW5kZXhlcwBT
+ZXR0aW5ncwBSZXF1ZXN0RGV0YWlscwBnZXRfbGlzdF9vZl9kZXRhaWxzAHNldF9saXN0X29mX2Rl
+dGFpbHMAZ2V0X3JlcXVlc3RkZXRhaWxzAHNldF9yZXF1ZXN0ZGV0YWlscwBTeXN0ZW0uV2ViLkV4
+dGVuc2lvbnMAU3lzdGVtLkNvbGxlY3Rpb25zAENvbm5lY3Rpb25zAEJ1ZmZlcnMAQ29udGFjdHMA
+RmluaXNoT3V0cHV0cwBnZXRfc3RhdHVzAHNldF9zdGF0dXMAQ3JlYXRlTmV3T3V0cHV0Um93cwBD
+b25jYXQAT2JqZWN0AFNldEVuZE9mUm93c2V0AGdldF9EZWZhdWx0AFVzZXJDb21wb25lbnQAUGFy
+ZW50Q29tcG9uZW50AFNjcmlwdENvbXBvbmVudABnZXRfQ3VycmVudABNaWNyb3NvZnQuU3FsU2Vy
+dmVyLlR4U2NyaXB0AGdldF9zb3J0AHNldF9zb3J0AE1pY3Jvc29mdC5TcWxTZXJ2ZXIuUGlwZWxp
+bmVIb3N0AFByaW1lT3V0cHV0AE1vdmVOZXh0AFJlYWRBbGxUZXh0AEdldFZhbHVlV2l0aENvbnRl
+eHQAU2NyaXB0Q29tcG9uZW50RXZhbENvbnRleHQAZ2V0X0V2YWx1YXRvckNvbnRleHQAQWRkUm93
+AGdldF9mcm9taW5kZXgAc2V0X2Zyb21pbmRleABnZXRfQXNzZW1ibHkASXNOdWxsT3JFbXB0eQAA
+FVMAaQBuACAATgBvAG0AYgByAGUAAAMgAAAZUwBpAG4AIABUAGUAbABlAGYAbwBuAG8AABdTAGkA
+bgAgAEUAbQBwAHIAZQBzAGEAACdFAHIAcgBvAHIAIABhAGwAIABsAGUAZQByACAAZABhAHQAbwBz
+AACAvUwAYQAgAHAAcgBvAHAAaQBlAGQAYQBkACAASQBzAE4AdQBsAGwAIABuAG8AIABwAHUAZQBk
+AGUAIABlAHMAdABhAGIAbABlAGMAZQByAHMAZQAgAGUAbgAgAEYAYQBsAHMAZQAuACAARQBuACAA
+cwB1ACAAbAB1AGcAYQByACwAIABhAHMAaQBnAG4AZQAgAHUAbgAgAHYAYQBsAG8AcgAgAGEAIABs
+AGEAIABjAG8AbAB1AG0AbgBhAC4AABFPAHUAdABwAHUAdAAgADAAABlKAHMAbwBuAEYAaQBsAGUA
+UABhAHQAaAAAcVMAQwBfADYAMwBhADYANABmADQAOQAyADEAZgAzADQAOABlAGUAYgBlAGQAYgA4
+ADAAYwAxADMAMAA5AGYAMwAzAGMAOQAuAFAAcgBvAHAAZQByAHQAaQBlAHMALgBSAGUAcwBvAHUA
+cgBjAGUAcwAAAADl0nje/mGPQ7mor+aqSWQ2AAQgAQEIAyAAAQUgAQEREQQgAQEOBSABARFtBAAB
+Ag4DIAAOBgADDg4ODg0HBA4VEjkBEiQSJBI9BAABDg4GMAEBHgAOBAoBEhwHFRKAhQESJAggABUS
+OQETAAYVEjkBEiQEIAATAAUAARFNDgMgAAIGIAIBDhI9CSADARJFHQgSSQUgAgEIHAMHAQgGAAII
+EkkOBSABHQgIBSAAEoCVBiABEoCZHAUAABKAnQYgARwSgKEIAAESgKURgKkFIAASgK0HIAIBDhKA
+rQi3elxWGTTgiQiJhF3NgIDMkQgxvzhWrTZONQMGEhQDBhIYAwYSDAMGElECBg4HBhUSXQESJAMG
+EiACBggDBhJlAwYSaQMGEiwFIAIODg4EIAEBAgUgAQERTQsgBAEIHQgdEkUSSQUgAQESUQggABUS
+XQESJAkgAQEVEl0BEiQEIAASIAUgAQESIAMgAAgEAAASZQQAABJpBQABARJpBAAAEiwDAAABAygA
+DgMoAAIEKAARTQgoABUSXQESJAQoABIgAygACAQIABJlBAgAEmkECAASLAgBAAgAAAAAAB4BAAEA
+VAIWV3JhcE5vbkV4Y2VwdGlvblRocm93cwEIAQACAAAAAAAoAQAjU0NfNjNhNjRmNDkyMWYzNDhl
+ZWJlZGI4MGMxMzA5ZjMzYzkAAAUBAAAAABYBABFDb3B5cmlnaHQgQCAgMjAyNAAASQEAGi5ORVRG
+cmFtZXdvcmssVmVyc2lvbj12NC43AQBUDhRGcmFtZXdvcmtEaXNwbGF5TmFtZRIuTkVUIEZyYW1l
+d29yayA0LjcEAQAAAAAAALQAAADOyu++AQAAAJEAAABsU3lzdGVtLlJlc291cmNlcy5SZXNvdXJj
+ZVJlYWRlciwgbXNjb3JsaWIsIFZlcnNpb249NC4wLjAuMCwgQ3VsdHVyZT1uZXV0cmFsLCBQdWJs
+aWNLZXlUb2tlbj1iNzdhNWM1NjE5MzRlMDg5I1N5c3RlbS5SZXNvdXJjZXMuUnVudGltZVJlc291
+cmNlU2V0AgAAAAAAAAAAAAAAUEFEUEFEULQAAABYRAAAAAAAAAAAAAByRAAAACAAAAAAAAAAAAAA
+AAAAAAAAAAAAAAAAZEQAAAAAAAAAAAAAAABfQ29yRGxsTWFpbgBtc2NvcmVlLmRsbAAAAAAA/yUA
+IAAQAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAQAQAAAA
+GAAAgAAAAAAAAAAAAAAAAAAAAQABAAAAMAAAgAAAAAAAAAAAAAAAAAAAAQAAAAAASAAAAFhgAADs
+AwAAAAAAAAAAAADsAzQAAABWAFMAXwBWAEUAUgBTAEkATwBOAF8ASQBOAEYATwAAAAAAvQTv/gAA
+AQAAAAEAAAAAAAAAAQAAAAAAPwAAAAAAAAAEAAAAAgAAAAAAAAAAAAAAAAAAAEQAAAABAFYAYQBy
+AEYAaQBsAGUASQBuAGYAbwAAAAAAJAAEAAAAVAByAGEAbgBzAGwAYQB0AGkAbwBuAAAAAAAAALAE
+TAMAAAEAUwB0AHIAaQBuAGcARgBpAGwAZQBJAG4AZgBvAAAAKAMAAAEAMAAwADAAMAAwADQAYgAw
+AAAAGgABAAEAQwBvAG0AbQBlAG4AdABzAAAAAAAAACIAAQABAEMAbwBtAHAAYQBuAHkATgBhAG0A
+ZQAAAAAAAAAAAHAAJAABAEYAaQBsAGUARABlAHMAYwByAGkAcAB0AGkAbwBuAAAAAABTAEMAXwA2
+ADMAYQA2ADQAZgA0ADkAMgAxAGYAMwA0ADgAZQBlAGIAZQBkAGIAOAAwAGMAMQAzADAAOQBmADMA
+MwBjADkAAAAwAAgAAQBGAGkAbABlAFYAZQByAHMAaQBvAG4AAAAAADEALgAwAC4AMAAuADAAAABw
+ACgAAQBJAG4AdABlAHIAbgBhAGwATgBhAG0AZQAAAFMAQwBfADYAMwBhADYANABmADQAOQAyADEA
+ZgAzADQAOABlAGUAYgBlAGQAYgA4ADAAYwAxADMAMAA5AGYAMwAzAGMAOQAuAGQAbABsAAAASAAS
+AAEATABlAGcAYQBsAEMAbwBwAHkAcgBpAGcAaAB0AAAAQwBvAHAAeQByAGkAZwBoAHQAIABAACAA
+IAAyADAAMgA0AAAAKgABAAEATABlAGcAYQBsAFQAcgBhAGQAZQBtAGEAcgBrAHMAAAAAAAAAAAB4
+ACgAAQBPAHIAaQBnAGkAbgBhAGwARgBpAGwAZQBuAGEAbQBlAAAAUwBDAF8ANgAzAGEANgA0AGYA
+NAA5ADIAMQBmADMANAA4AGUAZQBiAGUAZABiADgAMABjADEAMwAwADkAZgAzADMAYwA5AC4AZABs
+AGwAAABoACQAAQBQAHIAbwBkAHUAYwB0AE4AYQBtAGUAAAAAAFMAQwBfADYAMwBhADYANABmADQA
+OQAyADEAZgAzADQAOABlAGUAYgBlAGQAYgA4ADAAYwAxADMAMAA5AGYAMwAzAGMAOQAAADQACAAB
+AFAAcgBvAGQAdQBjAHQAVgBlAHIAcwBpAG8AbgAAADEALgAwAC4AMAAuADAAAAA4AAgAAQBBAHMA
+cwBlAG0AYgBsAHkAIABWAGUAcgBzAGkAbwBuAAAAMQAuADAALgAwAC4AMAAAAAAAAAAAAAAAAAAA
 AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
 AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
 AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
@@ -1460,7 +1541,7 @@ AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
 AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
 AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
 AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
-AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAEAAAAwAAACoMQAAAAAAAAAAAAAA
+AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAABAAAAMAAAAhDQAAAAAAAAAAAAAAAAA
 AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
 AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
 AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
@@ -1469,7 +1550,7 @@ AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
 AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
 AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
 AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
-AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=]]></arrayElement>
+AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA]]></arrayElement>
                   </arrayElements>
                 </property>
                 <property
@@ -1486,7 +1567,7 @@ AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=]]></arrayElement>
                   dataType="System.String"
                   description="Specifies a comma-separated list of read-only variables."
                   name="ReadOnlyVariables"
-                  UITypeEditor="Microsoft.DataTransformationServices.Controls.ScriptUIVariablePickerDlg"></property>
+                  UITypeEditor="Microsoft.DataTransformationServices.Controls.ScriptUIVariablePickerDlg">$Package::JsonFilePath</property>
                 <property
                   dataType="System.String"
                   description="Specifies a comma-separated list of read/write variables."
@@ -1505,7 +1586,7 @@ AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=]]></arrayElement>
                   dataType="System.String"
                   description="Checksum to match component metedata against compiled codes."
                   name="MetadataChecksum140"
-                  typeConverter="NOTBROWSABLE">1F</property>
+                  typeConverter="NOTBROWSABLE">D7</property>
                 <property
                   dataType="System.String"
                   name="UserComponentTypeName">Microsoft.ScriptComponentHost</property>
@@ -1517,54 +1598,45 @@ AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=]]></arrayElement>
                   name="Output 0">
                   <outputColumns>
                     <outputColumn
-                      refId="Package\Data Flow Task\Lectura Archivo JSON.Outputs[Output 0].Columns[firstname]"
+                      refId="Package\Data Flow Task\Lectura Archivo JSON.Outputs[Output 0].Columns[NombreCliente]"
                       codePage="1252"
                       dataType="str"
                       length="50"
-                      lineageId="Package\Data Flow Task\Lectura Archivo JSON.Outputs[Output 0].Columns[firstname]"
-                      name="firstname" />
+                      lineageId="Package\Data Flow Task\Lectura Archivo JSON.Outputs[Output 0].Columns[NombreCliente]"
+                      name="NombreCliente" />
                     <outputColumn
-                      refId="Package\Data Flow Task\Lectura Archivo JSON.Outputs[Output 0].Columns[zuid]"
+                      refId="Package\Data Flow Task\Lectura Archivo JSON.Outputs[Output 0].Columns[ClienteId]"
                       codePage="1252"
                       dataType="str"
                       length="50"
-                      lineageId="Package\Data Flow Task\Lectura Archivo JSON.Outputs[Output 0].Columns[zuid]"
-                      name="zuid" />
+                      lineageId="Package\Data Flow Task\Lectura Archivo JSON.Outputs[Output 0].Columns[ClienteId]"
+                      name="ClienteId" />
                     <outputColumn
-                      refId="Package\Data Flow Task\Lectura Archivo JSON.Outputs[Output 0].Columns[lastname]"
+                      refId="Package\Data Flow Task\Lectura Archivo JSON.Outputs[Output 0].Columns[Email]"
                       codePage="1252"
                       dataType="str"
                       length="50"
-                      lineageId="Package\Data Flow Task\Lectura Archivo JSON.Outputs[Output 0].Columns[lastname]"
-                      name="lastname" />
+                      lineageId="Package\Data Flow Task\Lectura Archivo JSON.Outputs[Output 0].Columns[Email]"
+                      name="Email" />
                     <outputColumn
-                      refId="Package\Data Flow Task\Lectura Archivo JSON.Outputs[Output 0].Columns[contact_email]"
+                      refId="Package\Data Flow Task\Lectura Archivo JSON.Outputs[Output 0].Columns[Telefono]"
                       codePage="1252"
                       dataType="str"
                       length="50"
-                      lineageId="Package\Data Flow Task\Lectura Archivo JSON.Outputs[Output 0].Columns[contact_email]"
-                      name="contact_email" />
+                      lineageId="Package\Data Flow Task\Lectura Archivo JSON.Outputs[Output 0].Columns[Telefono]"
+                      name="Telefono" />
                     <outputColumn
-                      refId="Package\Data Flow Task\Lectura Archivo JSON.Outputs[Output 0].Columns[companyname]"
-                      codePage="1252"
-                      dataType="str"
-                      length="50"
-                      lineageId="Package\Data Flow Task\Lectura Archivo JSON.Outputs[Output 0].Columns[companyname]"
-                      name="companyname" />
+                      refId="Package\Data Flow Task\Lectura Archivo JSON.Outputs[Output 0].Columns[FechaCreacion]"
+                      dataType="date"
+                      lineageId="Package\Data Flow Task\Lectura Archivo JSON.Outputs[Output 0].Columns[FechaCreacion]"
+                      name="FechaCreacion" />
                     <outputColumn
-                      refId="Package\Data Flow Task\Lectura Archivo JSON.Outputs[Output 0].Columns[phone]"
+                      refId="Package\Data Flow Task\Lectura Archivo JSON.Outputs[Output 0].Columns[NombreEmpresa]"
                       codePage="1252"
                       dataType="str"
-                      length="50"
-                      lineageId="Package\Data Flow Task\Lectura Archivo JSON.Outputs[Output 0].Columns[phone]"
-                      name="phone" />
-                    <outputColumn
-                      refId="Package\Data Flow Task\Lectura Archivo JSON.Outputs[Output 0].Columns[added_time]"
-                      codePage="1252"
-                      dataType="str"
-                      length="50"
-                      lineageId="Package\Data Flow Task\Lectura Archivo JSON.Outputs[Output 0].Columns[added_time]"
-                      name="added_time" />
+                      length="255"
+                      lineageId="Package\Data Flow Task\Lectura Archivo JSON.Outputs[Output 0].Columns[NombreEmpresa]"
+                      name="NombreEmpresa" />
                   </outputColumns>
                   <externalMetadataColumns />
                 </output>
@@ -1591,7 +1663,7 @@ AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=]]></arrayElement>
                   expressionType="Notify"
                   name="SqlCommandParam"
                   UITypeEditor="Microsoft.DataTransformationServices.Controls.ModalMultilineStringEditor">select * from (select * from [dbo].[DimCliente]) [refTable]
-where [refTable].[Email] = ?</property>
+where [refTable].[ClienteId] = ?</property>
                 <property
                   dataType="System.Int32"
                   description="Specifies the type of connection used to access the reference dataset."
@@ -1627,7 +1699,7 @@ where [refTable].[Email] = ?</property>
                   containsID="true"
                   dataType="System.String"
                   description="Specifies the list of lineage identifiers that map to the parameters that the SQL statement in the SQLCommand property uses. Entries in the list are separated by semicolons."
-                  name="ParameterMap">#{Package\Data Flow Task\Lectura Archivo JSON.Outputs[Output 0].Columns[contact_email]};</property>
+                  name="ParameterMap">#{Package\Data Flow Task\Lectura Archivo JSON.Outputs[Output 0].Columns[ClienteId]};</property>
                 <property
                   dataType="System.Int32"
                   description="Specifies the column code page to use when code page information is unavailable from the data source."
@@ -1651,17 +1723,17 @@ where [refTable].[Email] = ?</property>
                   name="Lookup Input">
                   <inputColumns>
                     <inputColumn
-                      refId="Package\Data Flow Task\Verificacion Existe.Inputs[Lookup Input].Columns[contact_email]"
+                      refId="Package\Data Flow Task\Verificacion Existe.Inputs[Lookup Input].Columns[ClienteId]"
                       cachedCodepage="1252"
                       cachedDataType="str"
                       cachedLength="50"
-                      cachedName="contact_email"
-                      lineageId="Package\Data Flow Task\Lectura Archivo JSON.Outputs[Output 0].Columns[contact_email]">
+                      cachedName="ClienteId"
+                      lineageId="Package\Data Flow Task\Lectura Archivo JSON.Outputs[Output 0].Columns[ClienteId]">
                       <properties>
                         <property
                           dataType="System.String"
                           description="Specifies the column in the reference table that a column joins."
-                          name="JoinToReferenceColumn">Email</property>
+                          name="JoinToReferenceColumn">ClienteId</property>
                         <property
                           dataType="System.Null"
                           description="Specifies the column in the reference table from which a column is copied."
@@ -1845,7 +1917,7 @@ where [refTable].[Email] = ?</property>
           </EdgeLayout.Curve>
           <EdgeLayout.Labels>
             <mssgm:EdgeLabel
-              BoundingBox="-190.639720052083,67.0609613130129,111.6127734375,11.609375"
+              BoundingBox="-190.639720052084,67.0609613130129,111.6127734375,11.609375"
               RelativePosition="Any" />
           </EdgeLayout.Labels>
         </EdgeLayout>
@@ -1894,7 +1966,7 @@ where [refTable].[Email] = ?</property>
       <Property>
         <Name>OverwriteParamsSQLProp</Name>
         <Value
-          type="q2:string">false</Value>
+          type="q2:boolean">false</Value>
       </Property>
       <Property>
         <Name>UsedTableName</Name>
@@ -1904,7 +1976,7 @@ where [refTable].[Email] = ?</property>
       <Property>
         <Name>TableInfoObjectType</Name>
         <Value
-          type="q4:string">0</Value>
+          type="q4:int">0</Value>
       </Property>
       <Property>
         <Name>DataSourceViewID</Name>
