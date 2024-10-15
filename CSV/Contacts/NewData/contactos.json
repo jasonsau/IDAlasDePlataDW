@@ -1,0 +1,104 @@
+{
+    "code": "0",
+    "uri": "/api/v1.1/getlistsubscribers",
+    "version": "1.1",
+    "list_of_details": [
+        {
+            "firstname": "Carlos",
+            "added_time": "10/10/2024",
+            "phone": "+503 7001-1234",
+            "companyname": "Empaques Martínez S.A.",
+            "contact_email": "carlos.martinez@empaquesmartinez.com",
+            "lastname": "Martínez",
+            "zuid": "857133841"
+        },
+        {
+            "firstname": "Sofía",
+            "added_time": "09/10/2024",
+            "phone": "+503 7002-5678",
+            "companyname": "Cartones El Salvador",
+            "contact_email": "sofia.gomez@cartoneselsalvador.com",
+            "lastname": "Gómez",
+            "zuid": "857133841"
+        },
+        {
+            "firstname": "Luis",
+            "added_time": "08/10/2024",
+            "phone": "+503 7003-7890",
+            "companyname": "CartoPack S.A. de C.V.",
+            "contact_email": "luis.rivera@cartopack.com",
+            "lastname": "Rivera",
+            "zuid": "857133841"
+        },
+        {
+            "firstname": "Ana",
+            "added_time": "08/10/2024",
+            "phone": "+503 7004-2345",
+            "companyname": "Empaques y Cartones García",
+            "contact_email": "ana.garcia@empaquesgarcia.com",
+            "lastname": "García",
+            "zuid": "857133841"
+        },
+        {
+            "firstname": "Juan",
+            "added_time": "07/10/2024",
+            "phone": "+503 7005-6789",
+            "companyname": "Cartonera López S.A.",
+            "contact_email": "juan.lopez@cartoneralopez.com",
+            "lastname": "López",
+            "zuid": "857133841"
+        },
+        {
+            "firstname": "María",
+            "added_time": "07/10/2024",
+            "phone": "+503 7006-7890",
+            "companyname": "Soluciones de Cartón Pérez",
+            "contact_email": "maria.perez@solucionesperez.com",
+            "lastname": "Pérez",
+            "zuid": "857133841"
+        },
+        {
+            "firstname": "José",
+            "added_time": "06/10/2024",
+            "phone": "+503 7007-1234",
+            "companyname": "Cartones y Empaques Hernández",
+            "contact_email": "jose.hernandez@cartoneshernandez.com",
+            "lastname": "Hernández",
+            "zuid": "857133841"
+        },
+        {
+            "firstname": "Carolina",
+            "added_time": "06/10/2024",
+            "phone": "+503 7008-5678",
+            "companyname": "Empaques y Cartones Romero",
+            "contact_email": "carolina.romero@empaquesromero.com",
+            "lastname": "Romero",
+            "zuid": "857133841"
+        },
+        {
+            "firstname": "Raúl",
+            "added_time": "05/10/2024",
+            "phone": "+503 7009-7890",
+            "companyname": "Cartones y Empaques Sosa",
+            "contact_email": "raul.sosa@cartonessosa.com",
+            "lastname": "Sosa",
+            "zuid": "857133841"
+        },
+        {
+            "firstname": "Valeria",
+            "added_time": "05/10/2024",
+            "phone": "+503 7010-2345",
+            "companyname": "Empaques Valeriano",
+            "contact_email": "valeria.valeriano@empaquesvaleriano.com",
+            "lastname": "Valeriano",
+            "zuid": "857133841"
+        }
+    ],
+    "requestdetails": {
+        "fromindex": 1,
+        "range": 20,
+        "sort": "Recently Created",
+        "status": "Active Contacts"
+    },
+    "status": "success"
+}
