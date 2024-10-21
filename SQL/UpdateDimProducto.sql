@@ -1,4 +1,4 @@
-ALTER PROCEDURE UpdateDimProducto(
+CREATE PROCEDURE UpdateDimProducto(
 	@ProductoKey INT,
 	@NombreProducto VARCHAR(500),
 	@TipoProducto VARCHAR(50),

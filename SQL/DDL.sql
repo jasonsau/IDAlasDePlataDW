@@ -74,7 +74,8 @@ CREATE TABLE DimCampania
 	EmailRespuestas VARCHAR(50) NOT NULL,
 	TituloEmail VARCHAR(50),
 	EstadoCampania VARCHAR(50),
-	FechaEnvio DATE
+	FechaEnvio DATE,
+	FechaCreacion DATE
 );
 GO
 
@@ -95,15 +96,14 @@ CREATE TABLE FactVentasPorCampania
 	CuponKey INT FOREIGN KEY REFERENCES DimCupon(CuponKey),
 	CampaniaKey INT FOREIGN KEY REFERENCES DimCampania(CampaniaKey),
 	FechaDeOrdenKey INT FOREIGN KEY REFERENCES DimTiempo(TiempoKey),
-	Cantidad INT,
-	NumeroOrden VARCHAR(100),
+	Cantidad float,
+	NumeroOrden VARCHAR(260),
 	PrecioUnitario FLOAT,
 	Descuento FLOAT,
 	Total FLOAT,
 	Subtotal FLOAT,
 );
 GO
-
 CREATE TABLE Date_Dimension
 (
 	date_key int not null,
@@ -113,17 +113,17 @@ CREATE TABLE Date_Dimension
 	day_num_overall int,
 	day_name varchar(9),
 	day_abbrev char(3),
-	weekday_flag char(1),
+	weekday_flag varchar(25),
 	week_num_in_year tinyint,
-	week_num_overall smallint,
+	week_num_overall int,
 	week_begin_date smalldatetime,
-	week_begin_date_key smallint,
+	week_begin_date_key int,
 	month tinyint,
 	month_num_overall int,
 	month_name varchar(9),
 	month_abbrev varchar(15),
 	quarter tinyint,
-	year smallint,
+	year int,
 	yearmo int,
 	fiscal_month tinyint,
 	fiscal_quarter tinyint,
@@ -132,3 +132,9 @@ CREATE TABLE Date_Dimension
 	same_day_year_ago_date smalldatetime,
 	primary key (date_key)
 );
+
+INSERT INTO DimCupon
+(CuponId, NombreCupon, CodigoCupon, FechaCreacion, TipoCupon, EstadoCupon, TipoDescuento, ValorDescuento, NumeroVecesUsado, MaximoNumeroUsos, FechaExpiracion)
+VALUES(0, 'No se aplico un cupon', 'NSAUC', '2024-10-19', 'Por defecto', 'ACTIVO', 'Por default', 0.0, 0, '0', '2024-10-19' );
+INSERT INTO DimCampania(CampaniaId, NombreCampania, TipoCampania, TemaCampania, EmailEnvio, EmailRespuestas, TituloEmail, EstadoCampania, FechaEnvio, FechaCreacion)
+VALUES(0, 'No se aplico un cupon', 'Por Defecto', 'Por Defecto', 'pordefecto@defecto.com', 'pordefecto@defecto.com', 'Por defecto','Por defecto', '2024-10-19', '2024-10-19');
