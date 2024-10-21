@@ -5,8 +5,8 @@
       {
         "coupon_id": "5382429000000089557",
         "coupon_code": "UKNDZ8LEGIFM",
-        "coupon_name": "primera prueba",
-        "name": "primera prueba",
+        "coupon_name": "Rebajas Fin Anios",
+        "name": "Rebajas Fin Anios",
         "description": "",
         "type": "one_time",
         "is_active": true,
@@ -17,7 +17,7 @@
         "status": "active",
         "max_redemption": -1,
         "expiry_at": "2025-03-12",
-        "created_time": "2024-07-06",
+        "created_time": "2024-07-07",
         "rule_type": "",
         "stop_after_this_rule": ""
       },
@@ -36,7 +36,7 @@
         "status": "active",
         "max_redemption": -1,
         "expiry_at": "2025-06-30",
-        "created_time": "2024-07-10",
+        "created_time": "2024-07-07",
         "rule_type": "",
         "stop_after_this_rule": ""
       },
@@ -55,7 +55,7 @@
         "status": "active",
         "max_redemption": 100,
         "expiry_at": "2025-02-28",
-        "created_time": "2024-07-10",
+        "created_time": "2024-07-07",
         "rule_type": "",
         "stop_after_this_rule": ""
       },
@@ -74,7 +74,7 @@
         "status": "active",
         "max_redemption": -1,
         "expiry_at": "2024-09-30",
-        "created_time": "2024-07-10",
+        "created_time": "2024-07-07",
         "rule_type": "",
         "stop_after_this_rule": ""
       },
@@ -93,7 +93,7 @@
         "status": "active",
         "max_redemption": -1,
         "expiry_at": "2024-12-31",
-        "created_time": "2024-07-10",
+        "created_time": "2024-07-07",
         "rule_type": "",
         "stop_after_this_rule": ""
       }
