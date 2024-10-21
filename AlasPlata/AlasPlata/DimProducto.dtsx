@@ -11,8 +11,8 @@
   DTS:LocaleID="1033"
   DTS:ObjectName="Package1"
   DTS:PackageType="5"
-  DTS:VersionBuild="45"
-  DTS:VersionGUID="{A9188E57-616A-45DA-950C-BD385BA5715E}">
+  DTS:VersionBuild="50"
+  DTS:VersionGUID="{34EBD833-0576-41B4-BA75-2214A2516064}">
   <DTS:Property
     DTS:Name="PackageFormatVersion">8</DTS:Property>
   <DTS:ConnectionManagers>
@@ -27,7 +27,7 @@
           <DTS:Password
             DTS:Name="Password"
             Sensitive="1"
-            Encrypted="1">AQAAANCMnd8BFdERjHoAwE/Cl+sBAAAA9/P1hSVza0Ck2thzhUOQ4QAAAAAIAAAARABUAFMAAAAQZgAAAAEAACAAAABjSEOrf0uXBzpLPUquegDkiGEUlPgUmnxdoWIwb/hEJwAAAAAOgAAAAAIAACAAAADHeU6hwhDtR3BwF4gzvScvC2sSSJPu1d3MjreoXsk3NiAAAAACBuRoXtz2XQ5Ik9rNWnrrnEmCUsN+Xk4H/5UAYf/s+kAAAACKNrh2h6MkCo+cLjRWTElXjDVPbhJuicqyUUpGksVPoKwtsijndV+o+2IkX17VLa0Np8Q/gVIfZOAdgS6RiHvH</DTS:Password>
+            Encrypted="1">AQAAANCMnd8BFdERjHoAwE/Cl+sBAAAAVjEO+z0Wqk6tj7LRX+YGJAAAAAAIAAAARABUAFMAAAAQZgAAAAEAACAAAAChgQS5UQYUrw1X5FYNmO1mWgjfmrLsirlYNcrYUxQbrwAAAAAOgAAAAAIAACAAAAB1zgNAccuz9TdXa+cCfixssza3qrX8EBVU9Jusj3sT5yAAAACxmdtkJa3bstvadOMxnI55TbOZw8seKmick1p+xlhlXUAAAADNHUIfdMf92djXlWUIfXqoQyANYT3yYlvbso0/j3/15nvsGBrAoRhTuZjKZBWv6HqUHeL8EtukZ9VrqTQaOwVA</DTS:Password>
         </DTS:ConnectionManager>
       </DTS:ObjectData>
     </DTS:ConnectionManager>
@@ -44,7 +44,7 @@
           <DTS:Password
             DTS:Name="Password"
             Sensitive="1"
-            Encrypted="1">AQAAANCMnd8BFdERjHoAwE/Cl+sBAAAA9/P1hSVza0Ck2thzhUOQ4QAAAAAIAAAARABUAFMAAAAQZgAAAAEAACAAAABrKqCqKnbpTJ/kS3HBe5qiGCO9gaCRLc33JCHrcjdrmAAAAAAOgAAAAAIAACAAAADwaOO8pDhSomUF9u+Rq4yp7jk3YkFnSVO8IhWfI63wWyAAAACRpyWpWMG+jU9Bg/QyRlPFIe3opCM+XTL+6Cluse7UKEAAAAAmfJ55ZpnkmiopniqBLzJcNz/5jJJDm1ezjYMxxAOLEErGsR0b5aoV51oixO6MwR31tv8b+1FoU0tRbBP3sE0v</DTS:Password>
+            Encrypted="1">AQAAANCMnd8BFdERjHoAwE/Cl+sBAAAAVjEO+z0Wqk6tj7LRX+YGJAAAAAAIAAAARABUAFMAAAAQZgAAAAEAACAAAABNteDLsLRv7ZDCsvi6bP+0N4SvU9Nx74s2E66qTw1GqgAAAAAOgAAAAAIAACAAAAB27EGN4Hyr/f9hyEkFWiPH2SBfPomIMp3dD8nmvu9qGSAAAABTHwqTortsG5djSDbA/T3vAdlQRqqMjCz+WXt9kH+/FUAAAABPDz/xy+NBwAjchPmI6MceRK7ahfUpSvsj1ppUw1aY3BrUQx2tA/nYAkss39qKJxk7ENRzZ1BXUKl6pQrjkAVu</DTS:Password>
         </DTS:ConnectionManager>
       </DTS:ObjectData>
     </DTS:ConnectionManager>
@@ -57,7 +57,7 @@
       DTS:ObjectName="JsonFilePath">
       <DTS:Property
         DTS:DataType="8"
-        DTS:Name="ParameterValue">C:\UES\IDAlasDePlataDW\CSV\Products\Products.json</DTS:Property>
+        DTS:Name="ParameterValue">C:\Users\js\Documents\ID\Proyecto\CSV\Products\Products.json</DTS:Property>
     </DTS:PackageParameter>
   </DTS:PackageParameters>
   <DTS:Variables />
@@ -735,7 +735,7 @@ namespace SC_291504ec7b0b45afa4ff8c4408356349.Properties {
     <msb:CodeName>SC_291504ec7b0b45afa4ff8c4408356349</msb:CodeName>
     <msb:Language>msBuild</msb:Language>
     <msb:DisplayName>SC_291504ec7b0b45afa4ff8c4408356349</msb:DisplayName>
-    <msb:ProjectId>{9AC835A3-E08D-4B16-82C9-1DC5C161709E}</msb:ProjectId>
+    <msb:ProjectId>{E3636A21-3677-4865-9568-56D2F9CDBFC5}</msb:ProjectId>
   </msb:PropertyGroup>
   <msb:ItemGroup>
     <msb:Project Include="SC_291504ec7b0b45afa4ff8c4408356349.csproj" />
@@ -1308,7 +1308,7 @@ public class Output0Buffer: ScriptBuffer
             }
             else
             {
-                throw new InvalidOperationException("La propiedad IsNull no puede establecerse en False. En su lugar, asigne un valor a la columna.");
+                throw new InvalidOperationException("IsNull property cannot be set to False. Assign a value to the column instead.");
             }
         }
     }
@@ -1330,7 +1330,7 @@ public class Output0Buffer: ScriptBuffer
             }
             else
             {
-                throw new InvalidOperationException("La propiedad IsNull no puede establecerse en False. En su lugar, asigne un valor a la columna.");
+                throw new InvalidOperationException("IsNull property cannot be set to False. Assign a value to the column instead.");
             }
         }
     }
@@ -1352,7 +1352,7 @@ public class Output0Buffer: ScriptBuffer
             }
             else
             {
-                throw new InvalidOperationException("La propiedad IsNull no puede establecerse en False. En su lugar, asigne un valor a la columna.");
+                throw new InvalidOperationException("IsNull property cannot be set to False. Assign a value to the column instead.");
             }
         }
     }
@@ -1374,7 +1374,7 @@ public class Output0Buffer: ScriptBuffer
             }
             else
             {
-                throw new InvalidOperationException("La propiedad IsNull no puede establecerse en False. En su lugar, asigne un valor a la columna.");
+                throw new InvalidOperationException("IsNull property cannot be set to False. Assign a value to the column instead.");
             }
         }
     }
@@ -1396,7 +1396,7 @@ public class Output0Buffer: ScriptBuffer
             }
             else
             {
-                throw new InvalidOperationException("La propiedad IsNull no puede establecerse en False. En su lugar, asigne un valor a la columna.");
+                throw new InvalidOperationException("IsNull property cannot be set to False. Assign a value to the column instead.");
             }
         }
     }
@@ -1418,7 +1418,7 @@ public class Output0Buffer: ScriptBuffer
             }
             else
             {
-                throw new InvalidOperationException("La propiedad IsNull no puede establecerse en False. En su lugar, asigne un valor a la columna.");
+                throw new InvalidOperationException("IsNull property cannot be set to False. Assign a value to the column instead.");
             }
         }
     }
@@ -1440,7 +1440,7 @@ public class Output0Buffer: ScriptBuffer
             }
             else
             {
-                throw new InvalidOperationException("La propiedad IsNull no puede establecerse en False. En su lugar, asigne un valor a la columna.");
+                throw new InvalidOperationException("IsNull property cannot be set to False. Assign a value to the column instead.");
             }
         }
     }
@@ -1462,7 +1462,7 @@ public class Output0Buffer: ScriptBuffer
             }
             else
             {
-                throw new InvalidOperationException("La propiedad IsNull no puede establecerse en False. En su lugar, asigne un valor a la columna.");
+                throw new InvalidOperationException("IsNull property cannot be set to False. Assign a value to the column instead.");
             }
         }
     }
@@ -1484,7 +1484,7 @@ public class Output0Buffer: ScriptBuffer
             }
             else
             {
-                throw new InvalidOperationException("La propiedad IsNull no puede establecerse en False. En su lugar, asigne un valor a la columna.");
+                throw new InvalidOperationException("IsNull property cannot be set to False. Assign a value to the column instead.");
             }
         }
     }
@@ -1506,7 +1506,7 @@ public class Output0Buffer: ScriptBuffer
             }
             else
             {
-                throw new InvalidOperationException("La propiedad IsNull no puede establecerse en False. En su lugar, asigne un valor a la columna.");
+                throw new InvalidOperationException("IsNull property cannot be set to False. Assign a value to the column instead.");
             }
         }
     }
@@ -1528,7 +1528,7 @@ public class Output0Buffer: ScriptBuffer
             }
             else
             {
-                throw new InvalidOperationException("La propiedad IsNull no puede establecerse en False. En su lugar, asigne un valor a la columna.");
+                throw new InvalidOperationException("IsNull property cannot be set to False. Assign a value to the column instead.");
             }
         }
     }
@@ -1550,7 +1550,7 @@ public class Output0Buffer: ScriptBuffer
             }
             else
             {
-                throw new InvalidOperationException("La propiedad IsNull no puede establecerse en False. En su lugar, asigne un valor a la columna.");
+                throw new InvalidOperationException("IsNull property cannot be set to False. Assign a value to the column instead.");
             }
         }
     }
@@ -1572,7 +1572,7 @@ public class Output0Buffer: ScriptBuffer
             }
             else
             {
-                throw new InvalidOperationException("La propiedad IsNull no puede establecerse en False. En su lugar, asigne un valor a la columna.");
+                throw new InvalidOperationException("IsNull property cannot be set to False. Assign a value to the column instead.");
             }
         }
     }
@@ -1894,14 +1894,14 @@ namespace SC_291504ec7b0b45afa4ff8c4408356349
                     <arrayElement
                       dataType="System.String"><![CDATA[TVqQAAMAAAAEAAAA//8AALgAAAAAAAAAQAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
 AAAAgAAAAA4fug4AtAnNIbgBTM0hVGhpcyBwcm9ncmFtIGNhbm5vdCBiZSBydW4gaW4gRE9TIG1v
-ZGUuDQ0KJAAAAAAAAABQRQAATAEDAEb5CmcAAAAAAAAAAOAAIiALATAAAGoAAAAIAAAAAAAATogA
+ZGUuDQ0KJAAAAAAAAABQRQAATAEDAE50E2cAAAAAAAAAAOAAIiALATAAAGoAAAAIAAAAAAAAKogA
 AAAgAAAAoAAAAAAAEAAgAAAAAgAABAAAAAAAAAAGAAAAAAAAAADgAAAAAgAAAAAAAAMAYIUAABAA
-ABAAAAAAEAAAEAAAAAAAABAAAAAAAAAAAAAAAPyHAABPAAAAAKAAAEgEAAAAAAAAAAAAAAAAAAAA
+ABAAAAAAEAAAEAAAAAAAABAAAAAAAAAAAAAAANiHAABPAAAAAKAAAEgEAAAAAAAAAAAAAAAAAAAA
 AAAAAMAAAAwAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
-AAAAIAAACAAAAAAAAAAAAAAACCAAAEgAAAAAAAAAAAAAAC50ZXh0AAAAVGgAAAAgAAAAagAAAAIA
+AAAAIAAACAAAAAAAAAAAAAAACCAAAEgAAAAAAAAAAAAAAC50ZXh0AAAAMGgAAAAgAAAAagAAAAIA
 AAAAAAAAAAAAAAAAACAAAGAucnNyYwAAAEgEAAAAoAAAAAYAAABsAAAAAAAAAAAAAAAAAABAAABA
-LnJlbG9jAAAMAAAAAMAAAAACAAAAcgAAAAAAAAAAAAAAAAAAQAAAQgAAAAAAAAAAAAAAAAAAAAAw
-iAAAAAAAAEgAAAACAAUAEC4AADRZAAABAAAAAAAAAESHAAC4AAAAAAAAAAAAAAAAAAAAAAAAAAAA
+LnJlbG9jAAAMAAAAAMAAAAACAAAAcgAAAAAAAAAAAAAAAAAAQAAAQgAAAAAAAAAAAAAAAAAAAAAM
+iAAAAAAAAEgAAAACAAUAEC4AABBZAAABAAAAAAAAACCHAAC4AAAAAAAAAAAAAAAAAAAAAAAAAAAA
 AAAAAAAAAAAAAAAAAAAAAAAAAAAAAB4CKBAAAAoqHgIoEQAACiqqA3IBAABwfhIAAAooEwAACigU
 AAAKcg0AAHByFQAAcCgTAAAKbxUAAAoqABswBABdAgAAAQAAEXMWAAAKJXIZAABwcicAAHBvFwAA
 CiVyNQAAcHJHAABwbxcAAAolclkAAHByYwAAcG8XAAAKJXJ1AABwcoEAAHBvFwAACgoCewIAAARv
@@ -1925,9 +1925,9 @@ LAgCHigrAAAKKnI1AQBwcywAAAp6KgIfCQMoKgAACipeAywJAh8JKCsAAAoqcjUBAHBzLAAACnoq
 Ah8KAygqAAAKKl4DLAkCHwooKwAACipyNQEAcHMsAAAKej4CHwsDjCgAAAEoKgAACipeAywJAh8L
 KCsAAAoqcjUBAHBzLAAACnoqAh8MAygqAAAKKl4DLAkCHwwoKwAACipyNQEAcHMsAAAKeh4CKC0A
 AAoqHgIoLgAACioeAigvAAAKKn4CKDAAAAoCAnMpAAAGfQEAAAQCAnMqAAAGfQIAAAQqBipuAnsD
-AAAELBICewMAAARvIgAABgIUfQMAAAQqAAAAEzAFAEkAAAACAAARFgorLgQGlA4EcvQBAHAoMQAA
+AAAELBICewMAAARvIgAABgIUfQMAAAQqAAAAEzAFAEkAAAACAAARFgorLgQGlA4EctIBAHAoMQAA
 CjMZAgUGmgIEBpQoMgAACg4EcwYAAAZ9AwAABAYXWAoGAzLOAm8oAAAGAm8lAAAGAigmAAAGKjoC
-KDMAAAoCA30EAAAEKjoCKDMAAAoCA30FAAAEKpYCewUAAARvNAAACnIGAgBwbzUAAAooNgAACm83
+KDMAAAoCA30EAAAEKjoCKDMAAAoCA30FAAAEKpYCewUAAARvNAAACnLkAQBwbzUAAAooNgAACm83
 AAAKdCAAAAEqHgIoMwAACioeAnsGAAAEKiICA30GAAAEKh4CewcAAAQqIgIDfQcAAAQqHgJ7CAAA
 BCoiAgN9CAAABCoeAnsJAAAEKiICA30JAAAEKh4CewoAAAQqIgIDfQoAAAQqHgJ7CwAABCoiAgN9
 CwAABCoeAnsMAAAEKiICA30MAAAEKh4Cew0AAAQqIgIDfQ0AAAQqHgJ7DgAABCoiAgN9DgAABCoe
@@ -1962,10 +1962,10 @@ A31pAAAEKh4Ce2oAAAQqIgIDfWoAAAQqHgJ7awAABCoiAgN9awAABCoeAntsAAAEKiICA31sAAAE
 Kh4Ce20AAAQqIgIDfW0AAAQqHgJ7bgAABCoiAgN9bgAABCoeAntvAAAEKiICA31vAAAEKh4Ce3AA
 AAQqIgIDfXAAAAQqHgJ7cQAABCoiAgN9cQAABCoeAntyAAAEKiICA31yAAAEKh4Ce3MAAAQqIgID
 fXMAAAQqHgJ7dAAABCoiAgN9dAAABCoeAnt1AAAEKiICA311AAAEKh4Ce3YAAAQqIgIDfXYAAAQq
-HgJ7dwAABCoiAgN9dwAABCoeAnt4AAAEKiICA314AAAEKq5+eQAABC0eciACAHDQDQAAAig4AAAK
+HgJ7dwAABCoiAgN9dwAABCoeAnt4AAAEKiICA314AAAEKq5+eQAABC0ecv4BAHDQDQAAAig4AAAK
 bzkAAApzOgAACoB5AAAEfnkAAAQqGn56AAAEKh4CgHoAAAQqGn57AAAEKh4CKDsAAAoqLnMdAQAG
 gHsAAAQqAABCU0pCAQABAAAAAAAMAAAAdjQuMC4zMDMxOQAAAAAFAGwAAACcLAAAI34AAAgtAABE
-JgAAI1N0cmluZ3MAAAAATFMAAJQCAAAjVVMA4FUAABAAAAAjR1VJRAAAAPBVAABEAwAAI0Jsb2IA
+JgAAI1N0cmluZ3MAAAAATFMAAHACAAAjVVMAvFUAABAAAAAjR1VJRAAAAMxVAABEAwAAI0Jsb2IA
 AAAAAAAAAgAAAVcVogkJCQAAAPoBMwAWAAABAAAAMgAAAA4AAAB7AAAAHgEAAJgAAAA7AAAAaQEA
 AAIAAAAJAAAAkQAAAAUBAAAFAAAAAQAAAAYAAAABAAAAAQAAAAAA7RoBAAAAAAAGAC4Y4yAGAMIY
 4yAGAHoXtyAPAFchAAAGAKcXix0GABEYix0GAPIXix0GAKkYix0GAE4Yix0GAGcYix0GAL4Xix0G
@@ -2343,33 +2343,33 @@ AFQASQBWAE8AABFpAG4AYQBjAHQAaQB2AGUAABFJAE4AQQBDAFQASQBWAE8AAAlkAHIAYQBmAAAR
 QgBPAFIAUgBBAEQATwBSAAALZwBvAG8AZABzAAANQgBpAGUAbgBlAHMAABtTAGkAbgAgAEMAYQB0
 AGUAZwBvAHIAaQBhAAATUwBpAG4AIABNAGEAcgBjAGEAAB1TAGkAbgAgAEYAYQBiAHIAaQBjAGEA
 bgB0AGUAAClTAGkAbgAgAFUAbgBpAGQAYQBkACAAZABlACAATQBlAGQAaQBkAGEAAAVGADIAACdF
-AHIAcgBvAHIAIABhAGwAIABsAGUAZQByACAAZABhAHQAbwBzAACAvUwAYQAgAHAAcgBvAHAAaQBl
-AGQAYQBkACAASQBzAE4AdQBsAGwAIABuAG8AIABwAHUAZQBkAGUAIABlAHMAdABhAGIAbABlAGMA
-ZQByAHMAZQAgAGUAbgAgAEYAYQBsAHMAZQAuACAARQBuACAAcwB1ACAAbAB1AGcAYQByACwAIABh
-AHMAaQBnAG4AZQAgAHUAbgAgAHYAYQBsAG8AcgAgAGEAIABsAGEAIABjAG8AbAB1AG0AbgBhAC4A
-ABFPAHUAdABwAHUAdAAgADAAABlKAHMAbwBuAEYAaQBsAGUAUABhAHQAaAAAcVMAQwBfADIAOQAx
-ADUAMAA0AGUAYwA3AGIAMABiADQANQBhAGYAYQA0AGYAZgA4AGMANAA0ADAAOAAzADUANgAzADQA
-OQAuAFAAcgBvAHAAZQByAHQAaQBlAHMALgBSAGUAcwBvAHUAcgBjAGUAcwAAAADrx/T18cySQKYY
-0HNrhMGhAAQgAQEIAyAAAQUgAQEREQQgAQEOBSABARF1AgYOBgADDg4ODgQAAQ4OAyAADh4HCRUS
-OQIODg4VEj0BEigSKBUSPQESLBIsEUENEkUGFRI5Ag4OByACARMAEwEGMAEBHgAOBAoBEiAHFRKA
-lQESKAggABUSPQETAAYVEj0BEigEIAATAAcVEoCVARIsBhUSPQESLAQAAQIOBiABEwETAAQAAQoO
-BQABEUEKBCAAEVUEIAEODgQAAQwOAyAAAgYgAgEOEkUJIAMBEk0dCBJRBSACAQgcAwcBCAYAAggS
-UQ4FIAEdCAgFIAASgLEGIAESgLUcBQAAEoC5BiABHBKAvQgAARKAwRGAxQUgABKAyQcgAgEOEoDJ
-CLd6XFYZNOCJCImEXc2AgMyRCDG/OFatNk41AwYSFAMGEhgDBhIMAwYSWQIGCAcGFRJlARIoAwYS
-JAIGAgMGEhwHBhUSZQESMAIGDQcGFRJlARIsBgYVEmUBHAMGEm0DBhJxAwYSOAUgAQERVQQgAQEC
-BCABAQwLIAQBCB0IHRJNElEFIAEBElkDIAAICCAAFRJlARIoCSABARUSZQESKAQgABIkBSABARIk
-BCAAEhwFIAEBEhwIIAAVEmUBEjAJIAEBFRJlARIwAyAADQQgAQENCCAAFRJlARIsCSABARUSZQES
-LAcgABUSZQEcCCABARUSZQEcBAAAEm0EAAAScQUAAQEScQQAABI4AwAAAQQoABFVAygAAgMoAA4D
-KAAMAygACAgoABUSZQESKAQoABIkBCgAEhwIKAAVEmUBEjADKAANCCgAFRJlARIsBygAFRJlARwE
-CAASbQQIABJxBAgAEjgIAQAIAAAAAAAeAQABAFQCFldyYXBOb25FeGNlcHRpb25UaHJvd3MBCAEA
-AgAAAAAAKAEAI1NDXzI5MTUwNGVjN2IwYjQ1YWZhNGZmOGM0NDA4MzU2MzQ5AAAFAQAAAAAWAQAR
-Q29weXJpZ2h0IEAgIDIwMjQAAEkBABouTkVURnJhbWV3b3JrLFZlcnNpb249djQuNwEAVA4URnJh
-bWV3b3JrRGlzcGxheU5hbWUSLk5FVCBGcmFtZXdvcmsgNC43BAEAAAAAAAC0AAAAzsrvvgEAAACR
-AAAAbFN5c3RlbS5SZXNvdXJjZXMuUmVzb3VyY2VSZWFkZXIsIG1zY29ybGliLCBWZXJzaW9uPTQu
-MC4wLjAsIEN1bHR1cmU9bmV1dHJhbCwgUHVibGljS2V5VG9rZW49Yjc3YTVjNTYxOTM0ZTA4OSNT
-eXN0ZW0uUmVzb3VyY2VzLlJ1bnRpbWVSZXNvdXJjZVNldAIAAAAAAAAAAAAAAFBBRFBBRFC0AAAA
-JIgAAAAAAAAAAAAAPogAAAAgAAAAAAAAAAAAAAAAAAAAAAAAAAAAADCIAAAAAAAAAAAAAAAAX0Nv
-ckRsbE1haW4AbXNjb3JlZS5kbGwAAAAAAP8lACAAEAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+AHIAcgBvAHIAIABhAGwAIABsAGUAZQByACAAZABhAHQAbwBzAACAm0kAcwBOAHUAbABsACAAcABy
+AG8AcABlAHIAdAB5ACAAYwBhAG4AbgBvAHQAIABiAGUAIABzAGUAdAAgAHQAbwAgAEYAYQBsAHMA
+ZQAuACAAQQBzAHMAaQBnAG4AIABhACAAdgBhAGwAdQBlACAAdABvACAAdABoAGUAIABjAG8AbAB1
+AG0AbgAgAGkAbgBzAHQAZQBhAGQALgAAEU8AdQB0AHAAdQB0ACAAMAAAGUoAcwBvAG4ARgBpAGwA
+ZQBQAGEAdABoAABxUwBDAF8AMgA5ADEANQAwADQAZQBjADcAYgAwAGIANAA1AGEAZgBhADQAZgBm
+ADgAYwA0ADQAMAA4ADMANQA2ADMANAA5AC4AUAByAG8AcABlAHIAdABpAGUAcwAuAFIAZQBzAG8A
+dQByAGMAZQBzAABkhJ1JfyiVSIewKCmUCiKHAAQgAQEIAyAAAQUgAQEREQQgAQEOBSABARF1AgYO
+BgADDg4ODgQAAQ4OAyAADh4HCRUSOQIODg4VEj0BEigSKBUSPQESLBIsEUENEkUGFRI5Ag4OByAC
+ARMAEwEGMAEBHgAOBAoBEiAHFRKAlQESKAggABUSPQETAAYVEj0BEigEIAATAAcVEoCVARIsBhUS
+PQESLAQAAQIOBiABEwETAAQAAQoOBQABEUEKBCAAEVUEIAEODgQAAQwOAyAAAgYgAgEOEkUJIAMB
+Ek0dCBJRBSACAQgcAwcBCAYAAggSUQ4FIAEdCAgFIAASgLEGIAESgLUcBQAAEoC5BiABHBKAvQgA
+ARKAwRGAxQUgABKAyQcgAgEOEoDJCLd6XFYZNOCJCImEXc2AgMyRCDG/OFatNk41AwYSFAMGEhgD
+BhIMAwYSWQIGCAcGFRJlARIoAwYSJAIGAgMGEhwHBhUSZQESMAIGDQcGFRJlARIsBgYVEmUBHAMG
+Em0DBhJxAwYSOAUgAQERVQQgAQECBCABAQwLIAQBCB0IHRJNElEFIAEBElkDIAAICCAAFRJlARIo
+CSABARUSZQESKAQgABIkBSABARIkBCAAEhwFIAEBEhwIIAAVEmUBEjAJIAEBFRJlARIwAyAADQQg
+AQENCCAAFRJlARIsCSABARUSZQESLAcgABUSZQEcCCABARUSZQEcBAAAEm0EAAAScQUAAQEScQQA
+ABI4AwAAAQQoABFVAygAAgMoAA4DKAAMAygACAgoABUSZQESKAQoABIkBCgAEhwIKAAVEmUBEjAD
+KAANCCgAFRJlARIsBygAFRJlARwECAASbQQIABJxBAgAEjgIAQAIAAAAAAAeAQABAFQCFldyYXBO
+b25FeGNlcHRpb25UaHJvd3MBCAEAAgAAAAAAKAEAI1NDXzI5MTUwNGVjN2IwYjQ1YWZhNGZmOGM0
+NDA4MzU2MzQ5AAAFAQAAAAAWAQARQ29weXJpZ2h0IEAgIDIwMjQAAEkBABouTkVURnJhbWV3b3Jr
+LFZlcnNpb249djQuNwEAVA4URnJhbWV3b3JrRGlzcGxheU5hbWUSLk5FVCBGcmFtZXdvcmsgNC43
+BAEAAAAAAAC0AAAAzsrvvgEAAACRAAAAbFN5c3RlbS5SZXNvdXJjZXMuUmVzb3VyY2VSZWFkZXIs
+IG1zY29ybGliLCBWZXJzaW9uPTQuMC4wLjAsIEN1bHR1cmU9bmV1dHJhbCwgUHVibGljS2V5VG9r
+ZW49Yjc3YTVjNTYxOTM0ZTA4OSNTeXN0ZW0uUmVzb3VyY2VzLlJ1bnRpbWVSZXNvdXJjZVNldAIA
+AAAAAAAAAAAAAFBBRFBBRFC0AAAAAIgAAAAAAAAAAAAAGogAAAAgAAAAAAAAAAAAAAAAAAAAAAAA
+AAAAAAyIAAAAAAAAAAAAAAAAX0NvckRsbE1haW4AbXNjb3JlZS5kbGwAAAAAAP8lACAAEAAAAAAA
+AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
 AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
 AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
 AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
@@ -2404,7 +2404,7 @@ AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
 AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
 AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
 AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
-AIAAAAwAAABQOAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+AIAAAAwAAAAsOAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
 AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
 AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
 AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
@@ -2731,12 +2731,12 @@ where [refTable].[ProductoId] = ?</property>
     </DTS:Executable>
   </DTS:Executables>
   <DTS:DesignTimeProperties><![CDATA[<?xml version="1.0"?>
-<!--Esta sección CDATA contiene la información de diseño del paquete. Esta sección incluye información como, por ejemplo, las coordenadas (x,y), el ancho y el alto.-->
-<!--Si edita manualmente esta sección y comete un error, puede eliminarlo. -->
-<!--El paquete podrá cargarse normalmente, pero se perderá la información de diseño anterior y el diseñador reorganizará los elementos automáticamente en la superficie de diseño.-->
+<!--This CDATA section contains the layout information of the package. The section includes information such as (x,y) coordinates, width, and height.-->
+<!--If you manually edit this section and make a mistake, you can delete it. -->
+<!--The package will still be able to load normally but the previous layout information will be lost and the designer will automatically re-arrange the elements on the design surface.-->
 <Objects
   Version="8">
-  <!--Cada uno de los nodos siguientes contiene propiedades que no afectan al comportamiento en tiempo de ejecución.-->
+  <!--Each node below will contain properties that do not affect runtime behavior.-->
   <Package
     design-time-name="Package">
     <LayoutInfo>
@@ -2755,21 +2755,57 @@ where [refTable].[ProductoId] = ?</property>
       <GraphLayout
         Capacity="8" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml" xmlns:mssgm="clr-namespace:Microsoft.SqlServer.Graph.Model;assembly=Microsoft.SqlServer.Graph">
         <NodeLayout
-          Size="213,42"
-          Id="Package\Data Flow Task\Verificacion Existe Registro"
-          TopLeft="557,167" />
-        <NodeLayout
-          Size="225,42"
-          Id="Package\Data Flow Task\Actualizar registros existentes"
-          TopLeft="695,353" />
-        <NodeLayout
           Size="168,42"
           Id="Package\Data Flow Task\Lectura Data Json"
           TopLeft="210,168" />
         <NodeLayout
+          Size="213,42"
+          Id="Package\Data Flow Task\Verificacion Existe Registro"
+          TopLeft="557,167" />
+        <NodeLayout
           Size="194,42"
           Id="Package\Data Flow Task\Insertar nuevos registro"
           TopLeft="332,352" />
+        <NodeLayout
+          Size="225,42"
+          Id="Package\Data Flow Task\Actualizar registros existentes"
+          TopLeft="695,353" />
+        <EdgeLayout
+          Id="Package\Data Flow Task.Paths[Lookup Match Output]"
+          TopLeft="697.666666666667,209">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="109.833333333333,144"
+              Start="0,0"
+              End="109.833333333333,136.5">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,54.2441752096925" />
+                  <mssgle:CubicBezierSegment
+                    Point1="0,54.2441752096925"
+                    Point2="0,58.2441752096925"
+                    Point3="4,58.2441752096925" />
+                  <mssgle:LineSegment
+                    End="105.833333333333,58.2441752096925" />
+                  <mssgle:CubicBezierSegment
+                    Point1="105.833333333333,58.2441752096925"
+                    Point2="109.833333333333,58.2441752096925"
+                    Point3="109.833333333333,62.2441752096925" />
+                  <mssgle:LineSegment
+                    End="109.833333333333,136.5" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <mssgm:EdgeLabel
+              BoundingBox="6.7252799479165,63.2441752096925,96.3827734375,11.609375"
+              RelativePosition="Any" />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
         <EdgeLayout
           Id="Package\Data Flow Task.Paths[Output 0]"
           TopLeft="378,188.5">
@@ -2825,42 +2861,6 @@ where [refTable].[ProductoId] = ?</property>
           <EdgeLayout.Labels>
             <mssgm:EdgeLabel
               BoundingBox="-155.973053385417,62.8397017707363,111.6127734375,11.609375"
-              RelativePosition="Any" />
-          </EdgeLayout.Labels>
-        </EdgeLayout>
-        <EdgeLayout
-          Id="Package\Data Flow Task.Paths[Lookup Match Output]"
-          TopLeft="697.666666666667,209">
-          <EdgeLayout.Curve>
-            <mssgle:Curve
-              StartConnector="{assembly:Null}"
-              EndConnector="109.833333333333,144"
-              Start="0,0"
-              End="109.833333333333,136.5">
-              <mssgle:Curve.Segments>
-                <mssgle:SegmentCollection
-                  Capacity="5">
-                  <mssgle:LineSegment
-                    End="0,54.2441752096925" />
-                  <mssgle:CubicBezierSegment
-                    Point1="0,54.2441752096925"
-                    Point2="0,58.2441752096925"
-                    Point3="4,58.2441752096925" />
-                  <mssgle:LineSegment
-                    End="105.833333333333,58.2441752096925" />
-                  <mssgle:CubicBezierSegment
-                    Point1="105.833333333333,58.2441752096925"
-                    Point2="109.833333333333,58.2441752096925"
-                    Point3="109.833333333333,62.2441752096925" />
-                  <mssgle:LineSegment
-                    End="109.833333333333,136.5" />
-                </mssgle:SegmentCollection>
-              </mssgle:Curve.Segments>
-            </mssgle:Curve>
-          </EdgeLayout.Curve>
-          <EdgeLayout.Labels>
-            <mssgm:EdgeLabel
-              BoundingBox="6.7252799479165,63.2441752096925,96.3827734375,11.609375"
               RelativePosition="Any" />
           </EdgeLayout.Labels>
         </EdgeLayout>

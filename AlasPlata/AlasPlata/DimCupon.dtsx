@@ -11,8 +11,8 @@
   DTS:LocaleID="1033"
   DTS:ObjectName="DimCupon"
   DTS:PackageType="5"
-  DTS:VersionBuild="39"
-  DTS:VersionGUID="{C650D843-AF1A-4A72-9D3C-07BD6307FA79}">
+  DTS:VersionBuild="41"
+  DTS:VersionGUID="{3DE5ADD1-32DA-4FEC-A05F-7945EAFC7FF3}">
   <DTS:Property
     DTS:Name="PackageFormatVersion">8</DTS:Property>
   <DTS:ConnectionManagers>
@@ -27,7 +27,7 @@
           <DTS:Password
             DTS:Name="Password"
             Sensitive="1"
-            Encrypted="1">AQAAANCMnd8BFdERjHoAwE/Cl+sBAAAA9/P1hSVza0Ck2thzhUOQ4QAAAAAIAAAARABUAFMAAAAQZgAAAAEAACAAAACg1RQxH9ejOzkJ+Mgivh5++TZPNT2YmVqvMAo41WBzmQAAAAAOgAAAAAIAACAAAAA2VpxE85WefYOFNWVA7sg6S9OfIjm2XIlohTxziJhqsiAAAABYHFCXc6QDSxo1NZOgRJnlyUfBj7HNzzaHyABNq6LYtEAAAABOaLV5MfguBLC3k/vVIic2GI/E20H23CmHKn5uKSOB3/6MNbwlLxLbhYrrP9zZU8baN5puuiWMv6hjVDbw+dA6</DTS:Password>
+            Encrypted="1">AQAAANCMnd8BFdERjHoAwE/Cl+sBAAAAVjEO+z0Wqk6tj7LRX+YGJAAAAAAIAAAARABUAFMAAAAQZgAAAAEAACAAAABXn7Xs8lNp58kn0q9mkjET4dSMK28o8aJhrSDRhfQDRAAAAAAOgAAAAAIAACAAAAA7j+1KI+gur1TTbm5JNCw2Ubp1dpaRoXew+02jFVLyQSAAAACriDbEMCo8zTUWbKpuuSr6jhlACFHOu7MZ2UOol5ob7kAAAAB+GigKrgn8Zp/+n7AbOKRt0QEKyTsBe7k3NTa6dRawOyQkASCqq4K0kTYliDfHz/TvuHqPR0ZKVDixWdPCN7mo</DTS:Password>
         </DTS:ConnectionManager>
       </DTS:ObjectData>
     </DTS:ConnectionManager>
@@ -44,7 +44,7 @@
           <DTS:Password
             DTS:Name="Password"
             Sensitive="1"
-            Encrypted="1">AQAAANCMnd8BFdERjHoAwE/Cl+sBAAAA9/P1hSVza0Ck2thzhUOQ4QAAAAAIAAAARABUAFMAAAAQZgAAAAEAACAAAAC/bQH2DjhFmGcYK8rs4RCPHPiJnSTKQ5a0hMUSM1gfrwAAAAAOgAAAAAIAACAAAADEzJOlFoPKyV3926FhGveTiaWpAXBkjZVuZocHezTrpCAAAAD+coF4dP3aY1WQdlLnKC1ADK99VzP3LZCxSz7ZGeQ/I0AAAABsQlCzo2BkwlBVZBoNYFCgO5IOAc8xHfkR6YY+MlMQ6uTe11rRFjYAI4zXmGa6Mv/uv7UOE4j1D7hE39rSLOxY</DTS:Password>
+            Encrypted="1">AQAAANCMnd8BFdERjHoAwE/Cl+sBAAAAVjEO+z0Wqk6tj7LRX+YGJAAAAAAIAAAARABUAFMAAAAQZgAAAAEAACAAAADoUjhbQ4VVxrSrmlHP635fnLvoM/KeeMQ55Dqjv6ALmgAAAAAOgAAAAAIAACAAAABRnHU7PLwV89Dtv2CB+MMJNOXesvgblrLUkR2x5CCGmSAAAABqYUAxAcbRg0jWhcQElTMf7kliyC7dwOJnCgNz3TdC90AAAACns0ASjqqYX2UQJKU+ZK+pJJBnoyKtmqcRIUImP2r0HpEWoptUNiU/kIFSrJ4JL26DNkxKGWQKMDaFYvxnbT2H</DTS:Password>
         </DTS:ConnectionManager>
       </DTS:ObjectData>
     </DTS:ConnectionManager>
@@ -57,7 +57,7 @@
       DTS:ObjectName="JsonFilePath">
       <DTS:Property
         DTS:DataType="8"
-        DTS:Name="ParameterValue">C:\UES\IDAlasDePlataDW\CSV\Cupons\ListCupons.json</DTS:Property>
+        DTS:Name="ParameterValue">C:\Users\js\Documents\ID\Proyecto\CSV\Cupons\ListCupons.json</DTS:Property>
     </DTS:PackageParameter>
   </DTS:PackageParameters>
   <DTS:Variables />
@@ -2379,12 +2379,12 @@ where [refTable].[CuponId] = ?</property>
     </DTS:Executable>
   </DTS:Executables>
   <DTS:DesignTimeProperties><![CDATA[<?xml version="1.0"?>
-<!--Esta sección CDATA contiene la información de diseño del paquete. Esta sección incluye información como, por ejemplo, las coordenadas (x,y), el ancho y el alto.-->
-<!--Si edita manualmente esta sección y comete un error, puede eliminarlo. -->
-<!--El paquete podrá cargarse normalmente, pero se perderá la información de diseño anterior y el diseñador reorganizará los elementos automáticamente en la superficie de diseño.-->
+<!--This CDATA section contains the layout information of the package. The section includes information such as (x,y) coordinates, width, and height.-->
+<!--If you manually edit this section and make a mistake, you can delete it. -->
+<!--The package will still be able to load normally but the previous layout information will be lost and the designer will automatically re-arrange the elements on the design surface.-->
 <Objects
   Version="8">
-  <!--Cada uno de los nodos siguientes contiene propiedades que no afectan al comportamiento en tiempo de ejecución.-->
+  <!--Each node below will contain properties that do not affect runtime behavior.-->
   <Package
     design-time-name="Package">
     <LayoutInfo>
@@ -2521,7 +2521,7 @@ where [refTable].[CuponId] = ?</property>
       <Property>
         <Name>OverwriteParamsSQLProp</Name>
         <Value
-          type="q2:boolean">false</Value>
+          type="q2:string">false</Value>
       </Property>
       <Property>
         <Name>UsedTableName</Name>
@@ -2531,7 +2531,7 @@ where [refTable].[CuponId] = ?</property>
       <Property>
         <Name>TableInfoObjectType</Name>
         <Value
-          type="q4:int">0</Value>
+          type="q4:string">0</Value>
       </Property>
       <Property>
         <Name>DataSourceViewID</Name>

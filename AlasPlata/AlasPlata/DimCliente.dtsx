@@ -11,8 +11,8 @@
   DTS:LocaleID="1033"
   DTS:ObjectName="DimCliente"
   DTS:PackageType="5"
-  DTS:VersionBuild="28"
-  DTS:VersionGUID="{9428C83C-1DDE-4C10-985A-D67D52641E11}">
+  DTS:VersionBuild="30"
+  DTS:VersionGUID="{4F1BC4E6-0771-444F-BF47-A1D0215472E7}">
   <DTS:Property
     DTS:Name="PackageFormatVersion">8</DTS:Property>
   <DTS:ConnectionManagers>
@@ -27,7 +27,7 @@
           <DTS:Password
             DTS:Name="Password"
             Sensitive="1"
-            Encrypted="1">AQAAANCMnd8BFdERjHoAwE/Cl+sBAAAA9/P1hSVza0Ck2thzhUOQ4QAAAAAIAAAARABUAFMAAAAQZgAAAAEAACAAAABX2NnyRCB95GGNaHCYfUKmI95Nb3tUOCfkHX4uTN7qmwAAAAAOgAAAAAIAACAAAADESSqXJwpQTjEb8LTKP3dR80sZvn2tcDSg06bQH9O8qiAAAACDXE5PFsFYsdVcef7c0Bd407qQTq/WvPkY2Zgq3gZXaEAAAABuI4U3ao+vI4FvN5rJHqkTwCs3SUg7lbXS5McaiJaI0EQErRonw5egQ+EtN9IRvxPKYWEVuddzacEf74rosaxk</DTS:Password>
+            Encrypted="1">AQAAANCMnd8BFdERjHoAwE/Cl+sBAAAAVjEO+z0Wqk6tj7LRX+YGJAAAAAAIAAAARABUAFMAAAAQZgAAAAEAACAAAAAc27UfOx5/1lw1IOJyd3VtoFc6y0YnsY/PYXuNTRoEwgAAAAAOgAAAAAIAACAAAADJS1astFBB36cUfqPPYVAiKejq07Ie09CVoSsqqoy0YSAAAAASnKv9iVGkN66a021yA335wswC5EB4swmoCQJXuQch0kAAAACofSc0C+99/51kvPgNSn62Txh1NCyEXnIh64ckM9qG0ZoCtz6mpdBmHTLpq7qmVx/Mv8aMS24VjkEWmAOB+C5y</DTS:Password>
         </DTS:ConnectionManager>
       </DTS:ObjectData>
     </DTS:ConnectionManager>
@@ -44,7 +44,7 @@
           <DTS:Password
             DTS:Name="Password"
             Sensitive="1"
-            Encrypted="1">AQAAANCMnd8BFdERjHoAwE/Cl+sBAAAA9/P1hSVza0Ck2thzhUOQ4QAAAAAIAAAARABUAFMAAAAQZgAAAAEAACAAAABIG32TbXlWKJQ3WXBdGcM14DlTwJAQA3We6Q1c+NvHwwAAAAAOgAAAAAIAACAAAACLshljPsru0jJg/zI7H6Hqc8coV2AOuHLWnfMLZXmhFyAAAACIIoZBj1mhks7N9EZtr+qQ/yMdU6TXG6ZnJTuIudOvk0AAAAD5Elkls9VZd5sINoYIaDcXlUgPKPfge8HFz7N7CjSu9rRS3L8nPnArmrbL6jwiZ+bdDkF/9mKR78+V27FdFwcz</DTS:Password>
+            Encrypted="1">AQAAANCMnd8BFdERjHoAwE/Cl+sBAAAAVjEO+z0Wqk6tj7LRX+YGJAAAAAAIAAAARABUAFMAAAAQZgAAAAEAACAAAABksG7ZasjI/S6IUMBavbw7h+NS9N+9AlSX+N6jkU90+gAAAAAOgAAAAAIAACAAAABLYRw7+sbtmmDtZXZFssYtL+X14y/ENpXwlvUdPZHtyiAAAAAtkUUa2TtgS68YMnPE3Q1tlfqDv2s8ay8lRuvLBtRZv0AAAADgpv0KetUQIZJKc6elxA6WTbB/O2Jj14eX9JG+jhrmc6T5fUDEoUA3oKWXTawUC9OyhI8PyO8ltTkv6oTzBH0k</DTS:Password>
         </DTS:ConnectionManager>
       </DTS:ObjectData>
     </DTS:ConnectionManager>
@@ -57,7 +57,7 @@
       DTS:ObjectName="JsonFilePath">
       <DTS:Property
         DTS:DataType="8"
-        DTS:Name="ParameterValue">C:\UES\IDAlasDePlataDW\CSV\Contacts\ListContacts.json</DTS:Property>
+        DTS:Name="ParameterValue">C:\Users\js\Documents\ID\Proyecto\CSV\Contacts\ListContacts.json</DTS:Property>
     </DTS:PackageParameter>
   </DTS:PackageParameters>
   <DTS:Variables />
@@ -1824,12 +1824,12 @@ where [refTable].[ClienteId] = ?</property>
     </DTS:Executable>
   </DTS:Executables>
   <DTS:DesignTimeProperties><![CDATA[<?xml version="1.0"?>
-<!--Esta sección CDATA contiene la información de diseño del paquete. Esta sección incluye información como, por ejemplo, las coordenadas (x,y), el ancho y el alto.-->
-<!--Si edita manualmente esta sección y comete un error, puede eliminarlo. -->
-<!--El paquete podrá cargarse normalmente, pero se perderá la información de diseño anterior y el diseñador reorganizará los elementos automáticamente en la superficie de diseño.-->
+<!--This CDATA section contains the layout information of the package. The section includes information such as (x,y) coordinates, width, and height.-->
+<!--If you manually edit this section and make a mistake, you can delete it. -->
+<!--The package will still be able to load normally but the previous layout information will be lost and the designer will automatically re-arrange the elements on the design surface.-->
 <Objects
   Version="8">
-  <!--Cada uno de los nodos siguientes contiene propiedades que no afectan al comportamiento en tiempo de ejecución.-->
+  <!--Each node below will contain properties that do not affect runtime behavior.-->
   <Package
     design-time-name="Package">
     <LayoutInfo>
@@ -1848,21 +1848,21 @@ where [refTable].[ClienteId] = ?</property>
       <GraphLayout
         Capacity="8" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml" xmlns:mssgm="clr-namespace:Microsoft.SqlServer.Graph.Model;assembly=Microsoft.SqlServer.Graph">
         <NodeLayout
-          Size="169,42"
-          Id="Package\Data Flow Task\Verificacion Existe"
-          TopLeft="573,152" />
-        <NodeLayout
           Size="212,42"
           Id="Package\Data Flow Task\Insercion nuevos Registros"
           TopLeft="255,347" />
         <NodeLayout
-          Size="247,42"
-          Id="Package\Data Flow Task\Actualizacion Registros Existentes"
-          TopLeft="763,343" />
+          Size="169,42"
+          Id="Package\Data Flow Task\Verificacion Existe"
+          TopLeft="573,152" />
         <NodeLayout
           Size="188,42"
           Id="Package\Data Flow Task\Lectura Archivo JSON"
           TopLeft="214,151" />
+        <NodeLayout
+          Size="247,42"
+          Id="Package\Data Flow Task\Actualizacion Registros Existentes"
+          TopLeft="763,343" />
         <EdgeLayout
           Id="Package\Data Flow Task.Paths[Output 0]"
           TopLeft="402,172.5">
@@ -1961,12 +1961,20 @@ where [refTable].[ClienteId] = ?</property>
     </LayoutInfo>
   </TaskHost>
   <PipelineComponentMetadata
+    design-time-name="Package\Data Flow Task\Insercion nuevos Registros">
+    <Properties>
+      <Property>
+        <Name>DataSourceViewID</Name>
+      </Property>
+    </Properties>
+  </PipelineComponentMetadata>
+  <PipelineComponentMetadata
     design-time-name="Package\Data Flow Task\Verificacion Existe">
     <Properties>
       <Property>
         <Name>OverwriteParamsSQLProp</Name>
         <Value
-          type="q2:boolean">false</Value>
+          type="q2:string">false</Value>
       </Property>
       <Property>
         <Name>UsedTableName</Name>
@@ -1976,16 +1984,8 @@ where [refTable].[ClienteId] = ?</property>
       <Property>
         <Name>TableInfoObjectType</Name>
         <Value
-          type="q4:int">0</Value>
+          type="q4:string">0</Value>
       </Property>
-      <Property>
-        <Name>DataSourceViewID</Name>
-      </Property>
-    </Properties>
-  </PipelineComponentMetadata>
-  <PipelineComponentMetadata
-    design-time-name="Package\Data Flow Task\Insercion nuevos Registros">
-    <Properties>
       <Property>
         <Name>DataSourceViewID</Name>
       </Property>
