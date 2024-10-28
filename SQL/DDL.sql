@@ -138,7 +138,8 @@ CREATE TABLE Parametros(
 	NombreParametro				VARCHAR(25)		NOT NULL,
 	ValorParametro				VARCHAR(100)	NOT NULL
 );
-INSERT INTO Parametros(NombreParametro, ValorParametro) VALUES('Fecha_Ultima_Ejecucion', convert(varchar, convert(datetime,'01/01/2023')));
+DELETE FROM Parametros;
+INSERT INTO Parametros(NombreParametro, ValorParametro) VALUES('Fecha_Ultima_Ejecucion', convert(varchar, convert(datetime,'07/09/2024')));
 INSERT INTO DimCupon
 (CuponId, NombreCupon, CodigoCupon, FechaCreacion, TipoCupon, EstadoCupon, TipoDescuento, ValorDescuento, NumeroVecesUsado, MaximoNumeroUsos, FechaExpiracion)
 VALUES(0, 'No se aplico un cupon', 'NSAUC', '2024-10-19', 'Por defecto', 'ACTIVO', 'Por default', 0.0, 0, '0', '2024-10-19' );
