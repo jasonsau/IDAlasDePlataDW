@@ -30,7 +30,8 @@ CREATE TABLE DimProducto
 	UnidadProducto VARCHAR(50) DEFAULT 'Sin Unidad de Medida',
 	FechaCreacion DATE,
 	FechaModificacion DATE,
-	PrecioUnitario DECIMAL(10,2)
+	PrecioUnitario DECIMAL(10,2),
+	Activo BIT DEFAULT 1
 );
 GO
 

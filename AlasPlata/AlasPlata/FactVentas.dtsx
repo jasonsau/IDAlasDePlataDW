@@ -11,8 +11,8 @@
   DTS:LocaleID="1033"
   DTS:ObjectName="FactVentas"
   DTS:PackageType="5"
-  DTS:VersionBuild="48"
-  DTS:VersionGUID="{5279B26B-2B16-4D76-9070-AB1ADE51843D}">
+  DTS:VersionBuild="50"
+  DTS:VersionGUID="{2A581CAF-03A0-4692-B16F-AD619184D3F2}">
   <DTS:Property
     DTS:Name="PackageFormatVersion">8</DTS:Property>
   <DTS:ConnectionManagers>
@@ -27,7 +27,7 @@
           <DTS:Password
             DTS:Name="Password"
             Sensitive="1"
-            Encrypted="1">AQAAANCMnd8BFdERjHoAwE/Cl+sBAAAAVjEO+z0Wqk6tj7LRX+YGJAAAAAAIAAAARABUAFMAAAAQZgAAAAEAACAAAACMkLSCgH07zZ9tGuGQHx3O+OQvcP/i5yXbw2TKFGavwAAAAAAOgAAAAAIAACAAAAB2h2UPUKymuYBxeTWyEXEZEDWlSbu9kIus3DNKFvoffyAAAABWtPWIhSvZvzUfljcB5rfYVVoHdx/zKv5a3tR5Mho9zkAAAABpbvO0CIFjyAuo/2LFnD+1eaQPU5uueHaJZqsZcdAdyuGEpRqzL2rFwmn2BRGsYhr92WYb1zmfByK0ZUkVOT6h</DTS:Password>
+            Encrypted="1">AQAAANCMnd8BFdERjHoAwE/Cl+sBAAAAVjEO+z0Wqk6tj7LRX+YGJAAAAAAIAAAARABUAFMAAAAQZgAAAAEAACAAAAAax10loy8kC35tVEYPtspkCc4+qn4+HAwESJ4e0wMmgwAAAAAOgAAAAAIAACAAAAAsccTyfzFuh9Gh0N7wR3uhnnn6I5AQ4hWzqZJxuYTyIiAAAACnA6qqYKgl6DHGuyhOV61HE8vqKRzTo7QqcsngvK2FoEAAAAD3UlZErOeRW7+AVnmJfpSswBvU5kJZ8tC6/G9jb6/5BQZqLI1dMxPWTVEkeLz0GCPJz8ZeyG5JcuHsxJjy2F+l</DTS:Password>
         </DTS:ConnectionManager>
       </DTS:ObjectData>
     </DTS:ConnectionManager>
@@ -44,7 +44,7 @@
           <DTS:Password
             DTS:Name="Password"
             Sensitive="1"
-            Encrypted="1">AQAAANCMnd8BFdERjHoAwE/Cl+sBAAAAVjEO+z0Wqk6tj7LRX+YGJAAAAAAIAAAARABUAFMAAAAQZgAAAAEAACAAAACUKdDl8y2/XqaL39UEqCncka4AJoX5OJQnyshwzYmr7QAAAAAOgAAAAAIAACAAAAD1G1V5tqw+ArdFpa34rCj4ELBm47rRZEe/09VlLWwaByAAAAD6Cx4cBGsV0A/ONFhhF5M9g1Og4QA5jpSmsNk8AH4urkAAAADpi+dpLxDs+bPjeriFaRKQasO0LA0pRv8IgslXqEs9BFv2nPVdf5URi0Lt+Vj5tU1r9fMjyxjnOKYCN9A8tLIL</DTS:Password>
+            Encrypted="1">AQAAANCMnd8BFdERjHoAwE/Cl+sBAAAAVjEO+z0Wqk6tj7LRX+YGJAAAAAAIAAAARABUAFMAAAAQZgAAAAEAACAAAAA9BcHWGkSZSiurD6EJofZm/twA54IXktDZcQTbgjV8VwAAAAAOgAAAAAIAACAAAADdEVCoQkoQI6Bj3UwaNNk5vHBVXGzNfaDO0GCuyatf+yAAAAAuD1LeiTP+emVBWgputLLYmqeKFvZbsSirJhTD/ohHPkAAAABE1qsiRcZMaFa/KtJdZhJ2zR6XzQGO9QcvHTzW96Ye2/O7FVkC702sSy93kctHhPDfdOhAj8JYl/XqQqyID1mV</DTS:Password>
         </DTS:ConnectionManager>
       </DTS:ObjectData>
     </DTS:ConnectionManager>
@@ -4275,13 +4275,13 @@ where [refTable].[Fecha] = ?</property>
                   description="Specifies the SQL statement that generates the lookup table."
                   expressionType="Notify"
                   name="SqlCommand"
-                  UITypeEditor="Microsoft.DataTransformationServices.Controls.ModalMultilineStringEditor">select * from [dbo].[DimProducto]</property>
+                  UITypeEditor="Microsoft.DataTransformationServices.Controls.ModalMultilineStringEditor">SELECT *FROM DimProducto Where Activo=1</property>
                 <property
                   dataType="System.String"
                   description="Specifies a SQL statement that uses parameters to generate the lookup table."
                   expressionType="Notify"
                   name="SqlCommandParam"
-                  UITypeEditor="Microsoft.DataTransformationServices.Controls.ModalMultilineStringEditor">select * from (select * from [dbo].[DimProducto]) [refTable]
+                  UITypeEditor="Microsoft.DataTransformationServices.Controls.ModalMultilineStringEditor">select * from (SELECT *FROM DimProducto Where Activo=1) [refTable]
 where [refTable].[VarianteId] = ? and [refTable].[ProductoId] = ?</property>
                 <property
                   dataType="System.Int32"
@@ -4313,7 +4313,7 @@ where [refTable].[VarianteId] = ? and [refTable].[ProductoId] = ?</property>
                 <property
                   dataType="System.String"
                   description="Indicates whether to reference metadata in an XML format."
-                  name="ReferenceMetadataXml">&lt;referenceMetadata&gt;&lt;referenceColumns&gt;&lt;referenceColumn name="ProductoKey" dataType="DT_I4" length="0" precision="0" scale="0" codePage="0"/&gt;&lt;referenceColumn name="ProductoId" dataType="DT_STR" length="255" precision="0" scale="0" codePage="1252"/&gt;&lt;referenceColumn name="VarianteId" dataType="DT_STR" length="255" precision="0" scale="0" codePage="1252"/&gt;&lt;referenceColumn name="NombreProducto" dataType="DT_STR" length="500" precision="0" scale="0" codePage="1252"/&gt;&lt;referenceColumn name="TipoProducto" dataType="DT_STR" length="50" precision="0" scale="0" codePage="1252"/&gt;&lt;referenceColumn name="FabricanteProducto" dataType="DT_STR" length="50" precision="0" scale="0" codePage="1252"/&gt;&lt;referenceColumn name="MarcaProducto" dataType="DT_STR" length="50" precision="0" scale="0" codePage="1252"/&gt;&lt;referenceColumn name="DescripcionProducto" dataType="DT_TEXT" length="0" precision="0" scale="0" codePage="1252"/&gt;&lt;referenceColumn name="CategoriaProducto" dataType="DT_STR" length="50" precision="0" scale="0" codePage="1252"/&gt;&lt;referenceColumn name="EstadoProducto" dataType="DT_STR" length="15" precision="0" scale="0" codePage="1252"/&gt;&lt;referenceColumn name="UnidadProducto" dataType="DT_STR" length="50" precision="0" scale="0" codePage="1252"/&gt;&lt;referenceColumn name="FechaCreacion" dataType="DT_DBDATE" length="0" precision="0" scale="0" codePage="0"/&gt;&lt;referenceColumn name="FechaModificacion" dataType="DT_DBDATE" length="0" precision="0" scale="0" codePage="0"/&gt;&lt;referenceColumn name="PrecioUnitario" dataType="DT_NUMERIC" length="0" precision="10" scale="2" codePage="0"/&gt;&lt;/referenceColumns&gt;&lt;/referenceMetadata&gt;</property>
+                  name="ReferenceMetadataXml">&lt;referenceMetadata&gt;&lt;referenceColumns&gt;&lt;referenceColumn name="ProductoKey" dataType="DT_I4" length="0" precision="0" scale="0" codePage="0"/&gt;&lt;referenceColumn name="ProductoId" dataType="DT_STR" length="255" precision="0" scale="0" codePage="1252"/&gt;&lt;referenceColumn name="VarianteId" dataType="DT_STR" length="255" precision="0" scale="0" codePage="1252"/&gt;&lt;referenceColumn name="NombreProducto" dataType="DT_STR" length="500" precision="0" scale="0" codePage="1252"/&gt;&lt;referenceColumn name="TipoProducto" dataType="DT_STR" length="50" precision="0" scale="0" codePage="1252"/&gt;&lt;referenceColumn name="FabricanteProducto" dataType="DT_STR" length="50" precision="0" scale="0" codePage="1252"/&gt;&lt;referenceColumn name="MarcaProducto" dataType="DT_STR" length="50" precision="0" scale="0" codePage="1252"/&gt;&lt;referenceColumn name="DescripcionProducto" dataType="DT_TEXT" length="0" precision="0" scale="0" codePage="1252"/&gt;&lt;referenceColumn name="CategoriaProducto" dataType="DT_STR" length="50" precision="0" scale="0" codePage="1252"/&gt;&lt;referenceColumn name="EstadoProducto" dataType="DT_STR" length="15" precision="0" scale="0" codePage="1252"/&gt;&lt;referenceColumn name="UnidadProducto" dataType="DT_STR" length="50" precision="0" scale="0" codePage="1252"/&gt;&lt;referenceColumn name="FechaCreacion" dataType="DT_DBDATE" length="0" precision="0" scale="0" codePage="0"/&gt;&lt;referenceColumn name="FechaModificacion" dataType="DT_DBDATE" length="0" precision="0" scale="0" codePage="0"/&gt;&lt;referenceColumn name="PrecioUnitario" dataType="DT_NUMERIC" length="0" precision="10" scale="2" codePage="0"/&gt;&lt;referenceColumn name="Activo" dataType="DT_BOOL" length="0" precision="0" scale="0" codePage="0"/&gt;&lt;/referenceColumns&gt;&lt;/referenceMetadata&gt;</property>
                 <property
                   containsID="true"
                   dataType="System.String"
@@ -4530,6 +4530,10 @@ where [refTable].[VarianteId] = ? and [refTable].[ProductoId] = ?</property>
       <GraphLayout
         Capacity="8" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml">
         <NodeLayout
+          Size="246,42"
+          Id="Package\Actualizar Fecha Ultima Ejecucion"
+          TopLeft="608,443" />
+        <NodeLayout
           Size="135,42"
           Id="Package\FactVentas"
           TopLeft="285,292" />
@@ -4571,10 +4575,6 @@ where [refTable].[VarianteId] = ? and [refTable].[ProductoId] = ?</property>
             <EdgeLabelCollection />
           </EdgeLayout.Labels>
         </EdgeLayout>
-        <NodeLayout
-          Size="246,42"
-          Id="Package\Actualizar Fecha Ultima Ejecucion"
-          TopLeft="608,443" />
         <EdgeLayout
           Id="Package.PrecedenceConstraints[Constraint 1]"
           TopLeft="352.5,334">
@@ -4622,29 +4622,29 @@ where [refTable].[VarianteId] = ? and [refTable].[ProductoId] = ?</property>
           Id="Package\FactVentas\Obtener ProductoKey"
           TopLeft="426,222" />
         <NodeLayout
-          Size="223,42"
-          Id="Package\FactVentas\Obtener Fecha de Orden Key"
-          TopLeft="507,320" />
-        <NodeLayout
           Size="194,42"
           Id="Package\FactVentas\Obtener Campania Key"
           TopLeft="212,325" />
         <NodeLayout
-          Size="274,42"
-          Id="Package\FactVentas\Lectura de metricas y llaves del negocio"
-          TopLeft="110,221" />
+          Size="223,42"
+          Id="Package\FactVentas\Obtener Fecha de Orden Key"
+          TopLeft="507,320" />
         <NodeLayout
           Size="173,42"
           Id="Package\FactVentas\Obtener CuponKey"
           TopLeft="971,222" />
         <NodeLayout
+          Size="181,42"
+          Id="Package\FactVentas\Obetener ClienteKey"
+          TopLeft="667,221" />
+        <NodeLayout
           Size="186,42"
           Id="Package\FactVentas\ADO NET Destination"
           TopLeft="844,324" />
         <NodeLayout
-          Size="181,42"
-          Id="Package\FactVentas\Obetener ClienteKey"
-          TopLeft="667,221" />
+          Size="274,42"
+          Id="Package\FactVentas\Lectura de metricas y llaves del negocio"
+          TopLeft="110,221" />
         <EdgeLayout
           Id="Package\FactVentas.Paths[Output 0]"
           TopLeft="384,242.5">
@@ -4808,12 +4808,35 @@ where [refTable].[VarianteId] = ? and [refTable].[ProductoId] = ?</property>
       <Property>
         <Name>OverwriteParamsSQLProp</Name>
         <Value
+          type="q2:boolean">false</Value>
+      </Property>
+      <Property>
+        <Name>UsedTableName</Name>
+        <Value
+          type="q3:string"></Value>
+      </Property>
+      <Property>
+        <Name>TableInfoObjectType</Name>
+        <Value
+          type="q4:int">0</Value>
+      </Property>
+      <Property>
+        <Name>DataSourceViewID</Name>
+      </Property>
+    </Properties>
+  </PipelineComponentMetadata>
+  <PipelineComponentMetadata
+    design-time-name="Package\FactVentas\Obtener Campania Key">
+    <Properties>
+      <Property>
+        <Name>OverwriteParamsSQLProp</Name>
+        <Value
           type="q2:string">false</Value>
       </Property>
       <Property>
         <Name>UsedTableName</Name>
         <Value
-          type="q3:string">[dbo].[DimProducto]</Value>
+          type="q3:string">[dbo].[DimCampania]</Value>
       </Property>
       <Property>
         <Name>TableInfoObjectType</Name>
@@ -4849,29 +4872,6 @@ where [refTable].[VarianteId] = ? and [refTable].[ProductoId] = ?</property>
     </Properties>
   </PipelineComponentMetadata>
   <PipelineComponentMetadata
-    design-time-name="Package\FactVentas\Obtener Campania Key">
-    <Properties>
-      <Property>
-        <Name>OverwriteParamsSQLProp</Name>
-        <Value
-          type="q2:string">false</Value>
-      </Property>
-      <Property>
-        <Name>UsedTableName</Name>
-        <Value
-          type="q3:string">[dbo].[DimCampania]</Value>
-      </Property>
-      <Property>
-        <Name>TableInfoObjectType</Name>
-        <Value
-          type="q4:string">0</Value>
-      </Property>
-      <Property>
-        <Name>DataSourceViewID</Name>
-      </Property>
-    </Properties>
-  </PipelineComponentMetadata>
-  <PipelineComponentMetadata
     design-time-name="Package\FactVentas\Obtener CuponKey">
     <Properties>
       <Property>
@@ -4895,14 +4895,6 @@ where [refTable].[VarianteId] = ? and [refTable].[ProductoId] = ?</property>
     </Properties>
   </PipelineComponentMetadata>
   <PipelineComponentMetadata
-    design-time-name="Package\FactVentas\ADO NET Destination">
-    <Properties>
-      <Property>
-        <Name>DataSourceViewID</Name>
-      </Property>
-    </Properties>
-  </PipelineComponentMetadata>
-  <PipelineComponentMetadata
     design-time-name="Package\FactVentas\Obetener ClienteKey">
     <Properties>
       <Property>
@@ -4920,6 +4912,14 @@ where [refTable].[VarianteId] = ? and [refTable].[ProductoId] = ?</property>
         <Value
           type="q4:string">0</Value>
       </Property>
+      <Property>
+        <Name>DataSourceViewID</Name>
+      </Property>
+    </Properties>
+  </PipelineComponentMetadata>
+  <PipelineComponentMetadata
+    design-time-name="Package\FactVentas\ADO NET Destination">
+    <Properties>
       <Property>
         <Name>DataSourceViewID</Name>
       </Property>

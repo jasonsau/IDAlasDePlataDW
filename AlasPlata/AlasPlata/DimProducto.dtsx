@@ -11,8 +11,8 @@
   DTS:LocaleID="1033"
   DTS:ObjectName="Package1"
   DTS:PackageType="5"
-  DTS:VersionBuild="50"
-  DTS:VersionGUID="{34EBD833-0576-41B4-BA75-2214A2516064}">
+  DTS:VersionBuild="57"
+  DTS:VersionGUID="{8F97D67D-FB00-490E-8C4D-8F81AB0D6EDA}">
   <DTS:Property
     DTS:Name="PackageFormatVersion">8</DTS:Property>
   <DTS:ConnectionManagers>
@@ -27,7 +27,7 @@
           <DTS:Password
             DTS:Name="Password"
             Sensitive="1"
-            Encrypted="1">AQAAANCMnd8BFdERjHoAwE/Cl+sBAAAAVjEO+z0Wqk6tj7LRX+YGJAAAAAAIAAAARABUAFMAAAAQZgAAAAEAACAAAAChgQS5UQYUrw1X5FYNmO1mWgjfmrLsirlYNcrYUxQbrwAAAAAOgAAAAAIAACAAAAB1zgNAccuz9TdXa+cCfixssza3qrX8EBVU9Jusj3sT5yAAAACxmdtkJa3bstvadOMxnI55TbOZw8seKmick1p+xlhlXUAAAADNHUIfdMf92djXlWUIfXqoQyANYT3yYlvbso0/j3/15nvsGBrAoRhTuZjKZBWv6HqUHeL8EtukZ9VrqTQaOwVA</DTS:Password>
+            Encrypted="1">AQAAANCMnd8BFdERjHoAwE/Cl+sBAAAAVjEO+z0Wqk6tj7LRX+YGJAAAAAAIAAAARABUAFMAAAAQZgAAAAEAACAAAABySL0Ntf9lo41jdHwbzBa/HPXf2jkyMjmtDjGKgvkUgwAAAAAOgAAAAAIAACAAAADngGPbs0FHfmm7EY1L4uOFByVwlDhxRAHXOGr+YMLFKCAAAAD+VogBaSO0kto3gjaqMF8A6Te1yoou+lYqClXFpEZMfEAAAADDiUSTPbQjPPmhkgqnjcMCWhOmwYVAh9cHO0UJTHIT7PRaVgRGAOsRSQZ8lwej46DcIcvLEvUkCppLhZExq7Vp</DTS:Password>
         </DTS:ConnectionManager>
       </DTS:ObjectData>
     </DTS:ConnectionManager>
@@ -44,7 +44,7 @@
           <DTS:Password
             DTS:Name="Password"
             Sensitive="1"
-            Encrypted="1">AQAAANCMnd8BFdERjHoAwE/Cl+sBAAAAVjEO+z0Wqk6tj7LRX+YGJAAAAAAIAAAARABUAFMAAAAQZgAAAAEAACAAAABNteDLsLRv7ZDCsvi6bP+0N4SvU9Nx74s2E66qTw1GqgAAAAAOgAAAAAIAACAAAAB27EGN4Hyr/f9hyEkFWiPH2SBfPomIMp3dD8nmvu9qGSAAAABTHwqTortsG5djSDbA/T3vAdlQRqqMjCz+WXt9kH+/FUAAAABPDz/xy+NBwAjchPmI6MceRK7ahfUpSvsj1ppUw1aY3BrUQx2tA/nYAkss39qKJxk7ENRzZ1BXUKl6pQrjkAVu</DTS:Password>
+            Encrypted="1">AQAAANCMnd8BFdERjHoAwE/Cl+sBAAAAVjEO+z0Wqk6tj7LRX+YGJAAAAAAIAAAARABUAFMAAAAQZgAAAAEAACAAAAC6O+YJUjs2pZKy8QXdQ7CI+FA4U4AhQlkZJqtzViSfbgAAAAAOgAAAAAIAACAAAAD0jRIGbw4CBoMKvlZr5AW6kfQapfox/Cv6AASvapRdlCAAAABtPNVG7H4o6VOsmfYbUS0mS3Vxp0PJUz7rZHn6QxWmmUAAAAAG53VkEnvvlQvuxvdogv9yb3m3slkzm8+wz2KNoXdMKJ5wt1wStzL+uFlUyvnyZfgu1Gpwam9jil+eJH0+8oFv</DTS:Password>
         </DTS:ConnectionManager>
       </DTS:ObjectData>
     </DTS:ConnectionManager>
@@ -94,7 +94,7 @@
                   description="The SQL command to be executed."
                   expressionType="Notify"
                   name="SqlCommand"
-                  UITypeEditor="Microsoft.DataTransformationServices.Controls.ModalMultilineStringEditor">EXECUTE UpdateDimProducto ?,?,?,?,?,?,?,?,?,?,?;</property>
+                  UITypeEditor="Microsoft.DataTransformationServices.Controls.ModalMultilineStringEditor">EXECUTE UpdateDimProducto ?,?,?,?,?,?,?,?,?,?,?,?,?;</property>
                 <property
                   dataType="System.Int32"
                   description="Specifies the column code page to use when code page information is unavailable from the data source."
@@ -117,11 +117,11 @@
                   name="OLE DB Command Input">
                   <inputColumns>
                     <inputColumn
-                      refId="Package\Data Flow Task\Actualizar registros existentes.Inputs[OLE DB Command Input].Columns[ProductoKey]"
+                      refId="Package\Data Flow Task\Actualizar registros existentes.Inputs[OLE DB Command Input].Columns[ProductoKeyDW]"
                       cachedDataType="i4"
-                      cachedName="ProductoKey"
+                      cachedName="ProductoKeyDW"
                       externalMetadataColumnId="Package\Data Flow Task\Actualizar registros existentes.Inputs[OLE DB Command Input].ExternalColumns[@ProductoKey]"
-                      lineageId="Package\Data Flow Task\Verificacion Existe Registro.Outputs[Lookup Match Output].Columns[ProductoKey]" />
+                      lineageId="Package\Data Flow Task\Verificacion Existe Registro.Outputs[Lookup Match Output].Columns[ProductoKeyDW]" />
                     <inputColumn
                       refId="Package\Data Flow Task\Actualizar registros existentes.Inputs[OLE DB Command Input].Columns[NombreProducto]"
                       cachedCodepage="1252"
@@ -194,10 +194,26 @@
                       lineageId="Package\Data Flow Task\Lectura Data Json.Outputs[Output 0].Columns[FabricanteProducto]" />
                     <inputColumn
                       refId="Package\Data Flow Task\Actualizar registros existentes.Inputs[OLE DB Command Input].Columns[PrecioProducto]"
-                      cachedDataType="r4"
+                      cachedDataType="decimal"
                       cachedName="PrecioProducto"
                       externalMetadataColumnId="Package\Data Flow Task\Actualizar registros existentes.Inputs[OLE DB Command Input].ExternalColumns[@PrecioProducto]"
                       lineageId="Package\Data Flow Task\Lectura Data Json.Outputs[Output 0].Columns[PrecioProducto]" />
+                    <inputColumn
+                      refId="Package\Data Flow Task\Actualizar registros existentes.Inputs[OLE DB Command Input].Columns[ProductoIdDW]"
+                      cachedCodepage="1252"
+                      cachedDataType="str"
+                      cachedLength="255"
+                      cachedName="ProductoIdDW"
+                      externalMetadataColumnId="Package\Data Flow Task\Actualizar registros existentes.Inputs[OLE DB Command Input].ExternalColumns[@ProductId]"
+                      lineageId="Package\Data Flow Task\Verificacion Existe Registro.Outputs[Lookup Match Output].Columns[ProductoIdDW]" />
+                    <inputColumn
+                      refId="Package\Data Flow Task\Actualizar registros existentes.Inputs[OLE DB Command Input].Columns[VarianteIdDW]"
+                      cachedCodepage="1252"
+                      cachedDataType="str"
+                      cachedLength="255"
+                      cachedName="VarianteIdDW"
+                      externalMetadataColumnId="Package\Data Flow Task\Actualizar registros existentes.Inputs[OLE DB Command Input].ExternalColumns[@VarianteId]"
+                      lineageId="Package\Data Flow Task\Verificacion Existe Registro.Outputs[Lookup Match Output].Columns[VarianteIdDW]" />
                   </inputColumns>
                   <externalMetadataColumns
                     isUsed="True">
@@ -337,6 +353,32 @@
                           dataType="System.Int32"
                           description="Parameter information.  Matches OLE DB's DBPARAMFLAGSENUM values."
                           name="DBParamInfoFlags">81</property>
+                      </properties>
+                    </externalMetadataColumn>
+                    <externalMetadataColumn
+                      refId="Package\Data Flow Task\Actualizar registros existentes.Inputs[OLE DB Command Input].ExternalColumns[@ProductId]"
+                      codePage="1252"
+                      dataType="str"
+                      length="255"
+                      name="@ProductId">
+                      <properties>
+                        <property
+                          dataType="System.Int32"
+                          description="Parameter information.  Matches OLE DB's DBPARAMFLAGSENUM values."
+                          name="DBParamInfoFlags">65</property>
+                      </properties>
+                    </externalMetadataColumn>
+                    <externalMetadataColumn
+                      refId="Package\Data Flow Task\Actualizar registros existentes.Inputs[OLE DB Command Input].ExternalColumns[@VarianteId]"
+                      codePage="1252"
+                      dataType="str"
+                      length="255"
+                      name="@VarianteId">
+                      <properties>
+                        <property
+                          dataType="System.Int32"
+                          description="Parameter information.  Matches OLE DB's DBPARAMFLAGSENUM values."
+                          name="DBParamInfoFlags">65</property>
                       </properties>
                     </externalMetadataColumn>
                   </externalMetadataColumns>
@@ -517,7 +559,7 @@
                       lineageId="Package\Data Flow Task\Lectura Data Json.Outputs[Output 0].Columns[FabricanteProducto]" />
                     <inputColumn
                       refId="Package\Data Flow Task\Insertar nuevos registro.Inputs[ADO NET Destination Input].Columns[PrecioProducto]"
-                      cachedDataType="r4"
+                      cachedDataType="decimal"
                       cachedName="PrecioProducto"
                       externalMetadataColumnId="Package\Data Flow Task\Insertar nuevos registro.Inputs[ADO NET Destination Input].ExternalColumns[PrecioUnitario]"
                       lineageId="Package\Data Flow Task\Lectura Data Json.Outputs[Output 0].Columns[PrecioProducto]" />
@@ -592,6 +634,10 @@
                       name="PrecioUnitario"
                       precision="10"
                       scale="2" />
+                    <externalMetadataColumn
+                      refId="Package\Data Flow Task\Insertar nuevos registro.Inputs[ADO NET Destination Input].ExternalColumns[Activo]"
+                      dataType="bool"
+                      name="Activo" />
                   </externalMetadataColumns>
                 </input>
               </inputs>
@@ -2534,7 +2580,7 @@ AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=]]><
                       name="VarianteId" />
                     <outputColumn
                       refId="Package\Data Flow Task\Lectura Data Json.Outputs[Output 0].Columns[PrecioProducto]"
-                      dataType="r4"
+                      dataType="decimal"
                       lineageId="Package\Data Flow Task\Lectura Data Json.Outputs[Output 0].Columns[PrecioProducto]"
                       name="PrecioProducto" />
                     <outputColumn
@@ -2601,7 +2647,7 @@ where [refTable].[ProductoId] = ?</property>
                 <property
                   dataType="System.String"
                   description="Indicates whether to reference metadata in an XML format."
-                  name="ReferenceMetadataXml">&lt;referenceMetadata&gt;&lt;referenceColumns&gt;&lt;referenceColumn name="ProductoKey" dataType="DT_I4" length="0" precision="0" scale="0" codePage="0"/&gt;&lt;referenceColumn name="ProductoId" dataType="DT_STR" length="255" precision="0" scale="0" codePage="1252"/&gt;&lt;referenceColumn name="NombreProducto" dataType="DT_STR" length="500" precision="0" scale="0" codePage="1252"/&gt;&lt;referenceColumn name="TipoProducto" dataType="DT_STR" length="50" precision="0" scale="0" codePage="1252"/&gt;&lt;referenceColumn name="MarcaProducto" dataType="DT_STR" length="50" precision="0" scale="0" codePage="1252"/&gt;&lt;referenceColumn name="DescripccionProducto" dataType="DT_TEXT" length="0" precision="0" scale="0" codePage="1252"/&gt;&lt;referenceColumn name="CategoriaProducto" dataType="DT_STR" length="50" precision="0" scale="0" codePage="1252"/&gt;&lt;referenceColumn name="EstadoProducto" dataType="DT_STR" length="15" precision="0" scale="0" codePage="1252"/&gt;&lt;referenceColumn name="UnidadProducto" dataType="DT_STR" length="50" precision="0" scale="0" codePage="1252"/&gt;&lt;referenceColumn name="FechaCreacion" dataType="DT_DBDATE" length="0" precision="0" scale="0" codePage="0"/&gt;&lt;referenceColumn name="FechaModificacion" dataType="DT_DBDATE" length="0" precision="0" scale="0" codePage="0"/&gt;&lt;referenceColumn name="VariantId" dataType="DT_STR" length="255" precision="0" scale="0" codePage="1252"/&gt;&lt;referenceColumn name="PrecioUnitario" dataType="DT_NUMERIC" length="0" precision="10" scale="2" codePage="0"/&gt;&lt;/referenceColumns&gt;&lt;/referenceMetadata&gt;</property>
+                  name="ReferenceMetadataXml">&lt;referenceMetadata&gt;&lt;referenceColumns&gt;&lt;referenceColumn name="ProductoKey" dataType="DT_I4" length="0" precision="0" scale="0" codePage="0"/&gt;&lt;referenceColumn name="ProductoId" dataType="DT_STR" length="255" precision="0" scale="0" codePage="1252"/&gt;&lt;referenceColumn name="VarianteId" dataType="DT_STR" length="255" precision="0" scale="0" codePage="1252"/&gt;&lt;referenceColumn name="NombreProducto" dataType="DT_STR" length="500" precision="0" scale="0" codePage="1252"/&gt;&lt;referenceColumn name="TipoProducto" dataType="DT_STR" length="50" precision="0" scale="0" codePage="1252"/&gt;&lt;referenceColumn name="FabricanteProducto" dataType="DT_STR" length="50" precision="0" scale="0" codePage="1252"/&gt;&lt;referenceColumn name="MarcaProducto" dataType="DT_STR" length="50" precision="0" scale="0" codePage="1252"/&gt;&lt;referenceColumn name="DescripcionProducto" dataType="DT_TEXT" length="0" precision="0" scale="0" codePage="1252"/&gt;&lt;referenceColumn name="CategoriaProducto" dataType="DT_STR" length="50" precision="0" scale="0" codePage="1252"/&gt;&lt;referenceColumn name="EstadoProducto" dataType="DT_STR" length="15" precision="0" scale="0" codePage="1252"/&gt;&lt;referenceColumn name="UnidadProducto" dataType="DT_STR" length="50" precision="0" scale="0" codePage="1252"/&gt;&lt;referenceColumn name="FechaCreacion" dataType="DT_DBDATE" length="0" precision="0" scale="0" codePage="0"/&gt;&lt;referenceColumn name="FechaModificacion" dataType="DT_DBDATE" length="0" precision="0" scale="0" codePage="0"/&gt;&lt;referenceColumn name="PrecioUnitario" dataType="DT_NUMERIC" length="0" precision="10" scale="2" codePage="0"/&gt;&lt;referenceColumn name="Activo" dataType="DT_BOOL" length="0" precision="0" scale="0" codePage="0"/&gt;&lt;/referenceColumns&gt;&lt;/referenceMetadata&gt;</property>
                 <property
                   containsID="true"
                   dataType="System.String"
@@ -2660,17 +2706,49 @@ where [refTable].[ProductoId] = ?</property>
                   synchronousInputId="Package\Data Flow Task\Verificacion Existe Registro.Inputs[Lookup Input]">
                   <outputColumns>
                     <outputColumn
-                      refId="Package\Data Flow Task\Verificacion Existe Registro.Outputs[Lookup Match Output].Columns[ProductoKey]"
+                      refId="Package\Data Flow Task\Verificacion Existe Registro.Outputs[Lookup Match Output].Columns[ProductoKeyDW]"
                       dataType="i4"
                       errorOrTruncationOperation="Copy Column"
-                      lineageId="Package\Data Flow Task\Verificacion Existe Registro.Outputs[Lookup Match Output].Columns[ProductoKey]"
-                      name="ProductoKey"
+                      lineageId="Package\Data Flow Task\Verificacion Existe Registro.Outputs[Lookup Match Output].Columns[ProductoKeyDW]"
+                      name="ProductoKeyDW"
                       truncationRowDisposition="FailComponent">
                       <properties>
                         <property
                           dataType="System.String"
                           description="Specifies the column in the reference table from which a column is copied."
                           name="CopyFromReferenceColumn">ProductoKey</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\Data Flow Task\Verificacion Existe Registro.Outputs[Lookup Match Output].Columns[VarianteIdDW]"
+                      codePage="1252"
+                      dataType="str"
+                      errorOrTruncationOperation="Copy Column"
+                      length="255"
+                      lineageId="Package\Data Flow Task\Verificacion Existe Registro.Outputs[Lookup Match Output].Columns[VarianteIdDW]"
+                      name="VarianteIdDW"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          dataType="System.String"
+                          description="Specifies the column in the reference table from which a column is copied."
+                          name="CopyFromReferenceColumn">VarianteId</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\Data Flow Task\Verificacion Existe Registro.Outputs[Lookup Match Output].Columns[ProductoIdDW]"
+                      codePage="1252"
+                      dataType="str"
+                      errorOrTruncationOperation="Copy Column"
+                      length="255"
+                      lineageId="Package\Data Flow Task\Verificacion Existe Registro.Outputs[Lookup Match Output].Columns[ProductoIdDW]"
+                      name="ProductoIdDW"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          dataType="System.String"
+                          description="Specifies the column in the reference table from which a column is copied."
+                          name="CopyFromReferenceColumn">ProductoId</property>
                       </properties>
                     </outputColumn>
                   </outputColumns>
@@ -2802,7 +2880,7 @@ where [refTable].[ProductoId] = ?</property>
           </EdgeLayout.Curve>
           <EdgeLayout.Labels>
             <mssgm:EdgeLabel
-              BoundingBox="6.7252799479165,63.2441752096925,96.3827734375,11.609375"
+              BoundingBox="6.72527994791668,63.2441752096925,96.3827734375,11.609375"
               RelativePosition="Any" />
           </EdgeLayout.Labels>
         </EdgeLayout>
@@ -2860,7 +2938,7 @@ where [refTable].[ProductoId] = ?</property>
           </EdgeLayout.Curve>
           <EdgeLayout.Labels>
             <mssgm:EdgeLabel
-              BoundingBox="-155.973053385417,62.8397017707363,111.6127734375,11.609375"
+              BoundingBox="-164.841705729167,62.8397017707363,129.350078125,16"
               RelativePosition="Any" />
           </EdgeLayout.Labels>
         </EdgeLayout>
@@ -2873,7 +2951,7 @@ where [refTable].[ProductoId] = ?</property>
       <Property>
         <Name>OverwriteParamsSQLProp</Name>
         <Value
-          type="q2:string">false</Value>
+          type="q2:boolean">false</Value>
       </Property>
       <Property>
         <Name>UsedTableName</Name>
@@ -2883,7 +2961,7 @@ where [refTable].[ProductoId] = ?</property>
       <Property>
         <Name>TableInfoObjectType</Name>
         <Value
-          type="q4:string">0</Value>
+          type="q4:int">0</Value>
       </Property>
       <Property>
         <Name>DataSourceViewID</Name>
