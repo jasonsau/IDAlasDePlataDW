@@ -11,8 +11,8 @@
   DTS:LocaleID="1033"
   DTS:ObjectName="DimCliente"
   DTS:PackageType="5"
-  DTS:VersionBuild="30"
-  DTS:VersionGUID="{4F1BC4E6-0771-444F-BF47-A1D0215472E7}">
+  DTS:VersionBuild="37"
+  DTS:VersionGUID="{8923E12F-8794-470E-A3E5-BD0FE52FB13E}">
   <DTS:Property
     DTS:Name="PackageFormatVersion">8</DTS:Property>
   <DTS:ConnectionManagers>
@@ -23,19 +23,19 @@
       DTS:ObjectName="DestinationDW">
       <DTS:ObjectData>
         <DTS:ConnectionManager
-          DTS:ConnectionString="Data Source=localhost;User ID=js;Initial Catalog=AlasDePlataDW;Application Name=SSIS-Package1-{A8D2B2EB-C41E-409D-BB73-BC941483DB03}localhost.AlasDePlataDW.js;">
+          DTS:ConnectionString="Data Source=localhost;User ID=js;Initial Catalog=AlasDePlataDW;Persist Security Info=True;Application Name=SSIS-Package1-{A8D2B2EB-C41E-409D-BB73-BC941483DB03}localhost.AlasDePlataDW.js;">
           <DTS:Password
             DTS:Name="Password"
             Sensitive="1"
-            Encrypted="1">AQAAANCMnd8BFdERjHoAwE/Cl+sBAAAAVjEO+z0Wqk6tj7LRX+YGJAAAAAAIAAAARABUAFMAAAAQZgAAAAEAACAAAAAc27UfOx5/1lw1IOJyd3VtoFc6y0YnsY/PYXuNTRoEwgAAAAAOgAAAAAIAACAAAADJS1astFBB36cUfqPPYVAiKejq07Ie09CVoSsqqoy0YSAAAAASnKv9iVGkN66a021yA335wswC5EB4swmoCQJXuQch0kAAAACofSc0C+99/51kvPgNSn62Txh1NCyEXnIh64ckM9qG0ZoCtz6mpdBmHTLpq7qmVx/Mv8aMS24VjkEWmAOB+C5y</DTS:Password>
+            Encrypted="1">AQAAANCMnd8BFdERjHoAwE/Cl+sBAAAA0cnV3L9sZUGZvr3Q4+g2VgAAAAAIAAAARABUAFMAAAAQZgAAAAEAACAAAAB0LeDq8BiTK0XJWFCTNBuAc8QMBDrh8y+FiKw9N8Q37AAAAAAOgAAAAAIAACAAAADKPAxs0059skw6xBo+EV6R9xYZxUx6W00HJYBkioWAByAAAAA+UiVLezzjJLD6M3Dbzq+7IAQG6KT8aspmcy5wbNCbI0AAAAAOusXfg2u7t30RRpzEXjtPdGJlS5yq9oOsp0Bhxyay9LGtmF09wGn8nzot5syWx299+3f6hdBESwtPUlkshOmm</DTS:Password>
         </DTS:ConnectionManager>
       </DTS:ObjectData>
     </DTS:ConnectionManager>
     <DTS:ConnectionManager
-      DTS:refId="Package.ConnectionManagers[localhost.AlasDePlataDW.js1]"
+      DTS:refId="Package.ConnectionManagers[DWOLEDB]"
       DTS:CreationName="OLEDB"
       DTS:DTSID="{C6D26B46-924A-4A1F-8A0F-72C3F32B6BB0}"
-      DTS:ObjectName="localhost.AlasDePlataDW.js1">
+      DTS:ObjectName="DWOLEDB">
       <DTS:ObjectData>
         <DTS:ConnectionManager
           DTS:ConnectRetryCount="1"
@@ -44,7 +44,7 @@
           <DTS:Password
             DTS:Name="Password"
             Sensitive="1"
-            Encrypted="1">AQAAANCMnd8BFdERjHoAwE/Cl+sBAAAAVjEO+z0Wqk6tj7LRX+YGJAAAAAAIAAAARABUAFMAAAAQZgAAAAEAACAAAABksG7ZasjI/S6IUMBavbw7h+NS9N+9AlSX+N6jkU90+gAAAAAOgAAAAAIAACAAAABLYRw7+sbtmmDtZXZFssYtL+X14y/ENpXwlvUdPZHtyiAAAAAtkUUa2TtgS68YMnPE3Q1tlfqDv2s8ay8lRuvLBtRZv0AAAADgpv0KetUQIZJKc6elxA6WTbB/O2Jj14eX9JG+jhrmc6T5fUDEoUA3oKWXTawUC9OyhI8PyO8ltTkv6oTzBH0k</DTS:Password>
+            Encrypted="1">AQAAANCMnd8BFdERjHoAwE/Cl+sBAAAA0cnV3L9sZUGZvr3Q4+g2VgAAAAAIAAAARABUAFMAAAAQZgAAAAEAACAAAACuXBS6mSbCuu/DcryU69hew6nuoizxd50iih0veSaknQAAAAAOgAAAAAIAACAAAAAmhwubU+hRGyUwPjnSeo6AZIX4SltpDqPoZebN1NclTyAAAADVW2w7Pw90kz1cW4yCmY/CFutusG7sJbEtJK5vbHsK4kAAAABePtsxAqhuC4OL5fEzgMFhddo/I9yuuFQy5N4LMOq2HESSKOwCRB+HN6HZ3f6+XzflPrSg9ikS9NtX0kqdef1Z</DTS:Password>
         </DTS:ConnectionManager>
       </DTS:ObjectData>
     </DTS:ConnectionManager>
@@ -57,19 +57,19 @@
       DTS:ObjectName="JsonFilePath">
       <DTS:Property
         DTS:DataType="8"
-        DTS:Name="ParameterValue">C:\Users\js\Documents\ID\Proyecto\CSV\Contacts\ListContacts.json</DTS:Property>
+        DTS:Name="ParameterValue">C:\UES\IDAlasDePlataDW\CSV\Contacts\ListContacts.json</DTS:Property>
     </DTS:PackageParameter>
   </DTS:PackageParameters>
   <DTS:Variables />
   <DTS:Executables>
     <DTS:Executable
-      DTS:refId="Package\Data Flow Task"
+      DTS:refId="Package\Llenar de DimCliente"
       DTS:CreationName="Microsoft.Pipeline"
       DTS:Description="Data Flow Task"
       DTS:DTSID="{1E561413-2017-4F07-AED1-07DF2133F039}"
       DTS:ExecutableType="Microsoft.Pipeline"
       DTS:LocaleID="-1"
-      DTS:ObjectName="Data Flow Task"
+      DTS:ObjectName="Llenar de DimCliente"
       DTS:TaskContact="Performs high-performance data extraction, transformation and loading;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; All Rights Reserved;http://www.microsoft.com/sql/support/default.asp;1">
       <DTS:Variables />
       <DTS:ObjectData>
@@ -77,7 +77,7 @@
           version="1">
           <components>
             <component
-              refId="Package\Data Flow Task\Actualizacion Registros Existentes"
+              refId="Package\Llenar de DimCliente\Actualizacion Registros Existentes"
               componentClassID="Microsoft.OLEDBCommand"
               contactInfo="OLE DB Command;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; All Rights Reserved; http://www.microsoft.com/sql/support;2"
               description="Runs an SQL statement for each row in a data flow. For example, call a 'new employee setup' stored procedure for each row in the 'new employees' table. Note: running an SQL statement for each row of a large data flow may take a long time."
@@ -102,63 +102,63 @@
               </properties>
               <connections>
                 <connection
-                  refId="Package\Data Flow Task\Actualizacion Registros Existentes.Connections[OleDbConnection]"
-                  connectionManagerID="Package.ConnectionManagers[localhost.AlasDePlataDW.js1]"
-                  connectionManagerRefId="Package.ConnectionManagers[localhost.AlasDePlataDW.js1]"
+                  refId="Package\Llenar de DimCliente\Actualizacion Registros Existentes.Connections[OleDbConnection]"
+                  connectionManagerID="Package.ConnectionManagers[DWOLEDB]"
+                  connectionManagerRefId="Package.ConnectionManagers[DWOLEDB]"
                   description="The OLE DB runtime connection used to access the database."
                   name="OleDbConnection" />
               </connections>
               <inputs>
                 <input
-                  refId="Package\Data Flow Task\Actualizacion Registros Existentes.Inputs[OLE DB Command Input]"
+                  refId="Package\Llenar de DimCliente\Actualizacion Registros Existentes.Inputs[OLE DB Command Input]"
                   errorOrTruncationOperation="Command Execution"
                   errorRowDisposition="FailComponent"
                   hasSideEffects="true"
                   name="OLE DB Command Input">
                   <inputColumns>
                     <inputColumn
-                      refId="Package\Data Flow Task\Actualizacion Registros Existentes.Inputs[OLE DB Command Input].Columns[Telefono]"
+                      refId="Package\Llenar de DimCliente\Actualizacion Registros Existentes.Inputs[OLE DB Command Input].Columns[Telefono]"
                       cachedCodepage="1252"
                       cachedDataType="str"
                       cachedLength="50"
                       cachedName="Telefono"
-                      externalMetadataColumnId="Package\Data Flow Task\Actualizacion Registros Existentes.Inputs[OLE DB Command Input].ExternalColumns[@Telefono]"
-                      lineageId="Package\Data Flow Task\Lectura Archivo JSON.Outputs[Output 0].Columns[Telefono]" />
+                      externalMetadataColumnId="Package\Llenar de DimCliente\Actualizacion Registros Existentes.Inputs[OLE DB Command Input].ExternalColumns[@Telefono]"
+                      lineageId="Package\Llenar de DimCliente\Lectura Archivo JSON.Outputs[Output 0].Columns[Telefono]" />
                     <inputColumn
-                      refId="Package\Data Flow Task\Actualizacion Registros Existentes.Inputs[OLE DB Command Input].Columns[ClienteKey]"
+                      refId="Package\Llenar de DimCliente\Actualizacion Registros Existentes.Inputs[OLE DB Command Input].Columns[ClienteKey]"
                       cachedDataType="i4"
                       cachedName="ClienteKey"
-                      externalMetadataColumnId="Package\Data Flow Task\Actualizacion Registros Existentes.Inputs[OLE DB Command Input].ExternalColumns[@ClienteKey]"
-                      lineageId="Package\Data Flow Task\Verificacion Existe.Outputs[Lookup Match Output].Columns[ClienteKey]" />
+                      externalMetadataColumnId="Package\Llenar de DimCliente\Actualizacion Registros Existentes.Inputs[OLE DB Command Input].ExternalColumns[@ClienteKey]"
+                      lineageId="Package\Llenar de DimCliente\Verificacion Existe.Outputs[Lookup Match Output].Columns[ClienteKey]" />
                     <inputColumn
-                      refId="Package\Data Flow Task\Actualizacion Registros Existentes.Inputs[OLE DB Command Input].Columns[Email]"
+                      refId="Package\Llenar de DimCliente\Actualizacion Registros Existentes.Inputs[OLE DB Command Input].Columns[Email]"
                       cachedCodepage="1252"
                       cachedDataType="str"
                       cachedLength="50"
                       cachedName="Email"
-                      externalMetadataColumnId="Package\Data Flow Task\Actualizacion Registros Existentes.Inputs[OLE DB Command Input].ExternalColumns[@Email]"
-                      lineageId="Package\Data Flow Task\Lectura Archivo JSON.Outputs[Output 0].Columns[Email]" />
+                      externalMetadataColumnId="Package\Llenar de DimCliente\Actualizacion Registros Existentes.Inputs[OLE DB Command Input].ExternalColumns[@Email]"
+                      lineageId="Package\Llenar de DimCliente\Lectura Archivo JSON.Outputs[Output 0].Columns[Email]" />
                     <inputColumn
-                      refId="Package\Data Flow Task\Actualizacion Registros Existentes.Inputs[OLE DB Command Input].Columns[NombreCliente]"
+                      refId="Package\Llenar de DimCliente\Actualizacion Registros Existentes.Inputs[OLE DB Command Input].Columns[NombreCliente]"
                       cachedCodepage="1252"
                       cachedDataType="str"
                       cachedLength="50"
                       cachedName="NombreCliente"
-                      externalMetadataColumnId="Package\Data Flow Task\Actualizacion Registros Existentes.Inputs[OLE DB Command Input].ExternalColumns[@NombreCliente]"
-                      lineageId="Package\Data Flow Task\Lectura Archivo JSON.Outputs[Output 0].Columns[NombreCliente]" />
+                      externalMetadataColumnId="Package\Llenar de DimCliente\Actualizacion Registros Existentes.Inputs[OLE DB Command Input].ExternalColumns[@NombreCliente]"
+                      lineageId="Package\Llenar de DimCliente\Lectura Archivo JSON.Outputs[Output 0].Columns[NombreCliente]" />
                     <inputColumn
-                      refId="Package\Data Flow Task\Actualizacion Registros Existentes.Inputs[OLE DB Command Input].Columns[NombreEmpresa]"
+                      refId="Package\Llenar de DimCliente\Actualizacion Registros Existentes.Inputs[OLE DB Command Input].Columns[NombreEmpresa]"
                       cachedCodepage="1252"
                       cachedDataType="str"
                       cachedLength="255"
                       cachedName="NombreEmpresa"
-                      externalMetadataColumnId="Package\Data Flow Task\Actualizacion Registros Existentes.Inputs[OLE DB Command Input].ExternalColumns[@NombreEmpresa]"
-                      lineageId="Package\Data Flow Task\Lectura Archivo JSON.Outputs[Output 0].Columns[NombreEmpresa]" />
+                      externalMetadataColumnId="Package\Llenar de DimCliente\Actualizacion Registros Existentes.Inputs[OLE DB Command Input].ExternalColumns[@NombreEmpresa]"
+                      lineageId="Package\Llenar de DimCliente\Lectura Archivo JSON.Outputs[Output 0].Columns[NombreEmpresa]" />
                   </inputColumns>
                   <externalMetadataColumns
                     isUsed="True">
                     <externalMetadataColumn
-                      refId="Package\Data Flow Task\Actualizacion Registros Existentes.Inputs[OLE DB Command Input].ExternalColumns[@Telefono]"
+                      refId="Package\Llenar de DimCliente\Actualizacion Registros Existentes.Inputs[OLE DB Command Input].ExternalColumns[@Telefono]"
                       codePage="1252"
                       dataType="str"
                       length="50"
@@ -171,7 +171,7 @@
                       </properties>
                     </externalMetadataColumn>
                     <externalMetadataColumn
-                      refId="Package\Data Flow Task\Actualizacion Registros Existentes.Inputs[OLE DB Command Input].ExternalColumns[@ClienteKey]"
+                      refId="Package\Llenar de DimCliente\Actualizacion Registros Existentes.Inputs[OLE DB Command Input].ExternalColumns[@ClienteKey]"
                       dataType="i4"
                       name="@ClienteKey">
                       <properties>
@@ -182,7 +182,7 @@
                       </properties>
                     </externalMetadataColumn>
                     <externalMetadataColumn
-                      refId="Package\Data Flow Task\Actualizacion Registros Existentes.Inputs[OLE DB Command Input].ExternalColumns[@Email]"
+                      refId="Package\Llenar de DimCliente\Actualizacion Registros Existentes.Inputs[OLE DB Command Input].ExternalColumns[@Email]"
                       codePage="1252"
                       dataType="str"
                       length="50"
@@ -195,7 +195,7 @@
                       </properties>
                     </externalMetadataColumn>
                     <externalMetadataColumn
-                      refId="Package\Data Flow Task\Actualizacion Registros Existentes.Inputs[OLE DB Command Input].ExternalColumns[@NombreCliente]"
+                      refId="Package\Llenar de DimCliente\Actualizacion Registros Existentes.Inputs[OLE DB Command Input].ExternalColumns[@NombreCliente]"
                       codePage="1252"
                       dataType="str"
                       length="255"
@@ -208,7 +208,7 @@
                       </properties>
                     </externalMetadataColumn>
                     <externalMetadataColumn
-                      refId="Package\Data Flow Task\Actualizacion Registros Existentes.Inputs[OLE DB Command Input].ExternalColumns[@NombreEmpresa]"
+                      refId="Package\Llenar de DimCliente\Actualizacion Registros Existentes.Inputs[OLE DB Command Input].ExternalColumns[@NombreEmpresa]"
                       codePage="1252"
                       dataType="str"
                       length="50"
@@ -225,29 +225,29 @@
               </inputs>
               <outputs>
                 <output
-                  refId="Package\Data Flow Task\Actualizacion Registros Existentes.Outputs[OLE DB Command Output]"
+                  refId="Package\Llenar de DimCliente\Actualizacion Registros Existentes.Outputs[OLE DB Command Output]"
                   exclusionGroup="1"
                   name="OLE DB Command Output"
-                  synchronousInputId="Package\Data Flow Task\Actualizacion Registros Existentes.Inputs[OLE DB Command Input]">
+                  synchronousInputId="Package\Llenar de DimCliente\Actualizacion Registros Existentes.Inputs[OLE DB Command Input]">
                   <externalMetadataColumns />
                 </output>
                 <output
-                  refId="Package\Data Flow Task\Actualizacion Registros Existentes.Outputs[OLE DB Command Error Output]"
+                  refId="Package\Llenar de DimCliente\Actualizacion Registros Existentes.Outputs[OLE DB Command Error Output]"
                   exclusionGroup="1"
                   isErrorOut="true"
                   name="OLE DB Command Error Output"
-                  synchronousInputId="Package\Data Flow Task\Actualizacion Registros Existentes.Inputs[OLE DB Command Input]">
+                  synchronousInputId="Package\Llenar de DimCliente\Actualizacion Registros Existentes.Inputs[OLE DB Command Input]">
                   <outputColumns>
                     <outputColumn
-                      refId="Package\Data Flow Task\Actualizacion Registros Existentes.Outputs[OLE DB Command Error Output].Columns[ErrorCode]"
+                      refId="Package\Llenar de DimCliente\Actualizacion Registros Existentes.Outputs[OLE DB Command Error Output].Columns[ErrorCode]"
                       dataType="i4"
-                      lineageId="Package\Data Flow Task\Actualizacion Registros Existentes.Outputs[OLE DB Command Error Output].Columns[ErrorCode]"
+                      lineageId="Package\Llenar de DimCliente\Actualizacion Registros Existentes.Outputs[OLE DB Command Error Output].Columns[ErrorCode]"
                       name="ErrorCode"
                       specialFlags="1" />
                     <outputColumn
-                      refId="Package\Data Flow Task\Actualizacion Registros Existentes.Outputs[OLE DB Command Error Output].Columns[ErrorColumn]"
+                      refId="Package\Llenar de DimCliente\Actualizacion Registros Existentes.Outputs[OLE DB Command Error Output].Columns[ErrorColumn]"
                       dataType="i4"
-                      lineageId="Package\Data Flow Task\Actualizacion Registros Existentes.Outputs[OLE DB Command Error Output].Columns[ErrorColumn]"
+                      lineageId="Package\Llenar de DimCliente\Actualizacion Registros Existentes.Outputs[OLE DB Command Error Output].Columns[ErrorColumn]"
                       name="ErrorColumn"
                       specialFlags="2" />
                   </outputColumns>
@@ -256,7 +256,7 @@
               </outputs>
             </component>
             <component
-              refId="Package\Data Flow Task\Insercion nuevos Registros"
+              refId="Package\Llenar de DimCliente\Insercion nuevos Registros"
               componentClassID="Microsoft.ManagedComponentHost"
               contactInfo="Loads data into an ADO.NET-compliant database that uses a database table or view. Load data into a new or existing table. For example, use an ADO.NET provider for ODBC to load data into an ODBC destination.;Microsoft Corporation; Microsoft SQL Server; © Microsoft Corporation; All Rights Reserved; http://www.microsoft.com/sql/support;2"
               description="Loads data into an ADO.NET-compliant database that uses a database table or view. Load data into a new or existing table. For example, use an ADO.NET provider for ODBC to load data into an ODBC destination."
@@ -291,7 +291,7 @@
               </properties>
               <connections>
                 <connection
-                  refId="Package\Data Flow Task\Insercion nuevos Registros.Connections[IDbConnection]"
+                  refId="Package\Llenar de DimCliente\Insercion nuevos Registros.Connections[IDbConnection]"
                   connectionManagerID="Package.ConnectionManagers[DestinationDW]"
                   connectionManagerRefId="Package.ConnectionManagers[DestinationDW]"
                   description="Managed connection manager"
@@ -299,114 +299,114 @@
               </connections>
               <inputs>
                 <input
-                  refId="Package\Data Flow Task\Insercion nuevos Registros.Inputs[ADO NET Destination Input]"
+                  refId="Package\Llenar de DimCliente\Insercion nuevos Registros.Inputs[ADO NET Destination Input]"
                   errorRowDisposition="FailComponent"
                   hasSideEffects="true"
                   name="ADO NET Destination Input">
                   <inputColumns>
                     <inputColumn
-                      refId="Package\Data Flow Task\Insercion nuevos Registros.Inputs[ADO NET Destination Input].Columns[NombreCliente]"
+                      refId="Package\Llenar de DimCliente\Insercion nuevos Registros.Inputs[ADO NET Destination Input].Columns[NombreCliente]"
                       cachedCodepage="1252"
                       cachedDataType="str"
                       cachedLength="50"
                       cachedName="NombreCliente"
-                      externalMetadataColumnId="Package\Data Flow Task\Insercion nuevos Registros.Inputs[ADO NET Destination Input].ExternalColumns[NombreCliente]"
-                      lineageId="Package\Data Flow Task\Lectura Archivo JSON.Outputs[Output 0].Columns[NombreCliente]" />
+                      externalMetadataColumnId="Package\Llenar de DimCliente\Insercion nuevos Registros.Inputs[ADO NET Destination Input].ExternalColumns[NombreCliente]"
+                      lineageId="Package\Llenar de DimCliente\Lectura Archivo JSON.Outputs[Output 0].Columns[NombreCliente]" />
                     <inputColumn
-                      refId="Package\Data Flow Task\Insercion nuevos Registros.Inputs[ADO NET Destination Input].Columns[ClienteId]"
+                      refId="Package\Llenar de DimCliente\Insercion nuevos Registros.Inputs[ADO NET Destination Input].Columns[ClienteId]"
                       cachedCodepage="1252"
                       cachedDataType="str"
                       cachedLength="50"
                       cachedName="ClienteId"
-                      externalMetadataColumnId="Package\Data Flow Task\Insercion nuevos Registros.Inputs[ADO NET Destination Input].ExternalColumns[ClienteId]"
-                      lineageId="Package\Data Flow Task\Lectura Archivo JSON.Outputs[Output 0].Columns[ClienteId]" />
+                      externalMetadataColumnId="Package\Llenar de DimCliente\Insercion nuevos Registros.Inputs[ADO NET Destination Input].ExternalColumns[ClienteId]"
+                      lineageId="Package\Llenar de DimCliente\Lectura Archivo JSON.Outputs[Output 0].Columns[ClienteId]" />
                     <inputColumn
-                      refId="Package\Data Flow Task\Insercion nuevos Registros.Inputs[ADO NET Destination Input].Columns[Email]"
+                      refId="Package\Llenar de DimCliente\Insercion nuevos Registros.Inputs[ADO NET Destination Input].Columns[Email]"
                       cachedCodepage="1252"
                       cachedDataType="str"
                       cachedLength="50"
                       cachedName="Email"
-                      externalMetadataColumnId="Package\Data Flow Task\Insercion nuevos Registros.Inputs[ADO NET Destination Input].ExternalColumns[Email]"
-                      lineageId="Package\Data Flow Task\Lectura Archivo JSON.Outputs[Output 0].Columns[Email]" />
+                      externalMetadataColumnId="Package\Llenar de DimCliente\Insercion nuevos Registros.Inputs[ADO NET Destination Input].ExternalColumns[Email]"
+                      lineageId="Package\Llenar de DimCliente\Lectura Archivo JSON.Outputs[Output 0].Columns[Email]" />
                     <inputColumn
-                      refId="Package\Data Flow Task\Insercion nuevos Registros.Inputs[ADO NET Destination Input].Columns[Telefono]"
+                      refId="Package\Llenar de DimCliente\Insercion nuevos Registros.Inputs[ADO NET Destination Input].Columns[Telefono]"
                       cachedCodepage="1252"
                       cachedDataType="str"
                       cachedLength="50"
                       cachedName="Telefono"
-                      externalMetadataColumnId="Package\Data Flow Task\Insercion nuevos Registros.Inputs[ADO NET Destination Input].ExternalColumns[Telefono]"
-                      lineageId="Package\Data Flow Task\Lectura Archivo JSON.Outputs[Output 0].Columns[Telefono]" />
+                      externalMetadataColumnId="Package\Llenar de DimCliente\Insercion nuevos Registros.Inputs[ADO NET Destination Input].ExternalColumns[Telefono]"
+                      lineageId="Package\Llenar de DimCliente\Lectura Archivo JSON.Outputs[Output 0].Columns[Telefono]" />
                     <inputColumn
-                      refId="Package\Data Flow Task\Insercion nuevos Registros.Inputs[ADO NET Destination Input].Columns[NombreEmpresa]"
+                      refId="Package\Llenar de DimCliente\Insercion nuevos Registros.Inputs[ADO NET Destination Input].Columns[FechaCreacion]"
+                      cachedDataType="date"
+                      cachedName="FechaCreacion"
+                      externalMetadataColumnId="Package\Llenar de DimCliente\Insercion nuevos Registros.Inputs[ADO NET Destination Input].ExternalColumns[FechaCreacion]"
+                      lineageId="Package\Llenar de DimCliente\Lectura Archivo JSON.Outputs[Output 0].Columns[FechaCreacion]" />
+                    <inputColumn
+                      refId="Package\Llenar de DimCliente\Insercion nuevos Registros.Inputs[ADO NET Destination Input].Columns[NombreEmpresa]"
                       cachedCodepage="1252"
                       cachedDataType="str"
                       cachedLength="255"
                       cachedName="NombreEmpresa"
-                      externalMetadataColumnId="Package\Data Flow Task\Insercion nuevos Registros.Inputs[ADO NET Destination Input].ExternalColumns[NombreEmpresa]"
-                      lineageId="Package\Data Flow Task\Lectura Archivo JSON.Outputs[Output 0].Columns[NombreEmpresa]" />
-                    <inputColumn
-                      refId="Package\Data Flow Task\Insercion nuevos Registros.Inputs[ADO NET Destination Input].Columns[FechaCreacion]"
-                      cachedDataType="date"
-                      cachedName="FechaCreacion"
-                      externalMetadataColumnId="Package\Data Flow Task\Insercion nuevos Registros.Inputs[ADO NET Destination Input].ExternalColumns[FechaDeCreacion]"
-                      lineageId="Package\Data Flow Task\Lectura Archivo JSON.Outputs[Output 0].Columns[FechaCreacion]" />
+                      externalMetadataColumnId="Package\Llenar de DimCliente\Insercion nuevos Registros.Inputs[ADO NET Destination Input].ExternalColumns[NombreEmpresa]"
+                      lineageId="Package\Llenar de DimCliente\Lectura Archivo JSON.Outputs[Output 0].Columns[NombreEmpresa]" />
                   </inputColumns>
                   <externalMetadataColumns
                     isUsed="True">
                     <externalMetadataColumn
-                      refId="Package\Data Flow Task\Insercion nuevos Registros.Inputs[ADO NET Destination Input].ExternalColumns[ClienteKey]"
+                      refId="Package\Llenar de DimCliente\Insercion nuevos Registros.Inputs[ADO NET Destination Input].ExternalColumns[ClienteKey]"
                       dataType="i4"
                       name="ClienteKey" />
                     <externalMetadataColumn
-                      refId="Package\Data Flow Task\Insercion nuevos Registros.Inputs[ADO NET Destination Input].ExternalColumns[ClienteId]"
+                      refId="Package\Llenar de DimCliente\Insercion nuevos Registros.Inputs[ADO NET Destination Input].ExternalColumns[ClienteId]"
                       dataType="wstr"
                       length="255"
                       name="ClienteId" />
                     <externalMetadataColumn
-                      refId="Package\Data Flow Task\Insercion nuevos Registros.Inputs[ADO NET Destination Input].ExternalColumns[NombreCliente]"
+                      refId="Package\Llenar de DimCliente\Insercion nuevos Registros.Inputs[ADO NET Destination Input].ExternalColumns[NombreCliente]"
                       dataType="wstr"
                       length="255"
                       name="NombreCliente" />
                     <externalMetadataColumn
-                      refId="Package\Data Flow Task\Insercion nuevos Registros.Inputs[ADO NET Destination Input].ExternalColumns[Telefono]"
+                      refId="Package\Llenar de DimCliente\Insercion nuevos Registros.Inputs[ADO NET Destination Input].ExternalColumns[Telefono]"
                       dataType="wstr"
                       length="50"
                       name="Telefono" />
                     <externalMetadataColumn
-                      refId="Package\Data Flow Task\Insercion nuevos Registros.Inputs[ADO NET Destination Input].ExternalColumns[Email]"
+                      refId="Package\Llenar de DimCliente\Insercion nuevos Registros.Inputs[ADO NET Destination Input].ExternalColumns[Email]"
                       dataType="wstr"
                       length="50"
                       name="Email" />
                     <externalMetadataColumn
-                      refId="Package\Data Flow Task\Insercion nuevos Registros.Inputs[ADO NET Destination Input].ExternalColumns[NombreEmpresa]"
+                      refId="Package\Llenar de DimCliente\Insercion nuevos Registros.Inputs[ADO NET Destination Input].ExternalColumns[NombreEmpresa]"
                       dataType="wstr"
                       length="255"
                       name="NombreEmpresa" />
                     <externalMetadataColumn
-                      refId="Package\Data Flow Task\Insercion nuevos Registros.Inputs[ADO NET Destination Input].ExternalColumns[FechaDeCreacion]"
+                      refId="Package\Llenar de DimCliente\Insercion nuevos Registros.Inputs[ADO NET Destination Input].ExternalColumns[FechaCreacion]"
                       dataType="dbTimeStamp"
-                      name="FechaDeCreacion" />
+                      name="FechaCreacion" />
                   </externalMetadataColumns>
                 </input>
               </inputs>
               <outputs>
                 <output
-                  refId="Package\Data Flow Task\Insercion nuevos Registros.Outputs[ADO NET Destination Error Output]"
+                  refId="Package\Llenar de DimCliente\Insercion nuevos Registros.Outputs[ADO NET Destination Error Output]"
                   exclusionGroup="1"
                   isErrorOut="true"
                   name="ADO NET Destination Error Output"
-                  synchronousInputId="Package\Data Flow Task\Insercion nuevos Registros.Inputs[ADO NET Destination Input]">
+                  synchronousInputId="Package\Llenar de DimCliente\Insercion nuevos Registros.Inputs[ADO NET Destination Input]">
                   <outputColumns>
                     <outputColumn
-                      refId="Package\Data Flow Task\Insercion nuevos Registros.Outputs[ADO NET Destination Error Output].Columns[ErrorCode]"
+                      refId="Package\Llenar de DimCliente\Insercion nuevos Registros.Outputs[ADO NET Destination Error Output].Columns[ErrorCode]"
                       dataType="i4"
-                      lineageId="Package\Data Flow Task\Insercion nuevos Registros.Outputs[ADO NET Destination Error Output].Columns[ErrorCode]"
+                      lineageId="Package\Llenar de DimCliente\Insercion nuevos Registros.Outputs[ADO NET Destination Error Output].Columns[ErrorCode]"
                       name="ErrorCode"
                       specialFlags="1" />
                     <outputColumn
-                      refId="Package\Data Flow Task\Insercion nuevos Registros.Outputs[ADO NET Destination Error Output].Columns[ErrorColumn]"
+                      refId="Package\Llenar de DimCliente\Insercion nuevos Registros.Outputs[ADO NET Destination Error Output].Columns[ErrorColumn]"
                       dataType="i4"
-                      lineageId="Package\Data Flow Task\Insercion nuevos Registros.Outputs[ADO NET Destination Error Output].Columns[ErrorColumn]"
+                      lineageId="Package\Llenar de DimCliente\Insercion nuevos Registros.Outputs[ADO NET Destination Error Output].Columns[ErrorColumn]"
                       name="ErrorColumn"
                       specialFlags="2" />
                   </outputColumns>
@@ -415,7 +415,7 @@
               </outputs>
             </component>
             <component
-              refId="Package\Data Flow Task\Lectura Archivo JSON"
+              refId="Package\Llenar de DimCliente\Lectura Archivo JSON"
               componentClassID="Microsoft.ManagedComponentHost"
               contactInfo="Includes and runs custom script code. For example, apply a business rule that limits the range of valid values in an &quot;income&quot; column or add values in two columns and calculate the average of the sum.;Microsoft Corporation; Microsoft SQL Server; Microsoft Corporation; All Rights Reserved; http://www.microsoft.com/sql/support;13"
               description="Includes and runs custom script code. For example, apply a business rule that limits the range of valid values in an &quot;income&quot; column or add values in two columns and calculate the average of the sum."
@@ -587,10 +587,6 @@ using Microsoft.SqlServer.Dts.Runtime.Wrapper;
 using SC_63a64f4921f348eebedb80c1309f33c9;
 #endregion
 
-/// <summary>
-/// This is the class to which to add your code.  Do not change the name, attributes, or parent
-/// of this class.
-/// </summary>
 [Microsoft.SqlServer.Dts.Pipeline.SSISScriptComponentEntryPointAttribute]
 public class ScriptMain : UserComponent
 {
@@ -650,30 +646,14 @@ public class ScriptMain : UserComponent
      */
     #endregion
 
-    /// <summary>
-    /// This method is called once, before rows begin to be processed in the data flow.
-    ///
-    /// You can remove this method if you don't need to do anything here.
-    /// </summary>
     public override void PreExecute()
     {
         base.PreExecute();
-        /*
-         * Add your code here
-         */
     }
 
-    /// <summary>
-    /// This method is called after all the rows have passed through this component.
-    ///
-    /// You can delete this method if you don't need to do anything here.
-    /// </summary>
     public override void PostExecute()
     {
         base.PostExecute();
-        /*
-         * Add your code here
-         */
     }
 
     private string GetContactName(string firstName, string lastName)
@@ -1032,7 +1012,7 @@ public class Variables
     <msb:CodeName>SC_63a64f4921f348eebedb80c1309f33c9</msb:CodeName>
     <msb:Language>msBuild</msb:Language>
     <msb:DisplayName>SC_63a64f4921f348eebedb80c1309f33c9</msb:DisplayName>
-    <msb:ProjectId>{9D621459-6469-4776-9A52-05AE7C7BE341}</msb:ProjectId>
+    <msb:ProjectId>{FDBF5836-BD62-4384-A8E6-3EA7ED53A113}</msb:ProjectId>
   </msb:PropertyGroup>
   <msb:ItemGroup>
     <msb:Project Include="SC_63a64f4921f348eebedb80c1309f33c9.csproj" />
@@ -1337,7 +1317,7 @@ namespace SC_63a64f4921f348eebedb80c1309f33c9
                     <arrayElement
                       dataType="System.String"><![CDATA[TVqQAAMAAAAEAAAA//8AALgAAAAAAAAAQAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
 AAAAgAAAAA4fug4AtAnNIbgBTM0hVGhpcyBwcm9ncmFtIGNhbm5vdCBiZSBydW4gaW4gRE9TIG1v
-ZGUuDQ0KJAAAAAAAAABQRQAATAEDAPs5C2cAAAAAAAAAAOAAIiALATAAACYAAAAIAAAAAAAAgkQA
+ZGUuDQ0KJAAAAAAAAABQRQAATAEDAKqCIGcAAAAAAAAAAOAAIiALATAAACYAAAAIAAAAAAAAgkQA
 AAAgAAAAYAAAAAAAEAAgAAAAAgAABAAAAAAAAAAGAAAAAAAAAACgAAAAAgAAAAAAAAMAYIUAABAA
 ABAAAAAAEAAAEAAAAAAAABAAAAAAAAAAAAAAADBEAABPAAAAAGAAAEgEAAAAAAAAAAAAAAAAAAAA
 AAAAAIAAAAwAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
@@ -1492,7 +1472,7 @@ cwB1ACAAbAB1AGcAYQByACwAIABhAHMAaQBnAG4AZQAgAHUAbgAgAHYAYQBsAG8AcgAgAGEAIABs
 AGEAIABjAG8AbAB1AG0AbgBhAC4AABFPAHUAdABwAHUAdAAgADAAABlKAHMAbwBuAEYAaQBsAGUA
 UABhAHQAaAAAcVMAQwBfADYAMwBhADYANABmADQAOQAyADEAZgAzADQAOABlAGUAYgBlAGQAYgA4
 ADAAYwAxADMAMAA5AGYAMwAzAGMAOQAuAFAAcgBvAHAAZQByAHQAaQBlAHMALgBSAGUAcwBvAHUA
-cgBjAGUAcwAAAADl0nje/mGPQ7mor+aqSWQ2AAQgAQEIAyAAAQUgAQEREQQgAQEOBSABARFtBAAB
+cgBjAGUAcwAAAADSFPD6xy6ATrTKBPNBMEK0AAQgAQEIAyAAAQUgAQEREQQgAQEOBSABARFtBAAB
 Ag4DIAAOBgADDg4ODg0HBA4VEjkBEiQSJBI9BAABDg4GMAEBHgAOBAoBEhwHFRKAhQESJAggABUS
 OQETAAYVEjkBEiQEIAATAAUAARFNDgMgAAIGIAIBDhI9CSADARJFHQgSSQUgAgEIHAMHAQgGAAII
 EkkOBSABHQgIBSAAEoCVBiABEoCZHAUAABKAnQYgARwSgKEIAAESgKURgKkFIAASgK0HIAIBDhKA
@@ -1593,49 +1573,49 @@ AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA]]></arrayElement>
               </properties>
               <outputs>
                 <output
-                  refId="Package\Data Flow Task\Lectura Archivo JSON.Outputs[Output 0]"
+                  refId="Package\Llenar de DimCliente\Lectura Archivo JSON.Outputs[Output 0]"
                   hasSideEffects="true"
                   name="Output 0">
                   <outputColumns>
                     <outputColumn
-                      refId="Package\Data Flow Task\Lectura Archivo JSON.Outputs[Output 0].Columns[NombreCliente]"
+                      refId="Package\Llenar de DimCliente\Lectura Archivo JSON.Outputs[Output 0].Columns[NombreCliente]"
                       codePage="1252"
                       dataType="str"
                       length="50"
-                      lineageId="Package\Data Flow Task\Lectura Archivo JSON.Outputs[Output 0].Columns[NombreCliente]"
+                      lineageId="Package\Llenar de DimCliente\Lectura Archivo JSON.Outputs[Output 0].Columns[NombreCliente]"
                       name="NombreCliente" />
                     <outputColumn
-                      refId="Package\Data Flow Task\Lectura Archivo JSON.Outputs[Output 0].Columns[ClienteId]"
+                      refId="Package\Llenar de DimCliente\Lectura Archivo JSON.Outputs[Output 0].Columns[ClienteId]"
                       codePage="1252"
                       dataType="str"
                       length="50"
-                      lineageId="Package\Data Flow Task\Lectura Archivo JSON.Outputs[Output 0].Columns[ClienteId]"
+                      lineageId="Package\Llenar de DimCliente\Lectura Archivo JSON.Outputs[Output 0].Columns[ClienteId]"
                       name="ClienteId" />
                     <outputColumn
-                      refId="Package\Data Flow Task\Lectura Archivo JSON.Outputs[Output 0].Columns[Email]"
+                      refId="Package\Llenar de DimCliente\Lectura Archivo JSON.Outputs[Output 0].Columns[Email]"
                       codePage="1252"
                       dataType="str"
                       length="50"
-                      lineageId="Package\Data Flow Task\Lectura Archivo JSON.Outputs[Output 0].Columns[Email]"
+                      lineageId="Package\Llenar de DimCliente\Lectura Archivo JSON.Outputs[Output 0].Columns[Email]"
                       name="Email" />
                     <outputColumn
-                      refId="Package\Data Flow Task\Lectura Archivo JSON.Outputs[Output 0].Columns[Telefono]"
+                      refId="Package\Llenar de DimCliente\Lectura Archivo JSON.Outputs[Output 0].Columns[Telefono]"
                       codePage="1252"
                       dataType="str"
                       length="50"
-                      lineageId="Package\Data Flow Task\Lectura Archivo JSON.Outputs[Output 0].Columns[Telefono]"
+                      lineageId="Package\Llenar de DimCliente\Lectura Archivo JSON.Outputs[Output 0].Columns[Telefono]"
                       name="Telefono" />
                     <outputColumn
-                      refId="Package\Data Flow Task\Lectura Archivo JSON.Outputs[Output 0].Columns[FechaCreacion]"
+                      refId="Package\Llenar de DimCliente\Lectura Archivo JSON.Outputs[Output 0].Columns[FechaCreacion]"
                       dataType="date"
-                      lineageId="Package\Data Flow Task\Lectura Archivo JSON.Outputs[Output 0].Columns[FechaCreacion]"
+                      lineageId="Package\Llenar de DimCliente\Lectura Archivo JSON.Outputs[Output 0].Columns[FechaCreacion]"
                       name="FechaCreacion" />
                     <outputColumn
-                      refId="Package\Data Flow Task\Lectura Archivo JSON.Outputs[Output 0].Columns[NombreEmpresa]"
+                      refId="Package\Llenar de DimCliente\Lectura Archivo JSON.Outputs[Output 0].Columns[NombreEmpresa]"
                       codePage="1252"
                       dataType="str"
                       length="255"
-                      lineageId="Package\Data Flow Task\Lectura Archivo JSON.Outputs[Output 0].Columns[NombreEmpresa]"
+                      lineageId="Package\Llenar de DimCliente\Lectura Archivo JSON.Outputs[Output 0].Columns[NombreEmpresa]"
                       name="NombreEmpresa" />
                   </outputColumns>
                   <externalMetadataColumns />
@@ -1643,7 +1623,7 @@ AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA]]></arrayElement>
               </outputs>
             </component>
             <component
-              refId="Package\Data Flow Task\Verificacion Existe"
+              refId="Package\Llenar de DimCliente\Verificacion Existe"
               componentClassID="Microsoft.Lookup"
               contactInfo="Lookup;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; All Rights Reserved; http://www.microsoft.com/sql/support;6"
               description="Joins additional columns to the data flow by looking up values in a table. For example, join to the 'employee id' column the employees table to get 'hire date' and 'employee name'. We recommend this transformation when the lookup table can fit into memory."
@@ -1699,7 +1679,7 @@ where [refTable].[ClienteId] = ?</property>
                   containsID="true"
                   dataType="System.String"
                   description="Specifies the list of lineage identifiers that map to the parameters that the SQL statement in the SQLCommand property uses. Entries in the list are separated by semicolons."
-                  name="ParameterMap">#{Package\Data Flow Task\Lectura Archivo JSON.Outputs[Output 0].Columns[ClienteId]};</property>
+                  name="ParameterMap">#{Package\Llenar de DimCliente\Lectura Archivo JSON.Outputs[Output 0].Columns[ClienteId]};</property>
                 <property
                   dataType="System.Int32"
                   description="Specifies the column code page to use when code page information is unavailable from the data source."
@@ -1711,24 +1691,24 @@ where [refTable].[ClienteId] = ?</property>
               </properties>
               <connections>
                 <connection
-                  refId="Package\Data Flow Task\Verificacion Existe.Connections[OleDbConnection]"
-                  connectionManagerID="Package.ConnectionManagers[localhost.AlasDePlataDW.js1]"
-                  connectionManagerRefId="Package.ConnectionManagers[localhost.AlasDePlataDW.js1]"
+                  refId="Package\Llenar de DimCliente\Verificacion Existe.Connections[OleDbConnection]"
+                  connectionManagerID="Package.ConnectionManagers[DWOLEDB]"
+                  connectionManagerRefId="Package.ConnectionManagers[DWOLEDB]"
                   description="Connection manager used to access lookup data."
                   name="OleDbConnection" />
               </connections>
               <inputs>
                 <input
-                  refId="Package\Data Flow Task\Verificacion Existe.Inputs[Lookup Input]"
+                  refId="Package\Llenar de DimCliente\Verificacion Existe.Inputs[Lookup Input]"
                   name="Lookup Input">
                   <inputColumns>
                     <inputColumn
-                      refId="Package\Data Flow Task\Verificacion Existe.Inputs[Lookup Input].Columns[ClienteId]"
+                      refId="Package\Llenar de DimCliente\Verificacion Existe.Inputs[Lookup Input].Columns[ClienteId]"
                       cachedCodepage="1252"
                       cachedDataType="str"
                       cachedLength="50"
                       cachedName="ClienteId"
-                      lineageId="Package\Data Flow Task\Lectura Archivo JSON.Outputs[Output 0].Columns[ClienteId]">
+                      lineageId="Package\Llenar de DimCliente\Lectura Archivo JSON.Outputs[Output 0].Columns[ClienteId]">
                       <properties>
                         <property
                           dataType="System.String"
@@ -1746,17 +1726,17 @@ where [refTable].[ClienteId] = ?</property>
               </inputs>
               <outputs>
                 <output
-                  refId="Package\Data Flow Task\Verificacion Existe.Outputs[Lookup Match Output]"
+                  refId="Package\Llenar de DimCliente\Verificacion Existe.Outputs[Lookup Match Output]"
                   errorOrTruncationOperation="Lookup"
                   exclusionGroup="1"
                   name="Lookup Match Output"
-                  synchronousInputId="Package\Data Flow Task\Verificacion Existe.Inputs[Lookup Input]">
+                  synchronousInputId="Package\Llenar de DimCliente\Verificacion Existe.Inputs[Lookup Input]">
                   <outputColumns>
                     <outputColumn
-                      refId="Package\Data Flow Task\Verificacion Existe.Outputs[Lookup Match Output].Columns[ClienteKey]"
+                      refId="Package\Llenar de DimCliente\Verificacion Existe.Outputs[Lookup Match Output].Columns[ClienteKey]"
                       dataType="i4"
                       errorOrTruncationOperation="Copy Column"
-                      lineageId="Package\Data Flow Task\Verificacion Existe.Outputs[Lookup Match Output].Columns[ClienteKey]"
+                      lineageId="Package\Llenar de DimCliente\Verificacion Existe.Outputs[Lookup Match Output].Columns[ClienteKey]"
                       name="ClienteKey"
                       truncationRowDisposition="FailComponent">
                       <properties>
@@ -1770,30 +1750,30 @@ where [refTable].[ClienteId] = ?</property>
                   <externalMetadataColumns />
                 </output>
                 <output
-                  refId="Package\Data Flow Task\Verificacion Existe.Outputs[Lookup No Match Output]"
+                  refId="Package\Llenar de DimCliente\Verificacion Existe.Outputs[Lookup No Match Output]"
                   description="The Lookup output that handles rows with no matching entries in the reference dataset. Use this output when the NoMatchBehavior property is set to &quot;Send rows with no matching entries to the no match output.&quot;"
                   exclusionGroup="1"
                   name="Lookup No Match Output"
-                  synchronousInputId="Package\Data Flow Task\Verificacion Existe.Inputs[Lookup Input]">
+                  synchronousInputId="Package\Llenar de DimCliente\Verificacion Existe.Inputs[Lookup Input]">
                   <externalMetadataColumns />
                 </output>
                 <output
-                  refId="Package\Data Flow Task\Verificacion Existe.Outputs[Lookup Error Output]"
+                  refId="Package\Llenar de DimCliente\Verificacion Existe.Outputs[Lookup Error Output]"
                   exclusionGroup="1"
                   isErrorOut="true"
                   name="Lookup Error Output"
-                  synchronousInputId="Package\Data Flow Task\Verificacion Existe.Inputs[Lookup Input]">
+                  synchronousInputId="Package\Llenar de DimCliente\Verificacion Existe.Inputs[Lookup Input]">
                   <outputColumns>
                     <outputColumn
-                      refId="Package\Data Flow Task\Verificacion Existe.Outputs[Lookup Error Output].Columns[ErrorCode]"
+                      refId="Package\Llenar de DimCliente\Verificacion Existe.Outputs[Lookup Error Output].Columns[ErrorCode]"
                       dataType="i4"
-                      lineageId="Package\Data Flow Task\Verificacion Existe.Outputs[Lookup Error Output].Columns[ErrorCode]"
+                      lineageId="Package\Llenar de DimCliente\Verificacion Existe.Outputs[Lookup Error Output].Columns[ErrorCode]"
                       name="ErrorCode"
                       specialFlags="1" />
                     <outputColumn
-                      refId="Package\Data Flow Task\Verificacion Existe.Outputs[Lookup Error Output].Columns[ErrorColumn]"
+                      refId="Package\Llenar de DimCliente\Verificacion Existe.Outputs[Lookup Error Output].Columns[ErrorColumn]"
                       dataType="i4"
-                      lineageId="Package\Data Flow Task\Verificacion Existe.Outputs[Lookup Error Output].Columns[ErrorColumn]"
+                      lineageId="Package\Llenar de DimCliente\Verificacion Existe.Outputs[Lookup Error Output].Columns[ErrorColumn]"
                       name="ErrorColumn"
                       specialFlags="2" />
                   </outputColumns>
@@ -1804,68 +1784,133 @@ where [refTable].[ClienteId] = ?</property>
           </components>
           <paths>
             <path
-              refId="Package\Data Flow Task.Paths[Lookup Match Output]"
-              endId="Package\Data Flow Task\Actualizacion Registros Existentes.Inputs[OLE DB Command Input]"
+              refId="Package\Llenar de DimCliente.Paths[Lookup Match Output]"
+              endId="Package\Llenar de DimCliente\Actualizacion Registros Existentes.Inputs[OLE DB Command Input]"
               name="Lookup Match Output"
-              startId="Package\Data Flow Task\Verificacion Existe.Outputs[Lookup Match Output]" />
+              startId="Package\Llenar de DimCliente\Verificacion Existe.Outputs[Lookup Match Output]" />
             <path
-              refId="Package\Data Flow Task.Paths[Lookup No Match Output]"
-              endId="Package\Data Flow Task\Insercion nuevos Registros.Inputs[ADO NET Destination Input]"
+              refId="Package\Llenar de DimCliente.Paths[Lookup No Match Output]"
+              endId="Package\Llenar de DimCliente\Insercion nuevos Registros.Inputs[ADO NET Destination Input]"
               name="Lookup No Match Output"
-              startId="Package\Data Flow Task\Verificacion Existe.Outputs[Lookup No Match Output]" />
+              startId="Package\Llenar de DimCliente\Verificacion Existe.Outputs[Lookup No Match Output]" />
             <path
-              refId="Package\Data Flow Task.Paths[Output 0]"
-              endId="Package\Data Flow Task\Verificacion Existe.Inputs[Lookup Input]"
+              refId="Package\Llenar de DimCliente.Paths[Output 0]"
+              endId="Package\Llenar de DimCliente\Verificacion Existe.Inputs[Lookup Input]"
               name="Output 0"
-              startId="Package\Data Flow Task\Lectura Archivo JSON.Outputs[Output 0]" />
+              startId="Package\Llenar de DimCliente\Lectura Archivo JSON.Outputs[Output 0]" />
           </paths>
         </pipeline>
       </DTS:ObjectData>
     </DTS:Executable>
+    <DTS:Executable
+      DTS:refId="Package\Vaciar DimCliente"
+      DTS:CreationName="Microsoft.ExecuteSQLTask"
+      DTS:Description="Tarea Ejecutar SQL"
+      DTS:DTSID="{BF6376BC-A36B-4EF0-8348-091AC71725C4}"
+      DTS:ExecutableType="Microsoft.ExecuteSQLTask"
+      DTS:LocaleID="-1"
+      DTS:ObjectName="Vaciar DimCliente"
+      DTS:TaskContact="Execute SQL Task; Microsoft Corporation; SQL Server 2022; © 2022 Microsoft Corporation; All Rights Reserved;http://www.microsoft.com/sql/support/default.asp;1"
+      DTS:ThreadHint="0">
+      <DTS:Variables />
+      <DTS:ObjectData>
+        <SQLTask:SqlTaskData
+          SQLTask:Connection="{C6D26B46-924A-4A1F-8A0F-72C3F32B6BB0}"
+          SQLTask:SqlStatementSource="delete from DimCliente;&#xA;DBCC CHECKIDENT ('DimCliente', RESEED, 0);&#xA;" xmlns:SQLTask="www.microsoft.com/sqlserver/dts/tasks/sqltask" />
+      </DTS:ObjectData>
+    </DTS:Executable>
   </DTS:Executables>
+  <DTS:PrecedenceConstraints>
+    <DTS:PrecedenceConstraint
+      DTS:refId="Package.PrecedenceConstraints[Restricción]"
+      DTS:CreationName=""
+      DTS:DTSID="{CE3F3721-7804-4F7D-B76A-33BE4A195614}"
+      DTS:From="Package\Vaciar DimCliente"
+      DTS:LogicalAnd="True"
+      DTS:ObjectName="Restricción"
+      DTS:To="Package\Llenar de DimCliente" />
+  </DTS:PrecedenceConstraints>
   <DTS:DesignTimeProperties><![CDATA[<?xml version="1.0"?>
-<!--This CDATA section contains the layout information of the package. The section includes information such as (x,y) coordinates, width, and height.-->
-<!--If you manually edit this section and make a mistake, you can delete it. -->
-<!--The package will still be able to load normally but the previous layout information will be lost and the designer will automatically re-arrange the elements on the design surface.-->
+<!--Esta sección CDATA contiene la información de diseño del paquete. Esta sección incluye información como, por ejemplo, las coordenadas (x,y), el ancho y el alto.-->
+<!--Si edita manualmente esta sección y comete un error, puede eliminarlo. -->
+<!--El paquete podrá cargarse normalmente, pero se perderá la información de diseño anterior y el diseñador reorganizará los elementos automáticamente en la superficie de diseño.-->
 <Objects
   Version="8">
-  <!--Each node below will contain properties that do not affect runtime behavior.-->
+  <!--Cada uno de los nodos siguientes contiene propiedades que no afectan al comportamiento en tiempo de ejecución.-->
   <Package
     design-time-name="Package">
     <LayoutInfo>
       <GraphLayout
-        Capacity="4" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph">
+        Capacity="4" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml">
         <NodeLayout
-          Size="155,42"
-          Id="Package\Data Flow Task"
-          TopLeft="158.5,194.5" />
+          Size="182,42"
+          Id="Package\Llenar de DimCliente"
+          TopLeft="506.5,310.5" />
+        <NodeLayout
+          Size="167,42"
+          Id="Package\Vaciar DimCliente"
+          TopLeft="379,183" />
+        <EdgeLayout
+          Id="Package.PrecedenceConstraints[Restricción]"
+          TopLeft="462.5,225">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="135,85.5"
+              Start="0,0"
+              End="135,78">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,38.75" />
+                  <mssgle:CubicBezierSegment
+                    Point1="0,38.75"
+                    Point2="0,42.75"
+                    Point3="4,42.75" />
+                  <mssgle:LineSegment
+                    End="131,42.75" />
+                  <mssgle:CubicBezierSegment
+                    Point1="131,42.75"
+                    Point2="135,42.75"
+                    Point3="135,46.75" />
+                  <mssgle:LineSegment
+                    End="135,78" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
       </GraphLayout>
     </LayoutInfo>
   </Package>
   <TaskHost
-    design-time-name="Package\Data Flow Task">
+    design-time-name="Package\Llenar de DimCliente">
     <LayoutInfo>
       <GraphLayout
         Capacity="8" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml" xmlns:mssgm="clr-namespace:Microsoft.SqlServer.Graph.Model;assembly=Microsoft.SqlServer.Graph">
         <NodeLayout
           Size="212,42"
-          Id="Package\Data Flow Task\Insercion nuevos Registros"
-          TopLeft="255,347" />
+          Id="Package\Llenar de DimCliente\Insercion nuevos Registros"
+          TopLeft="212,390" />
         <NodeLayout
           Size="169,42"
-          Id="Package\Data Flow Task\Verificacion Existe"
-          TopLeft="573,152" />
+          Id="Package\Llenar de DimCliente\Verificacion Existe"
+          TopLeft="530,195" />
         <NodeLayout
           Size="188,42"
-          Id="Package\Data Flow Task\Lectura Archivo JSON"
-          TopLeft="214,151" />
+          Id="Package\Llenar de DimCliente\Lectura Archivo JSON"
+          TopLeft="171,194" />
         <NodeLayout
           Size="247,42"
-          Id="Package\Data Flow Task\Actualizacion Registros Existentes"
-          TopLeft="763,343" />
+          Id="Package\Llenar de DimCliente\Actualizacion Registros Existentes"
+          TopLeft="720,386" />
         <EdgeLayout
-          Id="Package\Data Flow Task.Paths[Output 0]"
-          TopLeft="402,172.5">
+          Id="Package\Llenar de DimCliente.Paths[Output 0]"
+          TopLeft="359,215.5">
           <EdgeLayout.Curve>
             <mssgle:Curve
               StartConnector="{assembly:Null}"
@@ -1882,12 +1927,14 @@ where [refTable].[ClienteId] = ?</property>
             </mssgle:Curve>
           </EdgeLayout.Curve>
           <EdgeLayout.Labels>
-            <EdgeLabelCollection />
+            <mssgm:EdgeLabel
+              BoundingBox="0,0,0,0"
+              RelativePosition="Any" />
           </EdgeLayout.Labels>
         </EdgeLayout>
         <EdgeLayout
-          Id="Package\Data Flow Task.Paths[Lookup No Match Output]"
-          TopLeft="630.666666666667,194">
+          Id="Package\Llenar de DimCliente.Paths[Lookup No Match Output]"
+          TopLeft="587.666666666667,237">
           <EdgeLayout.Curve>
             <mssgle:Curve
               StartConnector="{assembly:Null}"
@@ -1922,8 +1969,8 @@ where [refTable].[ClienteId] = ?</property>
           </EdgeLayout.Labels>
         </EdgeLayout>
         <EdgeLayout
-          Id="Package\Data Flow Task.Paths[Lookup Match Output]"
-          TopLeft="684.333333333333,194">
+          Id="Package\Llenar de DimCliente.Paths[Lookup Match Output]"
+          TopLeft="641.333333333333,237">
           <EdgeLayout.Curve>
             <mssgle:Curve
               StartConnector="{assembly:Null}"
@@ -1953,7 +2000,7 @@ where [refTable].[ClienteId] = ?</property>
           </EdgeLayout.Curve>
           <EdgeLayout.Labels>
             <mssgm:EdgeLabel
-              BoundingBox="52.8919466145833,65.4384525205158,96.3827734375,11.609375"
+              BoundingBox="52.8919466145835,65.4384525205158,96.3827734375,11.609375"
               RelativePosition="Any" />
           </EdgeLayout.Labels>
         </EdgeLayout>
@@ -1961,7 +2008,7 @@ where [refTable].[ClienteId] = ?</property>
     </LayoutInfo>
   </TaskHost>
   <PipelineComponentMetadata
-    design-time-name="Package\Data Flow Task\Insercion nuevos Registros">
+    design-time-name="Package\Llenar de DimCliente\Insercion nuevos Registros">
     <Properties>
       <Property>
         <Name>DataSourceViewID</Name>
@@ -1969,7 +2016,7 @@ where [refTable].[ClienteId] = ?</property>
     </Properties>
   </PipelineComponentMetadata>
   <PipelineComponentMetadata
-    design-time-name="Package\Data Flow Task\Verificacion Existe">
+    design-time-name="Package\Llenar de DimCliente\Verificacion Existe">
     <Properties>
       <Property>
         <Name>OverwriteParamsSQLProp</Name>

@@ -11,31 +11,31 @@
   DTS:LocaleID="1033"
   DTS:ObjectName="DimCupon"
   DTS:PackageType="5"
-  DTS:VersionBuild="41"
-  DTS:VersionGUID="{3DE5ADD1-32DA-4FEC-A05F-7945EAFC7FF3}">
+  DTS:VersionBuild="50"
+  DTS:VersionGUID="{71309D6A-75FA-4299-A099-31211FAE7E90}">
   <DTS:Property
     DTS:Name="PackageFormatVersion">8</DTS:Property>
   <DTS:ConnectionManagers>
     <DTS:ConnectionManager
-      DTS:refId="Package.ConnectionManagers[DestinationDW]"
+      DTS:refId="Package.ConnectionManagers[DestinoDW]"
       DTS:CreationName="ADO.NET:System.Data.SqlClient.SqlConnection, System.Data, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089"
       DTS:DTSID="{D47F0AD1-D1EE-4B4E-994E-CC64E26196F9}"
-      DTS:ObjectName="DestinationDW">
+      DTS:ObjectName="DestinoDW">
       <DTS:ObjectData>
         <DTS:ConnectionManager
           DTS:ConnectionString="Data Source=localhost;User ID=js;Initial Catalog=AlasDePlataDW;Application Name=SSIS-Package1-{D47F0AD1-D1EE-4B4E-994E-CC64E26196F9}localhost.AlasDePlataDW.js;">
           <DTS:Password
             DTS:Name="Password"
             Sensitive="1"
-            Encrypted="1">AQAAANCMnd8BFdERjHoAwE/Cl+sBAAAAVjEO+z0Wqk6tj7LRX+YGJAAAAAAIAAAARABUAFMAAAAQZgAAAAEAACAAAABXn7Xs8lNp58kn0q9mkjET4dSMK28o8aJhrSDRhfQDRAAAAAAOgAAAAAIAACAAAAA7j+1KI+gur1TTbm5JNCw2Ubp1dpaRoXew+02jFVLyQSAAAACriDbEMCo8zTUWbKpuuSr6jhlACFHOu7MZ2UOol5ob7kAAAAB+GigKrgn8Zp/+n7AbOKRt0QEKyTsBe7k3NTa6dRawOyQkASCqq4K0kTYliDfHz/TvuHqPR0ZKVDixWdPCN7mo</DTS:Password>
+            Encrypted="1">AQAAANCMnd8BFdERjHoAwE/Cl+sBAAAA0cnV3L9sZUGZvr3Q4+g2VgAAAAAIAAAARABUAFMAAAAQZgAAAAEAACAAAACJ3MPp/tyoYHUnhy8gGsCuRpmzCX8IECru3SYo76WI0gAAAAAOgAAAAAIAACAAAACmSVQdEaqoJYQ5Me//T1FqZ2UQBb0g132ofPWa3GzNQiAAAAAOoN6KHj32iqnyen09JV4ntDxAXrEvoAE30VUK+K1P10AAAAC5JnyTq22IPHwoYV6B3I/NpHifjPIaje9nQAFRv887A1Gn5I0BEqwf80LKjgTTUsP+3XHPhyPLHBEusk7Mwcro</DTS:Password>
         </DTS:ConnectionManager>
       </DTS:ObjectData>
     </DTS:ConnectionManager>
     <DTS:ConnectionManager
-      DTS:refId="Package.ConnectionManagers[DestinationDWOLEDB]"
+      DTS:refId="Package.ConnectionManagers[DWOLEDB]"
       DTS:CreationName="OLEDB"
       DTS:DTSID="{A1FA1B79-184D-437C-BD81-6EFE211A5F36}"
-      DTS:ObjectName="DestinationDWOLEDB">
+      DTS:ObjectName="DWOLEDB">
       <DTS:ObjectData>
         <DTS:ConnectionManager
           DTS:ConnectRetryCount="1"
@@ -44,7 +44,7 @@
           <DTS:Password
             DTS:Name="Password"
             Sensitive="1"
-            Encrypted="1">AQAAANCMnd8BFdERjHoAwE/Cl+sBAAAAVjEO+z0Wqk6tj7LRX+YGJAAAAAAIAAAARABUAFMAAAAQZgAAAAEAACAAAADoUjhbQ4VVxrSrmlHP635fnLvoM/KeeMQ55Dqjv6ALmgAAAAAOgAAAAAIAACAAAABRnHU7PLwV89Dtv2CB+MMJNOXesvgblrLUkR2x5CCGmSAAAABqYUAxAcbRg0jWhcQElTMf7kliyC7dwOJnCgNz3TdC90AAAACns0ASjqqYX2UQJKU+ZK+pJJBnoyKtmqcRIUImP2r0HpEWoptUNiU/kIFSrJ4JL26DNkxKGWQKMDaFYvxnbT2H</DTS:Password>
+            Encrypted="1">AQAAANCMnd8BFdERjHoAwE/Cl+sBAAAA0cnV3L9sZUGZvr3Q4+g2VgAAAAAIAAAARABUAFMAAAAQZgAAAAEAACAAAAAkGhtQNVfkBFRwec5nS3a4ypFmTX+utJ/2KcqHPdBPaAAAAAAOgAAAAAIAACAAAACK8p44Wf1aZiTM88qjsW/CzJBv8A/Wafu2L5RyxPLAoSAAAAA7JeVZcUbh7Wi3OxmEOD1pSdDKAjQntw6lFVCAjuQErEAAAADWlGFOOIgcoVc6h+eML61NPN/QmyBKFGLcDGpZzZuXqS0vqpof67Y+3+VB0pRzc7UhhjdsouYy711YFbjKtDrP</DTS:Password>
         </DTS:ConnectionManager>
       </DTS:ObjectData>
     </DTS:ConnectionManager>
@@ -57,26 +57,26 @@
       DTS:ObjectName="JsonFilePath">
       <DTS:Property
         DTS:DataType="8"
-        DTS:Name="ParameterValue">C:\Users\js\Documents\ID\Proyecto\CSV\Cupons\ListCupons.json</DTS:Property>
+        DTS:Name="ParameterValue">C:\UES\IDAlasDePlataDW\CSV\Cupons\ListCupons.json</DTS:Property>
     </DTS:PackageParameter>
   </DTS:PackageParameters>
   <DTS:Variables />
   <DTS:Executables>
     <DTS:Executable
-      DTS:refId="Package\Data Flow Task"
+      DTS:refId="Package\Llenado de DimCupon"
       DTS:CreationName="Microsoft.Pipeline"
       DTS:Description="Data Flow Task"
       DTS:DTSID="{BDD0B712-F0F7-4009-95F2-9D85ACF57DA3}"
       DTS:ExecutableType="Microsoft.Pipeline"
       DTS:LocaleID="-1"
-      DTS:ObjectName="Data Flow Task">
+      DTS:ObjectName="Llenado de DimCupon">
       <DTS:Variables />
       <DTS:ObjectData>
         <pipeline
           version="1">
           <components>
             <component
-              refId="Package\Data Flow Task\Actualizacion del registro"
+              refId="Package\Llenado de DimCupon\Actualizacion del registro"
               componentClassID="Microsoft.OLEDBCommand"
               contactInfo="OLE DB Command;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; All Rights Reserved; http://www.microsoft.com/sql/support;2"
               description="Runs an SQL statement for each row in a data flow. For example, call a 'new employee setup' stored procedure for each row in the 'new employees' table. Note: running an SQL statement for each row of a large data flow may take a long time."
@@ -101,98 +101,98 @@
               </properties>
               <connections>
                 <connection
-                  refId="Package\Data Flow Task\Actualizacion del registro.Connections[OleDbConnection]"
-                  connectionManagerID="Package.ConnectionManagers[DestinationDWOLEDB]"
-                  connectionManagerRefId="Package.ConnectionManagers[DestinationDWOLEDB]"
+                  refId="Package\Llenado de DimCupon\Actualizacion del registro.Connections[OleDbConnection]"
+                  connectionManagerID="Package.ConnectionManagers[DWOLEDB]"
+                  connectionManagerRefId="Package.ConnectionManagers[DWOLEDB]"
                   description="The OLE DB runtime connection used to access the database."
                   name="OleDbConnection" />
               </connections>
               <inputs>
                 <input
-                  refId="Package\Data Flow Task\Actualizacion del registro.Inputs[OLE DB Command Input]"
+                  refId="Package\Llenado de DimCupon\Actualizacion del registro.Inputs[OLE DB Command Input]"
                   errorOrTruncationOperation="Command Execution"
                   errorRowDisposition="FailComponent"
                   hasSideEffects="true"
                   name="OLE DB Command Input">
                   <inputColumns>
                     <inputColumn
-                      refId="Package\Data Flow Task\Actualizacion del registro.Inputs[OLE DB Command Input].Columns[TipoDescuento]"
+                      refId="Package\Llenado de DimCupon\Actualizacion del registro.Inputs[OLE DB Command Input].Columns[TipoDescuento]"
                       cachedCodepage="1252"
                       cachedDataType="str"
                       cachedLength="50"
                       cachedName="TipoDescuento"
-                      externalMetadataColumnId="Package\Data Flow Task\Actualizacion del registro.Inputs[OLE DB Command Input].ExternalColumns[@TipoDescuento]"
-                      lineageId="Package\Data Flow Task\Lectura Data JSON.Outputs[Output 0].Columns[TipoDescuento]" />
+                      externalMetadataColumnId="Package\Llenado de DimCupon\Actualizacion del registro.Inputs[OLE DB Command Input].ExternalColumns[@TipoDescuento]"
+                      lineageId="Package\Llenado de DimCupon\Lectura Data JSON.Outputs[Output 0].Columns[TipoDescuento]" />
                     <inputColumn
-                      refId="Package\Data Flow Task\Actualizacion del registro.Inputs[OLE DB Command Input].Columns[ValorDescuento]"
+                      refId="Package\Llenado de DimCupon\Actualizacion del registro.Inputs[OLE DB Command Input].Columns[ValorDescuento]"
                       cachedDataType="r4"
                       cachedName="ValorDescuento"
-                      externalMetadataColumnId="Package\Data Flow Task\Actualizacion del registro.Inputs[OLE DB Command Input].ExternalColumns[@ValorDescuento]"
-                      lineageId="Package\Data Flow Task\Lectura Data JSON.Outputs[Output 0].Columns[ValorDescuento]" />
+                      externalMetadataColumnId="Package\Llenado de DimCupon\Actualizacion del registro.Inputs[OLE DB Command Input].ExternalColumns[@ValorDescuento]"
+                      lineageId="Package\Llenado de DimCupon\Lectura Data JSON.Outputs[Output 0].Columns[ValorDescuento]" />
                     <inputColumn
-                      refId="Package\Data Flow Task\Actualizacion del registro.Inputs[OLE DB Command Input].Columns[CantidadDeCanje]"
+                      refId="Package\Llenado de DimCupon\Actualizacion del registro.Inputs[OLE DB Command Input].Columns[CantidadDeCanje]"
                       cachedDataType="numeric"
                       cachedName="CantidadDeCanje"
                       cachedPrecision="18"
-                      externalMetadataColumnId="Package\Data Flow Task\Actualizacion del registro.Inputs[OLE DB Command Input].ExternalColumns[@NumeroVecesUsado]"
-                      lineageId="Package\Data Flow Task\Lectura Data JSON.Outputs[Output 0].Columns[CantidadDeCanje]" />
+                      externalMetadataColumnId="Package\Llenado de DimCupon\Actualizacion del registro.Inputs[OLE DB Command Input].ExternalColumns[@NumeroVecesUsado]"
+                      lineageId="Package\Llenado de DimCupon\Lectura Data JSON.Outputs[Output 0].Columns[CantidadDeCanje]" />
                     <inputColumn
-                      refId="Package\Data Flow Task\Actualizacion del registro.Inputs[OLE DB Command Input].Columns[MaximoNumeroDeCanjes]"
+                      refId="Package\Llenado de DimCupon\Actualizacion del registro.Inputs[OLE DB Command Input].Columns[MaximoNumeroDeCanjes]"
                       cachedCodepage="1252"
                       cachedDataType="str"
                       cachedLength="50"
                       cachedName="MaximoNumeroDeCanjes"
-                      externalMetadataColumnId="Package\Data Flow Task\Actualizacion del registro.Inputs[OLE DB Command Input].ExternalColumns[@MaximoNumeroUsos]"
-                      lineageId="Package\Data Flow Task\Lectura Data JSON.Outputs[Output 0].Columns[MaximoNumeroDeCanjes]" />
+                      externalMetadataColumnId="Package\Llenado de DimCupon\Actualizacion del registro.Inputs[OLE DB Command Input].ExternalColumns[@MaximoNumeroUsos]"
+                      lineageId="Package\Llenado de DimCupon\Lectura Data JSON.Outputs[Output 0].Columns[MaximoNumeroDeCanjes]" />
                     <inputColumn
-                      refId="Package\Data Flow Task\Actualizacion del registro.Inputs[OLE DB Command Input].Columns[FechaDeExpiracion]"
+                      refId="Package\Llenado de DimCupon\Actualizacion del registro.Inputs[OLE DB Command Input].Columns[FechaDeExpiracion]"
                       cachedDataType="date"
                       cachedName="FechaDeExpiracion"
-                      externalMetadataColumnId="Package\Data Flow Task\Actualizacion del registro.Inputs[OLE DB Command Input].ExternalColumns[@FechaExpiracion]"
-                      lineageId="Package\Data Flow Task\Lectura Data JSON.Outputs[Output 0].Columns[FechaDeExpiracion]" />
+                      externalMetadataColumnId="Package\Llenado de DimCupon\Actualizacion del registro.Inputs[OLE DB Command Input].ExternalColumns[@FechaExpiracion]"
+                      lineageId="Package\Llenado de DimCupon\Lectura Data JSON.Outputs[Output 0].Columns[FechaDeExpiracion]" />
                     <inputColumn
-                      refId="Package\Data Flow Task\Actualizacion del registro.Inputs[OLE DB Command Input].Columns[CuponKey]"
+                      refId="Package\Llenado de DimCupon\Actualizacion del registro.Inputs[OLE DB Command Input].Columns[CuponKey]"
                       cachedDataType="i4"
                       cachedName="CuponKey"
-                      externalMetadataColumnId="Package\Data Flow Task\Actualizacion del registro.Inputs[OLE DB Command Input].ExternalColumns[@CuponKey]"
-                      lineageId="Package\Data Flow Task\Verificacion de si existe el registro.Outputs[Lookup Match Output].Columns[CuponKey]" />
+                      externalMetadataColumnId="Package\Llenado de DimCupon\Actualizacion del registro.Inputs[OLE DB Command Input].ExternalColumns[@CuponKey]"
+                      lineageId="Package\Llenado de DimCupon\Verificacion de si existe el registro.Outputs[Lookup Match Output].Columns[CuponKey]" />
                     <inputColumn
-                      refId="Package\Data Flow Task\Actualizacion del registro.Inputs[OLE DB Command Input].Columns[CodigoCupon]"
+                      refId="Package\Llenado de DimCupon\Actualizacion del registro.Inputs[OLE DB Command Input].Columns[CodigoCupon]"
                       cachedCodepage="1252"
                       cachedDataType="str"
                       cachedLength="255"
                       cachedName="CodigoCupon"
-                      externalMetadataColumnId="Package\Data Flow Task\Actualizacion del registro.Inputs[OLE DB Command Input].ExternalColumns[@CodigoCupon]"
-                      lineageId="Package\Data Flow Task\Lectura Data JSON.Outputs[Output 0].Columns[CodigoCupon]" />
+                      externalMetadataColumnId="Package\Llenado de DimCupon\Actualizacion del registro.Inputs[OLE DB Command Input].ExternalColumns[@CodigoCupon]"
+                      lineageId="Package\Llenado de DimCupon\Lectura Data JSON.Outputs[Output 0].Columns[CodigoCupon]" />
                     <inputColumn
-                      refId="Package\Data Flow Task\Actualizacion del registro.Inputs[OLE DB Command Input].Columns[Nombre]"
+                      refId="Package\Llenado de DimCupon\Actualizacion del registro.Inputs[OLE DB Command Input].Columns[Nombre]"
                       cachedCodepage="1252"
                       cachedDataType="str"
                       cachedLength="255"
                       cachedName="Nombre"
-                      externalMetadataColumnId="Package\Data Flow Task\Actualizacion del registro.Inputs[OLE DB Command Input].ExternalColumns[@NombreCupon]"
-                      lineageId="Package\Data Flow Task\Lectura Data JSON.Outputs[Output 0].Columns[Nombre]" />
+                      externalMetadataColumnId="Package\Llenado de DimCupon\Actualizacion del registro.Inputs[OLE DB Command Input].ExternalColumns[@NombreCupon]"
+                      lineageId="Package\Llenado de DimCupon\Lectura Data JSON.Outputs[Output 0].Columns[Nombre]" />
                     <inputColumn
-                      refId="Package\Data Flow Task\Actualizacion del registro.Inputs[OLE DB Command Input].Columns[Tipo]"
+                      refId="Package\Llenado de DimCupon\Actualizacion del registro.Inputs[OLE DB Command Input].Columns[Tipo]"
                       cachedCodepage="1252"
                       cachedDataType="str"
                       cachedLength="50"
                       cachedName="Tipo"
-                      externalMetadataColumnId="Package\Data Flow Task\Actualizacion del registro.Inputs[OLE DB Command Input].ExternalColumns[@TipoCupon]"
-                      lineageId="Package\Data Flow Task\Lectura Data JSON.Outputs[Output 0].Columns[Tipo]" />
+                      externalMetadataColumnId="Package\Llenado de DimCupon\Actualizacion del registro.Inputs[OLE DB Command Input].ExternalColumns[@TipoCupon]"
+                      lineageId="Package\Llenado de DimCupon\Lectura Data JSON.Outputs[Output 0].Columns[Tipo]" />
                     <inputColumn
-                      refId="Package\Data Flow Task\Actualizacion del registro.Inputs[OLE DB Command Input].Columns[Estado]"
+                      refId="Package\Llenado de DimCupon\Actualizacion del registro.Inputs[OLE DB Command Input].Columns[Estado]"
                       cachedCodepage="1252"
                       cachedDataType="str"
                       cachedLength="50"
                       cachedName="Estado"
-                      externalMetadataColumnId="Package\Data Flow Task\Actualizacion del registro.Inputs[OLE DB Command Input].ExternalColumns[@EstadoCupon]"
-                      lineageId="Package\Data Flow Task\Lectura Data JSON.Outputs[Output 0].Columns[Estado]" />
+                      externalMetadataColumnId="Package\Llenado de DimCupon\Actualizacion del registro.Inputs[OLE DB Command Input].ExternalColumns[@EstadoCupon]"
+                      lineageId="Package\Llenado de DimCupon\Lectura Data JSON.Outputs[Output 0].Columns[Estado]" />
                   </inputColumns>
                   <externalMetadataColumns
                     isUsed="True">
                     <externalMetadataColumn
-                      refId="Package\Data Flow Task\Actualizacion del registro.Inputs[OLE DB Command Input].ExternalColumns[@TipoDescuento]"
+                      refId="Package\Llenado de DimCupon\Actualizacion del registro.Inputs[OLE DB Command Input].ExternalColumns[@TipoDescuento]"
                       codePage="1252"
                       dataType="str"
                       length="50"
@@ -205,7 +205,7 @@
                       </properties>
                     </externalMetadataColumn>
                     <externalMetadataColumn
-                      refId="Package\Data Flow Task\Actualizacion del registro.Inputs[OLE DB Command Input].ExternalColumns[@ValorDescuento]"
+                      refId="Package\Llenado de DimCupon\Actualizacion del registro.Inputs[OLE DB Command Input].ExternalColumns[@ValorDescuento]"
                       dataType="r8"
                       name="@ValorDescuento">
                       <properties>
@@ -216,7 +216,7 @@
                       </properties>
                     </externalMetadataColumn>
                     <externalMetadataColumn
-                      refId="Package\Data Flow Task\Actualizacion del registro.Inputs[OLE DB Command Input].ExternalColumns[@NumeroVecesUsado]"
+                      refId="Package\Llenado de DimCupon\Actualizacion del registro.Inputs[OLE DB Command Input].ExternalColumns[@NumeroVecesUsado]"
                       codePage="1252"
                       dataType="str"
                       length="50"
@@ -229,7 +229,7 @@
                       </properties>
                     </externalMetadataColumn>
                     <externalMetadataColumn
-                      refId="Package\Data Flow Task\Actualizacion del registro.Inputs[OLE DB Command Input].ExternalColumns[@MaximoNumeroUsos]"
+                      refId="Package\Llenado de DimCupon\Actualizacion del registro.Inputs[OLE DB Command Input].ExternalColumns[@MaximoNumeroUsos]"
                       codePage="1252"
                       dataType="str"
                       length="50"
@@ -242,7 +242,7 @@
                       </properties>
                     </externalMetadataColumn>
                     <externalMetadataColumn
-                      refId="Package\Data Flow Task\Actualizacion del registro.Inputs[OLE DB Command Input].ExternalColumns[@FechaExpiracion]"
+                      refId="Package\Llenado de DimCupon\Actualizacion del registro.Inputs[OLE DB Command Input].ExternalColumns[@FechaExpiracion]"
                       dataType="dbDate"
                       name="@FechaExpiracion">
                       <properties>
@@ -253,7 +253,7 @@
                       </properties>
                     </externalMetadataColumn>
                     <externalMetadataColumn
-                      refId="Package\Data Flow Task\Actualizacion del registro.Inputs[OLE DB Command Input].ExternalColumns[@CuponKey]"
+                      refId="Package\Llenado de DimCupon\Actualizacion del registro.Inputs[OLE DB Command Input].ExternalColumns[@CuponKey]"
                       dataType="i4"
                       name="@CuponKey">
                       <properties>
@@ -264,7 +264,7 @@
                       </properties>
                     </externalMetadataColumn>
                     <externalMetadataColumn
-                      refId="Package\Data Flow Task\Actualizacion del registro.Inputs[OLE DB Command Input].ExternalColumns[@CodigoCupon]"
+                      refId="Package\Llenado de DimCupon\Actualizacion del registro.Inputs[OLE DB Command Input].ExternalColumns[@CodigoCupon]"
                       codePage="1252"
                       dataType="str"
                       length="255"
@@ -277,7 +277,7 @@
                       </properties>
                     </externalMetadataColumn>
                     <externalMetadataColumn
-                      refId="Package\Data Flow Task\Actualizacion del registro.Inputs[OLE DB Command Input].ExternalColumns[@NombreCupon]"
+                      refId="Package\Llenado de DimCupon\Actualizacion del registro.Inputs[OLE DB Command Input].ExternalColumns[@NombreCupon]"
                       codePage="1252"
                       dataType="str"
                       length="255"
@@ -290,7 +290,7 @@
                       </properties>
                     </externalMetadataColumn>
                     <externalMetadataColumn
-                      refId="Package\Data Flow Task\Actualizacion del registro.Inputs[OLE DB Command Input].ExternalColumns[@TipoCupon]"
+                      refId="Package\Llenado de DimCupon\Actualizacion del registro.Inputs[OLE DB Command Input].ExternalColumns[@TipoCupon]"
                       codePage="1252"
                       dataType="str"
                       length="50"
@@ -303,7 +303,7 @@
                       </properties>
                     </externalMetadataColumn>
                     <externalMetadataColumn
-                      refId="Package\Data Flow Task\Actualizacion del registro.Inputs[OLE DB Command Input].ExternalColumns[@EstadoCupon]"
+                      refId="Package\Llenado de DimCupon\Actualizacion del registro.Inputs[OLE DB Command Input].ExternalColumns[@EstadoCupon]"
                       codePage="1252"
                       dataType="str"
                       length="50"
@@ -320,29 +320,29 @@
               </inputs>
               <outputs>
                 <output
-                  refId="Package\Data Flow Task\Actualizacion del registro.Outputs[OLE DB Command Output]"
+                  refId="Package\Llenado de DimCupon\Actualizacion del registro.Outputs[OLE DB Command Output]"
                   exclusionGroup="1"
                   name="OLE DB Command Output"
-                  synchronousInputId="Package\Data Flow Task\Actualizacion del registro.Inputs[OLE DB Command Input]">
+                  synchronousInputId="Package\Llenado de DimCupon\Actualizacion del registro.Inputs[OLE DB Command Input]">
                   <externalMetadataColumns />
                 </output>
                 <output
-                  refId="Package\Data Flow Task\Actualizacion del registro.Outputs[OLE DB Command Error Output]"
+                  refId="Package\Llenado de DimCupon\Actualizacion del registro.Outputs[OLE DB Command Error Output]"
                   exclusionGroup="1"
                   isErrorOut="true"
                   name="OLE DB Command Error Output"
-                  synchronousInputId="Package\Data Flow Task\Actualizacion del registro.Inputs[OLE DB Command Input]">
+                  synchronousInputId="Package\Llenado de DimCupon\Actualizacion del registro.Inputs[OLE DB Command Input]">
                   <outputColumns>
                     <outputColumn
-                      refId="Package\Data Flow Task\Actualizacion del registro.Outputs[OLE DB Command Error Output].Columns[ErrorCode]"
+                      refId="Package\Llenado de DimCupon\Actualizacion del registro.Outputs[OLE DB Command Error Output].Columns[ErrorCode]"
                       dataType="i4"
-                      lineageId="Package\Data Flow Task\Actualizacion del registro.Outputs[OLE DB Command Error Output].Columns[ErrorCode]"
+                      lineageId="Package\Llenado de DimCupon\Actualizacion del registro.Outputs[OLE DB Command Error Output].Columns[ErrorCode]"
                       name="ErrorCode"
                       specialFlags="1" />
                     <outputColumn
-                      refId="Package\Data Flow Task\Actualizacion del registro.Outputs[OLE DB Command Error Output].Columns[ErrorColumn]"
+                      refId="Package\Llenado de DimCupon\Actualizacion del registro.Outputs[OLE DB Command Error Output].Columns[ErrorColumn]"
                       dataType="i4"
-                      lineageId="Package\Data Flow Task\Actualizacion del registro.Outputs[OLE DB Command Error Output].Columns[ErrorColumn]"
+                      lineageId="Package\Llenado de DimCupon\Actualizacion del registro.Outputs[OLE DB Command Error Output].Columns[ErrorColumn]"
                       name="ErrorColumn"
                       specialFlags="2" />
                   </outputColumns>
@@ -351,7 +351,7 @@
               </outputs>
             </component>
             <component
-              refId="Package\Data Flow Task\Inserccion del registro"
+              refId="Package\Llenado de DimCupon\Inserccion del registro"
               componentClassID="Microsoft.ManagedComponentHost"
               contactInfo="Loads data into an ADO.NET-compliant database that uses a database table or view. Load data into a new or existing table. For example, use an ADO.NET provider for ODBC to load data into an ODBC destination.;Microsoft Corporation; Microsoft SQL Server; © Microsoft Corporation; All Rights Reserved; http://www.microsoft.com/sql/support;2"
               description="Loads data into an ADO.NET-compliant database that uses a database table or view. Load data into a new or existing table. For example, use an ADO.NET provider for ODBC to load data into an ODBC destination."
@@ -386,156 +386,156 @@
               </properties>
               <connections>
                 <connection
-                  refId="Package\Data Flow Task\Inserccion del registro.Connections[IDbConnection]"
-                  connectionManagerID="Package.ConnectionManagers[DestinationDW]"
-                  connectionManagerRefId="Package.ConnectionManagers[DestinationDW]"
+                  refId="Package\Llenado de DimCupon\Inserccion del registro.Connections[IDbConnection]"
+                  connectionManagerID="Package.ConnectionManagers[DestinoDW]"
+                  connectionManagerRefId="Package.ConnectionManagers[DestinoDW]"
                   description="Managed connection manager"
                   name="IDbConnection" />
               </connections>
               <inputs>
                 <input
-                  refId="Package\Data Flow Task\Inserccion del registro.Inputs[ADO NET Destination Input]"
+                  refId="Package\Llenado de DimCupon\Inserccion del registro.Inputs[ADO NET Destination Input]"
                   errorRowDisposition="FailComponent"
                   hasSideEffects="true"
                   name="ADO NET Destination Input">
                   <inputColumns>
                     <inputColumn
-                      refId="Package\Data Flow Task\Inserccion del registro.Inputs[ADO NET Destination Input].Columns[ValorDescuento]"
+                      refId="Package\Llenado de DimCupon\Inserccion del registro.Inputs[ADO NET Destination Input].Columns[ValorDescuento]"
                       cachedDataType="r4"
                       cachedName="ValorDescuento"
-                      externalMetadataColumnId="Package\Data Flow Task\Inserccion del registro.Inputs[ADO NET Destination Input].ExternalColumns[ValorDescuento]"
-                      lineageId="Package\Data Flow Task\Lectura Data JSON.Outputs[Output 0].Columns[ValorDescuento]" />
+                      externalMetadataColumnId="Package\Llenado de DimCupon\Inserccion del registro.Inputs[ADO NET Destination Input].ExternalColumns[ValorDescuento]"
+                      lineageId="Package\Llenado de DimCupon\Lectura Data JSON.Outputs[Output 0].Columns[ValorDescuento]" />
                     <inputColumn
-                      refId="Package\Data Flow Task\Inserccion del registro.Inputs[ADO NET Destination Input].Columns[TipoDescuento]"
+                      refId="Package\Llenado de DimCupon\Inserccion del registro.Inputs[ADO NET Destination Input].Columns[TipoDescuento]"
                       cachedCodepage="1252"
                       cachedDataType="str"
                       cachedLength="50"
                       cachedName="TipoDescuento"
-                      externalMetadataColumnId="Package\Data Flow Task\Inserccion del registro.Inputs[ADO NET Destination Input].ExternalColumns[TipoDescuento]"
-                      lineageId="Package\Data Flow Task\Lectura Data JSON.Outputs[Output 0].Columns[TipoDescuento]" />
+                      externalMetadataColumnId="Package\Llenado de DimCupon\Inserccion del registro.Inputs[ADO NET Destination Input].ExternalColumns[TipoDescuento]"
+                      lineageId="Package\Llenado de DimCupon\Lectura Data JSON.Outputs[Output 0].Columns[TipoDescuento]" />
                     <inputColumn
-                      refId="Package\Data Flow Task\Inserccion del registro.Inputs[ADO NET Destination Input].Columns[NombreCupon]"
+                      refId="Package\Llenado de DimCupon\Inserccion del registro.Inputs[ADO NET Destination Input].Columns[NombreCupon]"
                       cachedCodepage="1252"
                       cachedDataType="str"
                       cachedLength="255"
                       cachedName="NombreCupon"
-                      externalMetadataColumnId="Package\Data Flow Task\Inserccion del registro.Inputs[ADO NET Destination Input].ExternalColumns[NombreCupon]"
-                      lineageId="Package\Data Flow Task\Lectura Data JSON.Outputs[Output 0].Columns[NombreCupon]" />
+                      externalMetadataColumnId="Package\Llenado de DimCupon\Inserccion del registro.Inputs[ADO NET Destination Input].ExternalColumns[NombreCupon]"
+                      lineageId="Package\Llenado de DimCupon\Lectura Data JSON.Outputs[Output 0].Columns[NombreCupon]" />
                     <inputColumn
-                      refId="Package\Data Flow Task\Inserccion del registro.Inputs[ADO NET Destination Input].Columns[CodigoCupon]"
+                      refId="Package\Llenado de DimCupon\Inserccion del registro.Inputs[ADO NET Destination Input].Columns[CodigoCupon]"
                       cachedCodepage="1252"
                       cachedDataType="str"
                       cachedLength="255"
                       cachedName="CodigoCupon"
-                      externalMetadataColumnId="Package\Data Flow Task\Inserccion del registro.Inputs[ADO NET Destination Input].ExternalColumns[CodigoCupon]"
-                      lineageId="Package\Data Flow Task\Lectura Data JSON.Outputs[Output 0].Columns[CodigoCupon]" />
+                      externalMetadataColumnId="Package\Llenado de DimCupon\Inserccion del registro.Inputs[ADO NET Destination Input].ExternalColumns[CodigoCupon]"
+                      lineageId="Package\Llenado de DimCupon\Lectura Data JSON.Outputs[Output 0].Columns[CodigoCupon]" />
                     <inputColumn
-                      refId="Package\Data Flow Task\Inserccion del registro.Inputs[ADO NET Destination Input].Columns[CuponId]"
+                      refId="Package\Llenado de DimCupon\Inserccion del registro.Inputs[ADO NET Destination Input].Columns[CuponId]"
                       cachedCodepage="1252"
                       cachedDataType="str"
                       cachedLength="255"
                       cachedName="CuponId"
-                      externalMetadataColumnId="Package\Data Flow Task\Inserccion del registro.Inputs[ADO NET Destination Input].ExternalColumns[CuponId]"
-                      lineageId="Package\Data Flow Task\Lectura Data JSON.Outputs[Output 0].Columns[CuponId]" />
+                      externalMetadataColumnId="Package\Llenado de DimCupon\Inserccion del registro.Inputs[ADO NET Destination Input].ExternalColumns[CuponId]"
+                      lineageId="Package\Llenado de DimCupon\Lectura Data JSON.Outputs[Output 0].Columns[CuponId]" />
                     <inputColumn
-                      refId="Package\Data Flow Task\Inserccion del registro.Inputs[ADO NET Destination Input].Columns[Tipo]"
+                      refId="Package\Llenado de DimCupon\Inserccion del registro.Inputs[ADO NET Destination Input].Columns[Tipo]"
                       cachedCodepage="1252"
                       cachedDataType="str"
                       cachedLength="50"
                       cachedName="Tipo"
-                      externalMetadataColumnId="Package\Data Flow Task\Inserccion del registro.Inputs[ADO NET Destination Input].ExternalColumns[TipoCupon]"
-                      lineageId="Package\Data Flow Task\Lectura Data JSON.Outputs[Output 0].Columns[Tipo]" />
+                      externalMetadataColumnId="Package\Llenado de DimCupon\Inserccion del registro.Inputs[ADO NET Destination Input].ExternalColumns[TipoCupon]"
+                      lineageId="Package\Llenado de DimCupon\Lectura Data JSON.Outputs[Output 0].Columns[Tipo]" />
                     <inputColumn
-                      refId="Package\Data Flow Task\Inserccion del registro.Inputs[ADO NET Destination Input].Columns[Estado]"
+                      refId="Package\Llenado de DimCupon\Inserccion del registro.Inputs[ADO NET Destination Input].Columns[Estado]"
                       cachedCodepage="1252"
                       cachedDataType="str"
                       cachedLength="50"
                       cachedName="Estado"
-                      externalMetadataColumnId="Package\Data Flow Task\Inserccion del registro.Inputs[ADO NET Destination Input].ExternalColumns[EstadoCupon]"
-                      lineageId="Package\Data Flow Task\Lectura Data JSON.Outputs[Output 0].Columns[Estado]" />
+                      externalMetadataColumnId="Package\Llenado de DimCupon\Inserccion del registro.Inputs[ADO NET Destination Input].ExternalColumns[EstadoCupon]"
+                      lineageId="Package\Llenado de DimCupon\Lectura Data JSON.Outputs[Output 0].Columns[Estado]" />
                     <inputColumn
-                      refId="Package\Data Flow Task\Inserccion del registro.Inputs[ADO NET Destination Input].Columns[CantidadDeCanje]"
+                      refId="Package\Llenado de DimCupon\Inserccion del registro.Inputs[ADO NET Destination Input].Columns[CantidadDeCanje]"
                       cachedDataType="numeric"
                       cachedName="CantidadDeCanje"
                       cachedPrecision="18"
-                      externalMetadataColumnId="Package\Data Flow Task\Inserccion del registro.Inputs[ADO NET Destination Input].ExternalColumns[NumeroVecesUsado]"
-                      lineageId="Package\Data Flow Task\Lectura Data JSON.Outputs[Output 0].Columns[CantidadDeCanje]" />
+                      externalMetadataColumnId="Package\Llenado de DimCupon\Inserccion del registro.Inputs[ADO NET Destination Input].ExternalColumns[NumeroVecesUsado]"
+                      lineageId="Package\Llenado de DimCupon\Lectura Data JSON.Outputs[Output 0].Columns[CantidadDeCanje]" />
                     <inputColumn
-                      refId="Package\Data Flow Task\Inserccion del registro.Inputs[ADO NET Destination Input].Columns[MaximoNumeroDeCanjes]"
+                      refId="Package\Llenado de DimCupon\Inserccion del registro.Inputs[ADO NET Destination Input].Columns[MaximoNumeroDeCanjes]"
                       cachedCodepage="1252"
                       cachedDataType="str"
                       cachedLength="50"
                       cachedName="MaximoNumeroDeCanjes"
-                      externalMetadataColumnId="Package\Data Flow Task\Inserccion del registro.Inputs[ADO NET Destination Input].ExternalColumns[MaximoNumeroUsos]"
-                      lineageId="Package\Data Flow Task\Lectura Data JSON.Outputs[Output 0].Columns[MaximoNumeroDeCanjes]" />
+                      externalMetadataColumnId="Package\Llenado de DimCupon\Inserccion del registro.Inputs[ADO NET Destination Input].ExternalColumns[MaximoNumeroUsos]"
+                      lineageId="Package\Llenado de DimCupon\Lectura Data JSON.Outputs[Output 0].Columns[MaximoNumeroDeCanjes]" />
                     <inputColumn
-                      refId="Package\Data Flow Task\Inserccion del registro.Inputs[ADO NET Destination Input].Columns[FechaDeCreacion]"
+                      refId="Package\Llenado de DimCupon\Inserccion del registro.Inputs[ADO NET Destination Input].Columns[FechaDeCreacion]"
                       cachedDataType="date"
                       cachedName="FechaDeCreacion"
-                      externalMetadataColumnId="Package\Data Flow Task\Inserccion del registro.Inputs[ADO NET Destination Input].ExternalColumns[FechaCreacion]"
-                      lineageId="Package\Data Flow Task\Lectura Data JSON.Outputs[Output 0].Columns[FechaDeCreacion]" />
+                      externalMetadataColumnId="Package\Llenado de DimCupon\Inserccion del registro.Inputs[ADO NET Destination Input].ExternalColumns[FechaCreacion]"
+                      lineageId="Package\Llenado de DimCupon\Lectura Data JSON.Outputs[Output 0].Columns[FechaDeCreacion]" />
                     <inputColumn
-                      refId="Package\Data Flow Task\Inserccion del registro.Inputs[ADO NET Destination Input].Columns[FechaDeExpiracion]"
+                      refId="Package\Llenado de DimCupon\Inserccion del registro.Inputs[ADO NET Destination Input].Columns[FechaDeExpiracion]"
                       cachedDataType="date"
                       cachedName="FechaDeExpiracion"
-                      externalMetadataColumnId="Package\Data Flow Task\Inserccion del registro.Inputs[ADO NET Destination Input].ExternalColumns[FechaExpiracion]"
-                      lineageId="Package\Data Flow Task\Lectura Data JSON.Outputs[Output 0].Columns[FechaDeExpiracion]" />
+                      externalMetadataColumnId="Package\Llenado de DimCupon\Inserccion del registro.Inputs[ADO NET Destination Input].ExternalColumns[FechaExpiracion]"
+                      lineageId="Package\Llenado de DimCupon\Lectura Data JSON.Outputs[Output 0].Columns[FechaDeExpiracion]" />
                   </inputColumns>
                   <externalMetadataColumns
                     isUsed="True">
                     <externalMetadataColumn
-                      refId="Package\Data Flow Task\Inserccion del registro.Inputs[ADO NET Destination Input].ExternalColumns[CuponKey]"
+                      refId="Package\Llenado de DimCupon\Inserccion del registro.Inputs[ADO NET Destination Input].ExternalColumns[CuponKey]"
                       dataType="i4"
                       name="CuponKey" />
                     <externalMetadataColumn
-                      refId="Package\Data Flow Task\Inserccion del registro.Inputs[ADO NET Destination Input].ExternalColumns[CuponId]"
+                      refId="Package\Llenado de DimCupon\Inserccion del registro.Inputs[ADO NET Destination Input].ExternalColumns[CuponId]"
                       dataType="wstr"
                       length="255"
                       name="CuponId" />
                     <externalMetadataColumn
-                      refId="Package\Data Flow Task\Inserccion del registro.Inputs[ADO NET Destination Input].ExternalColumns[CodigoCupon]"
+                      refId="Package\Llenado de DimCupon\Inserccion del registro.Inputs[ADO NET Destination Input].ExternalColumns[CodigoCupon]"
                       dataType="wstr"
                       length="255"
                       name="CodigoCupon" />
                     <externalMetadataColumn
-                      refId="Package\Data Flow Task\Inserccion del registro.Inputs[ADO NET Destination Input].ExternalColumns[NombreCupon]"
+                      refId="Package\Llenado de DimCupon\Inserccion del registro.Inputs[ADO NET Destination Input].ExternalColumns[NombreCupon]"
                       dataType="wstr"
                       length="255"
                       name="NombreCupon" />
                     <externalMetadataColumn
-                      refId="Package\Data Flow Task\Inserccion del registro.Inputs[ADO NET Destination Input].ExternalColumns[TipoCupon]"
+                      refId="Package\Llenado de DimCupon\Inserccion del registro.Inputs[ADO NET Destination Input].ExternalColumns[TipoCupon]"
                       dataType="wstr"
                       length="50"
                       name="TipoCupon" />
                     <externalMetadataColumn
-                      refId="Package\Data Flow Task\Inserccion del registro.Inputs[ADO NET Destination Input].ExternalColumns[EstadoCupon]"
+                      refId="Package\Llenado de DimCupon\Inserccion del registro.Inputs[ADO NET Destination Input].ExternalColumns[EstadoCupon]"
                       dataType="wstr"
                       length="50"
                       name="EstadoCupon" />
                     <externalMetadataColumn
-                      refId="Package\Data Flow Task\Inserccion del registro.Inputs[ADO NET Destination Input].ExternalColumns[TipoDescuento]"
+                      refId="Package\Llenado de DimCupon\Inserccion del registro.Inputs[ADO NET Destination Input].ExternalColumns[TipoDescuento]"
                       dataType="wstr"
                       length="50"
                       name="TipoDescuento" />
                     <externalMetadataColumn
-                      refId="Package\Data Flow Task\Inserccion del registro.Inputs[ADO NET Destination Input].ExternalColumns[ValorDescuento]"
+                      refId="Package\Llenado de DimCupon\Inserccion del registro.Inputs[ADO NET Destination Input].ExternalColumns[ValorDescuento]"
                       dataType="r8"
                       name="ValorDescuento" />
                     <externalMetadataColumn
-                      refId="Package\Data Flow Task\Inserccion del registro.Inputs[ADO NET Destination Input].ExternalColumns[NumeroVecesUsado]"
+                      refId="Package\Llenado de DimCupon\Inserccion del registro.Inputs[ADO NET Destination Input].ExternalColumns[NumeroVecesUsado]"
                       dataType="i4"
                       name="NumeroVecesUsado" />
                     <externalMetadataColumn
-                      refId="Package\Data Flow Task\Inserccion del registro.Inputs[ADO NET Destination Input].ExternalColumns[MaximoNumeroUsos]"
+                      refId="Package\Llenado de DimCupon\Inserccion del registro.Inputs[ADO NET Destination Input].ExternalColumns[MaximoNumeroUsos]"
                       dataType="wstr"
                       length="50"
                       name="MaximoNumeroUsos" />
                     <externalMetadataColumn
-                      refId="Package\Data Flow Task\Inserccion del registro.Inputs[ADO NET Destination Input].ExternalColumns[FechaCreacion]"
+                      refId="Package\Llenado de DimCupon\Inserccion del registro.Inputs[ADO NET Destination Input].ExternalColumns[FechaCreacion]"
                       dataType="dbTimeStamp"
                       name="FechaCreacion" />
                     <externalMetadataColumn
-                      refId="Package\Data Flow Task\Inserccion del registro.Inputs[ADO NET Destination Input].ExternalColumns[FechaExpiracion]"
+                      refId="Package\Llenado de DimCupon\Inserccion del registro.Inputs[ADO NET Destination Input].ExternalColumns[FechaExpiracion]"
                       dataType="dbTimeStamp"
                       name="FechaExpiracion" />
                   </externalMetadataColumns>
@@ -543,22 +543,22 @@
               </inputs>
               <outputs>
                 <output
-                  refId="Package\Data Flow Task\Inserccion del registro.Outputs[ADO NET Destination Error Output]"
+                  refId="Package\Llenado de DimCupon\Inserccion del registro.Outputs[ADO NET Destination Error Output]"
                   exclusionGroup="1"
                   isErrorOut="true"
                   name="ADO NET Destination Error Output"
-                  synchronousInputId="Package\Data Flow Task\Inserccion del registro.Inputs[ADO NET Destination Input]">
+                  synchronousInputId="Package\Llenado de DimCupon\Inserccion del registro.Inputs[ADO NET Destination Input]">
                   <outputColumns>
                     <outputColumn
-                      refId="Package\Data Flow Task\Inserccion del registro.Outputs[ADO NET Destination Error Output].Columns[ErrorCode]"
+                      refId="Package\Llenado de DimCupon\Inserccion del registro.Outputs[ADO NET Destination Error Output].Columns[ErrorCode]"
                       dataType="i4"
-                      lineageId="Package\Data Flow Task\Inserccion del registro.Outputs[ADO NET Destination Error Output].Columns[ErrorCode]"
+                      lineageId="Package\Llenado de DimCupon\Inserccion del registro.Outputs[ADO NET Destination Error Output].Columns[ErrorCode]"
                       name="ErrorCode"
                       specialFlags="1" />
                     <outputColumn
-                      refId="Package\Data Flow Task\Inserccion del registro.Outputs[ADO NET Destination Error Output].Columns[ErrorColumn]"
+                      refId="Package\Llenado de DimCupon\Inserccion del registro.Outputs[ADO NET Destination Error Output].Columns[ErrorColumn]"
                       dataType="i4"
-                      lineageId="Package\Data Flow Task\Inserccion del registro.Outputs[ADO NET Destination Error Output].Columns[ErrorColumn]"
+                      lineageId="Package\Llenado de DimCupon\Inserccion del registro.Outputs[ADO NET Destination Error Output].Columns[ErrorColumn]"
                       name="ErrorColumn"
                       specialFlags="2" />
                   </outputColumns>
@@ -567,7 +567,7 @@
               </outputs>
             </component>
             <component
-              refId="Package\Data Flow Task\Lectura Data JSON"
+              refId="Package\Llenado de DimCupon\Lectura Data JSON"
               componentClassID="Microsoft.ManagedComponentHost"
               contactInfo="Includes and runs custom script code. For example, apply a business rule that limits the range of valid values in an &quot;income&quot; column or add values in two columns and calculate the average of the sum.;Microsoft Corporation; Microsoft SQL Server; Microsoft Corporation; All Rights Reserved; http://www.microsoft.com/sql/support;13"
               description="Includes and runs custom script code. For example, apply a business rule that limits the range of valid values in an &quot;income&quot; column or add values in two columns and calculate the average of the sum."
@@ -638,7 +638,7 @@ namespace SC_59fbc10562cd45809bf66d5652494101.Properties {
     <msb:CodeName>SC_59fbc10562cd45809bf66d5652494101</msb:CodeName>
     <msb:Language>msBuild</msb:Language>
     <msb:DisplayName>SC_59fbc10562cd45809bf66d5652494101</msb:DisplayName>
-    <msb:ProjectId>{49CF3D33-CAF6-46AA-A2CE-B5DE27A8B8FB}</msb:ProjectId>
+    <msb:ProjectId>{5D96A287-056C-441B-8F36-7AD605280509}</msb:ProjectId>
   </msb:PropertyGroup>
   <msb:ItemGroup>
     <msb:Project Include="SC_59fbc10562cd45809bf66d5652494101.csproj" />
@@ -1576,10 +1576,6 @@ using Microsoft.SqlServer.Dts.Runtime.Wrapper;
 using SC_59fbc10562cd45809bf66d5652494101;
 #endregion
 
-/// <summary>
-/// This is the class to which to add your code.  Do not change the name, attributes, or parent
-/// of this class.
-/// </summary>
 [Microsoft.SqlServer.Dts.Pipeline.SSISScriptComponentEntryPointAttribute]
 public class ScriptMain : UserComponent
 {
@@ -1639,30 +1635,14 @@ public class ScriptMain : UserComponent
      */
     #endregion
 
-    /// <summary>
-    /// This method is called once, before rows begin to be processed in the data flow.
-    ///
-    /// You can remove this method if you don't need to do anything here.
-    /// </summary>
     public override void PreExecute()
     {
         base.PreExecute();
-        /*
-         * Add your code here
-         */
     }
 
-    /// <summary>
-    /// This method is called after all the rows have passed through this component.
-    ///
-    /// You can delete this method if you don't need to do anything here.
-    /// </summary>
     public override void PostExecute()
     {
         base.PostExecute();
-        /*
-         * Add your code here
-         */
     }
 
     public override void CreateNewOutputRows()
@@ -1750,7 +1730,7 @@ namespace SC_59fbc10562cd45809bf66d5652494101
                     <arrayElement
                       dataType="System.String"><![CDATA[TVqQAAMAAAAEAAAA//8AALgAAAAAAAAAQAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
 AAAAgAAAAA4fug4AtAnNIbgBTM0hVGhpcyBwcm9ncmFtIGNhbm5vdCBiZSBydW4gaW4gRE9TIG1v
-ZGUuDQ0KJAAAAAAAAABQRQAATAEDAJIvC2cAAAAAAAAAAOAAIiALATAAADYAAAAIAAAAAAAAAlQA
+ZGUuDQ0KJAAAAAAAAABQRQAATAEDAHaCIGcAAAAAAAAAAOAAIiALATAAADYAAAAIAAAAAAAAAlQA
 AAAgAAAAYAAAAAAAEAAgAAAAAgAABAAAAAAAAAAGAAAAAAAAAACgAAAAAgAAAAAAAAMAYIUAABAA
 ABAAAAAAEAAAEAAAAAAAABAAAAAAAAAAAAAAALBTAABPAAAAAGAAAEgEAAAAAAAAAAAAAAAAAAAA
 AAAAAIAAAAwAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
@@ -1974,7 +1954,7 @@ AGcAYQByACwAIABhAHMAaQBnAG4AZQAgAHUAbgAgAHYAYQBsAG8AcgAgAGEAIABsAGEAIABjAG8A
 bAB1AG0AbgBhAC4AABFPAHUAdABwAHUAdAAgADAAABlKAHMAbwBuAEYAaQBsAGUAUABhAHQAaAAA
 cVMAQwBfADUAOQBmAGIAYwAxADAANQA2ADIAYwBkADQANQA4ADAAOQBiAGYANgA2AGQANQA2ADUA
 MgA0ADkANAAxADAAMQAuAFAAcgBvAHAAZQByAHQAaQBlAHMALgBSAGUAcwBvAHUAcgBjAGUAcwAA
-AADIQIsJniUoSLYe31leDw4FAAQgAQEIAyAAAQUgAQEREQQgAQEOBSABARF1FAcGFRI5Ag4ODhUS
+AABN5v3T6AaWTLyUIysQ7OAHAAQgAQEIAyAAAQUgAQEREQQgAQEOBSABARF1FAcGFRI5Ag4ODhUS
 PQESHBIcCBJBBhUSOQIODgcgAgETABMBBAABDg4GMAEBHgAOBAoBEiAHFRKAiQESHAggABUSPQET
 AAYVEj0BEhwEIAATAAYgARMBEwAFAAERVQgDIAAOBQABEVEOAyAAAgYgAgEOEkEJIAMBEkkdCBJN
 BSACAQgcAwcBCAYAAggSTQ4FIAEdCAgFIAASgKkGIAESgK0cBQAAEoCxBiABHBKAtQgAARKAuRGA
@@ -2078,119 +2058,119 @@ AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==]]></arrayElement>
               </properties>
               <outputs>
                 <output
-                  refId="Package\Data Flow Task\Lectura Data JSON.Outputs[Output 0]"
+                  refId="Package\Llenado de DimCupon\Lectura Data JSON.Outputs[Output 0]"
                   hasSideEffects="true"
                   name="Output 0">
                   <outputColumns>
                     <outputColumn
-                      refId="Package\Data Flow Task\Lectura Data JSON.Outputs[Output 0].Columns[DetenerLuegoDeRegla]"
+                      refId="Package\Llenado de DimCupon\Lectura Data JSON.Outputs[Output 0].Columns[DetenerLuegoDeRegla]"
                       codePage="1252"
                       dataType="str"
                       length="50"
-                      lineageId="Package\Data Flow Task\Lectura Data JSON.Outputs[Output 0].Columns[DetenerLuegoDeRegla]"
+                      lineageId="Package\Llenado de DimCupon\Lectura Data JSON.Outputs[Output 0].Columns[DetenerLuegoDeRegla]"
                       name="DetenerLuegoDeRegla" />
                     <outputColumn
-                      refId="Package\Data Flow Task\Lectura Data JSON.Outputs[Output 0].Columns[TipoRegla]"
+                      refId="Package\Llenado de DimCupon\Lectura Data JSON.Outputs[Output 0].Columns[TipoRegla]"
                       codePage="1252"
                       dataType="str"
                       length="50"
-                      lineageId="Package\Data Flow Task\Lectura Data JSON.Outputs[Output 0].Columns[TipoRegla]"
+                      lineageId="Package\Llenado de DimCupon\Lectura Data JSON.Outputs[Output 0].Columns[TipoRegla]"
                       name="TipoRegla" />
                     <outputColumn
-                      refId="Package\Data Flow Task\Lectura Data JSON.Outputs[Output 0].Columns[FechaDeCreacion]"
+                      refId="Package\Llenado de DimCupon\Lectura Data JSON.Outputs[Output 0].Columns[FechaDeCreacion]"
                       dataType="date"
-                      lineageId="Package\Data Flow Task\Lectura Data JSON.Outputs[Output 0].Columns[FechaDeCreacion]"
+                      lineageId="Package\Llenado de DimCupon\Lectura Data JSON.Outputs[Output 0].Columns[FechaDeCreacion]"
                       name="FechaDeCreacion" />
                     <outputColumn
-                      refId="Package\Data Flow Task\Lectura Data JSON.Outputs[Output 0].Columns[FechaDeExpiracion]"
+                      refId="Package\Llenado de DimCupon\Lectura Data JSON.Outputs[Output 0].Columns[FechaDeExpiracion]"
                       dataType="date"
-                      lineageId="Package\Data Flow Task\Lectura Data JSON.Outputs[Output 0].Columns[FechaDeExpiracion]"
+                      lineageId="Package\Llenado de DimCupon\Lectura Data JSON.Outputs[Output 0].Columns[FechaDeExpiracion]"
                       name="FechaDeExpiracion" />
                     <outputColumn
-                      refId="Package\Data Flow Task\Lectura Data JSON.Outputs[Output 0].Columns[MaximoNumeroDeCanjes]"
+                      refId="Package\Llenado de DimCupon\Lectura Data JSON.Outputs[Output 0].Columns[MaximoNumeroDeCanjes]"
                       codePage="1252"
                       dataType="str"
                       length="50"
-                      lineageId="Package\Data Flow Task\Lectura Data JSON.Outputs[Output 0].Columns[MaximoNumeroDeCanjes]"
+                      lineageId="Package\Llenado de DimCupon\Lectura Data JSON.Outputs[Output 0].Columns[MaximoNumeroDeCanjes]"
                       name="MaximoNumeroDeCanjes" />
                     <outputColumn
-                      refId="Package\Data Flow Task\Lectura Data JSON.Outputs[Output 0].Columns[Estado]"
+                      refId="Package\Llenado de DimCupon\Lectura Data JSON.Outputs[Output 0].Columns[Estado]"
                       codePage="1252"
                       dataType="str"
                       length="50"
-                      lineageId="Package\Data Flow Task\Lectura Data JSON.Outputs[Output 0].Columns[Estado]"
+                      lineageId="Package\Llenado de DimCupon\Lectura Data JSON.Outputs[Output 0].Columns[Estado]"
                       name="Estado" />
                     <outputColumn
-                      refId="Package\Data Flow Task\Lectura Data JSON.Outputs[Output 0].Columns[CantidadDeCanje]"
+                      refId="Package\Llenado de DimCupon\Lectura Data JSON.Outputs[Output 0].Columns[CantidadDeCanje]"
                       dataType="numeric"
-                      lineageId="Package\Data Flow Task\Lectura Data JSON.Outputs[Output 0].Columns[CantidadDeCanje]"
+                      lineageId="Package\Llenado de DimCupon\Lectura Data JSON.Outputs[Output 0].Columns[CantidadDeCanje]"
                       name="CantidadDeCanje"
                       precision="18" />
                     <outputColumn
-                      refId="Package\Data Flow Task\Lectura Data JSON.Outputs[Output 0].Columns[ValorDescuento]"
+                      refId="Package\Llenado de DimCupon\Lectura Data JSON.Outputs[Output 0].Columns[ValorDescuento]"
                       dataType="r4"
-                      lineageId="Package\Data Flow Task\Lectura Data JSON.Outputs[Output 0].Columns[ValorDescuento]"
+                      lineageId="Package\Llenado de DimCupon\Lectura Data JSON.Outputs[Output 0].Columns[ValorDescuento]"
                       name="ValorDescuento" />
                     <outputColumn
-                      refId="Package\Data Flow Task\Lectura Data JSON.Outputs[Output 0].Columns[TipoDescuento]"
+                      refId="Package\Llenado de DimCupon\Lectura Data JSON.Outputs[Output 0].Columns[TipoDescuento]"
                       codePage="1252"
                       dataType="str"
                       length="50"
-                      lineageId="Package\Data Flow Task\Lectura Data JSON.Outputs[Output 0].Columns[TipoDescuento]"
+                      lineageId="Package\Llenado de DimCupon\Lectura Data JSON.Outputs[Output 0].Columns[TipoDescuento]"
                       name="TipoDescuento" />
                     <outputColumn
-                      refId="Package\Data Flow Task\Lectura Data JSON.Outputs[Output 0].Columns[DescuentoPor]"
+                      refId="Package\Llenado de DimCupon\Lectura Data JSON.Outputs[Output 0].Columns[DescuentoPor]"
                       codePage="1252"
                       dataType="str"
                       length="50"
-                      lineageId="Package\Data Flow Task\Lectura Data JSON.Outputs[Output 0].Columns[DescuentoPor]"
+                      lineageId="Package\Llenado de DimCupon\Lectura Data JSON.Outputs[Output 0].Columns[DescuentoPor]"
                       name="DescuentoPor" />
                     <outputColumn
-                      refId="Package\Data Flow Task\Lectura Data JSON.Outputs[Output 0].Columns[EsActivo]"
+                      refId="Package\Llenado de DimCupon\Lectura Data JSON.Outputs[Output 0].Columns[EsActivo]"
                       dataType="bool"
-                      lineageId="Package\Data Flow Task\Lectura Data JSON.Outputs[Output 0].Columns[EsActivo]"
+                      lineageId="Package\Llenado de DimCupon\Lectura Data JSON.Outputs[Output 0].Columns[EsActivo]"
                       name="EsActivo" />
                     <outputColumn
-                      refId="Package\Data Flow Task\Lectura Data JSON.Outputs[Output 0].Columns[Tipo]"
+                      refId="Package\Llenado de DimCupon\Lectura Data JSON.Outputs[Output 0].Columns[Tipo]"
                       codePage="1252"
                       dataType="str"
                       length="50"
-                      lineageId="Package\Data Flow Task\Lectura Data JSON.Outputs[Output 0].Columns[Tipo]"
+                      lineageId="Package\Llenado de DimCupon\Lectura Data JSON.Outputs[Output 0].Columns[Tipo]"
                       name="Tipo" />
                     <outputColumn
-                      refId="Package\Data Flow Task\Lectura Data JSON.Outputs[Output 0].Columns[DescripcionCupon]"
+                      refId="Package\Llenado de DimCupon\Lectura Data JSON.Outputs[Output 0].Columns[DescripcionCupon]"
                       codePage="1252"
                       dataType="str"
                       length="50"
-                      lineageId="Package\Data Flow Task\Lectura Data JSON.Outputs[Output 0].Columns[DescripcionCupon]"
+                      lineageId="Package\Llenado de DimCupon\Lectura Data JSON.Outputs[Output 0].Columns[DescripcionCupon]"
                       name="DescripcionCupon" />
                     <outputColumn
-                      refId="Package\Data Flow Task\Lectura Data JSON.Outputs[Output 0].Columns[Nombre]"
+                      refId="Package\Llenado de DimCupon\Lectura Data JSON.Outputs[Output 0].Columns[Nombre]"
                       codePage="1252"
                       dataType="str"
                       length="255"
-                      lineageId="Package\Data Flow Task\Lectura Data JSON.Outputs[Output 0].Columns[Nombre]"
+                      lineageId="Package\Llenado de DimCupon\Lectura Data JSON.Outputs[Output 0].Columns[Nombre]"
                       name="Nombre" />
                     <outputColumn
-                      refId="Package\Data Flow Task\Lectura Data JSON.Outputs[Output 0].Columns[NombreCupon]"
+                      refId="Package\Llenado de DimCupon\Lectura Data JSON.Outputs[Output 0].Columns[NombreCupon]"
                       codePage="1252"
                       dataType="str"
                       length="255"
-                      lineageId="Package\Data Flow Task\Lectura Data JSON.Outputs[Output 0].Columns[NombreCupon]"
+                      lineageId="Package\Llenado de DimCupon\Lectura Data JSON.Outputs[Output 0].Columns[NombreCupon]"
                       name="NombreCupon" />
                     <outputColumn
-                      refId="Package\Data Flow Task\Lectura Data JSON.Outputs[Output 0].Columns[CodigoCupon]"
+                      refId="Package\Llenado de DimCupon\Lectura Data JSON.Outputs[Output 0].Columns[CodigoCupon]"
                       codePage="1252"
                       dataType="str"
                       length="255"
-                      lineageId="Package\Data Flow Task\Lectura Data JSON.Outputs[Output 0].Columns[CodigoCupon]"
+                      lineageId="Package\Llenado de DimCupon\Lectura Data JSON.Outputs[Output 0].Columns[CodigoCupon]"
                       name="CodigoCupon" />
                     <outputColumn
-                      refId="Package\Data Flow Task\Lectura Data JSON.Outputs[Output 0].Columns[CuponId]"
+                      refId="Package\Llenado de DimCupon\Lectura Data JSON.Outputs[Output 0].Columns[CuponId]"
                       codePage="1252"
                       dataType="str"
                       length="255"
-                      lineageId="Package\Data Flow Task\Lectura Data JSON.Outputs[Output 0].Columns[CuponId]"
+                      lineageId="Package\Llenado de DimCupon\Lectura Data JSON.Outputs[Output 0].Columns[CuponId]"
                       name="CuponId" />
                   </outputColumns>
                   <externalMetadataColumns />
@@ -2198,7 +2178,7 @@ AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==]]></arrayElement>
               </outputs>
             </component>
             <component
-              refId="Package\Data Flow Task\Verificacion de si existe el registro"
+              refId="Package\Llenado de DimCupon\Verificacion de si existe el registro"
               componentClassID="Microsoft.Lookup"
               contactInfo="Lookup;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; All Rights Reserved; http://www.microsoft.com/sql/support;6"
               description="Joins additional columns to the data flow by looking up values in a table. For example, join to the 'employee id' column the employees table to get 'hire date' and 'employee name'. We recommend this transformation when the lookup table can fit into memory."
@@ -2254,7 +2234,7 @@ where [refTable].[CuponId] = ?</property>
                   containsID="true"
                   dataType="System.String"
                   description="Specifies the list of lineage identifiers that map to the parameters that the SQL statement in the SQLCommand property uses. Entries in the list are separated by semicolons."
-                  name="ParameterMap">#{Package\Data Flow Task\Lectura Data JSON.Outputs[Output 0].Columns[CuponId]};</property>
+                  name="ParameterMap">#{Package\Llenado de DimCupon\Lectura Data JSON.Outputs[Output 0].Columns[CuponId]};</property>
                 <property
                   dataType="System.Int32"
                   description="Specifies the column code page to use when code page information is unavailable from the data source."
@@ -2266,24 +2246,24 @@ where [refTable].[CuponId] = ?</property>
               </properties>
               <connections>
                 <connection
-                  refId="Package\Data Flow Task\Verificacion de si existe el registro.Connections[OleDbConnection]"
-                  connectionManagerID="Package.ConnectionManagers[DestinationDWOLEDB]"
-                  connectionManagerRefId="Package.ConnectionManagers[DestinationDWOLEDB]"
+                  refId="Package\Llenado de DimCupon\Verificacion de si existe el registro.Connections[OleDbConnection]"
+                  connectionManagerID="Package.ConnectionManagers[DWOLEDB]"
+                  connectionManagerRefId="Package.ConnectionManagers[DWOLEDB]"
                   description="Connection manager used to access lookup data."
                   name="OleDbConnection" />
               </connections>
               <inputs>
                 <input
-                  refId="Package\Data Flow Task\Verificacion de si existe el registro.Inputs[Lookup Input]"
+                  refId="Package\Llenado de DimCupon\Verificacion de si existe el registro.Inputs[Lookup Input]"
                   name="Lookup Input">
                   <inputColumns>
                     <inputColumn
-                      refId="Package\Data Flow Task\Verificacion de si existe el registro.Inputs[Lookup Input].Columns[CuponId]"
+                      refId="Package\Llenado de DimCupon\Verificacion de si existe el registro.Inputs[Lookup Input].Columns[CuponId]"
                       cachedCodepage="1252"
                       cachedDataType="str"
                       cachedLength="255"
                       cachedName="CuponId"
-                      lineageId="Package\Data Flow Task\Lectura Data JSON.Outputs[Output 0].Columns[CuponId]">
+                      lineageId="Package\Llenado de DimCupon\Lectura Data JSON.Outputs[Output 0].Columns[CuponId]">
                       <properties>
                         <property
                           dataType="System.String"
@@ -2301,17 +2281,17 @@ where [refTable].[CuponId] = ?</property>
               </inputs>
               <outputs>
                 <output
-                  refId="Package\Data Flow Task\Verificacion de si existe el registro.Outputs[Lookup Match Output]"
+                  refId="Package\Llenado de DimCupon\Verificacion de si existe el registro.Outputs[Lookup Match Output]"
                   errorOrTruncationOperation="Lookup"
                   exclusionGroup="1"
                   name="Lookup Match Output"
-                  synchronousInputId="Package\Data Flow Task\Verificacion de si existe el registro.Inputs[Lookup Input]">
+                  synchronousInputId="Package\Llenado de DimCupon\Verificacion de si existe el registro.Inputs[Lookup Input]">
                   <outputColumns>
                     <outputColumn
-                      refId="Package\Data Flow Task\Verificacion de si existe el registro.Outputs[Lookup Match Output].Columns[CuponKey]"
+                      refId="Package\Llenado de DimCupon\Verificacion de si existe el registro.Outputs[Lookup Match Output].Columns[CuponKey]"
                       dataType="i4"
                       errorOrTruncationOperation="Copy Column"
-                      lineageId="Package\Data Flow Task\Verificacion de si existe el registro.Outputs[Lookup Match Output].Columns[CuponKey]"
+                      lineageId="Package\Llenado de DimCupon\Verificacion de si existe el registro.Outputs[Lookup Match Output].Columns[CuponKey]"
                       name="CuponKey"
                       truncationRowDisposition="FailComponent">
                       <properties>
@@ -2325,30 +2305,30 @@ where [refTable].[CuponId] = ?</property>
                   <externalMetadataColumns />
                 </output>
                 <output
-                  refId="Package\Data Flow Task\Verificacion de si existe el registro.Outputs[Lookup No Match Output]"
+                  refId="Package\Llenado de DimCupon\Verificacion de si existe el registro.Outputs[Lookup No Match Output]"
                   description="The Lookup output that handles rows with no matching entries in the reference dataset. Use this output when the NoMatchBehavior property is set to &quot;Send rows with no matching entries to the no match output.&quot;"
                   exclusionGroup="1"
                   name="Lookup No Match Output"
-                  synchronousInputId="Package\Data Flow Task\Verificacion de si existe el registro.Inputs[Lookup Input]">
+                  synchronousInputId="Package\Llenado de DimCupon\Verificacion de si existe el registro.Inputs[Lookup Input]">
                   <externalMetadataColumns />
                 </output>
                 <output
-                  refId="Package\Data Flow Task\Verificacion de si existe el registro.Outputs[Lookup Error Output]"
+                  refId="Package\Llenado de DimCupon\Verificacion de si existe el registro.Outputs[Lookup Error Output]"
                   exclusionGroup="1"
                   isErrorOut="true"
                   name="Lookup Error Output"
-                  synchronousInputId="Package\Data Flow Task\Verificacion de si existe el registro.Inputs[Lookup Input]">
+                  synchronousInputId="Package\Llenado de DimCupon\Verificacion de si existe el registro.Inputs[Lookup Input]">
                   <outputColumns>
                     <outputColumn
-                      refId="Package\Data Flow Task\Verificacion de si existe el registro.Outputs[Lookup Error Output].Columns[ErrorCode]"
+                      refId="Package\Llenado de DimCupon\Verificacion de si existe el registro.Outputs[Lookup Error Output].Columns[ErrorCode]"
                       dataType="i4"
-                      lineageId="Package\Data Flow Task\Verificacion de si existe el registro.Outputs[Lookup Error Output].Columns[ErrorCode]"
+                      lineageId="Package\Llenado de DimCupon\Verificacion de si existe el registro.Outputs[Lookup Error Output].Columns[ErrorCode]"
                       name="ErrorCode"
                       specialFlags="1" />
                     <outputColumn
-                      refId="Package\Data Flow Task\Verificacion de si existe el registro.Outputs[Lookup Error Output].Columns[ErrorColumn]"
+                      refId="Package\Llenado de DimCupon\Verificacion de si existe el registro.Outputs[Lookup Error Output].Columns[ErrorColumn]"
                       dataType="i4"
-                      lineageId="Package\Data Flow Task\Verificacion de si existe el registro.Outputs[Lookup Error Output].Columns[ErrorColumn]"
+                      lineageId="Package\Llenado de DimCupon\Verificacion de si existe el registro.Outputs[Lookup Error Output].Columns[ErrorColumn]"
                       name="ErrorColumn"
                       specialFlags="2" />
                   </outputColumns>
@@ -2359,68 +2339,133 @@ where [refTable].[CuponId] = ?</property>
           </components>
           <paths>
             <path
-              refId="Package\Data Flow Task.Paths[Lookup Match Output]"
-              endId="Package\Data Flow Task\Actualizacion del registro.Inputs[OLE DB Command Input]"
+              refId="Package\Llenado de DimCupon.Paths[Lookup Match Output]"
+              endId="Package\Llenado de DimCupon\Actualizacion del registro.Inputs[OLE DB Command Input]"
               name="Lookup Match Output"
-              startId="Package\Data Flow Task\Verificacion de si existe el registro.Outputs[Lookup Match Output]" />
+              startId="Package\Llenado de DimCupon\Verificacion de si existe el registro.Outputs[Lookup Match Output]" />
             <path
-              refId="Package\Data Flow Task.Paths[Lookup No Match Output]"
-              endId="Package\Data Flow Task\Inserccion del registro.Inputs[ADO NET Destination Input]"
+              refId="Package\Llenado de DimCupon.Paths[Lookup No Match Output]"
+              endId="Package\Llenado de DimCupon\Inserccion del registro.Inputs[ADO NET Destination Input]"
               name="Lookup No Match Output"
-              startId="Package\Data Flow Task\Verificacion de si existe el registro.Outputs[Lookup No Match Output]" />
+              startId="Package\Llenado de DimCupon\Verificacion de si existe el registro.Outputs[Lookup No Match Output]" />
             <path
-              refId="Package\Data Flow Task.Paths[Output 0]"
-              endId="Package\Data Flow Task\Verificacion de si existe el registro.Inputs[Lookup Input]"
+              refId="Package\Llenado de DimCupon.Paths[Output 0]"
+              endId="Package\Llenado de DimCupon\Verificacion de si existe el registro.Inputs[Lookup Input]"
               name="Output 0"
-              startId="Package\Data Flow Task\Lectura Data JSON.Outputs[Output 0]" />
+              startId="Package\Llenado de DimCupon\Lectura Data JSON.Outputs[Output 0]" />
           </paths>
         </pipeline>
       </DTS:ObjectData>
     </DTS:Executable>
+    <DTS:Executable
+      DTS:refId="Package\Vaciar DimCupon"
+      DTS:CreationName="Microsoft.ExecuteSQLTask"
+      DTS:Description="Tarea Ejecutar SQL"
+      DTS:DTSID="{25CA7924-AF16-4217-9CEF-BABA6AEE033A}"
+      DTS:ExecutableType="Microsoft.ExecuteSQLTask"
+      DTS:LocaleID="-1"
+      DTS:ObjectName="Vaciar DimCupon"
+      DTS:TaskContact="Execute SQL Task; Microsoft Corporation; SQL Server 2022; © 2022 Microsoft Corporation; All Rights Reserved;http://www.microsoft.com/sql/support/default.asp;1"
+      DTS:ThreadHint="0">
+      <DTS:Variables />
+      <DTS:ObjectData>
+        <SQLTask:SqlTaskData
+          SQLTask:Connection="{A1FA1B79-184D-437C-BD81-6EFE211A5F36}"
+          SQLTask:SqlStatementSource="delete from DimCupon where CuponId != '0';&#xA;DBCC CHECKIDENT ('DimCupon', RESEED, 0);&#xA;" xmlns:SQLTask="www.microsoft.com/sqlserver/dts/tasks/sqltask" />
+      </DTS:ObjectData>
+    </DTS:Executable>
   </DTS:Executables>
+  <DTS:PrecedenceConstraints>
+    <DTS:PrecedenceConstraint
+      DTS:refId="Package.PrecedenceConstraints[Restricción]"
+      DTS:CreationName=""
+      DTS:DTSID="{E61E900D-3765-401A-84B7-CA4508EDCF06}"
+      DTS:From="Package\Vaciar DimCupon"
+      DTS:LogicalAnd="True"
+      DTS:ObjectName="Restricción"
+      DTS:To="Package\Llenado de DimCupon" />
+  </DTS:PrecedenceConstraints>
   <DTS:DesignTimeProperties><![CDATA[<?xml version="1.0"?>
-<!--This CDATA section contains the layout information of the package. The section includes information such as (x,y) coordinates, width, and height.-->
-<!--If you manually edit this section and make a mistake, you can delete it. -->
-<!--The package will still be able to load normally but the previous layout information will be lost and the designer will automatically re-arrange the elements on the design surface.-->
+<!--Esta sección CDATA contiene la información de diseño del paquete. Esta sección incluye información como, por ejemplo, las coordenadas (x,y), el ancho y el alto.-->
+<!--Si edita manualmente esta sección y comete un error, puede eliminarlo. -->
+<!--El paquete podrá cargarse normalmente, pero se perderá la información de diseño anterior y el diseñador reorganizará los elementos automáticamente en la superficie de diseño.-->
 <Objects
   Version="8">
-  <!--Each node below will contain properties that do not affect runtime behavior.-->
+  <!--Cada uno de los nodos siguientes contiene propiedades que no afectan al comportamiento en tiempo de ejecución.-->
   <Package
     design-time-name="Package">
     <LayoutInfo>
       <GraphLayout
-        Capacity="4" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph">
+        Capacity="4" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml">
         <NodeLayout
-          Size="155,42"
-          Id="Package\Data Flow Task"
-          TopLeft="5.5,5.5" />
+          Size="188,42"
+          Id="Package\Llenado de DimCupon"
+          TopLeft="604.5,386.5" />
+        <NodeLayout
+          Size="165,42"
+          Id="Package\Vaciar DimCupon"
+          TopLeft="384,162" />
+        <EdgeLayout
+          Id="Package.PrecedenceConstraints[Restricción]"
+          TopLeft="466.5,204">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="232,182.5"
+              Start="0,0"
+              End="232,175">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,87.25" />
+                  <mssgle:CubicBezierSegment
+                    Point1="0,87.25"
+                    Point2="0,91.25"
+                    Point3="4,91.25" />
+                  <mssgle:LineSegment
+                    End="228,91.25" />
+                  <mssgle:CubicBezierSegment
+                    Point1="228,91.25"
+                    Point2="232,91.25"
+                    Point3="232,95.25" />
+                  <mssgle:LineSegment
+                    End="232,175" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
       </GraphLayout>
     </LayoutInfo>
   </Package>
   <TaskHost
-    design-time-name="Package\Data Flow Task">
+    design-time-name="Package\Llenado de DimCupon">
     <LayoutInfo>
       <GraphLayout
         Capacity="8" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml" xmlns:mssgm="clr-namespace:Microsoft.SqlServer.Graph.Model;assembly=Microsoft.SqlServer.Graph">
         <NodeLayout
           Size="174,42"
-          Id="Package\Data Flow Task\Lectura Data JSON"
-          TopLeft="362,225" />
+          Id="Package\Llenado de DimCupon\Lectura Data JSON"
+          TopLeft="144,234" />
         <NodeLayout
           Size="245,42"
-          Id="Package\Data Flow Task\Verificacion de si existe el registro"
-          TopLeft="730,225" />
+          Id="Package\Llenado de DimCupon\Verificacion de si existe el registro"
+          TopLeft="512,234" />
         <NodeLayout
           Size="201,42"
-          Id="Package\Data Flow Task\Actualizacion del registro"
-          TopLeft="1003,344" />
+          Id="Package\Llenado de DimCupon\Actualizacion del registro"
+          TopLeft="785,353" />
         <NodeLayout
           Size="187,42"
-          Id="Package\Data Flow Task\Inserccion del registro"
-          TopLeft="361,355" />
+          Id="Package\Llenado de DimCupon\Inserccion del registro"
+          TopLeft="360,348" />
         <EdgeLayout
-          Id="Package\Data Flow Task.Paths[Output 0]"
-          TopLeft="536,246">
+          Id="Package\Llenado de DimCupon.Paths[Output 0]"
+          TopLeft="318,255">
           <EdgeLayout.Curve>
             <mssgle:Curve
               StartConnector="{assembly:Null}"
@@ -2437,48 +2482,50 @@ where [refTable].[CuponId] = ?</property>
             </mssgle:Curve>
           </EdgeLayout.Curve>
           <EdgeLayout.Labels>
-            <EdgeLabelCollection />
+            <mssgm:EdgeLabel
+              BoundingBox="0,0,0,0"
+              RelativePosition="Any" />
           </EdgeLayout.Labels>
         </EdgeLayout>
         <EdgeLayout
-          Id="Package\Data Flow Task.Paths[Lookup No Match Output]"
-          TopLeft="813,267">
+          Id="Package\Llenado de DimCupon.Paths[Lookup No Match Output]"
+          TopLeft="595,276">
           <EdgeLayout.Curve>
             <mssgle:Curve
               StartConnector="{assembly:Null}"
-              EndConnector="-358.5,88"
+              EndConnector="-141.5,72"
               Start="0,0"
-              End="-358.5,80.5">
+              End="-141.5,64.5">
               <mssgle:Curve.Segments>
                 <mssgle:SegmentCollection
                   Capacity="5">
                   <mssgle:LineSegment
-                    End="0,31.5425790754258" />
+                    End="0,25.0802919708029" />
                   <mssgle:CubicBezierSegment
-                    Point1="0,31.5425790754258"
-                    Point2="0,35.5425790754258"
-                    Point3="-4,35.5425790754258" />
+                    Point1="0,25.0802919708029"
+                    Point2="0,29.0802919708029"
+                    Point3="-4,29.0802919708029" />
                   <mssgle:LineSegment
-                    End="-354.5,35.5425790754258" />
+                    End="-137.5,29.0802919708029" />
                   <mssgle:CubicBezierSegment
-                    Point1="-354.5,35.5425790754258"
-                    Point2="-358.5,35.5425790754258"
-                    Point3="-358.5,39.5425790754258" />
+                    Point1="-137.5,29.0802919708029"
+                    Point2="-141.5,29.0802919708029"
+                    Point3="-141.5,33.0802919708029" />
                   <mssgle:LineSegment
-                    End="-358.5,80.5" />
+                    End="-141.5,64.5" />
                 </mssgle:SegmentCollection>
               </mssgle:Curve.Segments>
             </mssgle:Curve>
           </EdgeLayout.Curve>
           <EdgeLayout.Labels>
             <mssgm:EdgeLabel
-              BoundingBox="-235.05638671875,40.5425790754258,111.6127734375,11.609375"
+              BoundingBox="-126.55638671875,34.0802919708029,111.6127734375,11.609375"
               RelativePosition="Any" />
           </EdgeLayout.Labels>
         </EdgeLayout>
         <EdgeLayout
-          Id="Package\Data Flow Task.Paths[Lookup Match Output]"
-          TopLeft="892,267">
+          Id="Package\Llenado de DimCupon.Paths[Lookup Match Output]"
+          TopLeft="674,276">
           <EdgeLayout.Curve>
             <mssgle:Curve
               StartConnector="{assembly:Null}"
@@ -2516,7 +2563,7 @@ where [refTable].[CuponId] = ?</property>
     </LayoutInfo>
   </TaskHost>
   <PipelineComponentMetadata
-    design-time-name="Package\Data Flow Task\Verificacion de si existe el registro">
+    design-time-name="Package\Llenado de DimCupon\Verificacion de si existe el registro">
     <Properties>
       <Property>
         <Name>OverwriteParamsSQLProp</Name>
@@ -2539,7 +2586,7 @@ where [refTable].[CuponId] = ?</property>
     </Properties>
   </PipelineComponentMetadata>
   <PipelineComponentMetadata
-    design-time-name="Package\Data Flow Task\Inserccion del registro">
+    design-time-name="Package\Llenado de DimCupon\Inserccion del registro">
     <Properties>
       <Property>
         <Name>DataSourceViewID</Name>

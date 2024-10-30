@@ -28,9 +28,10 @@ CREATE TABLE DimProducto
 	CategoriaProducto VARCHAR(50) DEFAULT 'Sin Categoria',
 	EstadoProducto VARCHAR(15) DEFAULT 'ACTIVO',
 	UnidadProducto VARCHAR(50) DEFAULT 'Sin Unidad de Medida',
+	PrecioUnitario DECIMAL(10,2),
 	FechaCreacion DATE,
 	FechaModificacion DATE,
-	PrecioUnitario DECIMAL(10,2)
+	Activo BIT DEFAULT 1
 );
 GO
 
@@ -42,7 +43,7 @@ CREATE TABLE DimCliente
 	Telefono VARCHAR(50) DEFAULT '',
 	Email VARCHAR(50) NOT NULL,
 	NombreEmpresa VARCHAR(255) NOT NULL,
-	FechaDeCreacion DATE
+	FechaCreacion DATE
 );
 GO
 
@@ -96,14 +97,38 @@ CREATE TABLE FactVentasPorCampania
 	CuponKey INT FOREIGN KEY REFERENCES DimCupon(CuponKey),
 	CampaniaKey INT FOREIGN KEY REFERENCES DimCampania(CampaniaKey),
 	FechaDeOrdenKey INT FOREIGN KEY REFERENCES DimTiempo(TiempoKey),
-	Cantidad float,
 	NumeroOrden VARCHAR(260),
+	Cantidad float,
 	PrecioUnitario FLOAT,
 	Descuento FLOAT,
+	PrecioUnitarioConDescuento FLOAT,
 	Total FLOAT,
-	Subtotal FLOAT,
+	TotalConDescuento FLOAT,
+	PRIMARY KEY (ClienteKey, ProductoKey, CuponKey, CampaniaKey, FechaDeOrdenKey)
 );
 GO
+
+CREATE TABLE FactReportesDeRendimientoPorCampania
+(
+	CampaniaKey INT FOREIGN KEY REFERENCES DimCampania(CampaniaKey),
+	FechaEnvioKey INT FOREIGN KEY REFERENCES DimTiempo(TiempoKey),
+	RebotesPermanentes INT,
+    NoEnviados INT,
+    NoAbiertos INT,
+    MarcadosComoSpam INT,
+    Entregados INT,
+    Quejas INT,
+    RespuestasAutomaticas INT,
+    RebotesTemporales INT,
+    Aperturas INT,
+    ClicsUnicos INT,
+    Rebotes INT,
+    Reenviados INT,
+    CorreosEnviados INT,
+	PRIMARY KEY (CampaniaKey, FechaEnvioKey)
+);
+GO
+
 CREATE TABLE Date_Dimension
 (
 	date_key int not null,
@@ -120,7 +145,7 @@ CREATE TABLE Date_Dimension
 	week_begin_date_key int,
 	month tinyint,
 	month_num_overall int,
-	month_name varchar(9),
+	month_name varchar(12),
 	month_abbrev varchar(15),
 	quarter tinyint,
 	year int,
@@ -132,14 +157,29 @@ CREATE TABLE Date_Dimension
 	same_day_year_ago_date smalldatetime,
 	primary key (date_key)
 );
-CREATE TABLE Parametros(
-	IdParametro					INT				PRIMARY KEY			IDENTITY(1,1),
-	NombreParametro				VARCHAR(25)		NOT NULL,
-	ValorParametro				VARCHAR(100)	NOT NULL
+
+CREATE TABLE Parametros
+(
+	IdParametro INT PRIMARY KEY IDENTITY(1,1),
+	NombreParametro VARCHAR(25) NOT NULL,
+	ValorParametro VARCHAR(100) NOT NULL
 );
-INSERT INTO Parametros(NombreParametro, ValorParametro) VALUES('Fecha_Ultima_Ejecucion', convert(varchar, convert(datetime,'01/01/2023')));
+GO
+
+INSERT INTO Parametros
+	(NombreParametro, ValorParametro)
+VALUES('Fecha_Ultima_Ejecucion', CONVERT(VARCHAR, CONVERT(DATETIME,'01/01/2023')));
+
+INSERT INTO Date_Dimension VALUES(19900101, '1990-1-1',1, 1, 1, 'Lunes', 'Lun', 'y', 1, 1, '1990-1-1', 19900101, 1, 1, 'Enero ', 'Ene', 1, 1990, 199001, 7, 3, 1990, 'n', '1989-1-1');
+INSERT INTO DimTiempo (TiempoKey, Fecha, Dia, Mes, Anio) SELECT date_key, full_date, day_num_in_month, month, year FROM Date_Dimension WHERE date_key = 19900101;
+
 INSERT INTO DimCupon
-(CuponId, NombreCupon, CodigoCupon, FechaCreacion, TipoCupon, EstadoCupon, TipoDescuento, ValorDescuento, NumeroVecesUsado, MaximoNumeroUsos, FechaExpiracion)
-VALUES(0, 'No se aplico un cupon', 'NSAUC', '2024-10-19', 'Por defecto', 'ACTIVO', 'Por default', 0.0, 0, '0', '2024-10-19' );
-INSERT INTO DimCampania(CampaniaId, NombreCampania, TipoCampania, TemaCampania, EmailEnvio, EmailRespuestas, TituloEmail, EstadoCampania, FechaEnvio, FechaCreacion)
-VALUES(0, 'No se aplico un cupon', 'Por Defecto', 'Por Defecto', 'pordefecto@defecto.com', 'pordefecto@defecto.com', 'Por defecto','Por defecto', '2024-10-19', '2024-10-19');
+	(CuponId, NombreCupon, CodigoCupon, FechaCreacion, TipoCupon, EstadoCupon, TipoDescuento, ValorDescuento, NumeroVecesUsado, MaximoNumeroUsos, FechaExpiracion)
+VALUES(0, 'No se aplico un cupon', 'NSAUC', '1990-01-01', 'Por defecto', 'ACTIVO', 'Por default', 0.0, 0, '0', '1990-01-01' );
+
+INSERT INTO DimCampania
+	(CampaniaId, NombreCampania, TipoCampania, TemaCampania, EmailEnvio, EmailRespuestas, TituloEmail, EstadoCampania, FechaEnvio, FechaCreacion)
+VALUES(0, 'No se aplico un cupon', 'Por Defecto', 'Por Defecto', 'pordefecto@defecto.com', 'pordefecto@defecto.com', 'Por defecto', 'Por defecto', '1990-01-01', '1990-01-01');
+
+
+UPDATE Parametros SET ValorParametro = CONVERT(VARCHAR, CONVERT(DATETIME,'01/01/2023')) WHERE NombreParametro='Fecha_Ultima_Ejecucion';

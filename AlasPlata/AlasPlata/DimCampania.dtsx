@@ -11,31 +11,31 @@
   DTS:LocaleID="1033"
   DTS:ObjectName="Package1"
   DTS:PackageType="5"
-  DTS:VersionBuild="24"
-  DTS:VersionGUID="{4E994644-4CC2-403A-A8A9-77E31A52CD86}">
+  DTS:VersionBuild="32"
+  DTS:VersionGUID="{7239453D-CA59-43C2-BAE2-6229ADB9A49B}">
   <DTS:Property
     DTS:Name="PackageFormatVersion">8</DTS:Property>
   <DTS:ConnectionManagers>
     <DTS:ConnectionManager
-      DTS:refId="Package.ConnectionManagers[DestinationDW]"
+      DTS:refId="Package.ConnectionManagers[DestinoDW]"
       DTS:CreationName="ADO.NET:System.Data.SqlClient.SqlConnection, System.Data, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089"
       DTS:DTSID="{7D53BFE3-33D2-4A88-BBD8-01C01E497338}"
-      DTS:ObjectName="DestinationDW">
+      DTS:ObjectName="DestinoDW">
       <DTS:ObjectData>
         <DTS:ConnectionManager
           DTS:ConnectionString="Data Source=localhost;User ID=js;Initial Catalog=AlasDePlataDW;Persist Security Info=True;Application Name=SSIS-Package1-{7D53BFE3-33D2-4A88-BBD8-01C01E497338}localhost.AlasDePlataDW.js;">
           <DTS:Password
             DTS:Name="Password"
             Sensitive="1"
-            Encrypted="1">AQAAANCMnd8BFdERjHoAwE/Cl+sBAAAAVjEO+z0Wqk6tj7LRX+YGJAAAAAAIAAAARABUAFMAAAAQZgAAAAEAACAAAADgGceqzPfcZczIAhMIagFH/qT7PCFu/gneJCDgZYrFrwAAAAAOgAAAAAIAACAAAACCX/AxEQW33KthUMWxDSsVRlqCvEXeeStEhZ0aHzJsDCAAAADREHvmJ+2wGAPn5m+kOJCbExPArxrT1wJHpUx0DjEdQ0AAAAA0B9OXPo2nnPeRfL93TK4/0MsuQccXLasYi9oJZZgZa/BtWOYE07Cq4E6XpxImQ0+AP5G8N3uIpb/RaH/qmVvL</DTS:Password>
+            Encrypted="1">AQAAANCMnd8BFdERjHoAwE/Cl+sBAAAA0cnV3L9sZUGZvr3Q4+g2VgAAAAAIAAAARABUAFMAAAAQZgAAAAEAACAAAADppCgq4C1LN1KEZ13Tb7ENTCuGtjkUTYY4LAYPzClD9wAAAAAOgAAAAAIAACAAAAB3Y4qf5bdqjkmOCRx500lG3YwfWuiH3D19tnQMlpGQ3CAAAACBEqIq8lL8Mt0MPu5OItxCc2qWlhTN+tvUCg27Ka03YEAAAACnnFpEyKhZnzSIRwwgouoV1zX+3oTwJLjjFRCF5lSykAYW7QqtnXvdfI1jO85JC7g3QipGfUfF9as8Ta454A28</DTS:Password>
         </DTS:ConnectionManager>
       </DTS:ObjectData>
     </DTS:ConnectionManager>
     <DTS:ConnectionManager
-      DTS:refId="Package.ConnectionManagers[OLEDBAlasDePlata]"
+      DTS:refId="Package.ConnectionManagers[DWOLEDB]"
       DTS:CreationName="OLEDB"
       DTS:DTSID="{C6577BD0-F773-4B28-A17F-959B01813989}"
-      DTS:ObjectName="OLEDBAlasDePlata">
+      DTS:ObjectName="DWOLEDB">
       <DTS:ObjectData>
         <DTS:ConnectionManager
           DTS:ConnectRetryCount="1"
@@ -44,7 +44,7 @@
           <DTS:Password
             DTS:Name="Password"
             Sensitive="1"
-            Encrypted="1">AQAAANCMnd8BFdERjHoAwE/Cl+sBAAAAVjEO+z0Wqk6tj7LRX+YGJAAAAAAIAAAARABUAFMAAAAQZgAAAAEAACAAAABT17QAmhTDoSLWNSmsWIRx6euSpJBQzctYLvl0EsVFswAAAAAOgAAAAAIAACAAAADPt75x+3tm0Bsw28f96VEPc1NJ3cR3ZyjUPKnsm/IQ0SAAAACTaF5q3xOR8nMmBhjlwWBX55wwhxtq9DtSydJgksMysUAAAADozfxVCYHd0jDEM0SJKRrH+k7bxoLi0mzFHinMd9fkZDGtkIf9xEwWJ5W5/6iChvIyzMcDxfPx65D30+QJ70IB</DTS:Password>
+            Encrypted="1">AQAAANCMnd8BFdERjHoAwE/Cl+sBAAAA0cnV3L9sZUGZvr3Q4+g2VgAAAAAIAAAARABUAFMAAAAQZgAAAAEAACAAAACbtedZGcjfYK5MPnY3N0O6tfnb5Yp5qniUi/OlCjwNkgAAAAAOgAAAAAIAACAAAACm25auIGdNWwpE6OirMx6xyJSE32asIsURJaJHGDl+XCAAAADhM4kBPHmBXHk1vFAHFbysx3EUbGsEZCTiStvjBGzSRUAAAADm+4Nc/ywPPdzUWEXL38h8j1EMMq/k1wNGgN5IPsyyVavaZjgSS1GyUMEQ9GsoFaGc/PYgI78Tba++oXnsDNYp</DTS:Password>
         </DTS:ConnectionManager>
       </DTS:ObjectData>
     </DTS:ConnectionManager>
@@ -57,19 +57,19 @@
       DTS:ObjectName="JsonFilePath">
       <DTS:Property
         DTS:DataType="8"
-        DTS:Name="ParameterValue">C:\Users\js\Documents\ID\Proyecto\CSV\Campaings\RecentCampaigns.json</DTS:Property>
+        DTS:Name="ParameterValue">C:\UES\IDAlasDePlataDW\CSV\Campaings\RecentCampaigns.json</DTS:Property>
     </DTS:PackageParameter>
   </DTS:PackageParameters>
   <DTS:Variables />
   <DTS:Executables>
     <DTS:Executable
-      DTS:refId="Package\Data Flow Task"
+      DTS:refId="Package\Llenado de DimCampania"
       DTS:CreationName="Microsoft.Pipeline"
       DTS:Description="Data Flow Task"
       DTS:DTSID="{EB89E11A-791D-4913-BEF4-14FB191D99F9}"
       DTS:ExecutableType="Microsoft.Pipeline"
       DTS:LocaleID="-1"
-      DTS:ObjectName="Data Flow Task"
+      DTS:ObjectName="Llenado de DimCampania"
       DTS:TaskContact="Performs high-performance data extraction, transformation and loading;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; All Rights Reserved;http://www.microsoft.com/sql/support/default.asp;1">
       <DTS:Variables />
       <DTS:ObjectData>
@@ -77,7 +77,7 @@
           version="1">
           <components>
             <component
-              refId="Package\Data Flow Task\Actualzicacion del registro existente"
+              refId="Package\Llenado de DimCampania\Actualzicacion del registro existente"
               componentClassID="Microsoft.OLEDBCommand"
               contactInfo="OLE DB Command;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; All Rights Reserved; http://www.microsoft.com/sql/support;2"
               description="Runs an SQL statement for each row in a data flow. For example, call a 'new employee setup' stored procedure for each row in the 'new employees' table. Note: running an SQL statement for each row of a large data flow may take a long time."
@@ -102,87 +102,87 @@
               </properties>
               <connections>
                 <connection
-                  refId="Package\Data Flow Task\Actualzicacion del registro existente.Connections[OleDbConnection]"
-                  connectionManagerID="Package.ConnectionManagers[OLEDBAlasDePlata]"
-                  connectionManagerRefId="Package.ConnectionManagers[OLEDBAlasDePlata]"
+                  refId="Package\Llenado de DimCampania\Actualzicacion del registro existente.Connections[OleDbConnection]"
+                  connectionManagerID="Package.ConnectionManagers[DWOLEDB]"
+                  connectionManagerRefId="Package.ConnectionManagers[DWOLEDB]"
                   description="The OLE DB runtime connection used to access the database."
                   name="OleDbConnection" />
               </connections>
               <inputs>
                 <input
-                  refId="Package\Data Flow Task\Actualzicacion del registro existente.Inputs[OLE DB Command Input]"
+                  refId="Package\Llenado de DimCampania\Actualzicacion del registro existente.Inputs[OLE DB Command Input]"
                   errorOrTruncationOperation="Command Execution"
                   errorRowDisposition="FailComponent"
                   hasSideEffects="true"
                   name="OLE DB Command Input">
                   <inputColumns>
                     <inputColumn
-                      refId="Package\Data Flow Task\Actualzicacion del registro existente.Inputs[OLE DB Command Input].Columns[EmailRespuesta]"
+                      refId="Package\Llenado de DimCampania\Actualzicacion del registro existente.Inputs[OLE DB Command Input].Columns[EmailRespuesta]"
                       cachedCodepage="1252"
                       cachedDataType="str"
                       cachedLength="50"
                       cachedName="EmailRespuesta"
-                      externalMetadataColumnId="Package\Data Flow Task\Actualzicacion del registro existente.Inputs[OLE DB Command Input].ExternalColumns[@EmailRespuesta]"
-                      lineageId="Package\Data Flow Task\Lectura data JSON.Outputs[Output 0].Columns[EmailRespuesta]" />
+                      externalMetadataColumnId="Package\Llenado de DimCampania\Actualzicacion del registro existente.Inputs[OLE DB Command Input].ExternalColumns[@EmailRespuesta]"
+                      lineageId="Package\Llenado de DimCampania\Lectura data JSON.Outputs[Output 0].Columns[EmailRespuesta]" />
                     <inputColumn
-                      refId="Package\Data Flow Task\Actualzicacion del registro existente.Inputs[OLE DB Command Input].Columns[EmailEnvio]"
+                      refId="Package\Llenado de DimCampania\Actualzicacion del registro existente.Inputs[OLE DB Command Input].Columns[EmailEnvio]"
                       cachedCodepage="1252"
                       cachedDataType="str"
                       cachedLength="50"
                       cachedName="EmailEnvio"
-                      externalMetadataColumnId="Package\Data Flow Task\Actualzicacion del registro existente.Inputs[OLE DB Command Input].ExternalColumns[@EmailEnvio]"
-                      lineageId="Package\Data Flow Task\Lectura data JSON.Outputs[Output 0].Columns[EmailEnvio]" />
+                      externalMetadataColumnId="Package\Llenado de DimCampania\Actualzicacion del registro existente.Inputs[OLE DB Command Input].ExternalColumns[@EmailEnvio]"
+                      lineageId="Package\Llenado de DimCampania\Lectura data JSON.Outputs[Output 0].Columns[EmailEnvio]" />
                     <inputColumn
-                      refId="Package\Data Flow Task\Actualzicacion del registro existente.Inputs[OLE DB Command Input].Columns[TipoCampania]"
+                      refId="Package\Llenado de DimCampania\Actualzicacion del registro existente.Inputs[OLE DB Command Input].Columns[TipoCampania]"
                       cachedCodepage="1252"
                       cachedDataType="str"
                       cachedLength="50"
                       cachedName="TipoCampania"
-                      externalMetadataColumnId="Package\Data Flow Task\Actualzicacion del registro existente.Inputs[OLE DB Command Input].ExternalColumns[@TipoCampania]"
-                      lineageId="Package\Data Flow Task\Lectura data JSON.Outputs[Output 0].Columns[TipoCampania]" />
+                      externalMetadataColumnId="Package\Llenado de DimCampania\Actualzicacion del registro existente.Inputs[OLE DB Command Input].ExternalColumns[@TipoCampania]"
+                      lineageId="Package\Llenado de DimCampania\Lectura data JSON.Outputs[Output 0].Columns[TipoCampania]" />
                     <inputColumn
-                      refId="Package\Data Flow Task\Actualzicacion del registro existente.Inputs[OLE DB Command Input].Columns[NombreCampania]"
+                      refId="Package\Llenado de DimCampania\Actualzicacion del registro existente.Inputs[OLE DB Command Input].Columns[NombreCampania]"
                       cachedCodepage="1252"
                       cachedDataType="str"
                       cachedLength="255"
                       cachedName="NombreCampania"
-                      externalMetadataColumnId="Package\Data Flow Task\Actualzicacion del registro existente.Inputs[OLE DB Command Input].ExternalColumns[@NombreCampania]"
-                      lineageId="Package\Data Flow Task\Lectura data JSON.Outputs[Output 0].Columns[NombreCampania]" />
+                      externalMetadataColumnId="Package\Llenado de DimCampania\Actualzicacion del registro existente.Inputs[OLE DB Command Input].ExternalColumns[@NombreCampania]"
+                      lineageId="Package\Llenado de DimCampania\Lectura data JSON.Outputs[Output 0].Columns[NombreCampania]" />
                     <inputColumn
-                      refId="Package\Data Flow Task\Actualzicacion del registro existente.Inputs[OLE DB Command Input].Columns[CampaniaKey]"
+                      refId="Package\Llenado de DimCampania\Actualzicacion del registro existente.Inputs[OLE DB Command Input].Columns[CampaniaKey]"
                       cachedDataType="i4"
                       cachedName="CampaniaKey"
-                      externalMetadataColumnId="Package\Data Flow Task\Actualzicacion del registro existente.Inputs[OLE DB Command Input].ExternalColumns[@CampaniaKey]"
-                      lineageId="Package\Data Flow Task\Verificacion de existencia de registro.Outputs[Lookup Match Output].Columns[CampaniaKey]" />
+                      externalMetadataColumnId="Package\Llenado de DimCampania\Actualzicacion del registro existente.Inputs[OLE DB Command Input].ExternalColumns[@CampaniaKey]"
+                      lineageId="Package\Llenado de DimCampania\Verificacion de existencia de registro.Outputs[Lookup Match Output].Columns[CampaniaKey]" />
                     <inputColumn
-                      refId="Package\Data Flow Task\Actualzicacion del registro existente.Inputs[OLE DB Command Input].Columns[TituloEmail]"
+                      refId="Package\Llenado de DimCampania\Actualzicacion del registro existente.Inputs[OLE DB Command Input].Columns[TituloEmail]"
                       cachedCodepage="1252"
                       cachedDataType="str"
                       cachedLength="50"
                       cachedName="TituloEmail"
-                      externalMetadataColumnId="Package\Data Flow Task\Actualzicacion del registro existente.Inputs[OLE DB Command Input].ExternalColumns[@TituloEmail]"
-                      lineageId="Package\Data Flow Task\Lectura data JSON.Outputs[Output 0].Columns[TituloEmail]" />
+                      externalMetadataColumnId="Package\Llenado de DimCampania\Actualzicacion del registro existente.Inputs[OLE DB Command Input].ExternalColumns[@TituloEmail]"
+                      lineageId="Package\Llenado de DimCampania\Lectura data JSON.Outputs[Output 0].Columns[TituloEmail]" />
                     <inputColumn
-                      refId="Package\Data Flow Task\Actualzicacion del registro existente.Inputs[OLE DB Command Input].Columns[TemaCampania]"
+                      refId="Package\Llenado de DimCampania\Actualzicacion del registro existente.Inputs[OLE DB Command Input].Columns[TemaCampania]"
                       cachedCodepage="1252"
                       cachedDataType="str"
                       cachedLength="50"
                       cachedName="TemaCampania"
-                      externalMetadataColumnId="Package\Data Flow Task\Actualzicacion del registro existente.Inputs[OLE DB Command Input].ExternalColumns[@TemaCampania]"
-                      lineageId="Package\Data Flow Task\Lectura data JSON.Outputs[Output 0].Columns[TemaCampania]" />
+                      externalMetadataColumnId="Package\Llenado de DimCampania\Actualzicacion del registro existente.Inputs[OLE DB Command Input].ExternalColumns[@TemaCampania]"
+                      lineageId="Package\Llenado de DimCampania\Lectura data JSON.Outputs[Output 0].Columns[TemaCampania]" />
                     <inputColumn
-                      refId="Package\Data Flow Task\Actualzicacion del registro existente.Inputs[OLE DB Command Input].Columns[EstadoCampania]"
+                      refId="Package\Llenado de DimCampania\Actualzicacion del registro existente.Inputs[OLE DB Command Input].Columns[EstadoCampania]"
                       cachedCodepage="1252"
                       cachedDataType="str"
                       cachedLength="50"
                       cachedName="EstadoCampania"
-                      externalMetadataColumnId="Package\Data Flow Task\Actualzicacion del registro existente.Inputs[OLE DB Command Input].ExternalColumns[@EstadoCampania]"
-                      lineageId="Package\Data Flow Task\Lectura data JSON.Outputs[Output 0].Columns[EstadoCampania]" />
+                      externalMetadataColumnId="Package\Llenado de DimCampania\Actualzicacion del registro existente.Inputs[OLE DB Command Input].ExternalColumns[@EstadoCampania]"
+                      lineageId="Package\Llenado de DimCampania\Lectura data JSON.Outputs[Output 0].Columns[EstadoCampania]" />
                   </inputColumns>
                   <externalMetadataColumns
                     isUsed="True">
                     <externalMetadataColumn
-                      refId="Package\Data Flow Task\Actualzicacion del registro existente.Inputs[OLE DB Command Input].ExternalColumns[@CampaniaKey]"
+                      refId="Package\Llenado de DimCampania\Actualzicacion del registro existente.Inputs[OLE DB Command Input].ExternalColumns[@CampaniaKey]"
                       dataType="i4"
                       name="@CampaniaKey">
                       <properties>
@@ -193,7 +193,7 @@
                       </properties>
                     </externalMetadataColumn>
                     <externalMetadataColumn
-                      refId="Package\Data Flow Task\Actualzicacion del registro existente.Inputs[OLE DB Command Input].ExternalColumns[@NombreCampania]"
+                      refId="Package\Llenado de DimCampania\Actualzicacion del registro existente.Inputs[OLE DB Command Input].ExternalColumns[@NombreCampania]"
                       codePage="1252"
                       dataType="str"
                       length="500"
@@ -206,7 +206,7 @@
                       </properties>
                     </externalMetadataColumn>
                     <externalMetadataColumn
-                      refId="Package\Data Flow Task\Actualzicacion del registro existente.Inputs[OLE DB Command Input].ExternalColumns[@TipoCampania]"
+                      refId="Package\Llenado de DimCampania\Actualzicacion del registro existente.Inputs[OLE DB Command Input].ExternalColumns[@TipoCampania]"
                       codePage="1252"
                       dataType="str"
                       length="50"
@@ -219,7 +219,7 @@
                       </properties>
                     </externalMetadataColumn>
                     <externalMetadataColumn
-                      refId="Package\Data Flow Task\Actualzicacion del registro existente.Inputs[OLE DB Command Input].ExternalColumns[@EmailEnvio]"
+                      refId="Package\Llenado de DimCampania\Actualzicacion del registro existente.Inputs[OLE DB Command Input].ExternalColumns[@EmailEnvio]"
                       codePage="1252"
                       dataType="str"
                       length="50"
@@ -232,7 +232,7 @@
                       </properties>
                     </externalMetadataColumn>
                     <externalMetadataColumn
-                      refId="Package\Data Flow Task\Actualzicacion del registro existente.Inputs[OLE DB Command Input].ExternalColumns[@EmailRespuesta]"
+                      refId="Package\Llenado de DimCampania\Actualzicacion del registro existente.Inputs[OLE DB Command Input].ExternalColumns[@EmailRespuesta]"
                       codePage="1252"
                       dataType="str"
                       length="50"
@@ -245,7 +245,7 @@
                       </properties>
                     </externalMetadataColumn>
                     <externalMetadataColumn
-                      refId="Package\Data Flow Task\Actualzicacion del registro existente.Inputs[OLE DB Command Input].ExternalColumns[@TituloEmail]"
+                      refId="Package\Llenado de DimCampania\Actualzicacion del registro existente.Inputs[OLE DB Command Input].ExternalColumns[@TituloEmail]"
                       codePage="1252"
                       dataType="str"
                       length="50"
@@ -258,7 +258,7 @@
                       </properties>
                     </externalMetadataColumn>
                     <externalMetadataColumn
-                      refId="Package\Data Flow Task\Actualzicacion del registro existente.Inputs[OLE DB Command Input].ExternalColumns[@TemaCampania]"
+                      refId="Package\Llenado de DimCampania\Actualzicacion del registro existente.Inputs[OLE DB Command Input].ExternalColumns[@TemaCampania]"
                       codePage="1252"
                       dataType="str"
                       length="50"
@@ -271,7 +271,7 @@
                       </properties>
                     </externalMetadataColumn>
                     <externalMetadataColumn
-                      refId="Package\Data Flow Task\Actualzicacion del registro existente.Inputs[OLE DB Command Input].ExternalColumns[@EstadoCampania]"
+                      refId="Package\Llenado de DimCampania\Actualzicacion del registro existente.Inputs[OLE DB Command Input].ExternalColumns[@EstadoCampania]"
                       codePage="1252"
                       dataType="str"
                       length="50"
@@ -288,29 +288,29 @@
               </inputs>
               <outputs>
                 <output
-                  refId="Package\Data Flow Task\Actualzicacion del registro existente.Outputs[OLE DB Command Output]"
+                  refId="Package\Llenado de DimCampania\Actualzicacion del registro existente.Outputs[OLE DB Command Output]"
                   exclusionGroup="1"
                   name="OLE DB Command Output"
-                  synchronousInputId="Package\Data Flow Task\Actualzicacion del registro existente.Inputs[OLE DB Command Input]">
+                  synchronousInputId="Package\Llenado de DimCampania\Actualzicacion del registro existente.Inputs[OLE DB Command Input]">
                   <externalMetadataColumns />
                 </output>
                 <output
-                  refId="Package\Data Flow Task\Actualzicacion del registro existente.Outputs[OLE DB Command Error Output]"
+                  refId="Package\Llenado de DimCampania\Actualzicacion del registro existente.Outputs[OLE DB Command Error Output]"
                   exclusionGroup="1"
                   isErrorOut="true"
                   name="OLE DB Command Error Output"
-                  synchronousInputId="Package\Data Flow Task\Actualzicacion del registro existente.Inputs[OLE DB Command Input]">
+                  synchronousInputId="Package\Llenado de DimCampania\Actualzicacion del registro existente.Inputs[OLE DB Command Input]">
                   <outputColumns>
                     <outputColumn
-                      refId="Package\Data Flow Task\Actualzicacion del registro existente.Outputs[OLE DB Command Error Output].Columns[ErrorCode]"
+                      refId="Package\Llenado de DimCampania\Actualzicacion del registro existente.Outputs[OLE DB Command Error Output].Columns[ErrorCode]"
                       dataType="i4"
-                      lineageId="Package\Data Flow Task\Actualzicacion del registro existente.Outputs[OLE DB Command Error Output].Columns[ErrorCode]"
+                      lineageId="Package\Llenado de DimCampania\Actualzicacion del registro existente.Outputs[OLE DB Command Error Output].Columns[ErrorCode]"
                       name="ErrorCode"
                       specialFlags="1" />
                     <outputColumn
-                      refId="Package\Data Flow Task\Actualzicacion del registro existente.Outputs[OLE DB Command Error Output].Columns[ErrorColumn]"
+                      refId="Package\Llenado de DimCampania\Actualzicacion del registro existente.Outputs[OLE DB Command Error Output].Columns[ErrorColumn]"
                       dataType="i4"
-                      lineageId="Package\Data Flow Task\Actualzicacion del registro existente.Outputs[OLE DB Command Error Output].Columns[ErrorColumn]"
+                      lineageId="Package\Llenado de DimCampania\Actualzicacion del registro existente.Outputs[OLE DB Command Error Output].Columns[ErrorColumn]"
                       name="ErrorColumn"
                       specialFlags="2" />
                   </outputColumns>
@@ -319,7 +319,7 @@
               </outputs>
             </component>
             <component
-              refId="Package\Data Flow Task\Insercion nuevos registros"
+              refId="Package\Llenado de DimCampania\Insercion nuevos registros"
               componentClassID="Microsoft.ManagedComponentHost"
               contactInfo="Loads data into an ADO.NET-compliant database that uses a database table or view. Load data into a new or existing table. For example, use an ADO.NET provider for ODBC to load data into an ODBC destination.;Microsoft Corporation; Microsoft SQL Server; © Microsoft Corporation; All Rights Reserved; http://www.microsoft.com/sql/support;2"
               description="Loads data into an ADO.NET-compliant database that uses a database table or view. Load data into a new or existing table. For example, use an ADO.NET provider for ODBC to load data into an ODBC destination."
@@ -354,148 +354,148 @@
               </properties>
               <connections>
                 <connection
-                  refId="Package\Data Flow Task\Insercion nuevos registros.Connections[IDbConnection]"
-                  connectionManagerID="Package.ConnectionManagers[DestinationDW]"
-                  connectionManagerRefId="Package.ConnectionManagers[DestinationDW]"
+                  refId="Package\Llenado de DimCampania\Insercion nuevos registros.Connections[IDbConnection]"
+                  connectionManagerID="Package.ConnectionManagers[DestinoDW]"
+                  connectionManagerRefId="Package.ConnectionManagers[DestinoDW]"
                   description="Managed connection manager"
                   name="IDbConnection" />
               </connections>
               <inputs>
                 <input
-                  refId="Package\Data Flow Task\Insercion nuevos registros.Inputs[ADO NET Destination Input]"
+                  refId="Package\Llenado de DimCampania\Insercion nuevos registros.Inputs[ADO NET Destination Input]"
                   errorRowDisposition="FailComponent"
                   hasSideEffects="true"
                   name="ADO NET Destination Input">
                   <inputColumns>
                     <inputColumn
-                      refId="Package\Data Flow Task\Insercion nuevos registros.Inputs[ADO NET Destination Input].Columns[FechaEnvio]"
+                      refId="Package\Llenado de DimCampania\Insercion nuevos registros.Inputs[ADO NET Destination Input].Columns[FechaEnvio]"
                       cachedDataType="date"
                       cachedName="FechaEnvio"
-                      externalMetadataColumnId="Package\Data Flow Task\Insercion nuevos registros.Inputs[ADO NET Destination Input].ExternalColumns[FechaEnvio]"
-                      lineageId="Package\Data Flow Task\Lectura data JSON.Outputs[Output 0].Columns[FechaEnvio]" />
+                      externalMetadataColumnId="Package\Llenado de DimCampania\Insercion nuevos registros.Inputs[ADO NET Destination Input].ExternalColumns[FechaEnvio]"
+                      lineageId="Package\Llenado de DimCampania\Lectura data JSON.Outputs[Output 0].Columns[FechaEnvio]" />
                     <inputColumn
-                      refId="Package\Data Flow Task\Insercion nuevos registros.Inputs[ADO NET Destination Input].Columns[TituloEmail]"
+                      refId="Package\Llenado de DimCampania\Insercion nuevos registros.Inputs[ADO NET Destination Input].Columns[TituloEmail]"
                       cachedCodepage="1252"
                       cachedDataType="str"
                       cachedLength="50"
                       cachedName="TituloEmail"
-                      externalMetadataColumnId="Package\Data Flow Task\Insercion nuevos registros.Inputs[ADO NET Destination Input].ExternalColumns[TituloEmail]"
-                      lineageId="Package\Data Flow Task\Lectura data JSON.Outputs[Output 0].Columns[TituloEmail]" />
+                      externalMetadataColumnId="Package\Llenado de DimCampania\Insercion nuevos registros.Inputs[ADO NET Destination Input].ExternalColumns[TituloEmail]"
+                      lineageId="Package\Llenado de DimCampania\Lectura data JSON.Outputs[Output 0].Columns[TituloEmail]" />
                     <inputColumn
-                      refId="Package\Data Flow Task\Insercion nuevos registros.Inputs[ADO NET Destination Input].Columns[EmailEnvio]"
+                      refId="Package\Llenado de DimCampania\Insercion nuevos registros.Inputs[ADO NET Destination Input].Columns[EmailEnvio]"
                       cachedCodepage="1252"
                       cachedDataType="str"
                       cachedLength="50"
                       cachedName="EmailEnvio"
-                      externalMetadataColumnId="Package\Data Flow Task\Insercion nuevos registros.Inputs[ADO NET Destination Input].ExternalColumns[EmailEnvio]"
-                      lineageId="Package\Data Flow Task\Lectura data JSON.Outputs[Output 0].Columns[EmailEnvio]" />
+                      externalMetadataColumnId="Package\Llenado de DimCampania\Insercion nuevos registros.Inputs[ADO NET Destination Input].ExternalColumns[EmailEnvio]"
+                      lineageId="Package\Llenado de DimCampania\Lectura data JSON.Outputs[Output 0].Columns[EmailEnvio]" />
                     <inputColumn
-                      refId="Package\Data Flow Task\Insercion nuevos registros.Inputs[ADO NET Destination Input].Columns[TipoCampania]"
+                      refId="Package\Llenado de DimCampania\Insercion nuevos registros.Inputs[ADO NET Destination Input].Columns[TipoCampania]"
                       cachedCodepage="1252"
                       cachedDataType="str"
                       cachedLength="50"
                       cachedName="TipoCampania"
-                      externalMetadataColumnId="Package\Data Flow Task\Insercion nuevos registros.Inputs[ADO NET Destination Input].ExternalColumns[TipoCampania]"
-                      lineageId="Package\Data Flow Task\Lectura data JSON.Outputs[Output 0].Columns[TipoCampania]" />
+                      externalMetadataColumnId="Package\Llenado de DimCampania\Insercion nuevos registros.Inputs[ADO NET Destination Input].ExternalColumns[TipoCampania]"
+                      lineageId="Package\Llenado de DimCampania\Lectura data JSON.Outputs[Output 0].Columns[TipoCampania]" />
                     <inputColumn
-                      refId="Package\Data Flow Task\Insercion nuevos registros.Inputs[ADO NET Destination Input].Columns[NombreCampania]"
+                      refId="Package\Llenado de DimCampania\Insercion nuevos registros.Inputs[ADO NET Destination Input].Columns[NombreCampania]"
                       cachedCodepage="1252"
                       cachedDataType="str"
                       cachedLength="255"
                       cachedName="NombreCampania"
-                      externalMetadataColumnId="Package\Data Flow Task\Insercion nuevos registros.Inputs[ADO NET Destination Input].ExternalColumns[NombreCampania]"
-                      lineageId="Package\Data Flow Task\Lectura data JSON.Outputs[Output 0].Columns[NombreCampania]" />
+                      externalMetadataColumnId="Package\Llenado de DimCampania\Insercion nuevos registros.Inputs[ADO NET Destination Input].ExternalColumns[NombreCampania]"
+                      lineageId="Package\Llenado de DimCampania\Lectura data JSON.Outputs[Output 0].Columns[NombreCampania]" />
                     <inputColumn
-                      refId="Package\Data Flow Task\Insercion nuevos registros.Inputs[ADO NET Destination Input].Columns[CampaniaId]"
+                      refId="Package\Llenado de DimCampania\Insercion nuevos registros.Inputs[ADO NET Destination Input].Columns[CampaniaId]"
                       cachedCodepage="1252"
                       cachedDataType="str"
                       cachedLength="500"
                       cachedName="CampaniaId"
-                      externalMetadataColumnId="Package\Data Flow Task\Insercion nuevos registros.Inputs[ADO NET Destination Input].ExternalColumns[CampaniaId]"
-                      lineageId="Package\Data Flow Task\Lectura data JSON.Outputs[Output 0].Columns[CampaniaId]" />
+                      externalMetadataColumnId="Package\Llenado de DimCampania\Insercion nuevos registros.Inputs[ADO NET Destination Input].ExternalColumns[CampaniaId]"
+                      lineageId="Package\Llenado de DimCampania\Lectura data JSON.Outputs[Output 0].Columns[CampaniaId]" />
                     <inputColumn
-                      refId="Package\Data Flow Task\Insercion nuevos registros.Inputs[ADO NET Destination Input].Columns[TemaCampania]"
+                      refId="Package\Llenado de DimCampania\Insercion nuevos registros.Inputs[ADO NET Destination Input].Columns[TemaCampania]"
                       cachedCodepage="1252"
                       cachedDataType="str"
                       cachedLength="50"
                       cachedName="TemaCampania"
-                      externalMetadataColumnId="Package\Data Flow Task\Insercion nuevos registros.Inputs[ADO NET Destination Input].ExternalColumns[TemaCampania]"
-                      lineageId="Package\Data Flow Task\Lectura data JSON.Outputs[Output 0].Columns[TemaCampania]" />
+                      externalMetadataColumnId="Package\Llenado de DimCampania\Insercion nuevos registros.Inputs[ADO NET Destination Input].ExternalColumns[TemaCampania]"
+                      lineageId="Package\Llenado de DimCampania\Lectura data JSON.Outputs[Output 0].Columns[TemaCampania]" />
                     <inputColumn
-                      refId="Package\Data Flow Task\Insercion nuevos registros.Inputs[ADO NET Destination Input].Columns[EstadoCampania]"
+                      refId="Package\Llenado de DimCampania\Insercion nuevos registros.Inputs[ADO NET Destination Input].Columns[EstadoCampania]"
                       cachedCodepage="1252"
                       cachedDataType="str"
                       cachedLength="50"
                       cachedName="EstadoCampania"
-                      externalMetadataColumnId="Package\Data Flow Task\Insercion nuevos registros.Inputs[ADO NET Destination Input].ExternalColumns[EstadoCampania]"
-                      lineageId="Package\Data Flow Task\Lectura data JSON.Outputs[Output 0].Columns[EstadoCampania]" />
+                      externalMetadataColumnId="Package\Llenado de DimCampania\Insercion nuevos registros.Inputs[ADO NET Destination Input].ExternalColumns[EstadoCampania]"
+                      lineageId="Package\Llenado de DimCampania\Lectura data JSON.Outputs[Output 0].Columns[EstadoCampania]" />
                     <inputColumn
-                      refId="Package\Data Flow Task\Insercion nuevos registros.Inputs[ADO NET Destination Input].Columns[FechaCreacion]"
+                      refId="Package\Llenado de DimCampania\Insercion nuevos registros.Inputs[ADO NET Destination Input].Columns[FechaCreacion]"
                       cachedDataType="date"
                       cachedName="FechaCreacion"
-                      externalMetadataColumnId="Package\Data Flow Task\Insercion nuevos registros.Inputs[ADO NET Destination Input].ExternalColumns[FechaCreacion]"
-                      lineageId="Package\Data Flow Task\Lectura data JSON.Outputs[Output 0].Columns[FechaCreacion]" />
+                      externalMetadataColumnId="Package\Llenado de DimCampania\Insercion nuevos registros.Inputs[ADO NET Destination Input].ExternalColumns[FechaCreacion]"
+                      lineageId="Package\Llenado de DimCampania\Lectura data JSON.Outputs[Output 0].Columns[FechaCreacion]" />
                     <inputColumn
-                      refId="Package\Data Flow Task\Insercion nuevos registros.Inputs[ADO NET Destination Input].Columns[EmailRespuesta]"
+                      refId="Package\Llenado de DimCampania\Insercion nuevos registros.Inputs[ADO NET Destination Input].Columns[EmailRespuesta]"
                       cachedCodepage="1252"
                       cachedDataType="str"
                       cachedLength="50"
                       cachedName="EmailRespuesta"
-                      externalMetadataColumnId="Package\Data Flow Task\Insercion nuevos registros.Inputs[ADO NET Destination Input].ExternalColumns[EmailRespuestas]"
-                      lineageId="Package\Data Flow Task\Lectura data JSON.Outputs[Output 0].Columns[EmailRespuesta]" />
+                      externalMetadataColumnId="Package\Llenado de DimCampania\Insercion nuevos registros.Inputs[ADO NET Destination Input].ExternalColumns[EmailRespuestas]"
+                      lineageId="Package\Llenado de DimCampania\Lectura data JSON.Outputs[Output 0].Columns[EmailRespuesta]" />
                   </inputColumns>
                   <externalMetadataColumns
                     isUsed="True">
                     <externalMetadataColumn
-                      refId="Package\Data Flow Task\Insercion nuevos registros.Inputs[ADO NET Destination Input].ExternalColumns[CampaniaKey]"
+                      refId="Package\Llenado de DimCampania\Insercion nuevos registros.Inputs[ADO NET Destination Input].ExternalColumns[CampaniaKey]"
                       dataType="i4"
                       name="CampaniaKey" />
                     <externalMetadataColumn
-                      refId="Package\Data Flow Task\Insercion nuevos registros.Inputs[ADO NET Destination Input].ExternalColumns[CampaniaId]"
+                      refId="Package\Llenado de DimCampania\Insercion nuevos registros.Inputs[ADO NET Destination Input].ExternalColumns[CampaniaId]"
                       dataType="wstr"
                       length="500"
                       name="CampaniaId" />
                     <externalMetadataColumn
-                      refId="Package\Data Flow Task\Insercion nuevos registros.Inputs[ADO NET Destination Input].ExternalColumns[NombreCampania]"
+                      refId="Package\Llenado de DimCampania\Insercion nuevos registros.Inputs[ADO NET Destination Input].ExternalColumns[NombreCampania]"
                       dataType="wstr"
                       length="255"
                       name="NombreCampania" />
                     <externalMetadataColumn
-                      refId="Package\Data Flow Task\Insercion nuevos registros.Inputs[ADO NET Destination Input].ExternalColumns[TipoCampania]"
+                      refId="Package\Llenado de DimCampania\Insercion nuevos registros.Inputs[ADO NET Destination Input].ExternalColumns[TipoCampania]"
                       dataType="wstr"
                       length="50"
                       name="TipoCampania" />
                     <externalMetadataColumn
-                      refId="Package\Data Flow Task\Insercion nuevos registros.Inputs[ADO NET Destination Input].ExternalColumns[TemaCampania]"
+                      refId="Package\Llenado de DimCampania\Insercion nuevos registros.Inputs[ADO NET Destination Input].ExternalColumns[TemaCampania]"
                       dataType="wstr"
                       length="255"
                       name="TemaCampania" />
                     <externalMetadataColumn
-                      refId="Package\Data Flow Task\Insercion nuevos registros.Inputs[ADO NET Destination Input].ExternalColumns[EmailEnvio]"
+                      refId="Package\Llenado de DimCampania\Insercion nuevos registros.Inputs[ADO NET Destination Input].ExternalColumns[EmailEnvio]"
                       dataType="wstr"
                       length="50"
                       name="EmailEnvio" />
                     <externalMetadataColumn
-                      refId="Package\Data Flow Task\Insercion nuevos registros.Inputs[ADO NET Destination Input].ExternalColumns[EmailRespuestas]"
+                      refId="Package\Llenado de DimCampania\Insercion nuevos registros.Inputs[ADO NET Destination Input].ExternalColumns[EmailRespuestas]"
                       dataType="wstr"
                       length="50"
                       name="EmailRespuestas" />
                     <externalMetadataColumn
-                      refId="Package\Data Flow Task\Insercion nuevos registros.Inputs[ADO NET Destination Input].ExternalColumns[TituloEmail]"
+                      refId="Package\Llenado de DimCampania\Insercion nuevos registros.Inputs[ADO NET Destination Input].ExternalColumns[TituloEmail]"
                       dataType="wstr"
                       length="50"
                       name="TituloEmail" />
                     <externalMetadataColumn
-                      refId="Package\Data Flow Task\Insercion nuevos registros.Inputs[ADO NET Destination Input].ExternalColumns[EstadoCampania]"
+                      refId="Package\Llenado de DimCampania\Insercion nuevos registros.Inputs[ADO NET Destination Input].ExternalColumns[EstadoCampania]"
                       dataType="wstr"
                       length="50"
                       name="EstadoCampania" />
                     <externalMetadataColumn
-                      refId="Package\Data Flow Task\Insercion nuevos registros.Inputs[ADO NET Destination Input].ExternalColumns[FechaEnvio]"
+                      refId="Package\Llenado de DimCampania\Insercion nuevos registros.Inputs[ADO NET Destination Input].ExternalColumns[FechaEnvio]"
                       dataType="dbTimeStamp"
                       name="FechaEnvio" />
                     <externalMetadataColumn
-                      refId="Package\Data Flow Task\Insercion nuevos registros.Inputs[ADO NET Destination Input].ExternalColumns[FechaCreacion]"
+                      refId="Package\Llenado de DimCampania\Insercion nuevos registros.Inputs[ADO NET Destination Input].ExternalColumns[FechaCreacion]"
                       dataType="dbTimeStamp"
                       name="FechaCreacion" />
                   </externalMetadataColumns>
@@ -503,22 +503,22 @@
               </inputs>
               <outputs>
                 <output
-                  refId="Package\Data Flow Task\Insercion nuevos registros.Outputs[ADO NET Destination Error Output]"
+                  refId="Package\Llenado de DimCampania\Insercion nuevos registros.Outputs[ADO NET Destination Error Output]"
                   exclusionGroup="1"
                   isErrorOut="true"
                   name="ADO NET Destination Error Output"
-                  synchronousInputId="Package\Data Flow Task\Insercion nuevos registros.Inputs[ADO NET Destination Input]">
+                  synchronousInputId="Package\Llenado de DimCampania\Insercion nuevos registros.Inputs[ADO NET Destination Input]">
                   <outputColumns>
                     <outputColumn
-                      refId="Package\Data Flow Task\Insercion nuevos registros.Outputs[ADO NET Destination Error Output].Columns[ErrorCode]"
+                      refId="Package\Llenado de DimCampania\Insercion nuevos registros.Outputs[ADO NET Destination Error Output].Columns[ErrorCode]"
                       dataType="i4"
-                      lineageId="Package\Data Flow Task\Insercion nuevos registros.Outputs[ADO NET Destination Error Output].Columns[ErrorCode]"
+                      lineageId="Package\Llenado de DimCampania\Insercion nuevos registros.Outputs[ADO NET Destination Error Output].Columns[ErrorCode]"
                       name="ErrorCode"
                       specialFlags="1" />
                     <outputColumn
-                      refId="Package\Data Flow Task\Insercion nuevos registros.Outputs[ADO NET Destination Error Output].Columns[ErrorColumn]"
+                      refId="Package\Llenado de DimCampania\Insercion nuevos registros.Outputs[ADO NET Destination Error Output].Columns[ErrorColumn]"
                       dataType="i4"
-                      lineageId="Package\Data Flow Task\Insercion nuevos registros.Outputs[ADO NET Destination Error Output].Columns[ErrorColumn]"
+                      lineageId="Package\Llenado de DimCampania\Insercion nuevos registros.Outputs[ADO NET Destination Error Output].Columns[ErrorColumn]"
                       name="ErrorColumn"
                       specialFlags="2" />
                   </outputColumns>
@@ -527,7 +527,7 @@
               </outputs>
             </component>
             <component
-              refId="Package\Data Flow Task\Lectura data JSON"
+              refId="Package\Llenado de DimCampania\Lectura data JSON"
               componentClassID="Microsoft.ManagedComponentHost"
               contactInfo="Includes and runs custom script code. For example, apply a business rule that limits the range of valid values in an &quot;income&quot; column or add values in two columns and calculate the average of the sum.;Microsoft Corporation; Microsoft SQL Server; Microsoft Corporation; All Rights Reserved; http://www.microsoft.com/sql/support;13"
               description="Includes and runs custom script code. For example, apply a business rule that limits the range of valid values in an &quot;income&quot; column or add values in two columns and calculate the average of the sum."
@@ -721,10 +721,7 @@ using Microsoft.SqlServer.Dts.Runtime.Wrapper;
 using SC_e6e06b7dcde54c089016673a834e033b;
 #endregion
 
-/// <summary>
-/// This is the class to which to add your code.  Do not change the name, attributes, or parent
-/// of this class.
-/// </summary>
+
 [Microsoft.SqlServer.Dts.Pipeline.SSISScriptComponentEntryPointAttribute]
 public class ScriptMain : UserComponent
 {
@@ -784,30 +781,14 @@ public class ScriptMain : UserComponent
      */
     #endregion
 
-    /// <summary>
-    /// This method is called once, before rows begin to be processed in the data flow.
-    ///
-    /// You can remove this method if you don't need to do anything here.
-    /// </summary>
     public override void PreExecute()
     {
         base.PreExecute();
-        /*
-         * Add your code here
-         */
     }
 
-    /// <summary>
-    /// This method is called after all the rows have passed through this component.
-    ///
-    /// You can delete this method if you don't need to do anything here.
-    /// </summary>
     public override void PostExecute()
     {
         base.PostExecute();
-        /*
-         * Add your code here
-         */
     }
 
     public override void CreateNewOutputRows()
@@ -884,7 +865,7 @@ public class Output0Buffer: ScriptBuffer
             }
             else
             {
-                throw new InvalidOperationException("IsNull property cannot be set to False. Assign a value to the column instead.");
+                throw new InvalidOperationException("La propiedad IsNull no puede establecerse en False. En su lugar, asigne un valor a la columna.");
             }
         }
     }
@@ -906,7 +887,7 @@ public class Output0Buffer: ScriptBuffer
             }
             else
             {
-                throw new InvalidOperationException("IsNull property cannot be set to False. Assign a value to the column instead.");
+                throw new InvalidOperationException("La propiedad IsNull no puede establecerse en False. En su lugar, asigne un valor a la columna.");
             }
         }
     }
@@ -928,7 +909,7 @@ public class Output0Buffer: ScriptBuffer
             }
             else
             {
-                throw new InvalidOperationException("IsNull property cannot be set to False. Assign a value to the column instead.");
+                throw new InvalidOperationException("La propiedad IsNull no puede establecerse en False. En su lugar, asigne un valor a la columna.");
             }
         }
     }
@@ -950,7 +931,7 @@ public class Output0Buffer: ScriptBuffer
             }
             else
             {
-                throw new InvalidOperationException("IsNull property cannot be set to False. Assign a value to the column instead.");
+                throw new InvalidOperationException("La propiedad IsNull no puede establecerse en False. En su lugar, asigne un valor a la columna.");
             }
         }
     }
@@ -972,7 +953,7 @@ public class Output0Buffer: ScriptBuffer
             }
             else
             {
-                throw new InvalidOperationException("IsNull property cannot be set to False. Assign a value to the column instead.");
+                throw new InvalidOperationException("La propiedad IsNull no puede establecerse en False. En su lugar, asigne un valor a la columna.");
             }
         }
     }
@@ -994,7 +975,7 @@ public class Output0Buffer: ScriptBuffer
             }
             else
             {
-                throw new InvalidOperationException("IsNull property cannot be set to False. Assign a value to the column instead.");
+                throw new InvalidOperationException("La propiedad IsNull no puede establecerse en False. En su lugar, asigne un valor a la columna.");
             }
         }
     }
@@ -1016,7 +997,7 @@ public class Output0Buffer: ScriptBuffer
             }
             else
             {
-                throw new InvalidOperationException("IsNull property cannot be set to False. Assign a value to the column instead.");
+                throw new InvalidOperationException("La propiedad IsNull no puede establecerse en False. En su lugar, asigne un valor a la columna.");
             }
         }
     }
@@ -1038,7 +1019,7 @@ public class Output0Buffer: ScriptBuffer
             }
             else
             {
-                throw new InvalidOperationException("IsNull property cannot be set to False. Assign a value to the column instead.");
+                throw new InvalidOperationException("La propiedad IsNull no puede establecerse en False. En su lugar, asigne un valor a la columna.");
             }
         }
     }
@@ -1060,7 +1041,7 @@ public class Output0Buffer: ScriptBuffer
             }
             else
             {
-                throw new InvalidOperationException("IsNull property cannot be set to False. Assign a value to the column instead.");
+                throw new InvalidOperationException("La propiedad IsNull no puede establecerse en False. En su lugar, asigne un valor a la columna.");
             }
         }
     }
@@ -1082,7 +1063,7 @@ public class Output0Buffer: ScriptBuffer
             }
             else
             {
-                throw new InvalidOperationException("IsNull property cannot be set to False. Assign a value to the column instead.");
+                throw new InvalidOperationException("La propiedad IsNull no puede establecerse en False. En su lugar, asigne un valor a la columna.");
             }
         }
     }
@@ -1104,7 +1085,7 @@ public class Output0Buffer: ScriptBuffer
             }
             else
             {
-                throw new InvalidOperationException("IsNull property cannot be set to False. Assign a value to the column instead.");
+                throw new InvalidOperationException("La propiedad IsNull no puede establecerse en False. En su lugar, asigne un valor a la columna.");
             }
         }
     }
@@ -1328,7 +1309,7 @@ public class Variables
     <msb:CodeName>SC_e6e06b7dcde54c089016673a834e033b</msb:CodeName>
     <msb:Language>msBuild</msb:Language>
     <msb:DisplayName>SC_e6e06b7dcde54c089016673a834e033b</msb:DisplayName>
-    <msb:ProjectId>{51A68054-5329-4E09-8D46-B8ED21C8BD18}</msb:ProjectId>
+    <msb:ProjectId>{3A84F600-58F6-4577-96DF-9A1B03F3144F}</msb:ProjectId>
   </msb:PropertyGroup>
   <msb:ItemGroup>
     <msb:Project Include="SC_e6e06b7dcde54c089016673a834e033b.csproj" />
@@ -1543,14 +1524,14 @@ namespace SC_e6e06b7dcde54c089016673a834e033b
                     <arrayElement
                       dataType="System.String"><![CDATA[TVqQAAMAAAAEAAAA//8AALgAAAAAAAAAQAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
 AAAAgAAAAA4fug4AtAnNIbgBTM0hVGhpcyBwcm9ncmFtIGNhbm5vdCBiZSBydW4gaW4gRE9TIG1v
-ZGUuDQ0KJAAAAAAAAABQRQAATAEDACrTE2cAAAAAAAAAAOAAIiALATAAADAAAAAIAAAAAAAAxk8A
+ZGUuDQ0KJAAAAAAAAABQRQAATAEDACGCIGcAAAAAAAAAAOAAIiALATAAADAAAAAIAAAAAAAA6k8A
 AAAgAAAAYAAAAAAAEAAgAAAAAgAABAAAAAAAAAAGAAAAAAAAAACgAAAAAgAAAAAAAAMAYIUAABAA
-ABAAAAAAEAAAEAAAAAAAABAAAAAAAAAAAAAAAHRPAABPAAAAAGAAAEgEAAAAAAAAAAAAAAAAAAAA
+ABAAAAAAEAAAEAAAAAAAABAAAAAAAAAAAAAAAJhPAABPAAAAAGAAAEgEAAAAAAAAAAAAAAAAAAAA
 AAAAAIAAAAwAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
-AAAAIAAACAAAAAAAAAAAAAAACCAAAEgAAAAAAAAAAAAAAC50ZXh0AAAAzC8AAAAgAAAAMAAAAAIA
+AAAAIAAACAAAAAAAAAAAAAAACCAAAEgAAAAAAAAAAAAAAC50ZXh0AAAA8C8AAAAgAAAAMAAAAAIA
 AAAAAAAAAAAAAAAAACAAAGAucnNyYwAAAEgEAAAAYAAAAAYAAAAyAAAAAAAAAAAAAAAAAABAAABA
-LnJlbG9jAAAMAAAAAIAAAAACAAAAOAAAAAAAAAAAAAAAAAAAQAAAQgAAAAAAAAAAAAAAAAAAAACo
-TwAAAAAAAEgAAAACAAUAxCYAAPgnAAABAAAAAAAAALxOAAC4AAAAAAAAAAAAAAAAAAAAAAAAAAAA
+LnJlbG9jAAAMAAAAAIAAAAACAAAAOAAAAAAAAAAAAAAAAAAAQAAAQgAAAAAAAAAAAAAAAAAAAADM
+TwAAAAAAAEgAAAACAAUAxCYAABwoAAABAAAAAAAAAOBOAAC4AAAAAAAAAAAAAAAAAAAAAAAAAAAA
 AAAAAAAAAAAAAAAAAAAAAAAAAAAAAB4CKBAAAAoqHgIoEQAACiobMAIANQEAAAEAABECewIAAARv
 JgAABigSAAAKCnMTAAAKBm8BAAArby0AAAZvFQAACgs44AAAAAdvFgAACgwCewMAAARvHAAABgJ7
 AwAABAhvYgAABm8UAAAGAnsDAAAECG9QAAAGbxIAAAYCewMAAAQIb1QAAAZvEAAABgJ7AwAABAhv
@@ -1567,9 +1548,9 @@ HSgfAAAKKnItAABwcyAAAAp6JgIeAygeAAAKKloDLAgCHigfAAAKKnItAABwcyAAAAp6KgIfCQMo
 HgAACipeAywJAh8JKB8AAAoqci0AAHBzIAAACno+Ah8KA4wUAAABKB4AAAoqXgMsCQIfCigfAAAK
 KnItAABwcyAAAAp6HgIoIQAACioeAigiAAAKKh4CKCMAAAoqfgIoJAAACgICcyQAAAZ9AQAABAIC
 cyUAAAZ9AgAABCoGKm4CewMAAAQsEgJ7AwAABG8dAAAGAhR9AwAABCoAABMwBQBJAAAAAgAAERYK
-Ky4EBpQOBHLKAABwKCUAAAozGQIFBpoCBAaUKCYAAAoOBHMFAAAGfQMAAAQGF1gKBgMyzgJvIwAA
+Ky4EBpQOBHLsAABwKCUAAAozGQIFBpoCBAaUKCYAAAoOBHMFAAAGfQMAAAQGF1gKBgMyzgJvIwAA
 BgJvIAAABgIoIQAABio6AignAAAKAgN9BAAABCo6AignAAAKAgN9BQAABCqWAnsFAAAEbygAAApy
-3AAAcG8pAAAKKCoAAApvKwAACnQqAAABKh4CewYAAAQqIgIDfQYAAAQqHgJ7BwAABCoiAgN9BwAA
+/gAAcG8pAAAKKCoAAApvKwAACnQqAAABKh4CewYAAAQqIgIDfQYAAAQqHgJ7BwAABCoiAgN9BwAA
 BCoeAnsIAAAEKiICA30IAAAEKh4CewkAAAQqIgIDfQkAAAQqHgJ7CgAABCoiAgN9CgAABCoeAnsL
 AAAEKiICA30LAAAEKh4CewwAAAQqIgIDfQwAAAQqHgJ7DQAABCoiAgN9DQAABCoeAnsOAAAEKiIC
 A30OAAAEKh4Cew8AAAQqIgIDfQ8AAAQqHgIoJwAACioeAnsQAAAEKiICA30QAAAEKh4CexEAAAQq
@@ -1578,10 +1559,10 @@ AAQqHgJ7FQAABCoiAgN9FQAABCoeAnsWAAAEKiICA30WAAAEKh4CexcAAAQqIgIDfRcAAAQqHgJ7
 GAAABCoiAgN9GAAABCoeAnsZAAAEKiICA30ZAAAEKh4CexoAAAQqIgIDfRoAAAQqHgJ7GwAABCoi
 AgN9GwAABCoeAnscAAAEKiICA30cAAAEKh4Cex0AAAQqIgIDfR0AAAQqHgJ7HgAABCoiAgN9HgAA
 BCoeAnsfAAAEKiICA30fAAAEKh4CeyAAAAQqIgIDfSAAAAQqHgJ7IQAABCoiAgN9IQAABCoeAnsi
-AAAEKiICA30iAAAEKh4CeyMAAAQqIgIDfSMAAAQqHgJ7JAAABCoiAgN9JAAABCqufiUAAAQtHnL2
-AABw0AkAAAIoLAAACm8tAAAKcy4AAAqAJQAABH4lAAAEKhp+JgAABCoeAoAmAAAEKhp+JwAABCoe
+AAAEKiICA30iAAAEKh4CeyMAAAQqIgIDfSMAAAQqHgJ7JAAABCoiAgN9JAAABCqufiUAAAQtHnIY
+AQBw0AkAAAIoLAAACm8tAAAKcy4AAAqAJQAABH4lAAAEKhp+JgAABCoeAoAmAAAEKhp+JwAABCoe
 AigvAAAKKi5zbAAABoAnAAAEKgAAQlNKQgEAAQAAAAAADAAAAHY0LjAuMzAzMTkAAAAABQBsAAAA
-MBIAACN+AACcEgAAoBEAACNTdHJpbmdzAAAAADwkAABoAQAAI1VTAKQlAAAQAAAAI0dVSUQAAAC0
+MBIAACN+AACcEgAAoBEAACNTdHJpbmdzAAAAADwkAACMAQAAI1VTAMglAAAQAAAAI0dVSUQAAADY
 JQAARAIAACNCbG9iAAAAAAAAAAIAAAFXFaIJCQkAAAD6ATMAFgAAAQAAAC0AAAAKAAAAJwAAAG0A
 AAA/AAAALwAAAG0AAAACAAAABgAAADkAAABZAAAAAgAAAAEAAAAGAAAAAQAAAAEAAAAAANgJAQAA
 AAAABgDfB0wNBgBzCEwNBgArByANDwDADQAABgBYB8ALBgDCB8ALBgCjB8ALBgBaCMALBgD/B8AL
@@ -1743,29 +1724,29 @@ ZUhvc3QAUHJpbWVPdXRwdXQATW92ZU5leHQAUmVhZEFsbFRleHQAR2V0VmFsdWVXaXRoQ29udGV4
 dABTY3JpcHRDb21wb25lbnRFdmFsQ29udGV4dABnZXRfRXZhbHVhdG9yQ29udGV4dABnZXRfY2Ft
 cGFpZ25fcHJldmlldwBzZXRfY2FtcGFpZ25fcHJldmlldwBBZGRSb3cAZ2V0X2Zyb21pbmRleABz
 ZXRfZnJvbWluZGV4AGdldF9jYW1wYWlnbl9rZXkAc2V0X2NhbXBhaWduX2tleQBnZXRfQXNzZW1i
-bHkAAAAAACtFAHIAcgBvAHIAIABhAGwAIABjAGEAcgBnAGEAcgAgAGQAYQB0AG8AcwAAgJtJAHMA
-TgB1AGwAbAAgAHAAcgBvAHAAZQByAHQAeQAgAGMAYQBuAG4AbwB0ACAAYgBlACAAcwBlAHQAIAB0
-AG8AIABGAGEAbABzAGUALgAgAEEAcwBzAGkAZwBuACAAYQAgAHYAYQBsAHUAZQAgAHQAbwAgAHQA
-aABlACAAYwBvAGwAdQBtAG4AIABpAG4AcwB0AGUAYQBkAC4AABFPAHUAdABwAHUAdAAgADAAABlK
-AHMAbwBuAEYAaQBsAGUAUABhAHQAaAAAcVMAQwBfAGUANgBlADAANgBiADcAZABjAGQAZQA1ADQA
-YwAwADgAOQAwADEANgA2ADcAMwBhADgAMwA0AGUAMAAzADMAYgAuAFAAcgBvAHAAZQByAHQAaQBl
-AHMALgBSAGUAcwBvAHUAcgBjAGUAcwAAFeWoLq5LvUKzB2ayavhb6QAEIAEBCAMgAAEFIAEBEREE
-IAEBDgUgAQERcQ8HBQ4VEjkBEiASIBE9EkEEAAEODgYwAQEeAA4ECgESHAcVEoCFARIgCCAAFRI5
-ARMABhUSOQESIAQgABMABAABCg4FAAERPQoEIAARUQMgAAIGIAIBDhJBCSADARJJHQgSTQUgAgEI
-HAMHAQgGAAIIEk0OBSABHQgIBSAAEoCZBiABEoCdHAUAABKAoQYgARwSgKUIAAESgK0RgLEFIAAS
-gLUHIAIBDhKAtQi3elxWGTTgiQiJhF3NgIDMkQgxvzhWrTZONQMGEhQDBhIYAwYSDAMGElUCBg4H
-BhUSYQESIAMGEVEDBhJpAwYSbQMGEigFIAEBEVEEIAEBAgsgBAEIHQgdEkkSTQUgAQESVQMgAA4I
-IAAVEmEBEiAJIAEBFRJhARIgBAAAEmkEAAASbQUAAQESbQQAABIoAwAAAQQoABFRAygAAgMoAA4I
-KAAVEmEBEiAECAASaQQIABJtBAgAEigIAQAIAAAAAAAeAQABAFQCFldyYXBOb25FeGNlcHRpb25U
-aHJvd3MBCAEAAgAAAAAAKAEAI1NDX2U2ZTA2YjdkY2RlNTRjMDg5MDE2NjczYTgzNGUwMzNiAAAF
-AQAAAAAWAQARQ29weXJpZ2h0IEAgIDIwMjQAAEkBABouTkVURnJhbWV3b3JrLFZlcnNpb249djQu
-NwEAVA4URnJhbWV3b3JrRGlzcGxheU5hbWUSLk5FVCBGcmFtZXdvcmsgNC43BAEAAAC0AAAAzsrv
-vgEAAACRAAAAbFN5c3RlbS5SZXNvdXJjZXMuUmVzb3VyY2VSZWFkZXIsIG1zY29ybGliLCBWZXJz
-aW9uPTQuMC4wLjAsIEN1bHR1cmU9bmV1dHJhbCwgUHVibGljS2V5VG9rZW49Yjc3YTVjNTYxOTM0
-ZTA4OSNTeXN0ZW0uUmVzb3VyY2VzLlJ1bnRpbWVSZXNvdXJjZVNldAIAAAAAAAAAAAAAAFBBRFBB
-RFC0AAAAnE8AAAAAAAAAAAAAtk8AAAAgAAAAAAAAAAAAAAAAAAAAAAAAAAAAAKhPAAAAAAAAAAAA
-AAAAX0NvckRsbE1haW4AbXNjb3JlZS5kbGwAAAAAAP8lACAAEAAAAAAAAAAAAAAAAAAAAAAAAAAA
-AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAEAEAAAABgAAIAA
+bHkAAAAAACtFAHIAcgBvAHIAIABhAGwAIABjAGEAcgBnAGEAcgAgAGQAYQB0AG8AcwAAgL1MAGEA
+IABwAHIAbwBwAGkAZQBkAGEAZAAgAEkAcwBOAHUAbABsACAAbgBvACAAcAB1AGUAZABlACAAZQBz
+AHQAYQBiAGwAZQBjAGUAcgBzAGUAIABlAG4AIABGAGEAbABzAGUALgAgAEUAbgAgAHMAdQAgAGwA
+dQBnAGEAcgAsACAAYQBzAGkAZwBuAGUAIAB1AG4AIAB2AGEAbABvAHIAIABhACAAbABhACAAYwBv
+AGwAdQBtAG4AYQAuAAARTwB1AHQAcAB1AHQAIAAwAAAZSgBzAG8AbgBGAGkAbABlAFAAYQB0AGgA
+AHFTAEMAXwBlADYAZQAwADYAYgA3AGQAYwBkAGUANQA0AGMAMAA4ADkAMAAxADYANgA3ADMAYQA4
+ADMANABlADAAMwAzAGIALgBQAHIAbwBwAGUAcgB0AGkAZQBzAC4AUgBlAHMAbwB1AHIAYwBlAHMA
+AAAAp2lUvgL9702xJhnqdcSjGAAEIAEBCAMgAAEFIAEBEREEIAEBDgUgAQERcQ8HBQ4VEjkBEiAS
+IBE9EkEEAAEODgYwAQEeAA4ECgESHAcVEoCFARIgCCAAFRI5ARMABhUSOQESIAQgABMABAABCg4F
+AAERPQoEIAARUQMgAAIGIAIBDhJBCSADARJJHQgSTQUgAgEIHAMHAQgGAAIIEk0OBSABHQgIBSAA
+EoCZBiABEoCdHAUAABKAoQYgARwSgKUIAAESgK0RgLEFIAASgLUHIAIBDhKAtQi3elxWGTTgiQiJ
+hF3NgIDMkQgxvzhWrTZONQMGEhQDBhIYAwYSDAMGElUCBg4HBhUSYQESIAMGEVEDBhJpAwYSbQMG
+EigFIAEBEVEEIAEBAgsgBAEIHQgdEkkSTQUgAQESVQMgAA4IIAAVEmEBEiAJIAEBFRJhARIgBAAA
+EmkEAAASbQUAAQESbQQAABIoAwAAAQQoABFRAygAAgMoAA4IKAAVEmEBEiAECAASaQQIABJtBAgA
+EigIAQAIAAAAAAAeAQABAFQCFldyYXBOb25FeGNlcHRpb25UaHJvd3MBCAEAAgAAAAAAKAEAI1ND
+X2U2ZTA2YjdkY2RlNTRjMDg5MDE2NjczYTgzNGUwMzNiAAAFAQAAAAAWAQARQ29weXJpZ2h0IEAg
+IDIwMjQAAEkBABouTkVURnJhbWV3b3JrLFZlcnNpb249djQuNwEAVA4URnJhbWV3b3JrRGlzcGxh
+eU5hbWUSLk5FVCBGcmFtZXdvcmsgNC43BAEAAAC0AAAAzsrvvgEAAACRAAAAbFN5c3RlbS5SZXNv
+dXJjZXMuUmVzb3VyY2VSZWFkZXIsIG1zY29ybGliLCBWZXJzaW9uPTQuMC4wLjAsIEN1bHR1cmU9
+bmV1dHJhbCwgUHVibGljS2V5VG9rZW49Yjc3YTVjNTYxOTM0ZTA4OSNTeXN0ZW0uUmVzb3VyY2Vz
+LlJ1bnRpbWVSZXNvdXJjZVNldAIAAAAAAAAAAAAAAFBBRFBBRFC0AAAAwE8AAAAAAAAAAAAA2k8A
+AAAgAAAAAAAAAAAAAAAAAAAAAAAAAAAAAMxPAAAAAAAAAAAAAAAAX0NvckRsbE1haW4AbXNjb3Jl
+ZS5kbGwAAAAAAP8lACAAEAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAEAEAAAABgAAIAA
 AAAAAAAAAAAAAAAAAAEAAQAAADAAAIAAAAAAAAAAAAAAAAAAAAEAAAAAAEgAAABYYAAA7AMAAAAA
 AAAAAAAA7AM0AAAAVgBTAF8AVgBFAFIAUwBJAE8ATgBfAEkATgBGAE8AAAAAAL0E7/4AAAEAAAAB
 AAAAAAAAAAEAAAAAAD8AAAAAAAAABAAAAAIAAAAAAAAAAAAAAAAAAABEAAAAAQBWAGEAcgBGAGkA
@@ -1792,7 +1773,7 @@ AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
 AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
 AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
 AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
-AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAQAAADAAAAMg/AAAAAAAAAAAAAAAAAAAAAAAA
+AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAQAAADAAAAOw/AAAAAAAAAAAAAAAAAAAAAAAA
 AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
 AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
 AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
@@ -1844,82 +1825,82 @@ AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==]]></arrayElement>
               </properties>
               <outputs>
                 <output
-                  refId="Package\Data Flow Task\Lectura data JSON.Outputs[Output 0]"
+                  refId="Package\Llenado de DimCampania\Lectura data JSON.Outputs[Output 0]"
                   hasSideEffects="true"
                   name="Output 0">
                   <outputColumns>
                     <outputColumn
-                      refId="Package\Data Flow Task\Lectura data JSON.Outputs[Output 0].Columns[FechaEnvio]"
+                      refId="Package\Llenado de DimCampania\Lectura data JSON.Outputs[Output 0].Columns[FechaEnvio]"
                       dataType="date"
-                      lineageId="Package\Data Flow Task\Lectura data JSON.Outputs[Output 0].Columns[FechaEnvio]"
+                      lineageId="Package\Llenado de DimCampania\Lectura data JSON.Outputs[Output 0].Columns[FechaEnvio]"
                       name="FechaEnvio" />
                     <outputColumn
-                      refId="Package\Data Flow Task\Lectura data JSON.Outputs[Output 0].Columns[TituloEmail]"
+                      refId="Package\Llenado de DimCampania\Lectura data JSON.Outputs[Output 0].Columns[TituloEmail]"
                       codePage="1252"
                       dataType="str"
                       length="50"
-                      lineageId="Package\Data Flow Task\Lectura data JSON.Outputs[Output 0].Columns[TituloEmail]"
+                      lineageId="Package\Llenado de DimCampania\Lectura data JSON.Outputs[Output 0].Columns[TituloEmail]"
                       name="TituloEmail" />
                     <outputColumn
-                      refId="Package\Data Flow Task\Lectura data JSON.Outputs[Output 0].Columns[TipoEmail]"
+                      refId="Package\Llenado de DimCampania\Lectura data JSON.Outputs[Output 0].Columns[TipoEmail]"
                       codePage="1252"
                       dataType="str"
                       length="50"
-                      lineageId="Package\Data Flow Task\Lectura data JSON.Outputs[Output 0].Columns[TipoEmail]"
+                      lineageId="Package\Llenado de DimCampania\Lectura data JSON.Outputs[Output 0].Columns[TipoEmail]"
                       name="TipoEmail" />
                     <outputColumn
-                      refId="Package\Data Flow Task\Lectura data JSON.Outputs[Output 0].Columns[EmailRespuesta]"
+                      refId="Package\Llenado de DimCampania\Lectura data JSON.Outputs[Output 0].Columns[EmailRespuesta]"
                       codePage="1252"
                       dataType="str"
                       length="50"
-                      lineageId="Package\Data Flow Task\Lectura data JSON.Outputs[Output 0].Columns[EmailRespuesta]"
+                      lineageId="Package\Llenado de DimCampania\Lectura data JSON.Outputs[Output 0].Columns[EmailRespuesta]"
                       name="EmailRespuesta" />
                     <outputColumn
-                      refId="Package\Data Flow Task\Lectura data JSON.Outputs[Output 0].Columns[EmailEnvio]"
+                      refId="Package\Llenado de DimCampania\Lectura data JSON.Outputs[Output 0].Columns[EmailEnvio]"
                       codePage="1252"
                       dataType="str"
                       length="50"
-                      lineageId="Package\Data Flow Task\Lectura data JSON.Outputs[Output 0].Columns[EmailEnvio]"
+                      lineageId="Package\Llenado de DimCampania\Lectura data JSON.Outputs[Output 0].Columns[EmailEnvio]"
                       name="EmailEnvio" />
                     <outputColumn
-                      refId="Package\Data Flow Task\Lectura data JSON.Outputs[Output 0].Columns[TipoCampania]"
+                      refId="Package\Llenado de DimCampania\Lectura data JSON.Outputs[Output 0].Columns[TipoCampania]"
                       codePage="1252"
                       dataType="str"
                       length="50"
-                      lineageId="Package\Data Flow Task\Lectura data JSON.Outputs[Output 0].Columns[TipoCampania]"
+                      lineageId="Package\Llenado de DimCampania\Lectura data JSON.Outputs[Output 0].Columns[TipoCampania]"
                       name="TipoCampania" />
                     <outputColumn
-                      refId="Package\Data Flow Task\Lectura data JSON.Outputs[Output 0].Columns[NombreCampania]"
+                      refId="Package\Llenado de DimCampania\Lectura data JSON.Outputs[Output 0].Columns[NombreCampania]"
                       codePage="1252"
                       dataType="str"
                       length="255"
-                      lineageId="Package\Data Flow Task\Lectura data JSON.Outputs[Output 0].Columns[NombreCampania]"
+                      lineageId="Package\Llenado de DimCampania\Lectura data JSON.Outputs[Output 0].Columns[NombreCampania]"
                       name="NombreCampania" />
                     <outputColumn
-                      refId="Package\Data Flow Task\Lectura data JSON.Outputs[Output 0].Columns[CampaniaId]"
+                      refId="Package\Llenado de DimCampania\Lectura data JSON.Outputs[Output 0].Columns[CampaniaId]"
                       codePage="1252"
                       dataType="str"
                       length="500"
-                      lineageId="Package\Data Flow Task\Lectura data JSON.Outputs[Output 0].Columns[CampaniaId]"
+                      lineageId="Package\Llenado de DimCampania\Lectura data JSON.Outputs[Output 0].Columns[CampaniaId]"
                       name="CampaniaId" />
                     <outputColumn
-                      refId="Package\Data Flow Task\Lectura data JSON.Outputs[Output 0].Columns[TemaCampania]"
+                      refId="Package\Llenado de DimCampania\Lectura data JSON.Outputs[Output 0].Columns[TemaCampania]"
                       codePage="1252"
                       dataType="str"
                       length="50"
-                      lineageId="Package\Data Flow Task\Lectura data JSON.Outputs[Output 0].Columns[TemaCampania]"
+                      lineageId="Package\Llenado de DimCampania\Lectura data JSON.Outputs[Output 0].Columns[TemaCampania]"
                       name="TemaCampania" />
                     <outputColumn
-                      refId="Package\Data Flow Task\Lectura data JSON.Outputs[Output 0].Columns[EstadoCampania]"
+                      refId="Package\Llenado de DimCampania\Lectura data JSON.Outputs[Output 0].Columns[EstadoCampania]"
                       codePage="1252"
                       dataType="str"
                       length="50"
-                      lineageId="Package\Data Flow Task\Lectura data JSON.Outputs[Output 0].Columns[EstadoCampania]"
+                      lineageId="Package\Llenado de DimCampania\Lectura data JSON.Outputs[Output 0].Columns[EstadoCampania]"
                       name="EstadoCampania" />
                     <outputColumn
-                      refId="Package\Data Flow Task\Lectura data JSON.Outputs[Output 0].Columns[FechaCreacion]"
+                      refId="Package\Llenado de DimCampania\Lectura data JSON.Outputs[Output 0].Columns[FechaCreacion]"
                       dataType="date"
-                      lineageId="Package\Data Flow Task\Lectura data JSON.Outputs[Output 0].Columns[FechaCreacion]"
+                      lineageId="Package\Llenado de DimCampania\Lectura data JSON.Outputs[Output 0].Columns[FechaCreacion]"
                       name="FechaCreacion" />
                   </outputColumns>
                   <externalMetadataColumns />
@@ -1927,7 +1908,7 @@ AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==]]></arrayElement>
               </outputs>
             </component>
             <component
-              refId="Package\Data Flow Task\Verificacion de existencia de registro"
+              refId="Package\Llenado de DimCampania\Verificacion de existencia de registro"
               componentClassID="Microsoft.Lookup"
               contactInfo="Lookup;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; All Rights Reserved; http://www.microsoft.com/sql/support;6"
               description="Joins additional columns to the data flow by looking up values in a table. For example, join to the 'employee id' column the employees table to get 'hire date' and 'employee name'. We recommend this transformation when the lookup table can fit into memory."
@@ -1983,7 +1964,7 @@ where [refTable].[CampaniaId] = ?</property>
                   containsID="true"
                   dataType="System.String"
                   description="Specifies the list of lineage identifiers that map to the parameters that the SQL statement in the SQLCommand property uses. Entries in the list are separated by semicolons."
-                  name="ParameterMap">#{Package\Data Flow Task\Lectura data JSON.Outputs[Output 0].Columns[CampaniaId]};</property>
+                  name="ParameterMap">#{Package\Llenado de DimCampania\Lectura data JSON.Outputs[Output 0].Columns[CampaniaId]};</property>
                 <property
                   dataType="System.Int32"
                   description="Specifies the column code page to use when code page information is unavailable from the data source."
@@ -1995,24 +1976,24 @@ where [refTable].[CampaniaId] = ?</property>
               </properties>
               <connections>
                 <connection
-                  refId="Package\Data Flow Task\Verificacion de existencia de registro.Connections[OleDbConnection]"
-                  connectionManagerID="Package.ConnectionManagers[OLEDBAlasDePlata]"
-                  connectionManagerRefId="Package.ConnectionManagers[OLEDBAlasDePlata]"
+                  refId="Package\Llenado de DimCampania\Verificacion de existencia de registro.Connections[OleDbConnection]"
+                  connectionManagerID="Package.ConnectionManagers[DWOLEDB]"
+                  connectionManagerRefId="Package.ConnectionManagers[DWOLEDB]"
                   description="Connection manager used to access lookup data."
                   name="OleDbConnection" />
               </connections>
               <inputs>
                 <input
-                  refId="Package\Data Flow Task\Verificacion de existencia de registro.Inputs[Lookup Input]"
+                  refId="Package\Llenado de DimCampania\Verificacion de existencia de registro.Inputs[Lookup Input]"
                   name="Lookup Input">
                   <inputColumns>
                     <inputColumn
-                      refId="Package\Data Flow Task\Verificacion de existencia de registro.Inputs[Lookup Input].Columns[CampaniaId]"
+                      refId="Package\Llenado de DimCampania\Verificacion de existencia de registro.Inputs[Lookup Input].Columns[CampaniaId]"
                       cachedCodepage="1252"
                       cachedDataType="str"
                       cachedLength="500"
                       cachedName="CampaniaId"
-                      lineageId="Package\Data Flow Task\Lectura data JSON.Outputs[Output 0].Columns[CampaniaId]">
+                      lineageId="Package\Llenado de DimCampania\Lectura data JSON.Outputs[Output 0].Columns[CampaniaId]">
                       <properties>
                         <property
                           dataType="System.String"
@@ -2030,17 +2011,17 @@ where [refTable].[CampaniaId] = ?</property>
               </inputs>
               <outputs>
                 <output
-                  refId="Package\Data Flow Task\Verificacion de existencia de registro.Outputs[Lookup Match Output]"
+                  refId="Package\Llenado de DimCampania\Verificacion de existencia de registro.Outputs[Lookup Match Output]"
                   errorOrTruncationOperation="Lookup"
                   exclusionGroup="1"
                   name="Lookup Match Output"
-                  synchronousInputId="Package\Data Flow Task\Verificacion de existencia de registro.Inputs[Lookup Input]">
+                  synchronousInputId="Package\Llenado de DimCampania\Verificacion de existencia de registro.Inputs[Lookup Input]">
                   <outputColumns>
                     <outputColumn
-                      refId="Package\Data Flow Task\Verificacion de existencia de registro.Outputs[Lookup Match Output].Columns[CampaniaKey]"
+                      refId="Package\Llenado de DimCampania\Verificacion de existencia de registro.Outputs[Lookup Match Output].Columns[CampaniaKey]"
                       dataType="i4"
                       errorOrTruncationOperation="Copy Column"
-                      lineageId="Package\Data Flow Task\Verificacion de existencia de registro.Outputs[Lookup Match Output].Columns[CampaniaKey]"
+                      lineageId="Package\Llenado de DimCampania\Verificacion de existencia de registro.Outputs[Lookup Match Output].Columns[CampaniaKey]"
                       name="CampaniaKey"
                       truncationRowDisposition="FailComponent">
                       <properties>
@@ -2054,30 +2035,30 @@ where [refTable].[CampaniaId] = ?</property>
                   <externalMetadataColumns />
                 </output>
                 <output
-                  refId="Package\Data Flow Task\Verificacion de existencia de registro.Outputs[Lookup No Match Output]"
+                  refId="Package\Llenado de DimCampania\Verificacion de existencia de registro.Outputs[Lookup No Match Output]"
                   description="The Lookup output that handles rows with no matching entries in the reference dataset. Use this output when the NoMatchBehavior property is set to &quot;Send rows with no matching entries to the no match output.&quot;"
                   exclusionGroup="1"
                   name="Lookup No Match Output"
-                  synchronousInputId="Package\Data Flow Task\Verificacion de existencia de registro.Inputs[Lookup Input]">
+                  synchronousInputId="Package\Llenado de DimCampania\Verificacion de existencia de registro.Inputs[Lookup Input]">
                   <externalMetadataColumns />
                 </output>
                 <output
-                  refId="Package\Data Flow Task\Verificacion de existencia de registro.Outputs[Lookup Error Output]"
+                  refId="Package\Llenado de DimCampania\Verificacion de existencia de registro.Outputs[Lookup Error Output]"
                   exclusionGroup="1"
                   isErrorOut="true"
                   name="Lookup Error Output"
-                  synchronousInputId="Package\Data Flow Task\Verificacion de existencia de registro.Inputs[Lookup Input]">
+                  synchronousInputId="Package\Llenado de DimCampania\Verificacion de existencia de registro.Inputs[Lookup Input]">
                   <outputColumns>
                     <outputColumn
-                      refId="Package\Data Flow Task\Verificacion de existencia de registro.Outputs[Lookup Error Output].Columns[ErrorCode]"
+                      refId="Package\Llenado de DimCampania\Verificacion de existencia de registro.Outputs[Lookup Error Output].Columns[ErrorCode]"
                       dataType="i4"
-                      lineageId="Package\Data Flow Task\Verificacion de existencia de registro.Outputs[Lookup Error Output].Columns[ErrorCode]"
+                      lineageId="Package\Llenado de DimCampania\Verificacion de existencia de registro.Outputs[Lookup Error Output].Columns[ErrorCode]"
                       name="ErrorCode"
                       specialFlags="1" />
                     <outputColumn
-                      refId="Package\Data Flow Task\Verificacion de existencia de registro.Outputs[Lookup Error Output].Columns[ErrorColumn]"
+                      refId="Package\Llenado de DimCampania\Verificacion de existencia de registro.Outputs[Lookup Error Output].Columns[ErrorColumn]"
                       dataType="i4"
-                      lineageId="Package\Data Flow Task\Verificacion de existencia de registro.Outputs[Lookup Error Output].Columns[ErrorColumn]"
+                      lineageId="Package\Llenado de DimCampania\Verificacion de existencia de registro.Outputs[Lookup Error Output].Columns[ErrorColumn]"
                       name="ErrorColumn"
                       specialFlags="2" />
                   </outputColumns>
@@ -2088,79 +2069,144 @@ where [refTable].[CampaniaId] = ?</property>
           </components>
           <paths>
             <path
-              refId="Package\Data Flow Task.Paths[Lookup Match Output]"
-              endId="Package\Data Flow Task\Actualzicacion del registro existente.Inputs[OLE DB Command Input]"
+              refId="Package\Llenado de DimCampania.Paths[Lookup Match Output]"
+              endId="Package\Llenado de DimCampania\Actualzicacion del registro existente.Inputs[OLE DB Command Input]"
               name="Lookup Match Output"
-              startId="Package\Data Flow Task\Verificacion de existencia de registro.Outputs[Lookup Match Output]" />
+              startId="Package\Llenado de DimCampania\Verificacion de existencia de registro.Outputs[Lookup Match Output]" />
             <path
-              refId="Package\Data Flow Task.Paths[Lookup No Match Output]"
-              endId="Package\Data Flow Task\Insercion nuevos registros.Inputs[ADO NET Destination Input]"
+              refId="Package\Llenado de DimCampania.Paths[Lookup No Match Output]"
+              endId="Package\Llenado de DimCampania\Insercion nuevos registros.Inputs[ADO NET Destination Input]"
               name="Lookup No Match Output"
-              startId="Package\Data Flow Task\Verificacion de existencia de registro.Outputs[Lookup No Match Output]" />
+              startId="Package\Llenado de DimCampania\Verificacion de existencia de registro.Outputs[Lookup No Match Output]" />
             <path
-              refId="Package\Data Flow Task.Paths[Output 0]"
-              endId="Package\Data Flow Task\Verificacion de existencia de registro.Inputs[Lookup Input]"
+              refId="Package\Llenado de DimCampania.Paths[Output 0]"
+              endId="Package\Llenado de DimCampania\Verificacion de existencia de registro.Inputs[Lookup Input]"
               name="Output 0"
-              startId="Package\Data Flow Task\Lectura data JSON.Outputs[Output 0]" />
+              startId="Package\Llenado de DimCampania\Lectura data JSON.Outputs[Output 0]" />
           </paths>
         </pipeline>
       </DTS:ObjectData>
     </DTS:Executable>
+    <DTS:Executable
+      DTS:refId="Package\Vaciar DimCampania"
+      DTS:CreationName="Microsoft.ExecuteSQLTask"
+      DTS:Description="Tarea Ejecutar SQL"
+      DTS:DTSID="{526F529F-B5AF-433B-AD78-AF57F11A4568}"
+      DTS:ExecutableType="Microsoft.ExecuteSQLTask"
+      DTS:LocaleID="-1"
+      DTS:ObjectName="Vaciar DimCampania"
+      DTS:TaskContact="Execute SQL Task; Microsoft Corporation; SQL Server 2022; © 2022 Microsoft Corporation; All Rights Reserved;http://www.microsoft.com/sql/support/default.asp;1"
+      DTS:ThreadHint="0">
+      <DTS:Variables />
+      <DTS:ObjectData>
+        <SQLTask:SqlTaskData
+          SQLTask:Connection="{C6577BD0-F773-4B28-A17F-959B01813989}"
+          SQLTask:SqlStatementSource="delete from DimCampania where CampaniaId != '0';&#xA;DBCC CHECKIDENT ('DimCampania', RESEED, 0);&#xA;" xmlns:SQLTask="www.microsoft.com/sqlserver/dts/tasks/sqltask" />
+      </DTS:ObjectData>
+    </DTS:Executable>
   </DTS:Executables>
+  <DTS:PrecedenceConstraints>
+    <DTS:PrecedenceConstraint
+      DTS:refId="Package.PrecedenceConstraints[Restricción]"
+      DTS:CreationName=""
+      DTS:DTSID="{6E654C38-8198-4FB2-BC09-903E020FAFBD}"
+      DTS:From="Package\Vaciar DimCampania"
+      DTS:LogicalAnd="True"
+      DTS:ObjectName="Restricción"
+      DTS:To="Package\Llenado de DimCampania" />
+  </DTS:PrecedenceConstraints>
   <DTS:DesignTimeProperties><![CDATA[<?xml version="1.0"?>
-<!--This CDATA section contains the layout information of the package. The section includes information such as (x,y) coordinates, width, and height.-->
-<!--If you manually edit this section and make a mistake, you can delete it. -->
-<!--The package will still be able to load normally but the previous layout information will be lost and the designer will automatically re-arrange the elements on the design surface.-->
+<!--Esta sección CDATA contiene la información de diseño del paquete. Esta sección incluye información como, por ejemplo, las coordenadas (x,y), el ancho y el alto.-->
+<!--Si edita manualmente esta sección y comete un error, puede eliminarlo. -->
+<!--El paquete podrá cargarse normalmente, pero se perderá la información de diseño anterior y el diseñador reorganizará los elementos automáticamente en la superficie de diseño.-->
 <Objects
   Version="8">
-  <!--Each node below will contain properties that do not affect runtime behavior.-->
+  <!--Cada uno de los nodos siguientes contiene propiedades que no afectan al comportamiento en tiempo de ejecución.-->
   <Package
     design-time-name="Package">
     <LayoutInfo>
       <GraphLayout
-        Capacity="4" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph">
+        Capacity="4" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml">
         <NodeLayout
-          Size="155,42"
-          Id="Package\Data Flow Task"
-          TopLeft="348,87" />
-      </GraphLayout>
-    </LayoutInfo>
-  </Package>
-  <TaskHost
-    design-time-name="Package\Data Flow Task">
-    <LayoutInfo>
-      <GraphLayout
-        Capacity="8" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml" xmlns:mssgm="clr-namespace:Microsoft.SqlServer.Graph.Model;assembly=Microsoft.SqlServer.Graph">
+          Size="206,42"
+          Id="Package\Llenado de DimCampania"
+          TopLeft="590,345" />
         <NodeLayout
-          Size="172,42"
-          Id="Package\Data Flow Task\Lectura data JSON"
-          TopLeft="195,152" />
-        <NodeLayout
-          Size="254,42"
-          Id="Package\Data Flow Task\Actualzicacion del registro existente"
-          TopLeft="938,354" />
-        <NodeLayout
-          Size="207,42"
-          Id="Package\Data Flow Task\Insercion nuevos registros"
-          TopLeft="184,361" />
-        <NodeLayout
-          Size="258,42"
-          Id="Package\Data Flow Task\Verificacion de existencia de registro"
-          TopLeft="595,158" />
+          Size="183,42"
+          Id="Package\Vaciar DimCampania"
+          TopLeft="397,233" />
         <EdgeLayout
-          Id="Package\Data Flow Task.Paths[Output 0]"
-          TopLeft="367,176">
+          Id="Package.PrecedenceConstraints[Restricción]"
+          TopLeft="488.5,275">
           <EdgeLayout.Curve>
             <mssgle:Curve
               StartConnector="{assembly:Null}"
-              EndConnector="228,0"
+              EndConnector="204.5,70"
               Start="0,0"
-              End="220.5,0">
+              End="204.5,62.5">
               <mssgle:Curve.Segments>
                 <mssgle:SegmentCollection
                   Capacity="5">
                   <mssgle:LineSegment
-                    End="220.5,0" />
+                    End="0,31" />
+                  <mssgle:CubicBezierSegment
+                    Point1="0,31"
+                    Point2="0,35"
+                    Point3="4,35" />
+                  <mssgle:LineSegment
+                    End="200.5,35" />
+                  <mssgle:CubicBezierSegment
+                    Point1="200.5,35"
+                    Point2="204.5,35"
+                    Point3="204.5,39" />
+                  <mssgle:LineSegment
+                    End="204.5,62.5" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+      </GraphLayout>
+    </LayoutInfo>
+  </Package>
+  <TaskHost
+    design-time-name="Package\Llenado de DimCampania">
+    <LayoutInfo>
+      <GraphLayout
+        Capacity="8" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml" xmlns:mssgm="clr-namespace:Microsoft.SqlServer.Graph.Model;assembly=Microsoft.SqlServer.Graph">
+        <NodeLayout
+          Size="258,42"
+          Id="Package\Llenado de DimCampania\Verificacion de existencia de registro"
+          TopLeft="493,207" />
+        <NodeLayout
+          Size="172,42"
+          Id="Package\Llenado de DimCampania\Lectura data JSON"
+          TopLeft="191,204" />
+        <NodeLayout
+          Size="254,42"
+          Id="Package\Llenado de DimCampania\Actualzicacion del registro existente"
+          TopLeft="748,339" />
+        <NodeLayout
+          Size="207,42"
+          Id="Package\Llenado de DimCampania\Insercion nuevos registros"
+          TopLeft="337,337" />
+        <EdgeLayout
+          Id="Package\Llenado de DimCampania.Paths[Output 0]"
+          TopLeft="363,226.5">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="130,0"
+              Start="0,0"
+              End="122.5,0">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="122.5,0" />
                 </mssgle:SegmentCollection>
               </mssgle:Curve.Segments>
             </mssgle:Curve>
@@ -2170,74 +2216,74 @@ where [refTable].[CampaniaId] = ?</property>
           </EdgeLayout.Labels>
         </EdgeLayout>
         <EdgeLayout
-          Id="Package\Data Flow Task.Paths[Lookup No Match Output]"
-          TopLeft="682.333333333333,200">
+          Id="Package\Llenado de DimCampania.Paths[Lookup No Match Output]"
+          TopLeft="580.333333333333,249">
           <EdgeLayout.Curve>
             <mssgle:Curve
               StartConnector="{assembly:Null}"
-              EndConnector="-394.833333333333,161"
+              EndConnector="-139.833333333333,88"
               Start="0,0"
-              End="-394.833333333333,153.5">
+              End="-139.833333333333,80.5">
               <mssgle:Curve.Segments>
                 <mssgle:SegmentCollection
                   Capacity="5">
                   <mssgle:LineSegment
-                    End="0,60.9953775038521" />
+                    End="0,31.5254237288136" />
                   <mssgle:CubicBezierSegment
-                    Point1="0,60.9953775038521"
-                    Point2="0,64.9953775038521"
-                    Point3="-4,64.9953775038521" />
+                    Point1="0,31.5254237288136"
+                    Point2="0,35.5254237288136"
+                    Point3="-4,35.5254237288136" />
                   <mssgle:LineSegment
-                    End="-390.833333333333,64.9953775038521" />
+                    End="-135.833333333333,35.5254237288136" />
                   <mssgle:CubicBezierSegment
-                    Point1="-390.833333333333,64.9953775038521"
-                    Point2="-394.833333333333,64.9953775038521"
-                    Point3="-394.833333333333,68.9953775038521" />
+                    Point1="-135.833333333333,35.5254237288136"
+                    Point2="-139.833333333333,35.5254237288136"
+                    Point3="-139.833333333333,39.5254237288136" />
                   <mssgle:LineSegment
-                    End="-394.833333333333,153.5" />
+                    End="-139.833333333333,80.5" />
                 </mssgle:SegmentCollection>
               </mssgle:Curve.Segments>
             </mssgle:Curve>
           </EdgeLayout.Curve>
           <EdgeLayout.Labels>
             <mssgm:EdgeLabel
-              BoundingBox="-253.223053385416,69.9953775038521,111.6127734375,11.609375"
+              BoundingBox="-125.723053385417,40.5254237288136,111.6127734375,11.609375"
               RelativePosition="Any" />
           </EdgeLayout.Labels>
         </EdgeLayout>
         <EdgeLayout
-          Id="Package\Data Flow Task.Paths[Lookup Match Output]"
-          TopLeft="765.666666666667,200">
+          Id="Package\Llenado de DimCampania.Paths[Lookup Match Output]"
+          TopLeft="663.666666666667,249">
           <EdgeLayout.Curve>
             <mssgle:Curve
               StartConnector="{assembly:Null}"
-              EndConnector="299.333333333333,154"
+              EndConnector="211.333333333333,90"
               Start="0,0"
-              End="299.333333333333,146.5">
+              End="211.333333333333,82.5">
               <mssgle:Curve.Segments>
                 <mssgle:SegmentCollection
                   Capacity="5">
                   <mssgle:LineSegment
-                    End="0,58.1694915254237" />
+                    End="0,32.3328197226502" />
                   <mssgle:CubicBezierSegment
-                    Point1="0,58.1694915254237"
-                    Point2="0,62.1694915254237"
-                    Point3="4,62.1694915254237" />
+                    Point1="0,32.3328197226502"
+                    Point2="0,36.3328197226502"
+                    Point3="4,36.3328197226502" />
                   <mssgle:LineSegment
-                    End="295.333333333333,62.1694915254237" />
+                    End="207.333333333333,36.3328197226502" />
                   <mssgle:CubicBezierSegment
-                    Point1="295.333333333333,62.1694915254237"
-                    Point2="299.333333333333,62.1694915254237"
-                    Point3="299.333333333333,66.1694915254238" />
+                    Point1="207.333333333333,36.3328197226502"
+                    Point2="211.333333333333,36.3328197226502"
+                    Point3="211.333333333333,40.3328197226502" />
                   <mssgle:LineSegment
-                    End="299.333333333333,146.5" />
+                    End="211.333333333333,82.5" />
                 </mssgle:SegmentCollection>
               </mssgle:Curve.Segments>
             </mssgle:Curve>
           </EdgeLayout.Curve>
           <EdgeLayout.Labels>
             <mssgm:EdgeLabel
-              BoundingBox="101.475279947916,67.1694915254237,96.3827734375,11.609375"
+              BoundingBox="57.4752799479165,41.3328197226502,96.3827734375,11.609375"
               RelativePosition="Any" />
           </EdgeLayout.Labels>
         </EdgeLayout>
@@ -2245,15 +2291,7 @@ where [refTable].[CampaniaId] = ?</property>
     </LayoutInfo>
   </TaskHost>
   <PipelineComponentMetadata
-    design-time-name="Package\Data Flow Task\Insercion nuevos registros">
-    <Properties>
-      <Property>
-        <Name>DataSourceViewID</Name>
-      </Property>
-    </Properties>
-  </PipelineComponentMetadata>
-  <PipelineComponentMetadata
-    design-time-name="Package\Data Flow Task\Verificacion de existencia de registro">
+    design-time-name="Package\Llenado de DimCampania\Verificacion de existencia de registro">
     <Properties>
       <Property>
         <Name>OverwriteParamsSQLProp</Name>
@@ -2270,6 +2308,14 @@ where [refTable].[CampaniaId] = ?</property>
         <Value
           type="q4:string">0</Value>
       </Property>
+      <Property>
+        <Name>DataSourceViewID</Name>
+      </Property>
+    </Properties>
+  </PipelineComponentMetadata>
+  <PipelineComponentMetadata
+    design-time-name="Package\Llenado de DimCampania\Insercion nuevos registros">
+    <Properties>
       <Property>
         <Name>DataSourceViewID</Name>
       </Property>

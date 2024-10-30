@@ -1,0 +1,3606 @@
+﻿<?xml version="1.0"?>
+<DTS:Executable xmlns:DTS="www.microsoft.com/SqlServer/Dts"
+  DTS:refId="Package"
+  DTS:CreationDate="10/17/2024 8:54:11 PM"
+  DTS:CreationName="Microsoft.Package"
+  DTS:CreatorComputerName="DESKTOP-U3LGKH3"
+  DTS:CreatorName="DESKTOP-U3LGKH3\js"
+  DTS:DTSID="{EA7B6D52-2808-44F6-8BF3-6895B9AF7D61}"
+  DTS:ExecutableType="Microsoft.Package"
+  DTS:LastModifiedProductVersion="16.0.5556.0"
+  DTS:LocaleID="1033"
+  DTS:ObjectName="FactReportesDeRendimientoPorCampania"
+  DTS:PackageType="5"
+  DTS:VersionBuild="99"
+  DTS:VersionGUID="{547AB2B7-D601-429C-93A0-8081EC1BA285}">
+  <DTS:Property
+    DTS:Name="PackageFormatVersion">8</DTS:Property>
+  <DTS:ConnectionManagers>
+    <DTS:ConnectionManager
+      DTS:refId="Package.ConnectionManagers[DestinoDW]"
+      DTS:CreationName="ADO.NET:System.Data.SqlClient.SqlConnection, System.Data, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089"
+      DTS:DTSID="{862AA1A4-BCBC-4D5E-B9CE-F57650934433}"
+      DTS:ObjectName="DestinoDW">
+      <DTS:ObjectData>
+        <DTS:ConnectionManager
+          DTS:ConnectionString="Data Source=localhost;User ID=js;Initial Catalog=AlasDePlataDW;Encrypt=False;Application Name=SSIS-FactVentas-{862AA1A4-BCBC-4D5E-B9CE-F57650934433}localhost.AlasDePlataDW.js;">
+          <DTS:Password
+            DTS:Name="Password"
+            Sensitive="1"
+            Encrypted="1">AQAAANCMnd8BFdERjHoAwE/Cl+sBAAAA0cnV3L9sZUGZvr3Q4+g2VgAAAAAIAAAARABUAFMAAAAQZgAAAAEAACAAAAD5w/3JMyik7aPFkaL7C3U0dfK7IQKZ2+LFhyKNz6qqIgAAAAAOgAAAAAIAACAAAAAHMnMbMehDIdOiE7llhYgNyamnOKdbvRWkMZa+xqPppSAAAABh2O2vLVdkefV1guYIZFdy/Hr7laQBogyQkVLeK39dMEAAAABAT/iBLxx3j34ilVfSkGU6zKkD5AyvmoOVtuFKZpieqqMmKptmWyl/mHr+gK2LQP67K2NoOPAQbqL7XZ2FbH5/</DTS:Password>
+        </DTS:ConnectionManager>
+      </DTS:ObjectData>
+    </DTS:ConnectionManager>
+    <DTS:ConnectionManager
+      DTS:refId="Package.ConnectionManagers[DWOLEDB]"
+      DTS:CreationName="OLEDB"
+      DTS:DTSID="{8DAC9683-5623-45C1-BBD0-381EF1BC7210}"
+      DTS:ObjectName="DWOLEDB">
+      <DTS:ObjectData>
+        <DTS:ConnectionManager
+          DTS:ConnectRetryCount="1"
+          DTS:ConnectRetryInterval="5"
+          DTS:ConnectionString="Data Source=localhost;User ID=js;Initial Catalog=AlasDePlataDW;Provider=MSOLEDBSQL.1;Auto Translate=False;Application Name=SSIS-FactVentas-{8DAC9683-5623-45C1-BBD0-381EF1BC7210}localhost.AlasDePlataDW.js1;">
+          <DTS:Password
+            DTS:Name="Password"
+            Sensitive="1"
+            Encrypted="1">AQAAANCMnd8BFdERjHoAwE/Cl+sBAAAA0cnV3L9sZUGZvr3Q4+g2VgAAAAAIAAAARABUAFMAAAAQZgAAAAEAACAAAAArDV0CVMHBbZqUi92d0nw4pZ/hqQXw++8PqONu4y/oewAAAAAOgAAAAAIAACAAAADvSrRA1fPdDm7qbpXABLLerkgguCoMHMR3UeTfKLNbISAAAABZ9KA/lLV1NkM0lglRZyDpYKMPDRfZuqhTk6VYsc5cn0AAAAAhLX0fzDJHSEpnl7PIOYAYSAuvc0lt9rAa8zZpDgZZhkatrJmiP+SbcaIEwpqcI+1IrvjBbFVAszdGUKWYOj5W</DTS:Password>
+        </DTS:ConnectionManager>
+      </DTS:ObjectData>
+    </DTS:ConnectionManager>
+  </DTS:ConnectionManagers>
+  <DTS:PackageParameters>
+    <DTS:PackageParameter
+      DTS:CreationName=""
+      DTS:DataType="8"
+      DTS:DTSID="{79B78A4F-CF8D-421F-B286-5DBA2921895E}"
+      DTS:ObjectName="JsonFilePath">
+      <DTS:Property
+        DTS:DataType="8"
+        DTS:Name="ParameterValue">C:\UES\IDAlasDePlataDW\CSV\Campaings\campaings.json</DTS:Property>
+    </DTS:PackageParameter>
+  </DTS:PackageParameters>
+  <DTS:Variables>
+    <DTS:Variable
+      DTS:CreationName=""
+      DTS:DTSID="{3E9F2159-92B5-4A12-8837-C539980B4932}"
+      DTS:IncludeInDebugDump="2345"
+      DTS:Namespace="User"
+      DTS:ObjectName="UltimaFechaEjecucion">
+      <DTS:VariableValue
+        DTS:DataType="8"
+        xml:space="preserve"></DTS:VariableValue>
+    </DTS:Variable>
+  </DTS:Variables>
+  <DTS:Executables>
+    <DTS:Executable
+      DTS:refId="Package\Actualizar Fecha de Ultima Ejecucion"
+      DTS:CreationName="Microsoft.ExecuteSQLTask"
+      DTS:Description="Execute SQL Task"
+      DTS:DTSID="{F3E9B1FA-6424-46BB-B3CF-52DF81F25EAD}"
+      DTS:ExecutableType="Microsoft.ExecuteSQLTask"
+      DTS:LocaleID="-1"
+      DTS:ObjectName="Actualizar Fecha de Ultima Ejecucion"
+      DTS:TaskContact="Execute SQL Task; Microsoft Corporation; SQL Server 2022; © 2022 Microsoft Corporation; All Rights Reserved;http://www.microsoft.com/sql/support/default.asp;1"
+      DTS:ThreadHint="0">
+      <DTS:Variables />
+      <DTS:ObjectData>
+        <SQLTask:SqlTaskData
+          SQLTask:Connection="{8DAC9683-5623-45C1-BBD0-381EF1BC7210}"
+          SQLTask:BypassPrepare="False"
+          SQLTask:SqlStatementSource="UPDATE Parametros SET ValorParametro = GETDATE() WHERE NombreParametro = 'Fecha_Ultima_Ejecucion'" xmlns:SQLTask="www.microsoft.com/sqlserver/dts/tasks/sqltask" />
+      </DTS:ObjectData>
+    </DTS:Executable>
+    <DTS:Executable
+      DTS:refId="Package\Lectura de Parametros"
+      DTS:CreationName="Microsoft.ExecuteSQLTask"
+      DTS:Description="Execute SQL Task"
+      DTS:DTSID="{77E3E058-5BAC-4C79-AA16-7838403FD2EB}"
+      DTS:ExecutableType="Microsoft.ExecuteSQLTask"
+      DTS:LocaleID="-1"
+      DTS:ObjectName="Lectura de Parametros"
+      DTS:TaskContact="Execute SQL Task; Microsoft Corporation; SQL Server 2022; © 2022 Microsoft Corporation; All Rights Reserved;http://www.microsoft.com/sql/support/default.asp;1"
+      DTS:ThreadHint="0">
+      <DTS:Variables />
+      <DTS:ObjectData>
+        <SQLTask:SqlTaskData
+          SQLTask:Connection="{8DAC9683-5623-45C1-BBD0-381EF1BC7210}"
+          SQLTask:BypassPrepare="False"
+          SQLTask:SqlStatementSource="SELECT ValorParametro FROM Parametros WHERE NombreParametro = 'Fecha_Ultima_Ejecucion';&#xA;"
+          SQLTask:ResultType="ResultSetType_SingleRow" xmlns:SQLTask="www.microsoft.com/sqlserver/dts/tasks/sqltask">
+          <SQLTask:ResultBinding
+            SQLTask:ResultName="ValorParametro"
+            SQLTask:DtsVariableName="User::UltimaFechaEjecucion" />
+        </SQLTask:SqlTaskData>
+      </DTS:ObjectData>
+    </DTS:Executable>
+    <DTS:Executable
+      DTS:refId="Package\Llenado de FactReportesDeRendimientoPorCampania"
+      DTS:CreationName="Microsoft.Pipeline"
+      DTS:Description="Data Flow Task"
+      DTS:DTSID="{952CBE3E-7BF2-4C14-8F53-9C2FDCE268E9}"
+      DTS:ExecutableType="Microsoft.Pipeline"
+      DTS:LocaleID="-1"
+      DTS:ObjectName="Llenado de FactReportesDeRendimientoPorCampania"
+      DTS:TaskContact="Performs high-performance data extraction, transformation and loading;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; All Rights Reserved;http://www.microsoft.com/sql/support/default.asp;1">
+      <DTS:Variables />
+      <DTS:ObjectData>
+        <pipeline
+          version="1">
+          <components>
+            <component
+              refId="Package\Llenado de FactReportesDeRendimientoPorCampania\Lectura de metricas y llaves del negocio"
+              componentClassID="Microsoft.ManagedComponentHost"
+              contactInfo="Includes and runs custom script code. For example, apply a business rule that limits the range of valid values in an &quot;income&quot; column or add values in two columns and calculate the average of the sum.;Microsoft Corporation; Microsoft SQL Server; Microsoft Corporation; All Rights Reserved; http://www.microsoft.com/sql/support;13"
+              description="Includes and runs custom script code. For example, apply a business rule that limits the range of valid values in an &quot;income&quot; column or add values in two columns and calculate the average of the sum."
+              name="Lectura de metricas y llaves del negocio"
+              version="13">
+              <properties>
+                <property
+                  dataType="System.String"
+                  description="Stores the source code of the component"
+                  isArray="true"
+                  name="SourceCode"
+                  state="cdata">
+                  <arrayElements
+                    arrayElementCount="120">
+                    <arrayElement
+                      dataType="System.String"><![CDATA[BufferWrapper.cs]]></arrayElement>
+                    <arrayElement
+                      dataType="System.String"><![CDATA[UTF8]]></arrayElement>
+                    <arrayElement
+                      dataType="System.String"><![CDATA[/* THIS IS AUTO-GENERATED CODE THAT WILL BE OVERWRITTEN! DO NOT EDIT!
+*  Microsoft SQL Server Integration Services buffer wrappers
+*  This module defines classes for accessing data flow buffers
+*  THIS IS AUTO-GENERATED CODE THAT WILL BE OVERWRITTEN! DO NOT EDIT! */
+
+
+
+using System;
+using System.Data;
+using Microsoft.SqlServer.Dts.Pipeline;
+using Microsoft.SqlServer.Dts.Pipeline.Wrapper;
+
+public class Output0Buffer: ScriptBuffer
+
+{
+    public Output0Buffer(PipelineBuffer Buffer, int[] BufferColumnIndexes, OutputNameMap OutputMap)
+        : base(Buffer, BufferColumnIndexes, OutputMap)
+    {
+    }
+
+    public String CampaniaId
+    {
+        set
+        {
+            this[0] = value;
+        }
+    }
+    public bool CampaniaId_IsNull
+    {
+        set
+        {
+            if (value)
+            {
+                SetNull(0);
+            }
+            else
+            {
+                throw new InvalidOperationException("La propiedad IsNull no puede establecerse en False. En su lugar, asigne un valor a la columna.");
+            }
+        }
+    }
+
+    public Int32 RebotesPermanentes
+    {
+        set
+        {
+            this[1] = value;
+        }
+    }
+    public bool RebotesPermanentes_IsNull
+    {
+        set
+        {
+            if (value)
+            {
+                SetNull(1);
+            }
+            else
+            {
+                throw new InvalidOperationException("La propiedad IsNull no puede establecerse en False. En su lugar, asigne un valor a la columna.");
+            }
+        }
+    }
+
+    public Int32 NoEnviados
+    {
+        set
+        {
+            this[2] = value;
+        }
+    }
+    public bool NoEnviados_IsNull
+    {
+        set
+        {
+            if (value)
+            {
+                SetNull(2);
+            }
+            else
+            {
+                throw new InvalidOperationException("La propiedad IsNull no puede establecerse en False. En su lugar, asigne un valor a la columna.");
+            }
+        }
+    }
+
+    public Int32 NoAbiertos
+    {
+        set
+        {
+            this[3] = value;
+        }
+    }
+    public bool NoAbiertos_IsNull
+    {
+        set
+        {
+            if (value)
+            {
+                SetNull(3);
+            }
+            else
+            {
+                throw new InvalidOperationException("La propiedad IsNull no puede establecerse en False. En su lugar, asigne un valor a la columna.");
+            }
+        }
+    }
+
+    public Int32 MarcadosComoSpam
+    {
+        set
+        {
+            this[4] = value;
+        }
+    }
+    public bool MarcadosComoSpam_IsNull
+    {
+        set
+        {
+            if (value)
+            {
+                SetNull(4);
+            }
+            else
+            {
+                throw new InvalidOperationException("La propiedad IsNull no puede establecerse en False. En su lugar, asigne un valor a la columna.");
+            }
+        }
+    }
+
+    public Int32 Entregados
+    {
+        set
+        {
+            this[5] = value;
+        }
+    }
+    public bool Entregados_IsNull
+    {
+        set
+        {
+            if (value)
+            {
+                SetNull(5);
+            }
+            else
+            {
+                throw new InvalidOperationException("La propiedad IsNull no puede establecerse en False. En su lugar, asigne un valor a la columna.");
+            }
+        }
+    }
+
+    public Int32 Quejas
+    {
+        set
+        {
+            this[6] = value;
+        }
+    }
+    public bool Quejas_IsNull
+    {
+        set
+        {
+            if (value)
+            {
+                SetNull(6);
+            }
+            else
+            {
+                throw new InvalidOperationException("La propiedad IsNull no puede establecerse en False. En su lugar, asigne un valor a la columna.");
+            }
+        }
+    }
+
+    public Int32 RespuestasAutomaticas
+    {
+        set
+        {
+            this[7] = value;
+        }
+    }
+    public bool RespuestasAutomaticas_IsNull
+    {
+        set
+        {
+            if (value)
+            {
+                SetNull(7);
+            }
+            else
+            {
+                throw new InvalidOperationException("La propiedad IsNull no puede establecerse en False. En su lugar, asigne un valor a la columna.");
+            }
+        }
+    }
+
+    public Int32 RebotesTemporales
+    {
+        set
+        {
+            this[8] = value;
+        }
+    }
+    public bool RebotesTemporales_IsNull
+    {
+        set
+        {
+            if (value)
+            {
+                SetNull(8);
+            }
+            else
+            {
+                throw new InvalidOperationException("La propiedad IsNull no puede establecerse en False. En su lugar, asigne un valor a la columna.");
+            }
+        }
+    }
+
+    public Int32 Aperturas
+    {
+        set
+        {
+            this[9] = value;
+        }
+    }
+    public bool Aperturas_IsNull
+    {
+        set
+        {
+            if (value)
+            {
+                SetNull(9);
+            }
+            else
+            {
+                throw new InvalidOperationException("La propiedad IsNull no puede establecerse en False. En su lugar, asigne un valor a la columna.");
+            }
+        }
+    }
+
+    public Int32 ClicsUnicos
+    {
+        set
+        {
+            this[10] = value;
+        }
+    }
+    public bool ClicsUnicos_IsNull
+    {
+        set
+        {
+            if (value)
+            {
+                SetNull(10);
+            }
+            else
+            {
+                throw new InvalidOperationException("La propiedad IsNull no puede establecerse en False. En su lugar, asigne un valor a la columna.");
+            }
+        }
+    }
+
+    public Int32 Rebotes
+    {
+        set
+        {
+            this[11] = value;
+        }
+    }
+    public bool Rebotes_IsNull
+    {
+        set
+        {
+            if (value)
+            {
+                SetNull(11);
+            }
+            else
+            {
+                throw new InvalidOperationException("La propiedad IsNull no puede establecerse en False. En su lugar, asigne un valor a la columna.");
+            }
+        }
+    }
+
+    public Int32 CorreosEnviados
+    {
+        set
+        {
+            this[12] = value;
+        }
+    }
+    public bool CorreosEnviados_IsNull
+    {
+        set
+        {
+            if (value)
+            {
+                SetNull(12);
+            }
+            else
+            {
+                throw new InvalidOperationException("La propiedad IsNull no puede establecerse en False. En su lugar, asigne un valor a la columna.");
+            }
+        }
+    }
+
+    public Int32 Reenvios
+    {
+        set
+        {
+            this[13] = value;
+        }
+    }
+    public bool Reenvios_IsNull
+    {
+        set
+        {
+            if (value)
+            {
+                SetNull(13);
+            }
+            else
+            {
+                throw new InvalidOperationException("La propiedad IsNull no puede establecerse en False. En su lugar, asigne un valor a la columna.");
+            }
+        }
+    }
+
+    public DateTime FechaEnvio
+    {
+        set
+        {
+            this[14] = value;
+        }
+    }
+    public bool FechaEnvio_IsNull
+    {
+        set
+        {
+            if (value)
+            {
+                SetNull(14);
+            }
+            else
+            {
+                throw new InvalidOperationException("La propiedad IsNull no puede establecerse en False. En su lugar, asigne un valor a la columna.");
+            }
+        }
+    }
+
+    new public void AddRow()
+    {
+        base.AddRow();
+    }
+
+    new public void SetEndOfRowset()
+    {
+        base.SetEndOfRowset();
+    }
+
+    new public bool EndOfRowset()
+    {
+        return base.EndOfRowset();
+    }
+
+}
+]]></arrayElement>
+                    <arrayElement
+                      dataType="System.String"><![CDATA[PickupLocation.cs]]></arrayElement>
+                    <arrayElement
+                      dataType="System.String"><![CDATA[UTF8]]></arrayElement>
+                    <arrayElement
+                      dataType="System.String"><![CDATA[using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+
+namespace SC_c1bf493118ae46768fe4c0ed325897be
+{
+    internal class PickupLocation
+    {
+        public string location_id { get; set; }
+        public string location_name { get; set; }
+        public string company_name { get; set; }
+        public string available_days { get; set; }
+        public string available_hours { get; set; }
+        public string notes { get; set; }
+    }
+}
+]]></arrayElement>
+                    <arrayElement
+                      dataType="System.String"><![CDATA[Project]]></arrayElement>
+                    <arrayElement
+                      dataType="System.String"><![CDATA[UTF16LE]]></arrayElement>
+                    <arrayElement
+                      dataType="System.String"><![CDATA[<?xml version="1.0" encoding="UTF-16" standalone="yes"?>
+<c:Project xmlns:c="http://schemas.microsoft.com/codeprojectml/2010/08/main" xmlns:msb="http://schemas.microsoft.com/developer/msbuild/2003" runtimeVersion="4.0" schemaVersion="1.0">
+  <msb:PropertyGroup>
+    <msb:CodeName>SC_c1bf493118ae46768fe4c0ed325897be</msb:CodeName>
+    <msb:Language>msBuild</msb:Language>
+    <msb:DisplayName>SC_c1bf493118ae46768fe4c0ed325897be</msb:DisplayName>
+    <msb:ProjectId>{3FD2D5D4-6558-43EF-B215-DC80B6D0FEEF}</msb:ProjectId>
+  </msb:PropertyGroup>
+  <msb:ItemGroup>
+    <msb:Project Include="SC_c1bf493118ae46768fe4c0ed325897be.csproj" />
+    <msb:File Include="CampaignReport.cs" />
+    <msb:File Include="main.cs" />
+    <msb:File Include="BufferWrapper.cs" />
+    <msb:File Include="app.config" />
+    <msb:File Include="CustomFieldHash.cs" />
+    <msb:File Include="Campaing.cs" />
+    <msb:File Include="CampaignDetail.cs" />
+    <msb:File Include="ComponentWrapper.cs" />
+    <msb:File Include="Properties\AssemblyInfo.cs" />
+    <msb:File Include="Properties\Resources.resx" />
+    <msb:File Include="Properties\Resources.Designer.cs" />
+    <msb:File Include="Properties\Settings.settings" />
+    <msb:File Include="Properties\Settings.Designer.cs" />
+  </msb:ItemGroup>
+</c:Project>]]></arrayElement>
+                    <arrayElement
+                      dataType="System.String"><![CDATA[FraudAnalysis.cs]]></arrayElement>
+                    <arrayElement
+                      dataType="System.String"><![CDATA[UTF8]]></arrayElement>
+                    <arrayElement
+                      dataType="System.String"><![CDATA[using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+
+namespace SC_c1bf493118ae46768fe4c0ed325897be
+{
+    internal class FraudAnalysis
+    {
+        public string ip_countrycode { get; set; }
+        public string ip_region { get; set; }
+        public string payment_retry_count { get; set; }
+        public IList<string> system { get; set; }
+        public string ip_city { get; set; }
+        public bool is_ip_location_and_shipping_location_matches { get; set; }
+        public string ip_countryname { get; set; }
+        public string ip_latitude { get; set; }
+        public string ip_longitude { get; set; }
+        public string manual { get; set; }
+        public string ip_zip { get; set; }
+        public string ip_score { get; set; }
+
+    }
+}
+]]></arrayElement>
+                    <arrayElement
+                      dataType="System.String"><![CDATA[SaleOrderMain.cs]]></arrayElement>
+                    <arrayElement
+                      dataType="System.String"><![CDATA[UTF8]]></arrayElement>
+                    <arrayElement
+                      dataType="System.String"><![CDATA[using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+
+namespace SC_c1bf493118ae46768fe4c0ed325897be
+{
+    internal class SaleOrderMain
+    {
+        public int code { get; set; }
+        public string message { get; set; }
+        public SaleOrder salesorder { get; set; }
+    }
+}
+]]></arrayElement>
+                    <arrayElement
+                      dataType="System.String"><![CDATA[SoCyclePreference.cs]]></arrayElement>
+                    <arrayElement
+                      dataType="System.String"><![CDATA[UTF8]]></arrayElement>
+                    <arrayElement
+                      dataType="System.String"><![CDATA[using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+
+namespace SC_c1bf493118ae46768fe4c0ed325897be
+{
+    internal class SoCyclePreference
+    {
+        public bool is_feature_enabled { get; set; }
+        public string socycle_status { get; set; }
+        public bool can_create_invoice { get; set; }
+        public bool can_create_package { get; set; }
+        public bool can_create_shipment { get; set; }
+        public ShippenPreference shipment_preference { get; set; }
+        public InvoicePreference invoice_preference { get; set; }
+
+    }
+}
+]]></arrayElement>
+                    <arrayElement
+                      dataType="System.String"><![CDATA[Invoices.cs]]></arrayElement>
+                    <arrayElement
+                      dataType="System.String"><![CDATA[UTF8]]></arrayElement>
+                    <arrayElement
+                      dataType="System.String"><![CDATA[using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+
+namespace SC_c1bf493118ae46768fe4c0ed325897be
+{
+    internal class Invoices
+    {
+        public string invoice_id { get; set; }
+        public string invoice_number { get; set; }
+        public string reference_number { get; set; }
+        public string status { get; set; }
+        public string date { get; set; }
+        public string due_date { get; set; }
+        public double total { get; set; }
+        public double balance { get; set; }
+    }
+}
+]]></arrayElement>
+                    <arrayElement
+                      dataType="System.String"><![CDATA[ComponentWrapper.cs]]></arrayElement>
+                    <arrayElement
+                      dataType="System.String"><![CDATA[UTF8]]></arrayElement>
+                    <arrayElement
+                      dataType="System.String"><![CDATA[/* THIS IS AUTO-GENERATED CODE THAT WILL BE OVERWRITTEN! DO NOT EDIT!
+*  Microsoft SQL Server Integration Services component wrapper
+*  This module defines the base class for your component
+*  THIS IS AUTO-GENERATED CODE THAT WILL BE OVERWRITTEN! DO NOT EDIT! */
+
+using System;
+using System.Data;
+using Microsoft.SqlServer.Dts.Pipeline;
+using Microsoft.SqlServer.Dts.Pipeline.Wrapper;
+using Microsoft.SqlServer.Dts.Runtime.Wrapper;
+
+public class UserComponent: ScriptComponent
+{
+    public Connections Connections;
+    public Variables Variables;
+    public UserComponent()
+    {
+        Connections = new Connections(this);
+        Variables = new Variables(this);
+    }
+
+    public Output0Buffer Output0Buffer;
+
+    public virtual void FinishOutputs()
+    {
+    }
+
+    private void MarkOutputsFinished()
+    {
+
+        if (null != Output0Buffer)
+        {
+            Output0Buffer.SetEndOfRowset();
+            Output0Buffer = null;
+        }
+
+    }
+
+    public override void PrimeOutput(int Outputs, int[] OutputIDs, PipelineBuffer[] Buffers, OutputNameMap OutputMap)
+    {
+       for(int Idx = 0; Idx < Outputs; Idx++)
+       {
+            if(OutputIDs[Idx] == GetOutputID(OutputMap, @"Output 0"))
+            {
+                Output0Buffer = new Output0Buffer(Buffers[Idx], GetColumnIndexes(OutputIDs[Idx]), OutputMap);
+            }
+        }
+
+        CreateNewOutputRows();
+
+        FinishOutputs();
+        MarkOutputsFinished();
+
+    }
+
+    public virtual void CreateNewOutputRows()
+    {
+    }
+
+}
+
+public class Connections
+{
+    ScriptComponent ParentComponent;
+
+    public Connections(ScriptComponent Component)
+    {
+        ParentComponent = Component;
+    }
+
+}
+
+public class Variables
+{
+    ScriptComponent ParentComponent;
+
+    public Variables(ScriptComponent Component)
+    {
+        ParentComponent = Component;
+    }
+
+    public String JsonFilePath
+    {
+        get
+        {
+            return (String)(ParentComponent.ReadOnlyVariables["JsonFilePath"].GetValueWithContext(ScriptComponent.EvaluatorContext));
+        }
+    }
+
+    public String UltimaFechaEjecucion
+    {
+        get
+        {
+            return (String)(ParentComponent.ReadOnlyVariables["UltimaFechaEjecucion"].GetValueWithContext(ScriptComponent.EvaluatorContext));
+        }
+    }
+
+}
+]]></arrayElement>
+                    <arrayElement
+                      dataType="System.String"><![CDATA[LineItems.cs]]></arrayElement>
+                    <arrayElement
+                      dataType="System.String"><![CDATA[UTF8]]></arrayElement>
+                    <arrayElement
+                      dataType="System.String"><![CDATA[using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+
+namespace SC_c1bf493118ae46768fe4c0ed325897be
+{
+    internal class LineItems
+    {
+        public string line_item_id { get; set; }
+        public string variant_id { get; set; }
+        public string item_id { get; set; }
+        public bool is_returnable { get; set; }
+        public string product_id { get; set; }
+        public string attribute_name1 { get; set; }
+        public string attribute_name2 { get; set; }
+        public string attribute_name3 { get; set; }
+        public string attribute_option_name1 { get; set; }
+        public string attribute_option_name2 { get; set; }
+        public string attribute_option_name3 { get; set; }
+        public string attribute_option_data1 { get; set; }
+        public string attribute_option_data2 { get; set; }
+        public string attribute_option_data3 { get; set; }
+        public bool is_combo_product { get; set; }
+        public string sku { get; set; }
+        public string name { get; set; }
+        public string group_name { get; set; }
+        public string description { get; set; }
+        public int item_order { get; set; }
+        public double bcy_rate { get; set; }
+        public double rate { get; set; }
+        public string label_rate { get; set; }
+        public double sales_rate { get; set; }
+        public double quantity { get; set; }
+        public double quantity_manuallyfulfilled { get; set; }
+        public string unit { get; set; }
+        public string pricebook_id { get; set; }
+        public string header_id { get; set; }
+        public string header_name { get; set; }
+        public double discount { get; set; }
+        public IList<Object> discounts { get; set; }
+        public string tax_id { get; set; }
+        public string tax_name { get; set; }
+        public string tax_type { get; set; }
+        public double tax_percentage { get; set; }
+        public IList<Object> line_item_taxes { get; set; }
+        public double item_total { get; set; }
+        public double item_sub_total { get; set; }
+        public string product_type { get; set; }
+        public string line_item_type { get; set; }
+        public string item_type { get; set; }
+        public bool is_invoiced { get; set; }
+        public bool is_unconfirmed_product { get; set; }
+        public double stock_on_hand { get; set; }
+        public double available_stock { get; set; }
+        public double committed_stock { get; set; }
+        public double available_for_sale_stock { get; set; }
+        public double actual_available_stock { get; set; }
+        public double actual_committed_stock { get; set; }
+        public double actual_available_for_sale_stock { get; set; }
+        public string image_name { get; set; }
+        public string image_type { get; set; }
+        public string image_document_id { get; set; }
+        public string document_id { get; set; }
+        public IList<Object> item_custom_fields { get; set; }
+        public CustomFieldHash custom_field_hash { get; set; }
+        public double quantity_invoiced { get; set; }
+        public double quantity_packed { get; set; }
+        public double quantity_shipped { get; set; }
+        public double quantity_backordered { get; set; }
+        public double quantity_dropshipped { get; set; }
+        public double quantity_cancelled { get; set; }
+        public double quantity_delivered { get; set; }
+        public PackageDetails package_details { get; set; }
+        public double quantity_invoiced_cancelled { get; set; }
+        public double quantity_returned { get; set; }
+        public int is_fulfillable { get; set; }
+    }
+}
+]]></arrayElement>
+                    <arrayElement
+                      dataType="System.String"><![CDATA[ShippenPreference.cs]]></arrayElement>
+                    <arrayElement
+                      dataType="System.String"><![CDATA[UTF8]]></arrayElement>
+                    <arrayElement
+                      dataType="System.String"><![CDATA[using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+
+namespace SC_c1bf493118ae46768fe4c0ed325897be
+{
+    internal class ShippenPreference
+    {
+        public string default_carrier { get; set; }
+        public bool send_notification { get; set; }
+        public bool deliver_shipments { get; set; }
+    }
+}
+]]></arrayElement>
+                    <arrayElement
+                      dataType="System.String"><![CDATA[Properties\AssemblyInfo.cs]]></arrayElement>
+                    <arrayElement
+                      dataType="System.String"><![CDATA[UTF8]]></arrayElement>
+                    <arrayElement
+                      dataType="System.String"><![CDATA[using System.Reflection;
+using System.Runtime.CompilerServices;
+
+//
+// General Information about an assembly is controlled through the following 
+// set of attributes. Change these attribute values to modify the information
+// associated with an assembly.
+//
+[assembly: AssemblyTitle("SC_c1bf493118ae46768fe4c0ed325897be")]
+[assembly: AssemblyDescription("")]
+[assembly: AssemblyConfiguration("")]
+[assembly: AssemblyCompany("")]
+[assembly: AssemblyProduct("SC_c1bf493118ae46768fe4c0ed325897be")]
+[assembly: AssemblyCopyright("Copyright @  2024")]
+[assembly: AssemblyTrademark("")]
+[assembly: AssemblyCulture("")]
+//
+// Version information for an assembly consists of the following four values:
+//
+//      Major Version
+//      Minor Version 
+//      Build Number
+//      Revision
+//
+// You can specify all the values or you can default the Revision and Build Numbers 
+// by using the '*' as shown below:
+
+[assembly: AssemblyVersion("1.0.0.0")]
+]]></arrayElement>
+                    <arrayElement
+                      dataType="System.String"><![CDATA[Properties\Resources.resx]]></arrayElement>
+                    <arrayElement
+                      dataType="System.String"><![CDATA[UTF8]]></arrayElement>
+                    <arrayElement
+                      dataType="System.String"><![CDATA[<?xml version="1.0" encoding="utf-8"?>
+<root>
+  <!-- 
+    Microsoft ResX Schema 
+    
+    Version 2.0
+    
+    The primary goals of this format is to allow a simple XML format 
+    that is mostly human readable. The generation and parsing of the 
+    various data types are done through the TypeConverter classes 
+    associated with the data types.
+    
+    Example:
+    
+    ... ado.net/XML headers & schema ...
+    <resheader name="resmimetype">text/microsoft-resx</resheader>
+    <resheader name="version">2.0</resheader>
+    <resheader name="reader">System.Resources.ResXResourceReader, System.Windows.Forms, ...</resheader>
+    <resheader name="writer">System.Resources.ResXResourceWriter, System.Windows.Forms, ...</resheader>
+    <data name="Name1"><value>this is my long string</value><comment>this is a comment</comment></data>
+    <data name="Color1" type="System.Drawing.Color, System.Drawing">Blue</data>
+    <data name="Bitmap1" mimetype="application/x-microsoft.net.object.binary.base64">
+        <value>[base64 mime encoded serialized .NET Framework object]</value>
+    </data>
+    <data name="Icon1" type="System.Drawing.Icon, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+        <value>[base64 mime encoded string representing a byte array form of the .NET Framework object]</value>
+        <comment>This is a comment</comment>
+    </data>
+                
+    There are any number of "resheader" rows that contain simple 
+    name/value pairs.
+    
+    Each data row contains a name, and value. The row also contains a 
+    type or mimetype. Type corresponds to a .NET class that support 
+    text/value conversion through the TypeConverter architecture. 
+    Classes that don't support this are serialized and stored with the 
+    mimetype set.
+    
+    The mimetype is used for serialized objects, and tells the 
+    ResXResourceReader how to depersist the object. This is currently not 
+    extensible. For a given mimetype the value must be set accordingly:
+    
+    Note - application/x-microsoft.net.object.binary.base64 is the format 
+    that the ResXResourceWriter will generate, however the reader can 
+    read any of the formats listed below.
+    
+    mimetype: application/x-microsoft.net.object.binary.base64
+    value   : The object must be serialized with 
+            : System.Serialization.Formatters.Binary.BinaryFormatter
+            : and then encoded with base64 encoding.
+    
+    mimetype: application/x-microsoft.net.object.soap.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Soap.SoapFormatter
+            : and then encoded with base64 encoding.
+
+    mimetype: application/x-microsoft.net.object.bytearray.base64
+    value   : The object must be serialized into a byte array 
+            : using a System.ComponentModel.TypeConverter
+            : and then encoded with base64 encoding.
+    -->
+  <xsd:schema id="root" xmlns="" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+    <xsd:element name="root" msdata:IsDataSet="true">
+      <xsd:complexType>
+        <xsd:choice maxOccurs="unbounded">
+          <xsd:element name="metadata">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" />
+              <xsd:attribute name="type" type="xsd:string" />
+              <xsd:attribute name="mimetype" type="xsd:string" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="assembly">
+            <xsd:complexType>
+              <xsd:attribute name="alias" type="xsd:string" />
+              <xsd:attribute name="name" type="xsd:string" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="data">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+                <xsd:element name="comment" type="xsd:string" minOccurs="0" msdata:Ordinal="2" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" msdata:Ordinal="1" />
+              <xsd:attribute name="type" type="xsd:string" msdata:Ordinal="3" />
+              <xsd:attribute name="mimetype" type="xsd:string" msdata:Ordinal="4" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="resheader">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" />
+            </xsd:complexType>
+          </xsd:element>
+        </xsd:choice>
+      </xsd:complexType>
+    </xsd:element>
+  </xsd:schema>
+  <resheader name="resmimetype">
+    <value>text/microsoft-resx</value>
+  </resheader>
+  <resheader name="version">
+    <value>2.0</value>
+  </resheader>
+  <resheader name="reader">
+    <value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <resheader name="writer">
+    <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+</root>]]></arrayElement>
+                    <arrayElement
+                      dataType="System.String"><![CDATA[Payments.cs]]></arrayElement>
+                    <arrayElement
+                      dataType="System.String"><![CDATA[UTF8]]></arrayElement>
+                    <arrayElement
+                      dataType="System.String"><![CDATA[using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+
+namespace SC_c1bf493118ae46768fe4c0ed325897be
+{
+    internal class Payments
+    {
+        public string payment_id { get; set; }
+        public string payment_mode { get; set; }
+        public string payment_mode_id { get; set; }
+        public double amount { get; set; }
+        public string date { get; set; }
+        public string offline_created_date_with_time { get; set; }
+        public string description { get; set; }
+        public string reference_number { get; set; }
+        public string account_id { get; set; }
+        public string account_name { get; set; }
+        public bool is_paymentgateway_refund_supported { get; set; }
+        public string payment_gateway { get; set; }
+        public string online_transaction_id { get; set; }
+        public string payment_type { get; set; }
+    }
+}
+]]></arrayElement>
+                    <arrayElement
+                      dataType="System.String"><![CDATA[ShippingDetails.cs]]></arrayElement>
+                    <arrayElement
+                      dataType="System.String"><![CDATA[UTF8]]></arrayElement>
+                    <arrayElement
+                      dataType="System.String"><![CDATA[using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+
+namespace SC_c1bf493118ae46768fe4c0ed325897be
+{
+    internal class ShippingDetails
+    {
+        public int shipping_rate { get; set; }
+        public string name { get; set; }
+        public string shipping_charge_id { get; set; }
+        public string delivery_title { get; set; }
+    }
+}
+]]></arrayElement>
+                    <arrayElement
+                      dataType="System.String"><![CDATA[ShippingOrder.cs]]></arrayElement>
+                    <arrayElement
+                      dataType="System.String"><![CDATA[UTF8]]></arrayElement>
+                    <arrayElement
+                      dataType="System.String"><![CDATA[using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+
+namespace SC_c1bf493118ae46768fe4c0ed325897be
+{
+    internal class ShippingOrder
+    {
+        public string shipment_id { get; set; }
+        public string shipment_number { get; set; }
+        public string shipment_date { get; set; }
+        public DateTime shipment_date_with_time { get; set; }
+        public string tracking_number { get; set; }
+        public string delivery_date { get; set; }
+        public DateTime delivery_date_with_time { get; set; }
+        public string shipment_type { get; set; }
+        public int associated_packages_count { get; set; }
+        public string carrier { get; set; }
+        public string service { get; set; }
+        public string delivery_days { get; set; }
+        public bool delivery_guarantee { get; set; }
+        public string tracking_url { get; set; }
+        public bool is_carrier_shipment { get; set; }
+    }
+}
+]]></arrayElement>
+                    <arrayElement
+                      dataType="System.String"><![CDATA[OfflinePaymentDetails.cs]]></arrayElement>
+                    <arrayElement
+                      dataType="System.String"><![CDATA[UTF8]]></arrayElement>
+                    <arrayElement
+                      dataType="System.String"><![CDATA[using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+
+namespace SC_c1bf493118ae46768fe4c0ed325897be
+{
+    internal class OfflinePaymentDetails
+    {
+        public string payment_mode { get; set; }
+        public string payment_id { get; set; }
+        public string reference_number { get; set; }
+    }
+
+}
+]]></arrayElement>
+                    <arrayElement
+                      dataType="System.String"><![CDATA[Risks.cs]]></arrayElement>
+                    <arrayElement
+                      dataType="System.String"><![CDATA[UTF8]]></arrayElement>
+                    <arrayElement
+                      dataType="System.String"><![CDATA[using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+
+namespace SC_c1bf493118ae46768fe4c0ed325897be
+{
+    internal class Risks
+    {
+        public string message { get; set; }
+    }
+
+}
+]]></arrayElement>
+                    <arrayElement
+                      dataType="System.String"><![CDATA[main.cs]]></arrayElement>
+                    <arrayElement
+                      dataType="System.String"><![CDATA[UTF8]]></arrayElement>
+                    <arrayElement
+                      dataType="System.String"><![CDATA[#region Help:  Introduction to the Script Component
+/* The Script Component allows you to perform virtually any operation that can be accomplished in
+ * a .Net application within the context of an Integration Services data flow.
+ *
+ * Expand the other regions which have "Help" prefixes for examples of specific ways to use
+ * Integration Services features within this script component. */
+#endregion
+
+#region Namespaces
+using System;
+using System.Collections.Generic;
+using System.IO;
+using System.Linq;
+using System.Web.Script.Serialization;
+using Newtonsoft.Json;
+using SC_c1bf493118ae46768fe4c0ed325897be;
+#endregion
+
+
+[Microsoft.SqlServer.Dts.Pipeline.SSISScriptComponentEntryPointAttribute]
+public class ScriptMain : UserComponent
+{
+    #region Help:  Using Integration Services variables and parameters
+    /* To use a variable in this script, first ensure that the variable has been added to
+     * either the list contained in the ReadOnlyVariables property or the list contained in
+     * the ReadWriteVariables property of this script component, according to whether or not your
+     * code needs to write into the variable.  To do so, save this script, close this instance of
+     * Visual Studio, and update the ReadOnlyVariables and ReadWriteVariables properties in the
+     * Script Transformation Editor window.
+     * To use a parameter in this script, follow the same steps. Parameters are always read-only.
+     *
+     * Example of reading from a variable or parameter:
+     *  DateTime startTime = Variables.MyStartTime;
+     *
+     * Example of writing to a variable:
+     *  Variables.myStringVariable = "new value";
+     */
+    #endregion
+
+    #region Help:  Using Integration Services Connnection Managers
+    /* Some types of connection managers can be used in this script component.  See the help topic
+     * "Working with Connection Managers Programatically" for details.
+     *
+     * To use a connection manager in this script, first ensure that the connection manager has
+     * been added to either the list of connection managers on the Connection Managers page of the
+     * script component editor.  To add the connection manager, save this script, close this instance of
+     * Visual Studio, and add the Connection Manager to the list.
+     *
+     * If the component needs to hold a connection open while processing rows, override the
+     * AcquireConnections and ReleaseConnections methods.
+     * 
+     * Example of using an ADO.Net connection manager to acquire a SqlConnection:
+     *  object rawConnection = Connections.SalesDB.AcquireConnection(transaction);
+     *  SqlConnection salesDBConn = (SqlConnection)rawConnection;
+     *
+     * Example of using a File connection manager to acquire a file path:
+     *  object rawConnection = Connections.Prices_zip.AcquireConnection(transaction);
+     *  string filePath = (string)rawConnection;
+     *
+     * Example of releasing a connection manager:
+     *  Connections.SalesDB.ReleaseConnection(rawConnection);
+     */
+    #endregion
+
+    #region Help:  Firing Integration Services Events
+    /* This script component can fire events.
+     *
+     * Example of firing an error event:
+     *  ComponentMetaData.FireError(10, "Process Values", "Bad value", "", 0, out cancel);
+     *
+     * Example of firing an information event:
+     *  ComponentMetaData.FireInformation(10, "Process Values", "Processing has started", "", 0, fireAgain);
+     *
+     * Example of firing a warning event:
+     *  ComponentMetaData.FireWarning(10, "Process Values", "No rows were received", "", 0);
+     */
+    #endregion
+
+
+    public override void PreExecute()
+    {
+        base.PreExecute();
+    }
+
+
+    public override void PostExecute()
+    {
+        base.PostExecute();
+    }
+
+    private DateTime ConvertUnixTimeToDate(string sentTime)
+    {
+        long sentTimeMillis = long.Parse(sentTime);
+        DateTimeOffset dateTimeOffset = DateTimeOffset.FromUnixTimeMilliseconds(sentTimeMillis);
+        return dateTimeOffset.DateTime.Date;
+    }
+
+
+    public override void CreateNewOutputRows()
+    {
+        String ultimaFechaEjecucion = Variables.UltimaFechaEjecucion;
+        DateTime fechaEjecucion = DateTime.Parse(ultimaFechaEjecucion);
+
+        String filePath = Variables.JsonFilePath;
+        String jsonContent = File.ReadAllText(filePath);
+
+        JavaScriptSerializer jsonSerializer = new JavaScriptSerializer();
+
+        try
+        {
+            List<Campaing> campaigns = JsonConvert.DeserializeObject<List<Campaing>>(jsonContent);
+
+            List<Campaing> filterCampaigns = campaigns.FindAll(campaing =>
+            {
+                DateTime sentTime = DateTimeOffset.FromUnixTimeMilliseconds(long.Parse(campaing.campaign_details.First().sent_time)).DateTime;
+                return sentTime >= fechaEjecucion;
+            });
+
+            foreach (Campaing campaing in filterCampaigns)
+            {
+                CampaignDetail campaignDetail = campaing.campaign_details.First();
+                CampaignReport campaignReport = campaing.campaign_reports.First();
+
+                Output0Buffer.AddRow();
+                Output0Buffer.CampaniaId = campaignDetail.campaign_key;
+                Output0Buffer.FechaEnvio = ConvertUnixTimeToDate(campaignDetail.sent_time);
+                Output0Buffer.Aperturas = int.Parse(campaignReport.opens_count);
+                Output0Buffer.ClicsUnicos = int.Parse(campaignReport.unique_clicks_count);
+                Output0Buffer.CorreosEnviados = int.Parse(campaignReport.emails_sent_count);
+                Output0Buffer.RebotesPermanentes = int.Parse(campaignReport.hardbounce_count);
+                Output0Buffer.NoAbiertos = int.Parse(campaignReport.unopened);
+                Output0Buffer.NoEnviados = int.Parse(campaignReport.unsent_count);
+                Output0Buffer.MarcadosComoSpam = int.Parse(campaignReport.spams_count);
+                Output0Buffer.Entregados = int.Parse(campaignReport.delivered_count);
+                Output0Buffer.Quejas = int.Parse(campaignReport.complaints_count);
+                Output0Buffer.RespuestasAutomaticas = int.Parse(campaignReport.autoreply_count);
+                Output0Buffer.RebotesTemporales = int.Parse(campaignReport.softbounce_count);
+                Output0Buffer.Rebotes = int.Parse(campaignReport.bounces_count);
+                Output0Buffer.Reenvios = int.Parse(campaignReport.forwards_count);
+            }
+
+        }
+        catch (ArgumentNullException exc)
+        {
+            throw exc;
+        }
+
+    }
+
+}
+]]></arrayElement>
+                    <arrayElement
+                      dataType="System.String"><![CDATA[CustomFieldHash.cs]]></arrayElement>
+                    <arrayElement
+                      dataType="System.String"><![CDATA[UTF8]]></arrayElement>
+                    <arrayElement
+                      dataType="System.String"><![CDATA[using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+
+namespace SC_c1bf493118ae46768fe4c0ed325897be
+{
+    internal class CustomFieldHash
+    {
+    }
+}
+]]></arrayElement>
+                    <arrayElement
+                      dataType="System.String"><![CDATA[Properties\Settings.settings]]></arrayElement>
+                    <arrayElement
+                      dataType="System.String"><![CDATA[UTF8]]></arrayElement>
+                    <arrayElement
+                      dataType="System.String"><![CDATA[<?xml version='1.0' encoding='iso-8859-1'?>
+<SettingsFile xmlns="uri:settings" CurrentProfile="(Default)">
+  <Profiles>
+    <Profile Name="(Default)" />
+  </Profiles>
+  <Settings />
+</SettingsFile>]]></arrayElement>
+                    <arrayElement
+                      dataType="System.String"><![CDATA[SaleOrder.cs]]></arrayElement>
+                    <arrayElement
+                      dataType="System.String"><![CDATA[UTF8]]></arrayElement>
+                    <arrayElement
+                      dataType="System.String"><![CDATA[using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+
+namespace SC_c1bf493118ae46768fe4c0ed325897be
+{
+    internal class SaleOrder
+    {
+        public string salesorder_id { get; set; }
+        public string order_summary { get; set; }
+        public string coupon_id { get; set; }
+        public string coupon_code { get; set; }
+        public IList<Object> documents { get; set; }
+        public string zcrm_potential_id { get; set; }
+        public string zcrm_potential_name { get; set; }
+        public string salesorder_number { get; set; }
+        public string date { get; set; }
+        public string offline_created_date_with_time { get; set; }
+        public string tracking_url { get; set; }
+        public bool has_discount { get; set; }
+        public string status { get; set; }
+        public string color_code { get; set; }
+        public string current_sub_status_id { get; set; }
+        public string current_sub_status { get; set; }
+        public IList<Object> sub_statuses { get; set; }
+        public string shipment_date { get; set; }
+        public string reference_number { get; set; }
+        public string customer_id { get; set; }
+        public string customer_name { get; set; }
+        public string company_name { get; set; }
+        public IList<string> contact_persons { get; set; }
+        public IList<ContactPerson> contact_person_details { get; set; }
+        public string source { get; set; }
+        public string contact_category { get; set; }
+        public bool has_shipping_address { get; set; }
+        public string currency_id { get; set; }
+        public string currency_code { get; set; }
+        public string currency_symbol { get; set; }
+        public double exchange_rate { get; set; }
+        public bool is_discount_before_tax { get; set; }
+        public string discount_type { get; set; }
+        public string estimate_id { get; set; }
+        public string delivery_method { get; set; }
+        public string delivery_method_id { get; set; }
+        public bool is_inclusive_tax { get; set; }
+        public string tax_rounding { get; set; }
+        public string tax_override_preference { get; set; }
+        public string tds_override_preference { get; set; }
+        public string order_status { get; set; }
+        public string invoiced_status { get; set; }
+        public string paid_status { get; set; }
+        public string shipped_status { get; set; }
+        public string sales_channel { get; set; }
+        public string sales_channel_formatted { get; set; }
+        public string account_identifier { get; set; }
+        public string integration_id { get; set; }
+        public bool is_dropshipped { get; set; }
+        public bool is_backordered { get; set; }
+        public bool is_manually_fulfilled { get; set; }
+        public bool can_manually_fulfill { get; set; }
+        public bool has_qty_cancelled { get; set; }
+        public bool is_possible_fraud_transaction { get; set; }
+        public ShippingDetails shipping_details { get; set; }
+        public IList<Risks> risks { get; set; }
+        public FraudAnalysis fraud_analysis { get; set; }
+        public string checkout_ip { get; set; }
+        public string payment_mode { get; set; }
+        public bool is_offline_payment { get; set; }
+        public OfflinePaymentDetails offline_payment_details { get; set; }
+        public string created_by_email { get; set; }
+        public string created_by_name { get; set; }
+        public bool can_process_in_store { get; set; }
+        public double total_quantity { get; set; }
+        public IList<LineItems> line_items { get; set; }
+        public string entity_tags { get; set; }
+        public bool is_tax_on_shipping_enabled { get; set; }
+        public string submitter_id { get; set; }
+        public string approver_id { get; set; }
+        public string submitted_date { get; set; }
+        public string submitted_by { get; set; }
+        public string submitted_by_name { get; set; }
+        public string submitted_by_email { get; set; }
+        public string submitted_by_photo_url { get; set; }
+        public int price_precision { get; set; }
+        public bool is_emailed { get; set; }
+        public bool has_unconfirmed_line_item { get; set; }
+        public IList<Object> picklists { get; set; }
+        public IList<Object> purchaseorders { get; set; }
+        public string billing_address_id { get; set; }
+        public BillingAddress billing_address { get; set; }
+        public string shipping_address_id { get; set; }
+        public ShippingAddress shipping_address { get; set; }
+        public PickupLocation pickup_location { get; set; }
+        public bool is_test_order { get; set; }
+        public string notes { get; set; }
+        public string terms { get; set; }
+        public int payment_terms { get; set; }
+        public string payment_terms_label { get; set; }
+        public IList<Object> custom_fields { get; set; }
+        public CustomFieldHash custom_field_hash { get; set; }
+        public string template_id { get; set; }
+        public string template_name { get; set; }
+        public string page_width { get; set; }
+        public string page_height { get; set; }
+        public string orientation { get; set; }
+        public string template_type { get; set; }
+        public DateTime created_time { get; set; }
+        public DateTime last_modified_time { get; set; }
+        public string created_by_id { get; set; }
+        public string created_date { get; set; }
+        public string last_modified_by_id { get; set; }
+        public string attachment_name { get; set; }
+        public bool can_send_in_mail { get; set; }
+        public string salesperson_id { get; set; }
+        public string salesperson_name { get; set; }
+        public string merchant_id { get; set; }
+        public string merchant_name { get; set; }
+        public string pickup_location_id { get; set; }
+        public double discount_amount { get; set; }
+        public string discount { get; set; }
+        public double discount_applied_on_amount { get; set; }
+        public bool is_adv_tracking_in_package { get; set; }
+        public OndcRelatedDetails ondc_related_details { get; set; }
+        public ShippingCharges shipping_charges { get; set; }
+        public string shipping_charge_tax_id { get; set; }
+        public string shipping_charge_tax_name { get; set; }
+        public string shipping_charge_tax_type { get; set; }
+        public string shipping_charge_tax_percentage { get; set; }
+        public string shipping_charge_tax { get; set; }
+        public string bcy_shipping_charge_tax { get; set; }
+        public double shipping_charge_exclusive_of_tax { get; set; }
+        public double shipping_charge_inclusive_of_tax { get; set; }
+        public string shipping_charge_tax_formatted { get; set; }
+        public string shipping_charge_exclusive_of_tax_formatted { get; set; }
+        public string shipping_charge_inclusive_of_tax_formatted { get; set; }
+        public double shipping_charge { get; set; }
+        public IList<Object> live_rate_package_details { get; set; }
+        public double bcy_shipping_charge { get; set; }
+        public double adjustment { get; set; }
+        public double bcy_adjustment { get; set; }
+        public string adjustment_description { get; set; }
+        public double roundoff_value { get; set; }
+        public string transaction_rounding_type { get; set; }
+        public double sub_total { get; set; }
+        public double bcy_sub_total { get; set; }
+        public double sub_total_inclusive_of_tax { get; set; }
+        public double sub_total_exclusive_of_discount { get; set; }
+        public double discount_total { get; set; }
+        public double bcy_discount_total { get; set; }
+        public double discount_percent { get; set; }
+        public double tax_total { get; set; }
+        public double bcy_tax_total { get; set; }
+        public double total { get; set; }
+        public string computation_type { get; set; }
+        public double bcy_total { get; set; }
+        public IList<Object> taxes { get; set; }
+        public string tds_calculation_type { get; set; }
+        public IList<Packages> packages { get; set; }
+        public SoCyclePreference so_cycle_preference { get; set; }
+        public IList<Invoices> invoices { get; set; }
+        public IList<Object> salesreturns { get; set; }
+        public IList<Payments> payments { get; set; }
+        public StorefrontPayment storefront_payment { get; set; }
+        public IList<Object> creditnotes { get; set; }
+        public IList<Object> refunds { get; set; }
+        public Contact contact { get; set; }
+        public double refundable_amount { get; set; }
+        public double balance { get; set; }
+        public IList<Object> approvers_list { get; set; }
+    }
+}
+]]></arrayElement>
+                    <arrayElement
+                      dataType="System.String"><![CDATA[OndcRelatedDetails.cs]]></arrayElement>
+                    <arrayElement
+                      dataType="System.String"><![CDATA[UTF8]]></arrayElement>
+                    <arrayElement
+                      dataType="System.String"><![CDATA[using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+
+namespace SC_c1bf493118ae46768fe4c0ed325897be
+{
+    internal class OndcRelatedDetails
+    {
+    }
+}
+]]></arrayElement>
+                    <arrayElement
+                      dataType="System.String"><![CDATA[PackageDetails.cs]]></arrayElement>
+                    <arrayElement
+                      dataType="System.String"><![CDATA[UTF8]]></arrayElement>
+                    <arrayElement
+                      dataType="System.String"><![CDATA[using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+
+namespace SC_c1bf493118ae46768fe4c0ed325897be
+{
+    internal class PackageDetails
+    {
+        public string length { get; set; }
+        public string width { get; set; }
+        public string height { get; set; }
+        public string weight { get; set; }
+        public string weight_unit { get; set; }
+        public string dimension_unit { get; set; }
+
+    }
+}
+]]></arrayElement>
+                    <arrayElement
+                      dataType="System.String"><![CDATA[ContactPerson.cs]]></arrayElement>
+                    <arrayElement
+                      dataType="System.String"><![CDATA[UTF8]]></arrayElement>
+                    <arrayElement
+                      dataType="System.String"><![CDATA[using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+
+namespace SC_c1bf493118ae46768fe4c0ed325897be
+{
+    internal class ContactPerson
+    {
+        public string phone { get; set; }
+        public string mobile { get; set; }
+        public string last_name { get; set; }
+        public string contact_person_id { get; set; }
+        public string first_name { get; set; }
+        public string email { get; set; }
+    }
+}
+]]></arrayElement>
+                    <arrayElement
+                      dataType="System.String"><![CDATA[Properties\Settings.Designer.cs]]></arrayElement>
+                    <arrayElement
+                      dataType="System.String"><![CDATA[UTF8]]></arrayElement>
+                    <arrayElement
+                      dataType="System.String"><![CDATA[//------------------------------------------------------------------------------
+// <auto-generated>
+//     This code was generated by a tool.
+//
+//     Changes to this file may cause incorrect behavior and will be lost if
+//     the code is regenerated.
+// </auto-generated>
+//------------------------------------------------------------------------------
+
+[assembly: global::System.Diagnostics.CodeAnalysis.SuppressMessageAttribute("Microsoft.Performance", "CA1811:AvoidUncalledPrivateCode", Scope="member", Target="SC_c1bf493118ae46768fe4c0ed325897be.Properties.Settings.get_Default():SC_c1bf493118ae46768fe4c0ed325897be.Properties.Sett" +
+    "ings")]
+
+namespace SC_c1bf493118ae46768fe4c0ed325897be.Properties {
+    
+    
+    internal sealed partial class Settings : global::System.Configuration.ApplicationSettingsBase {
+        
+        [global::System.Runtime.CompilerServices.CompilerGeneratedAttribute()]
+        private static Settings defaultInstance = new Settings();
+        
+        public static Settings Default {
+            get {
+                return defaultInstance;
+            }
+        }
+    }
+}
+]]></arrayElement>
+                    <arrayElement
+                      dataType="System.String"><![CDATA[Properties\Resources.Designer.cs]]></arrayElement>
+                    <arrayElement
+                      dataType="System.String"><![CDATA[UTF8]]></arrayElement>
+                    <arrayElement
+                      dataType="System.String"><![CDATA[//------------------------------------------------------------------------------
+// <auto-generated>
+//     This code was generated by a tool.
+//
+//     Changes to this file may cause incorrect behavior and will be lost if
+//     the code is regenerated.
+// </auto-generated>
+//------------------------------------------------------------------------------
+
+[assembly: global::System.Diagnostics.CodeAnalysis.SuppressMessageAttribute("Microsoft.Performance", "CA1811:AvoidUncalledPrivateCode", Scope="member", Target="SC_c1bf493118ae46768fe4c0ed325897be.Properties.Resources.get_ResourceManager():System.Resources.Resou" +
+    "rceManager")]
+[assembly: global::System.Diagnostics.CodeAnalysis.SuppressMessageAttribute("Microsoft.Performance", "CA1811:AvoidUncalledPrivateCode", Scope="member", Target="SC_c1bf493118ae46768fe4c0ed325897be.Properties.Resources.get_Culture():System.Globalization.CultureIn" +
+    "fo")]
+[assembly: global::System.Diagnostics.CodeAnalysis.SuppressMessageAttribute("Microsoft.Performance", "CA1811:AvoidUncalledPrivateCode", Scope="member", Target="SC_c1bf493118ae46768fe4c0ed325897be.Properties.Resources.set_Culture(System.Globalization.CultureInfo" +
+    "):Void")]
+
+namespace SC_c1bf493118ae46768fe4c0ed325897be.Properties {
+    
+    
+    /// <summary>
+    ///   A strongly-typed resource class, for looking up localized strings, etc.
+    /// </summary>
+    // This class was auto-generated by the StronglyTypedResourceBuilder
+    // class via a tool like ResGen or Visual Studio.
+    // To add or remove a member, edit your .ResX file then rerun ResGen
+    // with the /str option, or rebuild your VS project.
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+    internal class Resources {
+        
+        private static global::System.Resources.ResourceManager resourceMan;
+        
+        private static global::System.Globalization.CultureInfo resourceCulture;
+        
+        [global::System.Diagnostics.CodeAnalysis.SuppressMessageAttribute("Microsoft.Performance", "CA1811:AvoidUncalledPrivateCode")]
+        internal Resources() {
+        }
+        
+        /// <summary>
+        ///   Returns the cached ResourceManager instance used by this class.
+        /// </summary>
+        [global::System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+        internal static global::System.Resources.ResourceManager ResourceManager {
+            get {
+                if ((resourceMan == null)) {
+                    global::System.Resources.ResourceManager temp = new global::System.Resources.ResourceManager("SC_c1bf493118ae46768fe4c0ed325897be.Properties.Resources", typeof(Resources).Assembly);
+                    resourceMan = temp;
+                }
+                return resourceMan;
+            }
+        }
+        
+        /// <summary>
+        ///   Overrides the current thread's CurrentUICulture property for all
+        ///   resource lookups using this strongly typed resource class.
+        /// </summary>
+        [global::System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+        internal static global::System.Globalization.CultureInfo Culture {
+            get {
+                return resourceCulture;
+            }
+            set {
+                resourceCulture = value;
+            }
+        }
+    }
+}
+]]></arrayElement>
+                    <arrayElement
+                      dataType="System.String"><![CDATA[Packages.cs]]></arrayElement>
+                    <arrayElement
+                      dataType="System.String"><![CDATA[UTF8]]></arrayElement>
+                    <arrayElement
+                      dataType="System.String"><![CDATA[using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+
+namespace SC_c1bf493118ae46768fe4c0ed325897be
+{
+    internal class Packages
+    {
+        public string package_id { get; set; }
+        public string package_number { get; set; }
+        public string date { get; set; }
+        public string status { get; set; }
+        public string detailed_status { get; set; }
+        public string status_message { get; set; }
+        public string shipment_id { get; set; }
+        public string shipment_number { get; set; }
+        public string shipment_status { get; set; }
+        public string carrier { get; set; }
+        public string service { get; set; }
+        public string tracking_number { get; set; }
+        public string shipment_date { get; set; }
+        public string delivery_days { get; set; }
+        public bool delivery_guarantee { get; set; }
+        public string delivery_method { get; set; }
+        public double quantity { get; set; }
+        public bool is_tracking_enabled { get; set; }
+        public ShippingOrder shipment_order { get; set; }
+    }
+}
+]]></arrayElement>
+                    <arrayElement
+                      dataType="System.String"><![CDATA[InvoicePreference.cs]]></arrayElement>
+                    <arrayElement
+                      dataType="System.String"><![CDATA[UTF8]]></arrayElement>
+                    <arrayElement
+                      dataType="System.String"><![CDATA[using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+
+namespace SC_c1bf493118ae46768fe4c0ed325897be
+{
+    internal class InvoicePreference
+    {
+        public bool mark_as_sent { get; set; }
+        public bool record_payment { get; set; }
+        public string payment_type { get; set; }
+    }
+}
+]]></arrayElement>
+                    <arrayElement
+                      dataType="System.String"><![CDATA[BillingAddress.cs]]></arrayElement>
+                    <arrayElement
+                      dataType="System.String"><![CDATA[UTF8]]></arrayElement>
+                    <arrayElement
+                      dataType="System.String"><![CDATA[using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+
+namespace SC_c1bf493118ae46768fe4c0ed325897be
+{
+    internal class BillingAddress
+    {
+        public string address { get; set; }
+        public string street2 { get; set; }
+        public string city { get; set; }
+        public string state { get; set; }
+        public string zip { get; set; }
+        public string country { get; set; }
+        public string country_code { get; set; }
+        public string state_code { get; set; }
+        public string fax { get; set; }
+        public string phone { get; set; }
+        public string attention { get; set; }
+    }
+}
+]]></arrayElement>
+                    <arrayElement
+                      dataType="System.String"><![CDATA[Contact.cs]]></arrayElement>
+                    <arrayElement
+                      dataType="System.String"><![CDATA[UTF8]]></arrayElement>
+                    <arrayElement
+                      dataType="System.String"><![CDATA[using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+
+namespace SC_c1bf493118ae46768fe4c0ed325897be
+{
+    internal class Contact
+    {
+        public double customer_balance { get; set; }
+        public double credit_limit { get; set; }
+        public double unused_customer_credits { get; set; }
+        public bool is_credit_limit_migration_completed { get; set; }
+    }
+}
+]]></arrayElement>
+                    <arrayElement
+                      dataType="System.String"><![CDATA[SC_c1bf493118ae46768fe4c0ed325897be.csproj]]></arrayElement>
+                    <arrayElement
+                      dataType="System.String"><![CDATA[UTF8]]></arrayElement>
+                    <arrayElement
+                      dataType="System.String"><![CDATA[<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <ProjectTypeGuids>{30D016F9-3734-4E33-A861-5E7D899E18F3};{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}</ProjectTypeGuids>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>8.0.30703</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{E0B9F041-3243-43E6-8951-37C936F78A68}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>SC_c1bf493118ae46768fe4c0ed325897be</RootNamespace>
+    <AssemblyName>SC_c1bf493118ae46768fe4c0ed325897be</AssemblyName>
+    <TargetFrameworkVersion>v4.7</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <ResolveAssemblyReferenceIgnoreTargetFrameworkAttributeVersionMismatch>true</ResolveAssemblyReferenceIgnoreTargetFrameworkAttributeVersionMismatch>
+    <TargetFrameworkProfile></TargetFrameworkProfile>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)' == 'Debug' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>.\bin\Debug\</OutputPath>
+    <EnableUnmanagedDebugging>false</EnableUnmanagedDebugging>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)' == 'Release' ">
+    <DebugSymbols>false</DebugSymbols>
+    <Optimize>true</Optimize>
+    <OutputPath>.\bin\Release\</OutputPath>
+    <EnableUnmanagedDebugging>false</EnableUnmanagedDebugging>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Compile Include="CampaignReport.cs" />
+    <Compile Include="CustomFieldHash.cs" />
+    <Compile Include="Campaing.cs" />
+    <Compile Include="CampaignDetail.cs" />
+    <Reference Include="Microsoft.Bcl.AsyncInterfaces, Version=8.0.0.0, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51, processorArchitecture=MSIL">
+      <HintPath>C:\Users\Eduardo\AppData\Local\Temp\Vsta\SSIS_SC160\Vsta8rwAtxk4MEy1BjWyHaK5pw\packages\Microsoft.Bcl.AsyncInterfaces.8.0.0\lib\net462\Microsoft.Bcl.AsyncInterfaces.dll</HintPath>
+    </Reference>
+    <Reference Include="Newtonsoft.Json, Version=13.0.0.0, Culture=neutral, PublicKeyToken=30ad4fe6b2a6aeed, processorArchitecture=MSIL">
+      <HintPath>C:\Users\Eduardo\.nuget\packages\newtonsoft.json\13.0.3\lib\net45\Newtonsoft.Json.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Buffers, Version=4.0.3.0, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51, processorArchitecture=MSIL">
+      <HintPath>C:\Users\Eduardo\AppData\Local\Temp\Vsta\SSIS_SC160\Vsta8rwAtxk4MEy1BjWyHaK5pw\packages\System.Buffers.4.5.1\lib\net461\System.Buffers.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Data" />
+    <Reference Include="System.Memory, Version=4.0.1.2, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51, processorArchitecture=MSIL">
+      <HintPath>C:\Users\Eduardo\AppData\Local\Temp\Vsta\SSIS_SC160\Vsta8rwAtxk4MEy1BjWyHaK5pw\packages\System.Memory.4.5.5\lib\net461\System.Memory.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Numerics" />
+    <Reference Include="System.Numerics.Vectors, Version=4.1.4.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+      <HintPath>C:\Users\Eduardo\AppData\Local\Temp\Vsta\SSIS_SC160\Vsta8rwAtxk4MEy1BjWyHaK5pw\packages\System.Numerics.Vectors.4.5.0\lib\net46\System.Numerics.Vectors.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Runtime.CompilerServices.Unsafe, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+      <HintPath>C:\Users\Eduardo\AppData\Local\Temp\Vsta\SSIS_SC160\Vsta8rwAtxk4MEy1BjWyHaK5pw\packages\System.Runtime.CompilerServices.Unsafe.6.0.0\lib\net461\System.Runtime.CompilerServices.Unsafe.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Runtime.Serialization" />
+    <Reference Include="System.Text.Encodings.Web, Version=8.0.0.0, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51, processorArchitecture=MSIL">
+      <HintPath>C:\Users\Eduardo\AppData\Local\Temp\Vsta\SSIS_SC160\Vsta8rwAtxk4MEy1BjWyHaK5pw\packages\System.Text.Encodings.Web.8.0.0\lib\net462\System.Text.Encodings.Web.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Threading.Tasks.Extensions, Version=4.2.0.1, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51, processorArchitecture=MSIL">
+      <HintPath>C:\Users\Eduardo\AppData\Local\Temp\Vsta\SSIS_SC160\Vsta8rwAtxk4MEy1BjWyHaK5pw\packages\System.Threading.Tasks.Extensions.4.5.4\lib\net461\System.Threading.Tasks.Extensions.dll</HintPath>
+    </Reference>
+    <Reference Include="System.ValueTuple, Version=4.0.3.0, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51, processorArchitecture=MSIL">
+      <HintPath>C:\Users\Eduardo\AppData\Local\Temp\Vsta\SSIS_SC160\Vsta8rwAtxk4MEy1BjWyHaK5pw\packages\System.ValueTuple.4.5.0\lib\net47\System.ValueTuple.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.Extensions" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+    <Reference Include="Microsoft.SqlServer.TxScript, Version=16.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91" />
+    <Reference Include="Microsoft.SqlServer.DTSRuntimeWrap, Version=16.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91" />
+    <Reference Include="Microsoft.SqlServer.DTSPipelineWrap, Version=16.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91" />
+    <Reference Include="Microsoft.SqlServer.PipelineHost, Version=16.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91" />
+    <Compile Include="main.cs" />
+    <Compile Include="BufferWrapper.cs" />
+    <Compile Include="ComponentWrapper.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <AppDesigner Include="Properties\" />
+    <Compile Include="Properties\AssemblyInfo.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <None Include="app.config" />
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <PackageReference Include="Newtonsoft.Json">
+      <Version>13.0.3</Version>
+    </PackageReference>
+  </ItemGroup>
+  <!-- Include the build rules for a C# project.-->
+  <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
+  <!-- This section defines VSTA properties that describe the host-changable project properties. -->
+  <ProjectExtensions>
+    <VisualStudio>
+      <FlavorProperties GUID="{30D016F9-3734-4E33-A861-5E7D899E18F3}">
+        <ProjectProperties HostName="VSTAHostName" HostPackage="{B3A685AA-7EAF-4BC6-9940-57959FA5AC07}" ApplicationType="usd" Language="cs" TemplatesPath="" />
+        <Host Name="ScriptComponent" IconIndex="0" />
+        <ProjectClient>
+          <HostIdentifier>SSIS_SC160</HostIdentifier>
+        </ProjectClient>
+      </FlavorProperties>
+    </VisualStudio>
+  </ProjectExtensions>
+</Project>]]></arrayElement>
+                    <arrayElement
+                      dataType="System.String"><![CDATA[ShippingCharges.cs]]></arrayElement>
+                    <arrayElement
+                      dataType="System.String"><![CDATA[UTF8]]></arrayElement>
+                    <arrayElement
+                      dataType="System.String"><![CDATA[using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+
+namespace SC_c1bf493118ae46768fe4c0ed325897be
+{
+    internal class ShippingCharges
+    {
+        public double bcy_rate { get; set; }
+        public string item_total_formatted { get; set; }
+        public string bcy_rate_formatted { get; set; }
+        public string rate_formatted { get; set; }
+        public string tax_name { get; set; }
+        public string description { get; set; }
+        public double item_total { get; set; }
+        public double item_total_inclusive_of_tax { get; set; }
+        public string tax_id { get; set; }
+        public string tax_total_fcy { get; set; }
+        public double rate { get; set; }
+        public string tax_type { get; set; }
+        public string tax_percentage { get; set; }
+        public string item_total_inclusive_of_tax_formatted { get; set; }
+    }
+}
+]]></arrayElement>
+                    <arrayElement
+                      dataType="System.String"><![CDATA[StorefrontPayment.cs]]></arrayElement>
+                    <arrayElement
+                      dataType="System.String"><![CDATA[UTF8]]></arrayElement>
+                    <arrayElement
+                      dataType="System.String"><![CDATA[using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+
+namespace SC_c1bf493118ae46768fe4c0ed325897be
+{
+    internal class StorefrontPayment
+    {
+        public bool is_offline_payment { get; set; }
+        public DateTime date { get; set; }
+        public double amount { get; set; }
+        public string payment_id { get; set; }
+        public string description { get; set; }
+        public string offline_payment_id { get; set; }
+        public bool is_paymentgateway_refund_supported { get; set; }
+        public string reference_number { get; set; }
+        public string gateway_name { get; set; }
+    }
+}
+]]></arrayElement>
+                    <arrayElement
+                      dataType="System.String"><![CDATA[ShippingAddress.cs]]></arrayElement>
+                    <arrayElement
+                      dataType="System.String"><![CDATA[UTF8]]></arrayElement>
+                    <arrayElement
+                      dataType="System.String"><![CDATA[using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+
+namespace SC_c1bf493118ae46768fe4c0ed325897be
+{
+    internal class ShippingAddress
+    {
+        public string address { get; set; }
+        public string street2 { get; set; }
+        public string city { get; set; }
+        public string state { get; set; }
+        public string zip { get; set; }
+        public string country { get; set; }
+        public string country_code { get; set; }
+        public string state_code { get; set; }
+        public string fax { get; set; }
+        public string phone { get; set; }
+        public string attention { get; set; }
+    }
+}
+]]></arrayElement>
+                    <arrayElement
+                      dataType="System.String"><![CDATA[EmailClientsPercent.cs]]></arrayElement>
+                    <arrayElement
+                      dataType="System.String"><![CDATA[UTF8]]></arrayElement>
+                    <arrayElement
+                      dataType="System.String"><![CDATA[using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+
+namespace SC_c1bf493118ae46768fe4c0ed325897be
+{
+    internal class EmailClientsPercent
+    {
+
+    }
+}
+]]></arrayElement>
+                    <arrayElement
+                      dataType="System.String"><![CDATA[packages.config]]></arrayElement>
+                    <arrayElement
+                      dataType="System.String"><![CDATA[UTF8]]></arrayElement>
+                    <arrayElement
+                      dataType="System.String"><![CDATA[<?xml version="1.0" encoding="utf-8"?>
+<packages>
+  <package id="Newtonsoft.Json" version="13.0.3" targetFramework="net47" />
+</packages>]]></arrayElement>
+                    <arrayElement
+                      dataType="System.String"><![CDATA[Campaing.cs]]></arrayElement>
+                    <arrayElement
+                      dataType="System.String"><![CDATA[UTF8]]></arrayElement>
+                    <arrayElement
+                      dataType="System.String"><![CDATA[using System.Collections.Generic;
+using Newtonsoft.Json;
+
+namespace SC_c1bf493118ae46768fe4c0ed325897be
+{
+    internal class Campaing
+    {
+        public string code { get; set; }
+
+        [JsonProperty("campaign-details")]
+        public List<CampaignDetail> campaign_details { get; set; }
+
+        [JsonProperty("campaign-reports")]
+        public List<CampaignReport> campaign_reports { get; set; }
+
+        public string campaign_status { get; set; }
+
+        public string status { get; set; }
+    }
+}]]></arrayElement>
+                    <arrayElement
+                      dataType="System.String"><![CDATA[CampaignDetail.cs]]></arrayElement>
+                    <arrayElement
+                      dataType="System.String"><![CDATA[UTF8]]></arrayElement>
+                    <arrayElement
+                      dataType="System.String"><![CDATA[using System.Collections.Generic;
+using Newtonsoft.Json;
+
+namespace SC_c1bf493118ae46768fe4c0ed325897be
+{
+    internal class CampaignDetail
+    {
+        public string advanceTypeString { get; set; }
+        public string campaign_key { get; set; }
+        public string campaign_name { get; set; }
+        public string campaign_preview { get; set; }
+        public string campaigntype { get; set; }
+        public string created_time { get; set; }
+        public string created_time_gmt { get; set; }
+        public string created_date_string { get; set; }
+        public string isGAConfig { get; set; }
+        public string is_advance { get; set; }
+        public string isHybrid { get; set; }
+        public string isReplyTrackingEnabled { get; set; }
+        public string isToNameConfig { get; set; }
+        public string isWistia { get; set; }
+        public string modified_time { get; set; }
+        public string modified_time_gmt { get; set; }
+        public string modifieddate { get; set; }
+        public string folder_id { get; set; }
+        public string email_from { get; set; }
+        public string email_subject { get; set; }
+        public string email_type { get; set; }
+        public string email_options { get; set; }
+        public string preheader { get; set; }
+        public string reply_to { get; set; }
+        public string sent_time { get; set; }
+        public string sent_time_gmt { get; set; }
+        public string sent_date_string { get; set; }
+        public string sent_time_zone { get; set; }
+        public string sent_time_zone_short { get; set; }
+        public string sender_name { get; set; }
+        public string webAutoStatus { get; set; }
+        public string topic_id { get; set; }
+        public string topic_name { get; set; }
+        public string updated_time { get; set; }
+        public string updated_time_gmt { get; set; }
+        public string updated_date_string { get; set; }
+    }
+}
+]]></arrayElement>
+                    <arrayElement
+                      dataType="System.String"><![CDATA[CampaignReport.cs]]></arrayElement>
+                    <arrayElement
+                      dataType="System.String"><![CDATA[UTF8]]></arrayElement>
+                    <arrayElement
+                      dataType="System.String"><![CDATA[using System.Collections.Generic;
+using Newtonsoft.Json;
+
+namespace SC_c1bf493118ae46768fe4c0ed325897be
+{
+    internal class CampaignReport
+    {
+        public string unique_clicked_percent { get; set; }
+        public string opens_count { get; set; }
+        public string delivered_percent { get; set; }
+        public string spams_count { get; set; }
+        public string unsent_count { get; set; }
+        public string complaints_percent { get; set; }
+        public string emails_sent_count { get; set; }
+        public string forwards_count { get; set; }
+        public string delivered_count { get; set; }
+        public string autoreply_count { get; set; }
+        public string unopened { get; set; }
+        public string complaints_count { get; set; }
+        public string open_percent { get; set; }
+        public string unopened_percent { get; set; }
+        public string bounce_percent { get; set; }
+        public string spam_percent { get; set; }
+        public string unsubscribe_percent { get; set; }
+        public string hardbounce_count { get; set; }
+        public string unsent_percent { get; set; }
+        public string softbounce_count { get; set; }
+        public string unsub_count { get; set; }
+        public string clicksperopenrate { get; set; }
+        public string forward_percent { get; set; }
+        public string bounces_count { get; set; }
+        public string unique_clicks_count { get; set; }
+    }
+}
+]]></arrayElement>
+                    <arrayElement
+                      dataType="System.String"><![CDATA[app.config]]></arrayElement>
+                    <arrayElement
+                      dataType="System.String"><![CDATA[UTF8]]></arrayElement>
+                    <arrayElement
+                      dataType="System.String"><![CDATA[<?xml version="1.0" encoding="utf-8"?>
+<configuration>
+  <runtime>
+    <assemblyBinding xmlns="urn:schemas-microsoft-com:asm.v1">
+      <dependentAssembly>
+        <assemblyIdentity name="System.Runtime.CompilerServices.Unsafe" publicKeyToken="b03f5f7f11d50a3a" culture="neutral" />
+        <bindingRedirect oldVersion="0.0.0.0-6.0.0.0" newVersion="6.0.0.0" />
+      </dependentAssembly>
+    </assemblyBinding>
+  </runtime>
+</configuration>]]></arrayElement>
+                  </arrayElements>
+                </property>
+                <property
+                  dataType="System.String"
+                  description="Stores the binary representation of the component"
+                  isArray="true"
+                  name="BinaryCode"
+                  state="cdata">
+                  <arrayElements
+                    arrayElementCount="2">
+                    <arrayElement
+                      dataType="System.String"><![CDATA[SC_c1bf493118ae46768fe4c0ed325897be.dll]]></arrayElement>
+                    <arrayElement
+                      dataType="System.String"><![CDATA[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
+BgB0DQQPCgAdDnULBgDfCvURBgB1F/URBgCDANgAQwALFAAABgC1EvURBgDdDIwUBgBKF/URCgCq
+E3ULDgCbE3ULCgAqE3ULCgADGnULEgB7DuUSBgD4DGAUBgC7E6wUBgD1Em4SFgDIDAsQFgApDQsQ
+FgA1DFkSBgCQAPURBgB0CqsAGgDzE4MSEgAyHOUSBgB3APURHgA5CmUTBgBpANgABgCKAPURBgBE
+CvURBgDLEvURIgARAMsTIgABAMsTYwDbHAAAIgAiAMsTBgBDD/URBgC8C/URBgBQCvURBgBiHaMS
+AAAAAJYAAAAAAAEAAQABABAAJhIAABAAAQABAAEAEACNEwAAVQABAAYAAQAQAOUZAABhAAEAKAAB
+ABAA+xUAAFEABAAtAAEAEABgFQAAUQAFAC4AAAAQAHAc1QlRAAYAMQAAABAA1A/VCVEAHwBkAAAA
+EADyDtUJUQAfAGUAAAAQACEQ1QlRACQAcAAAABAAsxQPFVEASAC5AAABEACyFQ8VfQBKAL0AAwEQ
+ADoAAABRAEsAwAAGAPsVOwEGAGAVPwEGAI0TQwEBAPMZRwEBAPMZRwEBAHgGSwEBAM4ISwEBAMIG
+SwEBALEISwEBADAJSwEBAIcHSwEBAA0JSwEBAE0ISwEBAOgHSwEBAE4JSwEBAPgBSwEBAOsISwEB
+AGkHSwEBAKAGSwEBACsHSwEBAEsHSwEBAAYHSwEBAAkISwEBAKsHSwEBACsISwEBAMsHSwEBANkD
+SwEBAOUGSwEBAG0ISwEBAIwISwEBAH0CSwEBABgFTgEBAFkFVgEBALIFSwEBAJoFSwEBADgESwEB
+ALcJSwEBAK8CSwEBAJUJSwEBAJ0DSwEBACgDSwEBADcGSwEBAIAESwEBAPwDSwEBAGECSwEBAEcC
+SwEBANABSwEBABgESwEBALYBSwEBAOsCSwEBAPIFSwEBALsDSwEBACwCSwEBAMcESwEBANMFSwEB
+AIEDSwEBADoFSwEBAP0ESwEBAOMESwEBAEYDSwEBAFkGSwEBAKUESwEBAGEDSwEBAG8JSwEBAM4C
+SwEBAHsFSwEBABICSwEBAJMCSwEBAAoDSwEBABUGSwEBAFsESwERABoSXgERACUMYgERAPkJZgEG
+AEoSagFQIAAAAADGAJEOBgABAFggAAAAAMYAnA4GAAEAYCAAAAAAgQBkDG4BAQCIIAAAAADGACsX
+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
+AQCoDgAAAQCoDgAAAQCoDgAAAQCoDgAAAQCoDgAAAQCoDgAAAQCoDgAAAQCoDgAAAQCoDgAAAQCo
+DgAAAQCoDgAAAQCoDgAAAQCoDgAAAQCoDgAAAQCoDgAAAQCoDgAAAQCoDgAAAQCoDgAAAQCoDgAA
+AQCoDgAAAQDBFgAAAgAjFAAAAwCJFgAABAA4EwAAAQAJGgAAAQAJGgAAAQCoDgAAAQCoDgAAAQCo
+DgAAAQCoDgAAAQCoDgAAAQCoDgAAAQCoDgAAAQCoDgAAAQCoDgAAAQCoDgAAAQCoDgAAAQCoDgAA
+AQCoDgAAAQCoDgAAAQCoDgAAAQCoDgAAAQCoDgAAAQCoDgAAAQCoDgAAAQCoDgAAAQCoDgAAAQCo
+DgAAAQCoDgAAAQCoDgAAAQCoDgAAAQCoDgAAAQCoDgAAAQCoDgAAAQCoDgAAAQCoDgAAAQCoDgAA
+AQCoDgAAAQCoDgAAAQCoDgAAAQCoDgAAAQCoDgAAAQCoDgAAAQCoDgAAAQCoDgAAAQCoDgAAAQCo
+DgAAAQCoDgAAAQCoDgAAAQCoDgAAAQCoDgAAAQCoDgAAAQCoDgAAAQCoDgAAAQCoDgAAAQCoDgAA
+AQCoDgAAAQCoDgAAAQCoDgAAAQCoDgAAAQCoDgAAAQCoDgAAAQCoDgAAAQCoDgAAAQCoDgAAAQCo
+DgAAAQCoDgAAAQCoDgAAAQCoDgAAAQCoDgAAAQCoDgAAAQCoDgAAAQCoDgAAAQD7DgkAFhQBABEA
+FhQGABkAFhQKACkAFhQQADEAFhQQADkAFhQQAEEAFhQQAEkAFhQQAFEAFhQQAFkAFhQQAGEAFhQQ
+AGkAFhQGAJkAFhQGAMkAFhQQANEAFhQGAPEAFhQVAMEAkQ4GAMEAnA4GAAEBVQwiAHkAcxQnAHkA
+2wotAHEAWwwtAHEAVQxDAAkBuxxJABEBFhQGABkBPxdOAAwAFhRmABQAMBBzABQACBSDABwAExqT
+ACkBoByYADkBVQyvABwAshy0AEEBTQwGAKkAFhS4AKkA7BHCAKkAxhEBAEkBFhQQAKkANR0GAKkA
+hBcGAKkAhxe0AMEAFhQGAMEAnwDMAMEAoRXTAKEAFhQGAMEAVBXZAFEB4xHfAMEA9hzmAFkBxxzs
+AHkBYgrzAHkBXh38ANkAFhQCAfkAFhQGAHEA9Q8PAS4ACwAMAi4AEwAVAi4AGwA0Ai4AIwA9Ai4A
+KwBmAi4AMwBmAi4AOwBmAi4AQwA9Ai4ASwBsAi4AUwBmAi4AWwCDAkMAYwDNAsEAawDNAuEAawDN
+AgEBawDNAiEBawDNAkEBawDNAmEBawDNAmMBewDNAoEBawDNAqEBawDNAqMBawDNAsEBawDNAuEB
+awDNAgECawDNAiECawDNAkECawDNAmECawDNAoECawDNAqECawDNAsECawDNAuECawDNAgEDawDN
+AiEDawDNAkEDawDNAmEDawDNAoEDawDNAqEDawDNAsEDawDNAuEDawDNAgEEawDNAiEEawDNAkEE
+awDNAmEEawDNAoEEawDNAqEEawDNAsEEawDNAuEEawDNAgEFawDNAiEFawDNAkEFawDNAmEFawDN
+AoEFawDNAqEFawDNAsEFawDNAuEFawDNAgEGawDNAiAGawDNAiEGawDNAkAGawDNAkEGawDNAmAG
+awDNAmEGawDNAoAGawDNAoEGawDNAqAGawDNAqEGawDNAsAGawDNAsEGawDNAuAGawDNAuEGawDN
+AgAHawDNAgEHawDNAiAHawDNAiEHawDNAkAHawDNAkEHawDNAmAHawDNAmEHawDNAmkHcwDSAoAH
+awDNAoEHawDNAokHcwDoAqAHawDNAqEHawDNAsAHawDNAsEHawDNAuAHawDNAuEHawDNAgAIawDN
+AgEIawDNAiAIawDNAiEIawDNAkAIawDNAkEIawDNAmAIawDNAmEIawDNAoAIawDNAoEIawDNAqAI
+awDNAqEIawDNAsAIawDNAsEIawDNAuAIawDNAuEIawDNAgAJawDNAiAJawDNAkAJawDNAkEJawDN
+AmAJawDNAoAJawDNAqAJawDNAsAJawDNAuAJawDNAgAKawDNAiAKawDNAkAKawDNAmAKawDNAoAK
+awDNAqAKawDNAsAKawDNAuAKawDNAgALawDNAiALawDNAkALawDNAmALawDNAoALawDNAqALawDN
+AsALawDNAuALawDNAgAMawDNAiAMawDNAkAMawDNAmkMgwA0AokMgwA0AqAMawDNAsAMawDNAuAM
+awDNAgANawDNAiANawDNAkANawDNAmANawDNAoANawDNAqANawDNAsANawDNAgAOawDNAiAOawDN
+AkAOawDNAmAOawDNAoAOawDNAqAOawDNAsAOawDNAuAOawDNAgAPawDNAiAPawDNAkAPawDNAmAP
+awDNAoAPawDNAqAPawDNAsAPawDNAuAPawDNAgAQawDNAiAQawDNAkAQawDNAmAQawDNAoAQawDN
+AqAQawDNAsAQawDNAuAQawDNAgARawDNAiARawDNAkARawDNAmARawDNAoARawDNAqARawDNAsAR
+awDNAuARawDNAgASawDNAiASawDNAkASawDNAmASawDNAoASawDNAqASawDNAsASawDNAuASawDN
+AgATawDNAiATawDNAkATawDNAmATawDNAoATawDNAqATawDNAsATawDNAuATawDNAgAUawDNAiAU
+awDNAkAUawDNAmAUawDNAoAUawDNAqAUawDNAsAUawDNAuAUawDNAgAVawDNAiAVawDNAkAVawDN
+AmAVawDNAoAVawDNAqAVawDNAsAVawDNAuAVawDNAgAWawDNAiAWawDNAkAWawDNAmAWawDNAoAW
+awDNAqAWawDNAsAWawDNAuAWawDNAhsAMgDIAAoBAwABAAYAHwAHACEACQA6AAoAPwALAGMADABl
+AAAA9wDaAQAAZBDeAQAAbhXiAQAAERHeAQAAThbiAQAAbxHeAQAAfhbiAQAAtBHeAQAA0hHiAQAA
+ehDeAQAAPxbiAQAAWRHeAQAASxTiAQAAzRDeAQAAMRTiAQAArBDeAQAAQhXiAQAA9BDeAQAAVhTi
+AQAA3xDeAQAALxbiAQAAQhHeAQAAhRXiAQAALxHeAQAAXRbiAQAAhRHeAQAAcRbiAQAAoBHeAQAA
+BRPmAQAAlhDeAQAA6A/aAQAANRLaAQAAYhjaAQAAaRvaAQAAvRjaAQAASRvaAQAA4BvaAQAArBna
+AQAAuRvaAQAA0hraAQAAVxraAQAABRzaAQAAXQHaAQAAjhvaAQAAhBnaAQAAkhjaAQAAPhnaAQAA
+YhnaAQAAExnaAQAAgBraAQAA1hnaAQAAqhraAQAAMxraAQAAtgzaAQAA5xjaAQAA9xraAQAAIRva
+AQAANAraAQAA1BXrAQAAqhb0AQAABRfaAQAAJBfaAQAAOA/aAQAAUR3aAQAArQraAQAAJB3aAQAA
+9AvaAQAATAvaAQAADhjaAQAAlg/aAQAAwQ7aAQAAHAraAQAArQHaAQAANQHaAQAA4w7aAQAAxgDa
+AQAABwvaAQAAuRfaAQAAjwzaAQAAkgHaAQAADxLaAQAAZxfaAQAA1AvaAQAAHRbaAQAAgxPaAQAA
+IRPaAQAAawvaAQAANRjaAQAAww/aAQAArQvaAQAAWxzaAQAAzwraAQAA3xbaAQAAdwHaAQAAjAra
+AQAAKgvaAQAA5BfaAQAAZg/aAQAAuxP9AQAALQwCAgAAlxcHAgEABwADAAEACAAFAAEACQAHAAEA
+CgAJAAEACwALAAEADAANAAEADQAPAAEADgARAAEADwATAAEAEAAVAAEAEQAXAAEAEgAZAAEAEwAb
+AAEAFAAdAAEAFQAfAAEAFgAhAAEAFwAjAAEAGAAlAAEAGQAnAAEAGgApAAEAGwArAAEAHAAtAAEA
+HQAvAAEAHgAxAAEAHwAzAAEAIAA1AAEAIQA3AAEAIgA5AAEAIwA7AAEAJAA9AAIALwA/AAIAMABB
+AAIAMQBDAAEAMgBDAAIAMwBFAAEANABFAAIANQBHAAEANgBHAAIANwBJAAEAOABJAAIAOQBLAAEA
+OgBLAAIAOwBNAAEAPABNAAIAPQBPAAEAPgBPAAIAPwBRAAEAQABRAAIAQQBTAAEAQgBTAAIAQwBV
+AAEARABVAAIARQBXAAEARgBXAAIARwBZAAEASABZAAIASQBbAAEASgBbAAIASwBdAAEATABdAAIA
+TQBfAAEATgBfAAIATwBhAAEAUABhAAIAUQBjAAEAUgBjAAIAUwBlAAEAVABlAAIAVQBnAAEAVgBn
+AAIAVwBpAAEAWABpAAIAWQBrAAEAWgBrAAIAWwBtAAEAXABtAAIAXQBvAAEAXgBvAAIAXwBxAAEA
+YABxAAIAYQBzAAEAYgBzAAIAZQB1AAEAZgB1AAIAZwB3AAEAaAB3AAIAaQB5AAEAagB5AAIAawB7
+AAEAbAB7AAIAbQB9AAEAbgB9AAIAcAB/AAEAcQB/AAIAcgCBAAEAcwCBAAIAdACDAAEAdQCDAAIA
+dgCFAAEAdwCFAAIAeACHAAEAeQCHAAIAegCJAAEAewCJAAIAfACLAAEAfQCLAAIAfgCNAAEAfwCN
+AAIAgACPAAEAgQCPAAIAggCRAAEAgwCRAAIAhACTAAEAhQCTAAIAhgCVAAEAhwCVAAIAiACXAAEA
+iQCXAAIAigCZAAEAiwCZAAIAjACbAAEAjQCbAAIAjgCdAAEAjwCdAAIAkACfAAEAkQCfAAIAkgCh
+AAEAkwChAAIAlACjAAEAlQCjAAIAlgClAAEAlwClAAIAmACnAAEAmQCnAAIAmgCpAAEAmwCpAAIA
+nACrAAEAnQCrAAIAngCtAAEAnwCtAAIAoACvAAEAoQCvAAIAogCxAAEAowCxAAIApACzAAEApQCz
+AAIApgC1AAEApwC1AAIAqAC3AAEAqQC3AAIAqgC5AAEAqwC5AAIArAC7AAEArQC7AAIArgC9AAEA
+rwC9AAIAsAC/AAEAsQC/AAIAsgDBAAEAswDBAAIAtADDAAEAtQDDAAIAtgDFAAEAtwDFAAIAugDH
+AAIAuwDJAAEAvADJAAIAvQDLAF4AbACMAASAAAABAAAAAAAAAAAAAAAAANUJAAAEAAAAAAAAAAAA
+AAAXAc8AAAAAABAAAAAAAAAAAAAAACABFRwAAAAAEAAAAAAAAAAAAAAAIAF/HAAAAAANAAAAAAAA
+AAAAAAApAeUSAAAAAAQAAAAAAAAAAAAAABcB9REAAAAABAAAAAAAAAAAAAAAMgHlFQAAAAAEAAAA
+AAAAAAAAAAAXAQEMAAAAABAAAAAAAAAAAAAAACABQhMAAAAAAAAAAAEAAAC9FAAADQACADUAVQA/
+AKUAPwCqAAAAAElEVFNWYXJpYWJsZTEwMABJRFRTVmFyaWFibGVzMTAwAElEVFNFdmFsdWF0b3JD
+b250ZXh0MTAwADw+Y19fRGlzcGxheUNsYXNzM18wADxDcmVhdGVOZXdPdXRwdXRSb3dzPmJfXzAA
+SUVudW1lcmFibGVgMQBQcmVkaWNhdGVgMQBMaXN0YDEASW50MzIASW50NjQAPE1vZHVsZT4AR2V0
+T3V0cHV0SUQAU3lzdGVtLklPAGdldF9pc1dpc3RpYQBzZXRfaXNXaXN0aWEAbXNjb3JsaWIAU3lz
+dGVtLkNvbGxlY3Rpb25zLkdlbmVyaWMAc2V0X0NhbXBhbmlhSWQATWFya091dHB1dHNGaW5pc2hl
+ZABnZXRfaXNSZXBseVRyYWNraW5nRW5hYmxlZABzZXRfaXNSZXBseVRyYWNraW5nRW5hYmxlZABn
+ZXRfdW5vcGVuZWQAc2V0X3Vub3BlbmVkAGdldF90b3BpY19pZABzZXRfdG9waWNfaWQAZ2V0X2Zv
+bGRlcl9pZABzZXRfZm9sZGVyX2lkAGdldF9pc0h5YnJpZABzZXRfaXNIeWJyaWQAPGlzV2lzdGlh
+PmtfX0JhY2tpbmdGaWVsZAA8aXNSZXBseVRyYWNraW5nRW5hYmxlZD5rX19CYWNraW5nRmllbGQA
+PHVub3BlbmVkPmtfX0JhY2tpbmdGaWVsZAA8dG9waWNfaWQ+a19fQmFja2luZ0ZpZWxkADxmb2xk
+ZXJfaWQ+a19fQmFja2luZ0ZpZWxkADxpc0h5YnJpZD5rX19CYWNraW5nRmllbGQAPGlzX2FkdmFu
+Y2U+a19fQmFja2luZ0ZpZWxkADxjb2RlPmtfX0JhY2tpbmdGaWVsZAA8dG9waWNfbmFtZT5rX19C
+YWNraW5nRmllbGQAPGNhbXBhaWduX25hbWU+a19fQmFja2luZ0ZpZWxkADxzZW5kZXJfbmFtZT5r
+X19CYWNraW5nRmllbGQAPG1vZGlmaWVkX3RpbWU+a19fQmFja2luZ0ZpZWxkADx1cGRhdGVkX3Rp
+bWU+a19fQmFja2luZ0ZpZWxkADxjcmVhdGVkX3RpbWU+a19fQmFja2luZ0ZpZWxkADxzZW50X3Rp
+bWU+a19fQmFja2luZ0ZpZWxkADxzZW50X3RpbWVfem9uZT5rX19CYWNraW5nRmllbGQAPGVtYWls
+X3R5cGU+a19fQmFja2luZ0ZpZWxkADxjYW1wYWlnbnR5cGU+a19fQmFja2luZ0ZpZWxkADxtb2Rp
+ZmllZGRhdGU+a19fQmFja2luZ0ZpZWxkADxjbGlja3NwZXJvcGVucmF0ZT5rX19CYWNraW5nRmll
+bGQAPGlzR0FDb25maWc+a19fQmFja2luZ0ZpZWxkADxpc1RvTmFtZUNvbmZpZz5rX19CYWNraW5n
+RmllbGQAPGFkdmFuY2VUeXBlU3RyaW5nPmtfX0JhY2tpbmdGaWVsZAA8dXBkYXRlZF9kYXRlX3N0
+cmluZz5rX19CYWNraW5nRmllbGQAPGNyZWF0ZWRfZGF0ZV9zdHJpbmc+a19fQmFja2luZ0ZpZWxk
+ADxzZW50X2RhdGVfc3RyaW5nPmtfX0JhY2tpbmdGaWVsZAA8ZW1haWxfZnJvbT5rX19CYWNraW5n
+RmllbGQAPHJlcGx5X3RvPmtfX0JhY2tpbmdGaWVsZAA8cHJlaGVhZGVyPmtfX0JhY2tpbmdGaWVs
+ZAA8Y2FtcGFpZ25fZGV0YWlscz5rX19CYWNraW5nRmllbGQAPGVtYWlsX29wdGlvbnM+a19fQmFj
+a2luZ0ZpZWxkADxjYW1wYWlnbl9yZXBvcnRzPmtfX0JhY2tpbmdGaWVsZAA8d2ViQXV0b1N0YXR1
+cz5rX19CYWNraW5nRmllbGQAPHN0YXR1cz5rX19CYWNraW5nRmllbGQAPGNhbXBhaWduX3N0YXR1
+cz5rX19CYWNraW5nRmllbGQAPGVtYWlsX3N1YmplY3Q+a19fQmFja2luZ0ZpZWxkADxtb2RpZmll
+ZF90aW1lX2dtdD5rX19CYWNraW5nRmllbGQAPHVwZGF0ZWRfdGltZV9nbXQ+a19fQmFja2luZ0Zp
+ZWxkADxjcmVhdGVkX3RpbWVfZ210PmtfX0JhY2tpbmdGaWVsZAA8c2VudF90aW1lX2dtdD5rX19C
+YWNraW5nRmllbGQAPHVuaXF1ZV9jbGlja2VkX3BlcmNlbnQ+a19fQmFja2luZ0ZpZWxkADx1bm9w
+ZW5lZF9wZXJjZW50PmtfX0JhY2tpbmdGaWVsZAA8ZGVsaXZlcmVkX3BlcmNlbnQ+a19fQmFja2lu
+Z0ZpZWxkADxmb3J3YXJkX3BlcmNlbnQ+a19fQmFja2luZ0ZpZWxkADx1bnN1YnNjcmliZV9wZXJj
+ZW50PmtfX0JhY2tpbmdGaWVsZAA8Ym91bmNlX3BlcmNlbnQ+a19fQmFja2luZ0ZpZWxkADxzcGFt
+X3BlcmNlbnQ+a19fQmFja2luZ0ZpZWxkADxvcGVuX3BlcmNlbnQ+a19fQmFja2luZ0ZpZWxkADxj
+b21wbGFpbnRzX3BlcmNlbnQ+a19fQmFja2luZ0ZpZWxkADx1bnNlbnRfcGVyY2VudD5rX19CYWNr
+aW5nRmllbGQAPHVuc3ViX2NvdW50PmtfX0JhY2tpbmdGaWVsZAA8ZGVsaXZlcmVkX2NvdW50Pmtf
+X0JhY2tpbmdGaWVsZAA8aGFyZGJvdW5jZV9jb3VudD5rX19CYWNraW5nRmllbGQAPHNvZnRib3Vu
+Y2VfY291bnQ+a19fQmFja2luZ0ZpZWxkADxmb3J3YXJkc19jb3VudD5rX19CYWNraW5nRmllbGQA
+PGJvdW5jZXNfY291bnQ+a19fQmFja2luZ0ZpZWxkADx1bmlxdWVfY2xpY2tzX2NvdW50PmtfX0Jh
+Y2tpbmdGaWVsZAA8c3BhbXNfY291bnQ+a19fQmFja2luZ0ZpZWxkADxvcGVuc19jb3VudD5rX19C
+YWNraW5nRmllbGQAPGNvbXBsYWludHNfY291bnQ+a19fQmFja2luZ0ZpZWxkADxlbWFpbHNfc2Vu
+dF9jb3VudD5rX19CYWNraW5nRmllbGQAPHVuc2VudF9jb3VudD5rX19CYWNraW5nRmllbGQAPGF1
+dG9yZXBseV9jb3VudD5rX19CYWNraW5nRmllbGQAPHNlbnRfdGltZV96b25lX3Nob3J0PmtfX0Jh
+Y2tpbmdGaWVsZAA8Y2FtcGFpZ25fcHJldmlldz5rX19CYWNraW5nRmllbGQAPGNhbXBhaWduX2tl
+eT5rX19CYWNraW5nRmllbGQAU0NfYzFiZjQ5MzExOGFlNDY3NjhmZTRjMGVkMzI1ODk3YmUAZGVm
+YXVsdEluc3RhbmNlAGdldF9pc19hZHZhbmNlAHNldF9pc19hZHZhbmNlAGdldF9jb2RlAHNldF9j
+b2RlAEVudW1lcmFibGUASURpc3Bvc2FibGUAUnVudGltZVR5cGVIYW5kbGUAR2V0VHlwZUZyb21I
+YW5kbGUARmlsZQBnZXRfdG9waWNfbmFtZQBzZXRfdG9waWNfbmFtZQBnZXRfY2FtcGFpZ25fbmFt
+ZQBzZXRfY2FtcGFpZ25fbmFtZQBnZXRfc2VuZGVyX25hbWUAc2V0X3NlbmRlcl9uYW1lAGdldF9E
+YXRlVGltZQBzZW50VGltZQBnZXRfbW9kaWZpZWRfdGltZQBzZXRfbW9kaWZpZWRfdGltZQBnZXRf
+dXBkYXRlZF90aW1lAHNldF91cGRhdGVkX3RpbWUAZ2V0X2NyZWF0ZWRfdGltZQBzZXRfY3JlYXRl
+ZF90aW1lAGdldF9zZW50X3RpbWUAc2V0X3NlbnRfdGltZQBNaWNyb3NvZnQuU3FsU2VydmVyLkR0
+cy5QaXBlbGluZQBnZXRfc2VudF90aW1lX3pvbmUAc2V0X3NlbnRfdGltZV96b25lAFR5cGUAZ2V0
+X2VtYWlsX3R5cGUAc2V0X2VtYWlsX3R5cGUAZ2V0X2NhbXBhaWdudHlwZQBzZXRfY2FtcGFpZ250
+eXBlAFN5c3RlbS5Db3JlAGdldF9DdWx0dXJlAHNldF9DdWx0dXJlAHJlc291cmNlQ3VsdHVyZQBB
+cHBsaWNhdGlvblNldHRpbmdzQmFzZQBEaXNwb3NlAFBhcnNlAGdldF9EYXRlAENvbnZlcnRVbml4
+VGltZVRvRGF0ZQBnZXRfbW9kaWZpZWRkYXRlAHNldF9tb2RpZmllZGRhdGUAZ2V0X2NsaWNrc3Bl
+cm9wZW5yYXRlAHNldF9jbGlja3NwZXJvcGVucmF0ZQBFZGl0b3JCcm93c2FibGVTdGF0ZQBDb21w
+aWxlckdlbmVyYXRlZEF0dHJpYnV0ZQBEZWJ1Z2dlck5vblVzZXJDb2RlQXR0cmlidXRlAERlYnVn
+Z2FibGVBdHRyaWJ1dGUARWRpdG9yQnJvd3NhYmxlQXR0cmlidXRlAEFzc2VtYmx5VGl0bGVBdHRy
+aWJ1dGUAQXNzZW1ibHlUcmFkZW1hcmtBdHRyaWJ1dGUAVGFyZ2V0RnJhbWV3b3JrQXR0cmlidXRl
+AEFzc2VtYmx5Q29uZmlndXJhdGlvbkF0dHJpYnV0ZQBBc3NlbWJseURlc2NyaXB0aW9uQXR0cmli
+dXRlAENvbXBpbGF0aW9uUmVsYXhhdGlvbnNBdHRyaWJ1dGUAQXNzZW1ibHlQcm9kdWN0QXR0cmli
+dXRlAEFzc2VtYmx5Q29weXJpZ2h0QXR0cmlidXRlAFNTSVNTY3JpcHRDb21wb25lbnRFbnRyeVBv
+aW50QXR0cmlidXRlAEFzc2VtYmx5Q29tcGFueUF0dHJpYnV0ZQBSdW50aW1lQ29tcGF0aWJpbGl0
+eUF0dHJpYnV0ZQBKc29uUHJvcGVydHlBdHRyaWJ1dGUAUHJlRXhlY3V0ZQBQb3N0RXhlY3V0ZQB2
+YWx1ZQBnZXRfaXNHQUNvbmZpZwBzZXRfaXNHQUNvbmZpZwBnZXRfaXNUb05hbWVDb25maWcAc2V0
+X2lzVG9OYW1lQ29uZmlnAENhbXBhaW5nAGNhbXBhaW5nAFN5c3RlbS5SdW50aW1lLlZlcnNpb25p
+bmcAZ2V0X2FkdmFuY2VUeXBlU3RyaW5nAHNldF9hZHZhbmNlVHlwZVN0cmluZwBnZXRfdXBkYXRl
+ZF9kYXRlX3N0cmluZwBzZXRfdXBkYXRlZF9kYXRlX3N0cmluZwBnZXRfY3JlYXRlZF9kYXRlX3N0
+cmluZwBzZXRfY3JlYXRlZF9kYXRlX3N0cmluZwBnZXRfc2VudF9kYXRlX3N0cmluZwBzZXRfc2Vu
+dF9kYXRlX3N0cmluZwBDdXN0b21GaWVsZEhhc2gAZ2V0X0pzb25GaWxlUGF0aABvcF9HcmVhdGVy
+VGhhbk9yRXF1YWwAU3lzdGVtLkNvbXBvbmVudE1vZGVsAENhbXBhaWduRGV0YWlsAEZpbmRBbGwA
+U0NfYzFiZjQ5MzExOGFlNDY3NjhmZTRjMGVkMzI1ODk3YmUuZGxsAHNldF9DYW1wYW5pYUlkX0lz
+TnVsbABzZXRfTWFyY2Fkb3NDb21vU3BhbV9Jc051bGwAc2V0X0ZlY2hhRW52aW9fSXNOdWxsAHNl
+dF9SZXNwdWVzdGFzQXV0b21hdGljYXNfSXNOdWxsAHNldF9RdWVqYXNfSXNOdWxsAHNldF9BcGVy
+dHVyYXNfSXNOdWxsAHNldF9SZWJvdGVzVGVtcG9yYWxlc19Jc051bGwAc2V0X1JlYm90ZXNQZXJt
+YW5lbnRlc19Jc051bGwAc2V0X1JlYm90ZXNfSXNOdWxsAHNldF9DbGljc1VuaWNvc19Jc051bGwA
+c2V0X0VudHJlZ2Fkb3NfSXNOdWxsAHNldF9Ob0VudmlhZG9zX0lzTnVsbABzZXRfQ29ycmVvc0Vu
+dmlhZG9zX0lzTnVsbABzZXRfUmVlbnZpb3NfSXNOdWxsAHNldF9Ob0FiaWVydG9zX0lzTnVsbABT
+ZXROdWxsAHNldF9NYXJjYWRvc0NvbW9TcGFtAGdldF9JdGVtAHNldF9JdGVtAFN5c3RlbQBnZXRf
+ZW1haWxfZnJvbQBzZXRfZW1haWxfZnJvbQByZXNvdXJjZU1hbgBTY3JpcHRNYWluAGdldF9VbHRp
+bWFGZWNoYUVqZWN1Y2lvbgBmZWNoYUVqZWN1Y2lvbgBTeXN0ZW0uQ29uZmlndXJhdGlvbgBTeXN0
+ZW0uR2xvYmFsaXphdGlvbgBTeXN0ZW0uV2ViLlNjcmlwdC5TZXJpYWxpemF0aW9uAFN5c3RlbS5S
+ZWZsZWN0aW9uAEFyZ3VtZW50TnVsbEV4Y2VwdGlvbgBJbnZhbGlkT3BlcmF0aW9uRXhjZXB0aW9u
+AE5ld3RvbnNvZnQuSnNvbgBDdWx0dXJlSW5mbwBzZXRfRmVjaGFFbnZpbwBnZXRfcmVwbHlfdG8A
+c2V0X3JlcGx5X3RvAE91dHB1dE5hbWVNYXAAT3V0cHV0TWFwAE1pY3Jvc29mdC5TcWxTZXJ2ZXIu
+RFRTUnVudGltZVdyYXAAU3lzdGVtLkxpbnEAZ2V0X3ByZWhlYWRlcgBzZXRfcHJlaGVhZGVyAE91
+dHB1dDBCdWZmZXIAUGlwZWxpbmVCdWZmZXIAU2NyaXB0QnVmZmVyAGdldF9SZXNvdXJjZU1hbmFn
+ZXIATWljcm9zb2Z0LlNxbFNlcnZlci5EdHMuUnVudGltZS5XcmFwcGVyAEphdmFTY3JpcHRTZXJp
+YWxpemVyAEdldEVudW1lcmF0b3IALmN0b3IALmNjdG9yAE91dHB1dElEcwBzZXRfUmVzcHVlc3Rh
+c0F1dG9tYXRpY2FzAHNldF9RdWVqYXMAc2V0X0FwZXJ0dXJhcwBTeXN0ZW0uRGlhZ25vc3RpY3MA
+RnJvbVVuaXhUaW1lTWlsbGlzZWNvbmRzAFN5c3RlbS5SdW50aW1lLkNvbXBpbGVyU2VydmljZXMA
+U3lzdGVtLlJlc291cmNlcwBTQ19jMWJmNDkzMTE4YWU0Njc2OGZlNGMwZWQzMjU4OTdiZS5Qcm9w
+ZXJ0aWVzLlJlc291cmNlcy5yZXNvdXJjZXMARGVidWdnaW5nTW9kZXMAU0NfYzFiZjQ5MzExOGFl
+NDY3NjhmZTRjMGVkMzI1ODk3YmUuUHJvcGVydGllcwBzZXRfUmVib3Rlc1RlbXBvcmFsZXMAZ2V0
+X1JlYWRPbmx5VmFyaWFibGVzAHNldF9SZWJvdGVzUGVybWFuZW50ZXMAc2V0X1JlYm90ZXMAQnVm
+ZmVyQ29sdW1uSW5kZXhlcwBHZXRDb2x1bW5JbmRleGVzAFNldHRpbmdzAGdldF9jYW1wYWlnbl9k
+ZXRhaWxzAHNldF9jYW1wYWlnbl9kZXRhaWxzAFN5c3RlbS5XZWIuRXh0ZW5zaW9ucwBDb25uZWN0
+aW9ucwBnZXRfZW1haWxfb3B0aW9ucwBzZXRfZW1haWxfb3B0aW9ucwBzZXRfQ2xpY3NVbmljb3MA
+c2V0X0VudHJlZ2Fkb3MAc2V0X05vRW52aWFkb3MAc2V0X0NvcnJlb3NFbnZpYWRvcwBzZXRfUmVl
+bnZpb3MAc2V0X05vQWJpZXJ0b3MAQnVmZmVycwBnZXRfY2FtcGFpZ25fcmVwb3J0cwBzZXRfY2Ft
+cGFpZ25fcmVwb3J0cwBGaW5pc2hPdXRwdXRzAGdldF93ZWJBdXRvU3RhdHVzAHNldF93ZWJBdXRv
+U3RhdHVzAGdldF9jYW1wYWlnbl9zdGF0dXMAc2V0X2NhbXBhaWduX3N0YXR1cwBnZXRfc3RhdHVz
+AHNldF9zdGF0dXMAQ3JlYXRlTmV3T3V0cHV0Um93cwBEZXNlcmlhbGl6ZU9iamVjdABnZXRfZW1h
+aWxfc3ViamVjdABzZXRfZW1haWxfc3ViamVjdABEYXRlVGltZU9mZnNldABTZXRFbmRPZlJvd3Nl
+dABnZXRfRGVmYXVsdABnZXRfbW9kaWZpZWRfdGltZV9nbXQAc2V0X21vZGlmaWVkX3RpbWVfZ210
+AGdldF91cGRhdGVkX3RpbWVfZ210AHNldF91cGRhdGVkX3RpbWVfZ210AGdldF9jcmVhdGVkX3Rp
+bWVfZ210AHNldF9jcmVhdGVkX3RpbWVfZ210AGdldF9zZW50X3RpbWVfZ210AHNldF9zZW50X3Rp
+bWVfZ210AGdldF91bmlxdWVfY2xpY2tlZF9wZXJjZW50AHNldF91bmlxdWVfY2xpY2tlZF9wZXJj
+ZW50AGdldF91bm9wZW5lZF9wZXJjZW50AHNldF91bm9wZW5lZF9wZXJjZW50AGdldF9kZWxpdmVy
+ZWRfcGVyY2VudABzZXRfZGVsaXZlcmVkX3BlcmNlbnQAZ2V0X2ZvcndhcmRfcGVyY2VudABzZXRf
+Zm9yd2FyZF9wZXJjZW50AGdldF91bnN1YnNjcmliZV9wZXJjZW50AHNldF91bnN1YnNjcmliZV9w
+ZXJjZW50AGdldF9ib3VuY2VfcGVyY2VudABzZXRfYm91bmNlX3BlcmNlbnQAZ2V0X3NwYW1fcGVy
+Y2VudABzZXRfc3BhbV9wZXJjZW50AGdldF9vcGVuX3BlcmNlbnQAc2V0X29wZW5fcGVyY2VudABn
+ZXRfY29tcGxhaW50c19wZXJjZW50AHNldF9jb21wbGFpbnRzX3BlcmNlbnQAZ2V0X3Vuc2VudF9w
+ZXJjZW50AHNldF91bnNlbnRfcGVyY2VudABVc2VyQ29tcG9uZW50AFBhcmVudENvbXBvbmVudABT
+Y3JpcHRDb21wb25lbnQAZ2V0X0N1cnJlbnQAZ2V0X3Vuc3ViX2NvdW50AHNldF91bnN1Yl9jb3Vu
+dABnZXRfZGVsaXZlcmVkX2NvdW50AHNldF9kZWxpdmVyZWRfY291bnQAZ2V0X2hhcmRib3VuY2Vf
+Y291bnQAc2V0X2hhcmRib3VuY2VfY291bnQAZ2V0X3NvZnRib3VuY2VfY291bnQAc2V0X3NvZnRi
+b3VuY2VfY291bnQAZ2V0X2ZvcndhcmRzX2NvdW50AHNldF9mb3J3YXJkc19jb3VudABnZXRfYm91
+bmNlc19jb3VudABzZXRfYm91bmNlc19jb3VudABnZXRfdW5pcXVlX2NsaWNrc19jb3VudABzZXRf
+dW5pcXVlX2NsaWNrc19jb3VudABnZXRfc3BhbXNfY291bnQAc2V0X3NwYW1zX2NvdW50AGdldF9v
+cGVuc19jb3VudABzZXRfb3BlbnNfY291bnQAZ2V0X2NvbXBsYWludHNfY291bnQAc2V0X2NvbXBs
+YWludHNfY291bnQAZ2V0X2VtYWlsc19zZW50X2NvdW50AHNldF9lbWFpbHNfc2VudF9jb3VudABn
+ZXRfdW5zZW50X2NvdW50AHNldF91bnNlbnRfY291bnQAZ2V0X2F1dG9yZXBseV9jb3VudABzZXRf
+YXV0b3JlcGx5X2NvdW50AE1pY3Jvc29mdC5TcWxTZXJ2ZXIuVHhTY3JpcHQASnNvbkNvbnZlcnQA
+Z2V0X3NlbnRfdGltZV96b25lX3Nob3J0AHNldF9zZW50X3RpbWVfem9uZV9zaG9ydABDYW1wYWln
+blJlcG9ydABNaWNyb3NvZnQuU3FsU2VydmVyLlBpcGVsaW5lSG9zdABGaXJzdABQcmltZU91dHB1
+dABNb3ZlTmV4dABSZWFkQWxsVGV4dABHZXRWYWx1ZVdpdGhDb250ZXh0AFNjcmlwdENvbXBvbmVu
+dEV2YWxDb250ZXh0AGdldF9FdmFsdWF0b3JDb250ZXh0AGdldF9jYW1wYWlnbl9wcmV2aWV3AHNl
+dF9jYW1wYWlnbl9wcmV2aWV3AEFkZFJvdwBnZXRfY2FtcGFpZ25fa2V5AHNldF9jYW1wYWlnbl9r
+ZXkAZ2V0X0Fzc2VtYmx5AAAAgL1MAGEAIABwAHIAbwBwAGkAZQBkAGEAZAAgAEkAcwBOAHUAbABs
+ACAAbgBvACAAcAB1AGUAZABlACAAZQBzAHQAYQBiAGwAZQBjAGUAcgBzAGUAIABlAG4AIABGAGEA
+bABzAGUALgAgAEUAbgAgAHMAdQAgAGwAdQBnAGEAcgAsACAAYQBzAGkAZwBuAGUAIAB1AG4AIAB2
+AGEAbABvAHIAIABhACAAbABhACAAYwBvAGwAdQBtAG4AYQAuAAARTwB1AHQAcAB1AHQAIAAwAAAZ
+SgBzAG8AbgBGAGkAbABlAFAAYQB0AGgAAClVAGwAdABpAG0AYQBGAGUAYwBoAGEARQBqAGUAYwB1
+AGMAaQBvAG4AAHFTAEMAXwBjADEAYgBmADQAOQAzADEAMQA4AGEAZQA0ADYANwA2ADgAZgBlADQA
+YwAwAGUAZAAzADIANQA4ADkANwBiAGUALgBQAHIAbwBwAGUAcgB0AGkAZQBzAC4AUgBlAHMAbwB1
+AHIAYwBlAHMAADGyWiNVgPBHkbGa64h7nPwABCABAQgDIAABBSABARERBCABAQ4FIAEBEXUGBwIR
+PRE5BAABCg4FAAERPQoEIAARORAHBhI0Dg4VEUUBEiQSKBIcBQABETkOBAABDg4GEAEBHgAOCAoB
+FRJBARIkBxUSgJEBEiQFIAIBHBgGFRJBARIkDyABFRJBARMAFRKAkQETAAggABURRQETAAYVEUUB
+EiQEIAATAAwQAQEeABUSgJkBHgAECgESKAQKARIcBAABCA4DIAACCSADARJZHQgSXQUgAgEIHAMH
+AQgGAAIIEl0OBSABHQgIBSAAEoCpBiABEoCtHAUAABKAsQYgARwSgLUIAAESgL0RgMEFIAASgMUH
+IAIBDhKAxQQHARE9BwACAhE5ETkIt3pcVhk04IkIiYRdzYCAzJEIMK1P5rKmru0IMb84Vq02TjUD
+BhIUAwYSGAMGEgwDBhJhAgYOBwYVEkEBEigHBhUSQQESHAMGEm0DBhJxAwYSMAMGETkFIAEROQ4E
+IAEBAgUgAQEROQsgBAEIHQgdElkSXQUgAQESYQMgAA4IIAAVEkEBEigJIAEBFRJBARIoCCAAFRJB
+ARIcCSABARUSQQESHAQAABJtBAAAEnEFAAEBEnEEAAASMAMAAAEFIAECEiQDKAAOAygAAgMoAAgE
+KAAROQgoABUSQQESKAgoABUSQQESHAQIABJtBAgAEnEECAASMAgBAAgAAAAAAB4BAAEAVAIWV3Jh
+cE5vbkV4Y2VwdGlvblRocm93cwEIAQACAAAAAAAoAQAjU0NfYzFiZjQ5MzExOGFlNDY3NjhmZTRj
+MGVkMzI1ODk3YmUAAAUBAAAAABYBABFDb3B5cmlnaHQgQCAgMjAyNAAASQEAGi5ORVRGcmFtZXdv
+cmssVmVyc2lvbj12NC43AQBUDhRGcmFtZXdvcmtEaXNwbGF5TmFtZRIuTkVUIEZyYW1ld29yayA0
+LjcEAQAAABUBABBjYW1wYWlnbi1kZXRhaWxzAAAVAQAQY2FtcGFpZ24tcmVwb3J0cwAAAAC0AAAA
+zsrvvgEAAACRAAAAbFN5c3RlbS5SZXNvdXJjZXMuUmVzb3VyY2VSZWFkZXIsIG1zY29ybGliLCBW
+ZXJzaW9uPTQuMC4wLjAsIEN1bHR1cmU9bmV1dHJhbCwgUHVibGljS2V5VG9rZW49Yjc3YTVjNTYx
+OTM0ZTA4OSNTeXN0ZW0uUmVzb3VyY2VzLlJ1bnRpbWVSZXNvdXJjZVNldAIAAAAAAAAAAAAAAFBB
+RFBBRFC0AAAAPG0AAAAAAAAAAAAAVm0AAAAgAAAAAAAAAAAAAAAAAAAAAAAAAAAAAEhtAAAAAAAA
+AAAAAAAAX0NvckRsbE1haW4AbXNjb3JlZS5kbGwAAAAAAP8lACAAEAAAAAAAAAAAAAAAAAAAAAAA
+AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAEAEAAAABgAAIAAAAAAAAAAAAAAAAAAAAEA
+AQAAADAAAIAAAAAAAAAAAAAAAAAAAAEAAAAAAEgAAABYgAAA7AMAAAAAAAAAAAAA7AM0AAAAVgBT
+AF8AVgBFAFIAUwBJAE8ATgBfAEkATgBGAE8AAAAAAL0E7/4AAAEAAAABAAAAAAAAAAEAAAAAAD8A
+AAAAAAAABAAAAAIAAAAAAAAAAAAAAAAAAABEAAAAAQBWAGEAcgBGAGkAbABlAEkAbgBmAG8AAAAA
+ACQABAAAAFQAcgBhAG4AcwBsAGEAdABpAG8AbgAAAAAAAACwBEwDAAABAFMAdAByAGkAbgBnAEYA
+aQBsAGUASQBuAGYAbwAAACgDAAABADAAMAAwADAAMAA0AGIAMAAAABoAAQABAEMAbwBtAG0AZQBu
+AHQAcwAAAAAAAAAiAAEAAQBDAG8AbQBwAGEAbgB5AE4AYQBtAGUAAAAAAAAAAABwACQAAQBGAGkA
+bABlAEQAZQBzAGMAcgBpAHAAdABpAG8AbgAAAAAAUwBDAF8AYwAxAGIAZgA0ADkAMwAxADEAOABh
+AGUANAA2ADcANgA4AGYAZQA0AGMAMABlAGQAMwAyADUAOAA5ADcAYgBlAAAAMAAIAAEARgBpAGwA
+ZQBWAGUAcgBzAGkAbwBuAAAAAAAxAC4AMAAuADAALgAwAAAAcAAoAAEASQBuAHQAZQByAG4AYQBs
+AE4AYQBtAGUAAABTAEMAXwBjADEAYgBmADQAOQAzADEAMQA4AGEAZQA0ADYANwA2ADgAZgBlADQA
+YwAwAGUAZAAzADIANQA4ADkANwBiAGUALgBkAGwAbAAAAEgAEgABAEwAZQBnAGEAbABDAG8AcAB5
+AHIAaQBnAGgAdAAAAEMAbwBwAHkAcgBpAGcAaAB0ACAAQAAgACAAMgAwADIANAAAACoAAQABAEwA
+ZQBnAGEAbABUAHIAYQBkAGUAbQBhAHIAawBzAAAAAAAAAAAAeAAoAAEATwByAGkAZwBpAG4AYQBs
+AEYAaQBsAGUAbgBhAG0AZQAAAFMAQwBfAGMAMQBiAGYANAA5ADMAMQAxADgAYQBlADQANgA3ADYA
+OABmAGUANABjADAAZQBkADMAMgA1ADgAOQA3AGIAZQAuAGQAbABsAAAAaAAkAAEAUAByAG8AZAB1
+AGMAdABOAGEAbQBlAAAAAABTAEMAXwBjADEAYgBmADQAOQAzADEAMQA4AGEAZQA0ADYANwA2ADgA
+ZgBlADQAYwAwAGUAZAAzADIANQA4ADkANwBiAGUAAAA0AAgAAQBQAHIAbwBkAHUAYwB0AFYAZQBy
+AHMAaQBvAG4AAAAxAC4AMAAuADAALgAwAAAAOAAIAAEAQQBzAHMAZQBtAGIAbAB5ACAAVgBlAHIA
+cwBpAG8AbgAAADEALgAwAC4AMAAuADAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+AAAAAAAAAAAAAAAAAAAAYAAADAAAAGg9AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+AAAAAAAAAAAAAAAAAA==]]></arrayElement>
+                  </arrayElements>
+                </property>
+                <property
+                  dataType="System.String"
+                  description="Specifies the name of the Microsoft Visual Studio Tools for Applications project. Project names must be unique within a package."
+                  name="VSTAProjectName"
+                  typeConverter="NOTBROWSABLE">SC_c1bf493118ae46768fe4c0ed325897be</property>
+                <property
+                  dataType="System.String"
+                  description="Specifies the programming language used by the script."
+                  name="ScriptLanguage"
+                  typeConverter="Microsoft.SqlServer.VSTAHosting.ScriptingLanguages">CSharp</property>
+                <property
+                  dataType="System.String"
+                  description="Specifies a comma-separated list of read-only variables."
+                  name="ReadOnlyVariables"
+                  UITypeEditor="Microsoft.DataTransformationServices.Controls.ScriptUIVariablePickerDlg">User::UltimaFechaEjecucion,$Package::JsonFilePath</property>
+                <property
+                  dataType="System.String"
+                  description="Specifies a comma-separated list of read/write variables."
+                  name="ReadWriteVariables"
+                  UITypeEditor="Microsoft.DataTransformationServices.Controls.ScriptUIWriteableVariablePickerDlg"></property>
+                <property
+                  dataType="System.String"
+                  description="List of breakpoints present on the script."
+                  isArray="true"
+                  name="BreakpointCollection"
+                  typeConverter="NOTBROWSABLE">
+                  <arrayElements
+                    arrayElementCount="0" />
+                </property>
+                <property
+                  dataType="System.String"
+                  description="Checksum to match component metedata against compiled codes."
+                  name="MetadataChecksum140"
+                  typeConverter="NOTBROWSABLE">9E</property>
+                <property
+                  dataType="System.String"
+                  name="UserComponentTypeName">Microsoft.ScriptComponentHost</property>
+              </properties>
+              <outputs>
+                <output
+                  refId="Package\Llenado de FactReportesDeRendimientoPorCampania\Lectura de metricas y llaves del negocio.Outputs[Output 0]"
+                  hasSideEffects="true"
+                  name="Output 0">
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\Llenado de FactReportesDeRendimientoPorCampania\Lectura de metricas y llaves del negocio.Outputs[Output 0].Columns[CampaniaId]"
+                      codePage="1252"
+                      dataType="str"
+                      length="100"
+                      lineageId="Package\Llenado de FactReportesDeRendimientoPorCampania\Lectura de metricas y llaves del negocio.Outputs[Output 0].Columns[CampaniaId]"
+                      name="CampaniaId" />
+                    <outputColumn
+                      refId="Package\Llenado de FactReportesDeRendimientoPorCampania\Lectura de metricas y llaves del negocio.Outputs[Output 0].Columns[RebotesPermanentes]"
+                      dataType="i4"
+                      lineageId="Package\Llenado de FactReportesDeRendimientoPorCampania\Lectura de metricas y llaves del negocio.Outputs[Output 0].Columns[RebotesPermanentes]"
+                      name="RebotesPermanentes" />
+                    <outputColumn
+                      refId="Package\Llenado de FactReportesDeRendimientoPorCampania\Lectura de metricas y llaves del negocio.Outputs[Output 0].Columns[NoEnviados]"
+                      dataType="i4"
+                      lineageId="Package\Llenado de FactReportesDeRendimientoPorCampania\Lectura de metricas y llaves del negocio.Outputs[Output 0].Columns[NoEnviados]"
+                      name="NoEnviados" />
+                    <outputColumn
+                      refId="Package\Llenado de FactReportesDeRendimientoPorCampania\Lectura de metricas y llaves del negocio.Outputs[Output 0].Columns[NoAbiertos]"
+                      dataType="i4"
+                      lineageId="Package\Llenado de FactReportesDeRendimientoPorCampania\Lectura de metricas y llaves del negocio.Outputs[Output 0].Columns[NoAbiertos]"
+                      name="NoAbiertos" />
+                    <outputColumn
+                      refId="Package\Llenado de FactReportesDeRendimientoPorCampania\Lectura de metricas y llaves del negocio.Outputs[Output 0].Columns[MarcadosComoSpam]"
+                      dataType="i4"
+                      lineageId="Package\Llenado de FactReportesDeRendimientoPorCampania\Lectura de metricas y llaves del negocio.Outputs[Output 0].Columns[MarcadosComoSpam]"
+                      name="MarcadosComoSpam" />
+                    <outputColumn
+                      refId="Package\Llenado de FactReportesDeRendimientoPorCampania\Lectura de metricas y llaves del negocio.Outputs[Output 0].Columns[Entregados]"
+                      dataType="i4"
+                      lineageId="Package\Llenado de FactReportesDeRendimientoPorCampania\Lectura de metricas y llaves del negocio.Outputs[Output 0].Columns[Entregados]"
+                      name="Entregados" />
+                    <outputColumn
+                      refId="Package\Llenado de FactReportesDeRendimientoPorCampania\Lectura de metricas y llaves del negocio.Outputs[Output 0].Columns[Quejas]"
+                      dataType="i4"
+                      lineageId="Package\Llenado de FactReportesDeRendimientoPorCampania\Lectura de metricas y llaves del negocio.Outputs[Output 0].Columns[Quejas]"
+                      name="Quejas" />
+                    <outputColumn
+                      refId="Package\Llenado de FactReportesDeRendimientoPorCampania\Lectura de metricas y llaves del negocio.Outputs[Output 0].Columns[RespuestasAutomaticas]"
+                      dataType="i4"
+                      lineageId="Package\Llenado de FactReportesDeRendimientoPorCampania\Lectura de metricas y llaves del negocio.Outputs[Output 0].Columns[RespuestasAutomaticas]"
+                      name="RespuestasAutomaticas" />
+                    <outputColumn
+                      refId="Package\Llenado de FactReportesDeRendimientoPorCampania\Lectura de metricas y llaves del negocio.Outputs[Output 0].Columns[RebotesTemporales]"
+                      dataType="i4"
+                      lineageId="Package\Llenado de FactReportesDeRendimientoPorCampania\Lectura de metricas y llaves del negocio.Outputs[Output 0].Columns[RebotesTemporales]"
+                      name="RebotesTemporales" />
+                    <outputColumn
+                      refId="Package\Llenado de FactReportesDeRendimientoPorCampania\Lectura de metricas y llaves del negocio.Outputs[Output 0].Columns[Aperturas]"
+                      dataType="i4"
+                      lineageId="Package\Llenado de FactReportesDeRendimientoPorCampania\Lectura de metricas y llaves del negocio.Outputs[Output 0].Columns[Aperturas]"
+                      name="Aperturas" />
+                    <outputColumn
+                      refId="Package\Llenado de FactReportesDeRendimientoPorCampania\Lectura de metricas y llaves del negocio.Outputs[Output 0].Columns[ClicsUnicos]"
+                      dataType="i4"
+                      lineageId="Package\Llenado de FactReportesDeRendimientoPorCampania\Lectura de metricas y llaves del negocio.Outputs[Output 0].Columns[ClicsUnicos]"
+                      name="ClicsUnicos" />
+                    <outputColumn
+                      refId="Package\Llenado de FactReportesDeRendimientoPorCampania\Lectura de metricas y llaves del negocio.Outputs[Output 0].Columns[Rebotes]"
+                      dataType="i4"
+                      lineageId="Package\Llenado de FactReportesDeRendimientoPorCampania\Lectura de metricas y llaves del negocio.Outputs[Output 0].Columns[Rebotes]"
+                      name="Rebotes" />
+                    <outputColumn
+                      refId="Package\Llenado de FactReportesDeRendimientoPorCampania\Lectura de metricas y llaves del negocio.Outputs[Output 0].Columns[CorreosEnviados]"
+                      dataType="i4"
+                      lineageId="Package\Llenado de FactReportesDeRendimientoPorCampania\Lectura de metricas y llaves del negocio.Outputs[Output 0].Columns[CorreosEnviados]"
+                      name="CorreosEnviados" />
+                    <outputColumn
+                      refId="Package\Llenado de FactReportesDeRendimientoPorCampania\Lectura de metricas y llaves del negocio.Outputs[Output 0].Columns[Reenvios]"
+                      dataType="i4"
+                      lineageId="Package\Llenado de FactReportesDeRendimientoPorCampania\Lectura de metricas y llaves del negocio.Outputs[Output 0].Columns[Reenvios]"
+                      name="Reenvios" />
+                    <outputColumn
+                      refId="Package\Llenado de FactReportesDeRendimientoPorCampania\Lectura de metricas y llaves del negocio.Outputs[Output 0].Columns[FechaEnvio]"
+                      dataType="dbTimeStamp"
+                      lineageId="Package\Llenado de FactReportesDeRendimientoPorCampania\Lectura de metricas y llaves del negocio.Outputs[Output 0].Columns[FechaEnvio]"
+                      name="FechaEnvio" />
+                  </outputColumns>
+                  <externalMetadataColumns />
+                </output>
+              </outputs>
+            </component>
+            <component
+              refId="Package\Llenado de FactReportesDeRendimientoPorCampania\Llenar FactReportesDeRendimientoPorCampania"
+              componentClassID="Microsoft.ManagedComponentHost"
+              contactInfo="Loads data into an ADO.NET-compliant database that uses a database table or view. Load data into a new or existing table. For example, use an ADO.NET provider for ODBC to load data into an ODBC destination.;Microsoft Corporation; Microsoft SQL Server; © Microsoft Corporation; All Rights Reserved; http://www.microsoft.com/sql/support;2"
+              description="Loads data into an ADO.NET-compliant database that uses a database table or view. Load data into a new or existing table. For example, use an ADO.NET provider for ODBC to load data into an ODBC destination."
+              name="Llenar FactReportesDeRendimientoPorCampania"
+              usesDispositions="true"
+              version="2">
+              <properties>
+                <property
+                  dataType="System.String"
+                  description="The Destination database table name."
+                  expressionType="Notify"
+                  name="TableOrViewName"
+                  UITypeEditor="Microsoft.DataTransformationServices.Controls.ModalMultilineStringEditor">"dbo"."FactReportesDeRendimientoPorCampania"</property>
+                <property
+                  dataType="System.Int32"
+                  description="Specify the number of rows per batch. The default is 0 which uses the same size as SSIS internal buffer. "
+                  expressionType="Notify"
+                  name="BatchSize">0</property>
+                <property
+                  dataType="System.Int32"
+                  description="The number of seconds before a command times out. A value of 0 indicates infinite time-out. "
+                  expressionType="Notify"
+                  name="CommandTimeout">30</property>
+                <property
+                  dataType="System.Boolean"
+                  description="Specifies whether to use the SqlBulkCopy interface to improve the performance of bulk insert operations. Only certain providers support this interface."
+                  expressionType="Notify"
+                  name="UseBulkInsertWhenPossible">true</property>
+                <property
+                  dataType="System.String"
+                  name="UserComponentTypeName">Microsoft.ADONETDestination</property>
+              </properties>
+              <connections>
+                <connection
+                  refId="Package\Llenado de FactReportesDeRendimientoPorCampania\Llenar FactReportesDeRendimientoPorCampania.Connections[IDbConnection]"
+                  connectionManagerID="Package.ConnectionManagers[DestinoDW]"
+                  connectionManagerRefId="Package.ConnectionManagers[DestinoDW]"
+                  description="Managed connection manager"
+                  name="IDbConnection" />
+              </connections>
+              <inputs>
+                <input
+                  refId="Package\Llenado de FactReportesDeRendimientoPorCampania\Llenar FactReportesDeRendimientoPorCampania.Inputs[ADO NET Destination Input]"
+                  errorRowDisposition="FailComponent"
+                  hasSideEffects="true"
+                  name="ADO NET Destination Input">
+                  <inputColumns>
+                    <inputColumn
+                      refId="Package\Llenado de FactReportesDeRendimientoPorCampania\Llenar FactReportesDeRendimientoPorCampania.Inputs[ADO NET Destination Input].Columns[RebotesPermanentes]"
+                      cachedDataType="i4"
+                      cachedName="RebotesPermanentes"
+                      externalMetadataColumnId="Package\Llenado de FactReportesDeRendimientoPorCampania\Llenar FactReportesDeRendimientoPorCampania.Inputs[ADO NET Destination Input].ExternalColumns[RebotesPermanentes]"
+                      lineageId="Package\Llenado de FactReportesDeRendimientoPorCampania\Lectura de metricas y llaves del negocio.Outputs[Output 0].Columns[RebotesPermanentes]" />
+                    <inputColumn
+                      refId="Package\Llenado de FactReportesDeRendimientoPorCampania\Llenar FactReportesDeRendimientoPorCampania.Inputs[ADO NET Destination Input].Columns[NoEnviados]"
+                      cachedDataType="i4"
+                      cachedName="NoEnviados"
+                      externalMetadataColumnId="Package\Llenado de FactReportesDeRendimientoPorCampania\Llenar FactReportesDeRendimientoPorCampania.Inputs[ADO NET Destination Input].ExternalColumns[NoEnviados]"
+                      lineageId="Package\Llenado de FactReportesDeRendimientoPorCampania\Lectura de metricas y llaves del negocio.Outputs[Output 0].Columns[NoEnviados]" />
+                    <inputColumn
+                      refId="Package\Llenado de FactReportesDeRendimientoPorCampania\Llenar FactReportesDeRendimientoPorCampania.Inputs[ADO NET Destination Input].Columns[NoAbiertos]"
+                      cachedDataType="i4"
+                      cachedName="NoAbiertos"
+                      externalMetadataColumnId="Package\Llenado de FactReportesDeRendimientoPorCampania\Llenar FactReportesDeRendimientoPorCampania.Inputs[ADO NET Destination Input].ExternalColumns[NoAbiertos]"
+                      lineageId="Package\Llenado de FactReportesDeRendimientoPorCampania\Lectura de metricas y llaves del negocio.Outputs[Output 0].Columns[NoAbiertos]" />
+                    <inputColumn
+                      refId="Package\Llenado de FactReportesDeRendimientoPorCampania\Llenar FactReportesDeRendimientoPorCampania.Inputs[ADO NET Destination Input].Columns[MarcadosComoSpam]"
+                      cachedDataType="i4"
+                      cachedName="MarcadosComoSpam"
+                      externalMetadataColumnId="Package\Llenado de FactReportesDeRendimientoPorCampania\Llenar FactReportesDeRendimientoPorCampania.Inputs[ADO NET Destination Input].ExternalColumns[MarcadosComoSpam]"
+                      lineageId="Package\Llenado de FactReportesDeRendimientoPorCampania\Lectura de metricas y llaves del negocio.Outputs[Output 0].Columns[MarcadosComoSpam]" />
+                    <inputColumn
+                      refId="Package\Llenado de FactReportesDeRendimientoPorCampania\Llenar FactReportesDeRendimientoPorCampania.Inputs[ADO NET Destination Input].Columns[Entregados]"
+                      cachedDataType="i4"
+                      cachedName="Entregados"
+                      externalMetadataColumnId="Package\Llenado de FactReportesDeRendimientoPorCampania\Llenar FactReportesDeRendimientoPorCampania.Inputs[ADO NET Destination Input].ExternalColumns[Entregados]"
+                      lineageId="Package\Llenado de FactReportesDeRendimientoPorCampania\Lectura de metricas y llaves del negocio.Outputs[Output 0].Columns[Entregados]" />
+                    <inputColumn
+                      refId="Package\Llenado de FactReportesDeRendimientoPorCampania\Llenar FactReportesDeRendimientoPorCampania.Inputs[ADO NET Destination Input].Columns[Quejas]"
+                      cachedDataType="i4"
+                      cachedName="Quejas"
+                      externalMetadataColumnId="Package\Llenado de FactReportesDeRendimientoPorCampania\Llenar FactReportesDeRendimientoPorCampania.Inputs[ADO NET Destination Input].ExternalColumns[Quejas]"
+                      lineageId="Package\Llenado de FactReportesDeRendimientoPorCampania\Lectura de metricas y llaves del negocio.Outputs[Output 0].Columns[Quejas]" />
+                    <inputColumn
+                      refId="Package\Llenado de FactReportesDeRendimientoPorCampania\Llenar FactReportesDeRendimientoPorCampania.Inputs[ADO NET Destination Input].Columns[RespuestasAutomaticas]"
+                      cachedDataType="i4"
+                      cachedName="RespuestasAutomaticas"
+                      externalMetadataColumnId="Package\Llenado de FactReportesDeRendimientoPorCampania\Llenar FactReportesDeRendimientoPorCampania.Inputs[ADO NET Destination Input].ExternalColumns[RespuestasAutomaticas]"
+                      lineageId="Package\Llenado de FactReportesDeRendimientoPorCampania\Lectura de metricas y llaves del negocio.Outputs[Output 0].Columns[RespuestasAutomaticas]" />
+                    <inputColumn
+                      refId="Package\Llenado de FactReportesDeRendimientoPorCampania\Llenar FactReportesDeRendimientoPorCampania.Inputs[ADO NET Destination Input].Columns[RebotesTemporales]"
+                      cachedDataType="i4"
+                      cachedName="RebotesTemporales"
+                      externalMetadataColumnId="Package\Llenado de FactReportesDeRendimientoPorCampania\Llenar FactReportesDeRendimientoPorCampania.Inputs[ADO NET Destination Input].ExternalColumns[RebotesTemporales]"
+                      lineageId="Package\Llenado de FactReportesDeRendimientoPorCampania\Lectura de metricas y llaves del negocio.Outputs[Output 0].Columns[RebotesTemporales]" />
+                    <inputColumn
+                      refId="Package\Llenado de FactReportesDeRendimientoPorCampania\Llenar FactReportesDeRendimientoPorCampania.Inputs[ADO NET Destination Input].Columns[Aperturas]"
+                      cachedDataType="i4"
+                      cachedName="Aperturas"
+                      externalMetadataColumnId="Package\Llenado de FactReportesDeRendimientoPorCampania\Llenar FactReportesDeRendimientoPorCampania.Inputs[ADO NET Destination Input].ExternalColumns[Aperturas]"
+                      lineageId="Package\Llenado de FactReportesDeRendimientoPorCampania\Lectura de metricas y llaves del negocio.Outputs[Output 0].Columns[Aperturas]" />
+                    <inputColumn
+                      refId="Package\Llenado de FactReportesDeRendimientoPorCampania\Llenar FactReportesDeRendimientoPorCampania.Inputs[ADO NET Destination Input].Columns[ClicsUnicos]"
+                      cachedDataType="i4"
+                      cachedName="ClicsUnicos"
+                      externalMetadataColumnId="Package\Llenado de FactReportesDeRendimientoPorCampania\Llenar FactReportesDeRendimientoPorCampania.Inputs[ADO NET Destination Input].ExternalColumns[ClicsUnicos]"
+                      lineageId="Package\Llenado de FactReportesDeRendimientoPorCampania\Lectura de metricas y llaves del negocio.Outputs[Output 0].Columns[ClicsUnicos]" />
+                    <inputColumn
+                      refId="Package\Llenado de FactReportesDeRendimientoPorCampania\Llenar FactReportesDeRendimientoPorCampania.Inputs[ADO NET Destination Input].Columns[Rebotes]"
+                      cachedDataType="i4"
+                      cachedName="Rebotes"
+                      externalMetadataColumnId="Package\Llenado de FactReportesDeRendimientoPorCampania\Llenar FactReportesDeRendimientoPorCampania.Inputs[ADO NET Destination Input].ExternalColumns[Rebotes]"
+                      lineageId="Package\Llenado de FactReportesDeRendimientoPorCampania\Lectura de metricas y llaves del negocio.Outputs[Output 0].Columns[Rebotes]" />
+                    <inputColumn
+                      refId="Package\Llenado de FactReportesDeRendimientoPorCampania\Llenar FactReportesDeRendimientoPorCampania.Inputs[ADO NET Destination Input].Columns[CorreosEnviados]"
+                      cachedDataType="i4"
+                      cachedName="CorreosEnviados"
+                      externalMetadataColumnId="Package\Llenado de FactReportesDeRendimientoPorCampania\Llenar FactReportesDeRendimientoPorCampania.Inputs[ADO NET Destination Input].ExternalColumns[CorreosEnviados]"
+                      lineageId="Package\Llenado de FactReportesDeRendimientoPorCampania\Lectura de metricas y llaves del negocio.Outputs[Output 0].Columns[CorreosEnviados]" />
+                    <inputColumn
+                      refId="Package\Llenado de FactReportesDeRendimientoPorCampania\Llenar FactReportesDeRendimientoPorCampania.Inputs[ADO NET Destination Input].Columns[CampaniaKey]"
+                      cachedDataType="i4"
+                      cachedName="CampaniaKey"
+                      externalMetadataColumnId="Package\Llenado de FactReportesDeRendimientoPorCampania\Llenar FactReportesDeRendimientoPorCampania.Inputs[ADO NET Destination Input].ExternalColumns[CampaniaKey]"
+                      lineageId="Package\Llenado de FactReportesDeRendimientoPorCampania\Obtener Campania Key.Outputs[Lookup Match Output].Columns[CampaniaKey]" />
+                    <inputColumn
+                      refId="Package\Llenado de FactReportesDeRendimientoPorCampania\Llenar FactReportesDeRendimientoPorCampania.Inputs[ADO NET Destination Input].Columns[TiempoKey]"
+                      cachedDataType="i4"
+                      cachedName="TiempoKey"
+                      externalMetadataColumnId="Package\Llenado de FactReportesDeRendimientoPorCampania\Llenar FactReportesDeRendimientoPorCampania.Inputs[ADO NET Destination Input].ExternalColumns[FechaEnvioKey]"
+                      lineageId="Package\Llenado de FactReportesDeRendimientoPorCampania\Obtener Tiempo Key.Outputs[Lookup Match Output].Columns[TiempoKey]" />
+                    <inputColumn
+                      refId="Package\Llenado de FactReportesDeRendimientoPorCampania\Llenar FactReportesDeRendimientoPorCampania.Inputs[ADO NET Destination Input].Columns[Reenvios]"
+                      cachedDataType="i4"
+                      cachedName="Reenvios"
+                      externalMetadataColumnId="Package\Llenado de FactReportesDeRendimientoPorCampania\Llenar FactReportesDeRendimientoPorCampania.Inputs[ADO NET Destination Input].ExternalColumns[Reenviados]"
+                      lineageId="Package\Llenado de FactReportesDeRendimientoPorCampania\Lectura de metricas y llaves del negocio.Outputs[Output 0].Columns[Reenvios]" />
+                  </inputColumns>
+                  <externalMetadataColumns
+                    isUsed="True">
+                    <externalMetadataColumn
+                      refId="Package\Llenado de FactReportesDeRendimientoPorCampania\Llenar FactReportesDeRendimientoPorCampania.Inputs[ADO NET Destination Input].ExternalColumns[CampaniaKey]"
+                      dataType="i4"
+                      name="CampaniaKey" />
+                    <externalMetadataColumn
+                      refId="Package\Llenado de FactReportesDeRendimientoPorCampania\Llenar FactReportesDeRendimientoPorCampania.Inputs[ADO NET Destination Input].ExternalColumns[FechaEnvioKey]"
+                      dataType="i4"
+                      name="FechaEnvioKey" />
+                    <externalMetadataColumn
+                      refId="Package\Llenado de FactReportesDeRendimientoPorCampania\Llenar FactReportesDeRendimientoPorCampania.Inputs[ADO NET Destination Input].ExternalColumns[RebotesPermanentes]"
+                      dataType="i4"
+                      name="RebotesPermanentes" />
+                    <externalMetadataColumn
+                      refId="Package\Llenado de FactReportesDeRendimientoPorCampania\Llenar FactReportesDeRendimientoPorCampania.Inputs[ADO NET Destination Input].ExternalColumns[NoEnviados]"
+                      dataType="i4"
+                      name="NoEnviados" />
+                    <externalMetadataColumn
+                      refId="Package\Llenado de FactReportesDeRendimientoPorCampania\Llenar FactReportesDeRendimientoPorCampania.Inputs[ADO NET Destination Input].ExternalColumns[NoAbiertos]"
+                      dataType="i4"
+                      name="NoAbiertos" />
+                    <externalMetadataColumn
+                      refId="Package\Llenado de FactReportesDeRendimientoPorCampania\Llenar FactReportesDeRendimientoPorCampania.Inputs[ADO NET Destination Input].ExternalColumns[MarcadosComoSpam]"
+                      dataType="i4"
+                      name="MarcadosComoSpam" />
+                    <externalMetadataColumn
+                      refId="Package\Llenado de FactReportesDeRendimientoPorCampania\Llenar FactReportesDeRendimientoPorCampania.Inputs[ADO NET Destination Input].ExternalColumns[Entregados]"
+                      dataType="i4"
+                      name="Entregados" />
+                    <externalMetadataColumn
+                      refId="Package\Llenado de FactReportesDeRendimientoPorCampania\Llenar FactReportesDeRendimientoPorCampania.Inputs[ADO NET Destination Input].ExternalColumns[Quejas]"
+                      dataType="i4"
+                      name="Quejas" />
+                    <externalMetadataColumn
+                      refId="Package\Llenado de FactReportesDeRendimientoPorCampania\Llenar FactReportesDeRendimientoPorCampania.Inputs[ADO NET Destination Input].ExternalColumns[RespuestasAutomaticas]"
+                      dataType="i4"
+                      name="RespuestasAutomaticas" />
+                    <externalMetadataColumn
+                      refId="Package\Llenado de FactReportesDeRendimientoPorCampania\Llenar FactReportesDeRendimientoPorCampania.Inputs[ADO NET Destination Input].ExternalColumns[RebotesTemporales]"
+                      dataType="i4"
+                      name="RebotesTemporales" />
+                    <externalMetadataColumn
+                      refId="Package\Llenado de FactReportesDeRendimientoPorCampania\Llenar FactReportesDeRendimientoPorCampania.Inputs[ADO NET Destination Input].ExternalColumns[Aperturas]"
+                      dataType="i4"
+                      name="Aperturas" />
+                    <externalMetadataColumn
+                      refId="Package\Llenado de FactReportesDeRendimientoPorCampania\Llenar FactReportesDeRendimientoPorCampania.Inputs[ADO NET Destination Input].ExternalColumns[ClicsUnicos]"
+                      dataType="i4"
+                      name="ClicsUnicos" />
+                    <externalMetadataColumn
+                      refId="Package\Llenado de FactReportesDeRendimientoPorCampania\Llenar FactReportesDeRendimientoPorCampania.Inputs[ADO NET Destination Input].ExternalColumns[Rebotes]"
+                      dataType="i4"
+                      name="Rebotes" />
+                    <externalMetadataColumn
+                      refId="Package\Llenado de FactReportesDeRendimientoPorCampania\Llenar FactReportesDeRendimientoPorCampania.Inputs[ADO NET Destination Input].ExternalColumns[Reenviados]"
+                      dataType="i4"
+                      name="Reenviados" />
+                    <externalMetadataColumn
+                      refId="Package\Llenado de FactReportesDeRendimientoPorCampania\Llenar FactReportesDeRendimientoPorCampania.Inputs[ADO NET Destination Input].ExternalColumns[CorreosEnviados]"
+                      dataType="i4"
+                      name="CorreosEnviados" />
+                  </externalMetadataColumns>
+                </input>
+              </inputs>
+              <outputs>
+                <output
+                  refId="Package\Llenado de FactReportesDeRendimientoPorCampania\Llenar FactReportesDeRendimientoPorCampania.Outputs[ADO NET Destination Error Output]"
+                  exclusionGroup="1"
+                  isErrorOut="true"
+                  name="ADO NET Destination Error Output"
+                  synchronousInputId="Package\Llenado de FactReportesDeRendimientoPorCampania\Llenar FactReportesDeRendimientoPorCampania.Inputs[ADO NET Destination Input]">
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\Llenado de FactReportesDeRendimientoPorCampania\Llenar FactReportesDeRendimientoPorCampania.Outputs[ADO NET Destination Error Output].Columns[ErrorCode]"
+                      dataType="i4"
+                      lineageId="Package\Llenado de FactReportesDeRendimientoPorCampania\Llenar FactReportesDeRendimientoPorCampania.Outputs[ADO NET Destination Error Output].Columns[ErrorCode]"
+                      name="ErrorCode"
+                      specialFlags="1" />
+                    <outputColumn
+                      refId="Package\Llenado de FactReportesDeRendimientoPorCampania\Llenar FactReportesDeRendimientoPorCampania.Outputs[ADO NET Destination Error Output].Columns[ErrorColumn]"
+                      dataType="i4"
+                      lineageId="Package\Llenado de FactReportesDeRendimientoPorCampania\Llenar FactReportesDeRendimientoPorCampania.Outputs[ADO NET Destination Error Output].Columns[ErrorColumn]"
+                      name="ErrorColumn"
+                      specialFlags="2" />
+                  </outputColumns>
+                  <externalMetadataColumns />
+                </output>
+              </outputs>
+            </component>
+            <component
+              refId="Package\Llenado de FactReportesDeRendimientoPorCampania\Obtener Campania Key"
+              componentClassID="Microsoft.Lookup"
+              contactInfo="Lookup;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; All Rights Reserved; http://www.microsoft.com/sql/support;6"
+              description="Joins additional columns to the data flow by looking up values in a table. For example, join to the 'employee id' column the employees table to get 'hire date' and 'employee name'. We recommend this transformation when the lookup table can fit into memory."
+              name="Obtener Campania Key"
+              usesDispositions="true"
+              version="6">
+              <properties>
+                <property
+                  dataType="System.String"
+                  description="Specifies the SQL statement that generates the lookup table."
+                  expressionType="Notify"
+                  name="SqlCommand"
+                  UITypeEditor="Microsoft.DataTransformationServices.Controls.ModalMultilineStringEditor">select * from [dbo].[DimCampania]</property>
+                <property
+                  dataType="System.String"
+                  description="Specifies a SQL statement that uses parameters to generate the lookup table."
+                  expressionType="Notify"
+                  name="SqlCommandParam"
+                  UITypeEditor="Microsoft.DataTransformationServices.Controls.ModalMultilineStringEditor">select * from (select * from [dbo].[DimCampania]) [refTable]
+where [refTable].[CampaniaId] = ?</property>
+                <property
+                  dataType="System.Int32"
+                  description="Specifies the type of connection used to access the reference dataset."
+                  name="ConnectionType"
+                  typeConverter="LookupConnectionType">0</property>
+                <property
+                  dataType="System.Int32"
+                  description="Specifies the cache type of the lookup table."
+                  name="CacheType"
+                  typeConverter="CacheType">0</property>
+                <property
+                  dataType="System.Int32"
+                  description="Specifies how the Lookup transformation handles rows without matching entries in the reference data set."
+                  name="NoMatchBehavior"
+                  typeConverter="LookupNoMatchBehavior">0</property>
+                <property
+                  dataType="System.Int32"
+                  description="Specifies the percentage of the cache that is allocated for rows with no matching entries in the reference dataset."
+                  name="NoMatchCachePercentage">0</property>
+                <property
+                  dataType="System.Int32"
+                  description="Maximum Memory Usage for Reference Cache on a 32 bit platform."
+                  name="MaxMemoryUsage">25</property>
+                <property
+                  dataType="System.Int64"
+                  description="Maximum Memory Usage for Reference Cache on a 64 bit platform."
+                  name="MaxMemoryUsage64">25</property>
+                <property
+                  dataType="System.String"
+                  description="Indicates whether to reference metadata in an XML format."
+                  name="ReferenceMetadataXml">&lt;referenceMetadata&gt;&lt;referenceColumns&gt;&lt;referenceColumn name="CampaniaKey" dataType="DT_I4" length="0" precision="0" scale="0" codePage="0"/&gt;&lt;referenceColumn name="CampaniaId" dataType="DT_STR" length="500" precision="0" scale="0" codePage="1252"/&gt;&lt;referenceColumn name="NombreCampania" dataType="DT_STR" length="255" precision="0" scale="0" codePage="1252"/&gt;&lt;referenceColumn name="TipoCampania" dataType="DT_STR" length="50" precision="0" scale="0" codePage="1252"/&gt;&lt;referenceColumn name="TemaCampania" dataType="DT_STR" length="255" precision="0" scale="0" codePage="1252"/&gt;&lt;referenceColumn name="EmailEnvio" dataType="DT_STR" length="50" precision="0" scale="0" codePage="1252"/&gt;&lt;referenceColumn name="EmailRespuestas" dataType="DT_STR" length="50" precision="0" scale="0" codePage="1252"/&gt;&lt;referenceColumn name="TituloEmail" dataType="DT_STR" length="50" precision="0" scale="0" codePage="1252"/&gt;&lt;referenceColumn name="EstadoCampania" dataType="DT_STR" length="50" precision="0" scale="0" codePage="1252"/&gt;&lt;referenceColumn name="FechaEnvio" dataType="DT_DBDATE" length="0" precision="0" scale="0" codePage="0"/&gt;&lt;referenceColumn name="FechaCreacion" dataType="DT_DBDATE" length="0" precision="0" scale="0" codePage="0"/&gt;&lt;/referenceColumns&gt;&lt;/referenceMetadata&gt;</property>
+                <property
+                  containsID="true"
+                  dataType="System.String"
+                  description="Specifies the list of lineage identifiers that map to the parameters that the SQL statement in the SQLCommand property uses. Entries in the list are separated by semicolons."
+                  name="ParameterMap">#{Package\Llenado de FactReportesDeRendimientoPorCampania\Lectura de metricas y llaves del negocio.Outputs[Output 0].Columns[CampaniaId]};</property>
+                <property
+                  dataType="System.Int32"
+                  description="Specifies the column code page to use when code page information is unavailable from the data source."
+                  name="DefaultCodePage">1252</property>
+                <property
+                  dataType="System.Boolean"
+                  description="Determines whether duplicate keys in the reference data should be treated as errors when full cache mode is used."
+                  name="TreatDuplicateKeysAsError">false</property>
+              </properties>
+              <connections>
+                <connection
+                  refId="Package\Llenado de FactReportesDeRendimientoPorCampania\Obtener Campania Key.Connections[OleDbConnection]"
+                  connectionManagerID="Package.ConnectionManagers[DWOLEDB]"
+                  connectionManagerRefId="Package.ConnectionManagers[DWOLEDB]"
+                  description="Connection manager used to access lookup data."
+                  name="OleDbConnection" />
+              </connections>
+              <inputs>
+                <input
+                  refId="Package\Llenado de FactReportesDeRendimientoPorCampania\Obtener Campania Key.Inputs[Lookup Input]"
+                  name="Lookup Input">
+                  <inputColumns>
+                    <inputColumn
+                      refId="Package\Llenado de FactReportesDeRendimientoPorCampania\Obtener Campania Key.Inputs[Lookup Input].Columns[CampaniaId]"
+                      cachedCodepage="1252"
+                      cachedDataType="str"
+                      cachedLength="100"
+                      cachedName="CampaniaId"
+                      lineageId="Package\Llenado de FactReportesDeRendimientoPorCampania\Lectura de metricas y llaves del negocio.Outputs[Output 0].Columns[CampaniaId]">
+                      <properties>
+                        <property
+                          dataType="System.String"
+                          description="Specifies the column in the reference table that a column joins."
+                          name="JoinToReferenceColumn">CampaniaId</property>
+                        <property
+                          dataType="System.Null"
+                          description="Specifies the column in the reference table from which a column is copied."
+                          name="CopyFromReferenceColumn" />
+                      </properties>
+                    </inputColumn>
+                  </inputColumns>
+                  <externalMetadataColumns />
+                </input>
+              </inputs>
+              <outputs>
+                <output
+                  refId="Package\Llenado de FactReportesDeRendimientoPorCampania\Obtener Campania Key.Outputs[Lookup Match Output]"
+                  errorOrTruncationOperation="Lookup"
+                  errorRowDisposition="FailComponent"
+                  exclusionGroup="1"
+                  name="Lookup Match Output"
+                  synchronousInputId="Package\Llenado de FactReportesDeRendimientoPorCampania\Obtener Campania Key.Inputs[Lookup Input]">
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\Llenado de FactReportesDeRendimientoPorCampania\Obtener Campania Key.Outputs[Lookup Match Output].Columns[CampaniaKey]"
+                      dataType="i4"
+                      errorOrTruncationOperation="Copy Column"
+                      lineageId="Package\Llenado de FactReportesDeRendimientoPorCampania\Obtener Campania Key.Outputs[Lookup Match Output].Columns[CampaniaKey]"
+                      name="CampaniaKey"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          dataType="System.String"
+                          description="Specifies the column in the reference table from which a column is copied."
+                          name="CopyFromReferenceColumn">CampaniaKey</property>
+                      </properties>
+                    </outputColumn>
+                  </outputColumns>
+                  <externalMetadataColumns />
+                </output>
+                <output
+                  refId="Package\Llenado de FactReportesDeRendimientoPorCampania\Obtener Campania Key.Outputs[Lookup No Match Output]"
+                  description="The Lookup output that handles rows with no matching entries in the reference dataset. Use this output when the NoMatchBehavior property is set to &quot;Send rows with no matching entries to the no match output.&quot;"
+                  exclusionGroup="1"
+                  name="Lookup No Match Output"
+                  synchronousInputId="Package\Llenado de FactReportesDeRendimientoPorCampania\Obtener Campania Key.Inputs[Lookup Input]">
+                  <externalMetadataColumns />
+                </output>
+                <output
+                  refId="Package\Llenado de FactReportesDeRendimientoPorCampania\Obtener Campania Key.Outputs[Lookup Error Output]"
+                  exclusionGroup="1"
+                  isErrorOut="true"
+                  name="Lookup Error Output"
+                  synchronousInputId="Package\Llenado de FactReportesDeRendimientoPorCampania\Obtener Campania Key.Inputs[Lookup Input]">
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\Llenado de FactReportesDeRendimientoPorCampania\Obtener Campania Key.Outputs[Lookup Error Output].Columns[ErrorCode]"
+                      dataType="i4"
+                      lineageId="Package\Llenado de FactReportesDeRendimientoPorCampania\Obtener Campania Key.Outputs[Lookup Error Output].Columns[ErrorCode]"
+                      name="ErrorCode"
+                      specialFlags="1" />
+                    <outputColumn
+                      refId="Package\Llenado de FactReportesDeRendimientoPorCampania\Obtener Campania Key.Outputs[Lookup Error Output].Columns[ErrorColumn]"
+                      dataType="i4"
+                      lineageId="Package\Llenado de FactReportesDeRendimientoPorCampania\Obtener Campania Key.Outputs[Lookup Error Output].Columns[ErrorColumn]"
+                      name="ErrorColumn"
+                      specialFlags="2" />
+                  </outputColumns>
+                  <externalMetadataColumns />
+                </output>
+              </outputs>
+            </component>
+            <component
+              refId="Package\Llenado de FactReportesDeRendimientoPorCampania\Obtener Tiempo Key"
+              componentClassID="Microsoft.Lookup"
+              contactInfo="Lookup;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; All Rights Reserved; http://www.microsoft.com/sql/support;6"
+              description="Joins additional columns to the data flow by looking up values in a table. For example, join to the 'employee id' column the employees table to get 'hire date' and 'employee name'. We recommend this transformation when the lookup table can fit into memory."
+              name="Obtener Tiempo Key"
+              usesDispositions="true"
+              version="6">
+              <properties>
+                <property
+                  dataType="System.String"
+                  description="Specifies the SQL statement that generates the lookup table."
+                  expressionType="Notify"
+                  name="SqlCommand"
+                  UITypeEditor="Microsoft.DataTransformationServices.Controls.ModalMultilineStringEditor">select * from [dbo].[DimTiempo]</property>
+                <property
+                  dataType="System.String"
+                  description="Specifies a SQL statement that uses parameters to generate the lookup table."
+                  expressionType="Notify"
+                  name="SqlCommandParam"
+                  UITypeEditor="Microsoft.DataTransformationServices.Controls.ModalMultilineStringEditor">select * from (select * from [dbo].[DimTiempo]) [refTable]
+where [refTable].[Fecha] = ?</property>
+                <property
+                  dataType="System.Int32"
+                  description="Specifies the type of connection used to access the reference dataset."
+                  name="ConnectionType"
+                  typeConverter="LookupConnectionType">0</property>
+                <property
+                  dataType="System.Int32"
+                  description="Specifies the cache type of the lookup table."
+                  name="CacheType"
+                  typeConverter="CacheType">0</property>
+                <property
+                  dataType="System.Int32"
+                  description="Specifies how the Lookup transformation handles rows without matching entries in the reference data set."
+                  name="NoMatchBehavior"
+                  typeConverter="LookupNoMatchBehavior">0</property>
+                <property
+                  dataType="System.Int32"
+                  description="Specifies the percentage of the cache that is allocated for rows with no matching entries in the reference dataset."
+                  name="NoMatchCachePercentage">0</property>
+                <property
+                  dataType="System.Int32"
+                  description="Maximum Memory Usage for Reference Cache on a 32 bit platform."
+                  name="MaxMemoryUsage">25</property>
+                <property
+                  dataType="System.Int64"
+                  description="Maximum Memory Usage for Reference Cache on a 64 bit platform."
+                  name="MaxMemoryUsage64">25</property>
+                <property
+                  dataType="System.String"
+                  description="Indicates whether to reference metadata in an XML format."
+                  name="ReferenceMetadataXml">&lt;referenceMetadata&gt;&lt;referenceColumns&gt;&lt;referenceColumn name="TiempoKey" dataType="DT_I4" length="0" precision="0" scale="0" codePage="0"/&gt;&lt;referenceColumn name="Fecha" dataType="DT_DBTIMESTAMP" length="0" precision="0" scale="0" codePage="0"/&gt;&lt;referenceColumn name="Dia" dataType="DT_UI1" length="0" precision="0" scale="0" codePage="0"/&gt;&lt;referenceColumn name="Mes" dataType="DT_UI1" length="0" precision="0" scale="0" codePage="0"/&gt;&lt;referenceColumn name="Anio" dataType="DT_I2" length="0" precision="0" scale="0" codePage="0"/&gt;&lt;/referenceColumns&gt;&lt;/referenceMetadata&gt;</property>
+                <property
+                  containsID="true"
+                  dataType="System.String"
+                  description="Specifies the list of lineage identifiers that map to the parameters that the SQL statement in the SQLCommand property uses. Entries in the list are separated by semicolons."
+                  name="ParameterMap">#{Package\Llenado de FactReportesDeRendimientoPorCampania\Lectura de metricas y llaves del negocio.Outputs[Output 0].Columns[FechaEnvio]};</property>
+                <property
+                  dataType="System.Int32"
+                  description="Specifies the column code page to use when code page information is unavailable from the data source."
+                  name="DefaultCodePage">1252</property>
+                <property
+                  dataType="System.Boolean"
+                  description="Determines whether duplicate keys in the reference data should be treated as errors when full cache mode is used."
+                  name="TreatDuplicateKeysAsError">false</property>
+              </properties>
+              <connections>
+                <connection
+                  refId="Package\Llenado de FactReportesDeRendimientoPorCampania\Obtener Tiempo Key.Connections[OleDbConnection]"
+                  connectionManagerID="Package.ConnectionManagers[DWOLEDB]"
+                  connectionManagerRefId="Package.ConnectionManagers[DWOLEDB]"
+                  description="Connection manager used to access lookup data."
+                  name="OleDbConnection" />
+              </connections>
+              <inputs>
+                <input
+                  refId="Package\Llenado de FactReportesDeRendimientoPorCampania\Obtener Tiempo Key.Inputs[Lookup Input]"
+                  name="Lookup Input">
+                  <inputColumns>
+                    <inputColumn
+                      refId="Package\Llenado de FactReportesDeRendimientoPorCampania\Obtener Tiempo Key.Inputs[Lookup Input].Columns[FechaEnvio]"
+                      cachedDataType="dbTimeStamp"
+                      cachedName="FechaEnvio"
+                      lineageId="Package\Llenado de FactReportesDeRendimientoPorCampania\Lectura de metricas y llaves del negocio.Outputs[Output 0].Columns[FechaEnvio]">
+                      <properties>
+                        <property
+                          dataType="System.String"
+                          description="Specifies the column in the reference table that a column joins."
+                          name="JoinToReferenceColumn">Fecha</property>
+                        <property
+                          dataType="System.Null"
+                          description="Specifies the column in the reference table from which a column is copied."
+                          name="CopyFromReferenceColumn" />
+                      </properties>
+                    </inputColumn>
+                  </inputColumns>
+                  <externalMetadataColumns />
+                </input>
+              </inputs>
+              <outputs>
+                <output
+                  refId="Package\Llenado de FactReportesDeRendimientoPorCampania\Obtener Tiempo Key.Outputs[Lookup Match Output]"
+                  errorOrTruncationOperation="Lookup"
+                  errorRowDisposition="FailComponent"
+                  exclusionGroup="1"
+                  name="Lookup Match Output"
+                  synchronousInputId="Package\Llenado de FactReportesDeRendimientoPorCampania\Obtener Tiempo Key.Inputs[Lookup Input]">
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\Llenado de FactReportesDeRendimientoPorCampania\Obtener Tiempo Key.Outputs[Lookup Match Output].Columns[TiempoKey]"
+                      dataType="i4"
+                      errorOrTruncationOperation="Copy Column"
+                      lineageId="Package\Llenado de FactReportesDeRendimientoPorCampania\Obtener Tiempo Key.Outputs[Lookup Match Output].Columns[TiempoKey]"
+                      name="TiempoKey"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          dataType="System.String"
+                          description="Specifies the column in the reference table from which a column is copied."
+                          name="CopyFromReferenceColumn">TiempoKey</property>
+                      </properties>
+                    </outputColumn>
+                  </outputColumns>
+                  <externalMetadataColumns />
+                </output>
+                <output
+                  refId="Package\Llenado de FactReportesDeRendimientoPorCampania\Obtener Tiempo Key.Outputs[Lookup No Match Output]"
+                  description="The Lookup output that handles rows with no matching entries in the reference dataset. Use this output when the NoMatchBehavior property is set to &quot;Send rows with no matching entries to the no match output.&quot;"
+                  exclusionGroup="1"
+                  name="Lookup No Match Output"
+                  synchronousInputId="Package\Llenado de FactReportesDeRendimientoPorCampania\Obtener Tiempo Key.Inputs[Lookup Input]">
+                  <externalMetadataColumns />
+                </output>
+                <output
+                  refId="Package\Llenado de FactReportesDeRendimientoPorCampania\Obtener Tiempo Key.Outputs[Lookup Error Output]"
+                  exclusionGroup="1"
+                  isErrorOut="true"
+                  name="Lookup Error Output"
+                  synchronousInputId="Package\Llenado de FactReportesDeRendimientoPorCampania\Obtener Tiempo Key.Inputs[Lookup Input]">
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\Llenado de FactReportesDeRendimientoPorCampania\Obtener Tiempo Key.Outputs[Lookup Error Output].Columns[ErrorCode]"
+                      dataType="i4"
+                      lineageId="Package\Llenado de FactReportesDeRendimientoPorCampania\Obtener Tiempo Key.Outputs[Lookup Error Output].Columns[ErrorCode]"
+                      name="ErrorCode"
+                      specialFlags="1" />
+                    <outputColumn
+                      refId="Package\Llenado de FactReportesDeRendimientoPorCampania\Obtener Tiempo Key.Outputs[Lookup Error Output].Columns[ErrorColumn]"
+                      dataType="i4"
+                      lineageId="Package\Llenado de FactReportesDeRendimientoPorCampania\Obtener Tiempo Key.Outputs[Lookup Error Output].Columns[ErrorColumn]"
+                      name="ErrorColumn"
+                      specialFlags="2" />
+                  </outputColumns>
+                  <externalMetadataColumns />
+                </output>
+              </outputs>
+            </component>
+          </components>
+          <paths>
+            <path
+              refId="Package\Llenado de FactReportesDeRendimientoPorCampania.Paths[Lookup Match Output]"
+              endId="Package\Llenado de FactReportesDeRendimientoPorCampania\Obtener Tiempo Key.Inputs[Lookup Input]"
+              name="Lookup Match Output"
+              startId="Package\Llenado de FactReportesDeRendimientoPorCampania\Obtener Campania Key.Outputs[Lookup Match Output]" />
+            <path
+              refId="Package\Llenado de FactReportesDeRendimientoPorCampania.Paths[Lookup Match Output1]"
+              endId="Package\Llenado de FactReportesDeRendimientoPorCampania\Llenar FactReportesDeRendimientoPorCampania.Inputs[ADO NET Destination Input]"
+              name="Lookup Match Output"
+              startId="Package\Llenado de FactReportesDeRendimientoPorCampania\Obtener Tiempo Key.Outputs[Lookup Match Output]" />
+            <path
+              refId="Package\Llenado de FactReportesDeRendimientoPorCampania.Paths[Output 0]"
+              endId="Package\Llenado de FactReportesDeRendimientoPorCampania\Obtener Campania Key.Inputs[Lookup Input]"
+              name="Output 0"
+              startId="Package\Llenado de FactReportesDeRendimientoPorCampania\Lectura de metricas y llaves del negocio.Outputs[Output 0]" />
+          </paths>
+        </pipeline>
+      </DTS:ObjectData>
+    </DTS:Executable>
+  </DTS:Executables>
+  <DTS:PrecedenceConstraints>
+    <DTS:PrecedenceConstraint
+      DTS:refId="Package.PrecedenceConstraints[Constraint]"
+      DTS:CreationName=""
+      DTS:DTSID="{3A7B342B-4704-40B8-BC10-F38E805350EF}"
+      DTS:From="Package\Lectura de Parametros"
+      DTS:LogicalAnd="True"
+      DTS:ObjectName="Constraint"
+      DTS:To="Package\Llenado de FactReportesDeRendimientoPorCampania" />
+    <DTS:PrecedenceConstraint
+      DTS:refId="Package.PrecedenceConstraints[Constraint 1]"
+      DTS:CreationName=""
+      DTS:DTSID="{32849900-A7DA-44FD-80F2-1C64DF92A91D}"
+      DTS:From="Package\Llenado de FactReportesDeRendimientoPorCampania"
+      DTS:LogicalAnd="True"
+      DTS:ObjectName="Constraint 1"
+      DTS:To="Package\Actualizar Fecha de Ultima Ejecucion" />
+  </DTS:PrecedenceConstraints>
+  <DTS:DesignTimeProperties><![CDATA[<?xml version="1.0"?>
+<!--Esta sección CDATA contiene la información de diseño del paquete. Esta sección incluye información como, por ejemplo, las coordenadas (x,y), el ancho y el alto.-->
+<!--Si edita manualmente esta sección y comete un error, puede eliminarlo. -->
+<!--El paquete podrá cargarse normalmente, pero se perderá la información de diseño anterior y el diseñador reorganizará los elementos automáticamente en la superficie de diseño.-->
+<Objects
+  Version="8">
+  <!--Cada uno de los nodos siguientes contiene propiedades que no afectan al comportamiento en tiempo de ejecución.-->
+  <Package
+    design-time-name="Package">
+    <LayoutInfo>
+      <GraphLayout
+        Capacity="8" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml">
+        <NodeLayout
+          Size="261,42"
+          Id="Package\Actualizar Fecha de Ultima Ejecucion"
+          TopLeft="680,496" />
+        <NodeLayout
+          Size="191,42"
+          Id="Package\Lectura de Parametros"
+          TopLeft="211,189" />
+        <NodeLayout
+          Size="346,42"
+          Id="Package\Llenado de FactReportesDeRendimientoPorCampania"
+          TopLeft="440,360" />
+        <EdgeLayout
+          Id="Package.PrecedenceConstraints[Constraint]"
+          TopLeft="306.5,231">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="306.5,129"
+              Start="0,0"
+              End="306.5,121.5">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,60.5" />
+                  <mssgle:CubicBezierSegment
+                    Point1="0,60.5"
+                    Point2="0,64.5"
+                    Point3="4,64.5" />
+                  <mssgle:LineSegment
+                    End="302.5,64.5" />
+                  <mssgle:CubicBezierSegment
+                    Point1="302.5,64.5"
+                    Point2="306.5,64.5"
+                    Point3="306.5,68.5" />
+                  <mssgle:LineSegment
+                    End="306.5,121.5" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <EdgeLayout
+          Id="Package.PrecedenceConstraints[Constraint 1]"
+          TopLeft="613,402">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="197.5,94"
+              Start="0,0"
+              End="197.5,86.5">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,43" />
+                  <mssgle:CubicBezierSegment
+                    Point1="0,43"
+                    Point2="0,47"
+                    Point3="4,47" />
+                  <mssgle:LineSegment
+                    End="193.5,47" />
+                  <mssgle:CubicBezierSegment
+                    Point1="193.5,47"
+                    Point2="197.5,47"
+                    Point3="197.5,51" />
+                  <mssgle:LineSegment
+                    End="197.5,86.5" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+      </GraphLayout>
+    </LayoutInfo>
+  </Package>
+  <TaskHost
+    design-time-name="Package\Llenado de FactReportesDeRendimientoPorCampania">
+    <LayoutInfo>
+      <GraphLayout
+        Capacity="8" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml" xmlns:mssgm="clr-namespace:Microsoft.SqlServer.Graph.Model;assembly=Microsoft.SqlServer.Graph">
+        <NodeLayout
+          Size="194,42"
+          Id="Package\Llenado de FactReportesDeRendimientoPorCampania\Obtener Campania Key"
+          TopLeft="397,280" />
+        <NodeLayout
+          Size="180,42"
+          Id="Package\Llenado de FactReportesDeRendimientoPorCampania\Obtener Tiempo Key"
+          TopLeft="604,368" />
+        <NodeLayout
+          Size="274,42"
+          Id="Package\Llenado de FactReportesDeRendimientoPorCampania\Lectura de metricas y llaves del negocio"
+          TopLeft="127,186" />
+        <NodeLayout
+          Size="322,42"
+          Id="Package\Llenado de FactReportesDeRendimientoPorCampania\Llenar FactReportesDeRendimientoPorCampania"
+          TopLeft="733,473" />
+        <EdgeLayout
+          Id="Package\Llenado de FactReportesDeRendimientoPorCampania.Paths[Output 0]"
+          TopLeft="264,228">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="230,52"
+              Start="0,0"
+              End="230,44.5">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,22" />
+                  <mssgle:CubicBezierSegment
+                    Point1="0,22"
+                    Point2="0,26"
+                    Point3="4,26" />
+                  <mssgle:LineSegment
+                    End="226,26" />
+                  <mssgle:CubicBezierSegment
+                    Point1="226,26"
+                    Point2="230,26"
+                    Point3="230,30" />
+                  <mssgle:LineSegment
+                    End="230,44.5" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <mssgm:EdgeLabel
+              BoundingBox="107,31,16,16"
+              RelativePosition="Any" />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <EdgeLayout
+          Id="Package\Llenado de FactReportesDeRendimientoPorCampania.Paths[Lookup Match Output1]"
+          TopLeft="694,410">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="200,63"
+              Start="0,0"
+              End="200,55.5">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,27.5" />
+                  <mssgle:CubicBezierSegment
+                    Point1="0,27.5"
+                    Point2="0,31.5"
+                    Point3="4,31.5" />
+                  <mssgle:LineSegment
+                    End="196,31.5" />
+                  <mssgle:CubicBezierSegment
+                    Point1="196,31.5"
+                    Point2="200,31.5"
+                    Point3="200,35.5" />
+                  <mssgle:LineSegment
+                    End="200,55.5" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <mssgm:EdgeLabel
+              BoundingBox="51.80861328125,36.5,96.3827734375,11.609375"
+              RelativePosition="Any" />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <EdgeLayout
+          Id="Package\Llenado de FactReportesDeRendimientoPorCampania.Paths[Lookup Match Output]"
+          TopLeft="494,322">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="200,46"
+              Start="0,0"
+              End="200,38.5">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,19" />
+                  <mssgle:CubicBezierSegment
+                    Point1="0,19"
+                    Point2="0,23"
+                    Point3="4,23" />
+                  <mssgle:LineSegment
+                    End="196,23" />
+                  <mssgle:CubicBezierSegment
+                    Point1="196,23"
+                    Point2="200,23"
+                    Point3="200,27" />
+                  <mssgle:LineSegment
+                    End="200,38.5" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <mssgm:EdgeLabel
+              BoundingBox="51.80861328125,28,96.3827734375,11.609375"
+              RelativePosition="Any" />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+      </GraphLayout>
+    </LayoutInfo>
+  </TaskHost>
+  <PipelineComponentMetadata
+    design-time-name="Package\Llenado de FactReportesDeRendimientoPorCampania\Obtener Campania Key">
+    <Properties>
+      <Property>
+        <Name>OverwriteParamsSQLProp</Name>
+        <Value
+          type="q2:string">false</Value>
+      </Property>
+      <Property>
+        <Name>UsedTableName</Name>
+        <Value
+          type="q3:string">[dbo].[DimCampania]</Value>
+      </Property>
+      <Property>
+        <Name>TableInfoObjectType</Name>
+        <Value
+          type="q4:string">0</Value>
+      </Property>
+      <Property>
+        <Name>DataSourceViewID</Name>
+      </Property>
+    </Properties>
+  </PipelineComponentMetadata>
+  <PipelineComponentMetadata
+    design-time-name="Package\Llenado de FactReportesDeRendimientoPorCampania\Obtener Tiempo Key">
+    <Properties>
+      <Property>
+        <Name>OverwriteParamsSQLProp</Name>
+        <Value
+          type="q2:string">false</Value>
+      </Property>
+      <Property>
+        <Name>UsedTableName</Name>
+        <Value
+          type="q3:string">[dbo].[DimTiempo]</Value>
+      </Property>
+      <Property>
+        <Name>TableInfoObjectType</Name>
+        <Value
+          type="q4:string">0</Value>
+      </Property>
+      <Property>
+        <Name>DataSourceViewID</Name>
+      </Property>
+    </Properties>
+  </PipelineComponentMetadata>
+  <PipelineComponentMetadata
+    design-time-name="Package\Llenado de FactReportesDeRendimientoPorCampania\Llenar FactReportesDeRendimientoPorCampania">
+    <Properties>
+      <Property>
+        <Name>DataSourceViewID</Name>
+      </Property>
+    </Properties>
+  </PipelineComponentMetadata>
+</Objects>]]></DTS:DesignTimeProperties>
+</DTS:Executable>

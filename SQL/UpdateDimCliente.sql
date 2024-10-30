@@ -5,7 +5,9 @@ CREATE PROCEDURE UpdateDimCliente(
 	@NombreCliente VARCHAR(255),
 	@Telefono VARCHAR(50),
 	@NombreEmpresa VARCHAR(50)
-) AS BEGIN 
+)
+AS
+BEGIN
 	UPDATE DimCliente SET 
 	NombreCliente=@NombreCliente,
 	Telefono=@Telefono,
