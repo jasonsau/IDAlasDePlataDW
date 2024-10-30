@@ -30,7 +30,7 @@ CREATE TABLE DimProducto
 	UnidadProducto VARCHAR(50) DEFAULT 'Sin Unidad de Medida',
 	PrecioUnitario DECIMAL(10,2),
 	FechaCreacion DATE,
-	FechaModificacion DATE,
+	FechaModificacion DATE DEFAULT GETDATE(),
 	Activo BIT DEFAULT 1
 );
 GO
@@ -103,15 +103,15 @@ CREATE TABLE FactVentasPorCampania
 	Descuento FLOAT,
 	PrecioUnitarioConDescuento FLOAT,
 	Total FLOAT,
-	TotalConDescuento FLOAT,
-	PRIMARY KEY (ClienteKey, ProductoKey, CuponKey, CampaniaKey, FechaDeOrdenKey)
+	TotalConDescuento FLOAT
 );
 GO
 
-CREATE TABLE FactReportesDeRendimientoPorCampania
+CREATE TABLE FactReporteCampaniaFotoDiaria
 (
 	CampaniaKey INT FOREIGN KEY REFERENCES DimCampania(CampaniaKey),
 	FechaEnvioKey INT FOREIGN KEY REFERENCES DimTiempo(TiempoKey),
+	FechaFotografia DATE NOT NULL DEFAULT GETDATE(),
 	RebotesPermanentes INT,
     NoEnviados INT,
     NoAbiertos INT,
@@ -124,8 +124,7 @@ CREATE TABLE FactReportesDeRendimientoPorCampania
     ClicsUnicos INT,
     Rebotes INT,
     Reenviados INT,
-    CorreosEnviados INT,
-	PRIMARY KEY (CampaniaKey, FechaEnvioKey)
+    CorreosEnviados INT
 );
 GO
 
@@ -172,10 +171,6 @@ INSERT INTO Parametros
 	(NombreParametro, ValorParametro)
 VALUES('Fecha_Ultima_Ejecucion', CONVERT(VARCHAR, CONVERT(DATETIME,'01/01/2023')));
 
-INSERT INTO Parametros
-	(NombreParametro, ValorParametro)
-VALUES('Fecha_Ultima_Ejecucion_Reportes', CONVERT(VARCHAR, CONVERT(DATETIME,'01/01/2023')));
-
 INSERT INTO Date_Dimension VALUES(19900101, '1990-1-1',1, 1, 1, 'Lunes', 'Lun', 'y', 1, 1, '1990-1-1', 19900101, 1, 1, 'Enero ', 'Ene', 1, 1990, 199001, 7, 3, 1990, 'n', '1989-1-1');
 INSERT INTO DimTiempo (TiempoKey, Fecha, Dia, Mes, Anio) SELECT date_key, full_date, day_num_in_month, month, year FROM Date_Dimension WHERE date_key = 19900101;
 
@@ -187,9 +182,5 @@ INSERT INTO DimCampania
 	(CampaniaId, NombreCampania, TipoCampania, TemaCampania, EmailEnvio, EmailRespuestas, TituloEmail, EstadoCampania, FechaEnvio, FechaCreacion)
 VALUES(0, 'No se aplico un cupon', 'Por Defecto', 'Por Defecto', 'pordefecto@defecto.com', 'pordefecto@defecto.com', 'Por defecto', 'Por defecto', '1990-01-01', '1990-01-01');
 
-INSERT INTO DimCliente
-	(ClienteId, NombreCliente, Telefono, Email, NombreEmpresa, FechaCreacion)
-VALUES(0, 'Cliente no encontrado', 'Sin Teléfono', 'Sin Email', 'Sin Empresa', '1990-01-01');
 
-
-UPDATE Parametros SET ValorParametro = CONVERT(VARCHAR, CONVERT(DATETIME,'01/01/2023')) WHERE NombreParametro='Fecha_Ultima_Ejecucion' and NombreParametro='Fecha_Ultima_Ejecucion_Reportes';
+UPDATE Parametros SET ValorParametro = CONVERT(VARCHAR, CONVERT(DATETIME,'01/01/2023')) WHERE NombreParametro='Fecha_Ultima_Ejecucion';
