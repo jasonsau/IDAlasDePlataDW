@@ -11,8 +11,8 @@
   DTS:LocaleID="1033"
   DTS:ObjectName="FactReporteCampaniaFotoDiaria"
   DTS:PackageType="5"
-  DTS:VersionBuild="112"
-  DTS:VersionGUID="{6A41E91D-5736-403F-BEFD-F5625F750F5C}">
+  DTS:VersionBuild="113"
+  DTS:VersionGUID="{322E7BFC-B3BA-46E7-A20A-AF2EF6EC78F4}">
   <DTS:Property
     DTS:Name="PackageFormatVersion">8</DTS:Property>
   <DTS:ConnectionManagers>
@@ -27,7 +27,7 @@
           <DTS:Password
             DTS:Name="Password"
             Sensitive="1"
-            Encrypted="1">AQAAANCMnd8BFdERjHoAwE/Cl+sBAAAA0cnV3L9sZUGZvr3Q4+g2VgAAAAAIAAAARABUAFMAAAAQZgAAAAEAACAAAABs9xP+7P1wXMN610T3S8Kk8dIRHhSSoc5UfQekSWPnvgAAAAAOgAAAAAIAACAAAAAfXKDeWF+aL/L+ZgQdVoXIvQ/5gPxIM/ZiKpz3ldabUSAAAADzCub6qFHRdCIxCE/eG9N7QBWGh4WMoW1AKlzP7pp0y0AAAAAI7KN2HaiWSiJ/LeYOwLVORsUeVzp9V7IHbm/JsUxw2+FWvaihmRb1yohNKFmQ+X4fErOfSiWM1/4weCUzridu</DTS:Password>
+            Encrypted="1">AQAAANCMnd8BFdERjHoAwE/Cl+sBAAAA0cnV3L9sZUGZvr3Q4+g2VgAAAAAIAAAARABUAFMAAAAQZgAAAAEAACAAAAA5s/4OJ4HQsoAMkJSjD2qGMwSR+bKe6Qb1y2ro6eq4NgAAAAAOgAAAAAIAACAAAAA3kRGdSsViSDi+xTZwPqW1ts6Axxtm/zwkrGSSFqdMjiAAAABExE5bewMpv+W2gSRPGn+LrthmKMeIpDutSasFm3L8p0AAAAAfc9G9HJy39EygLBWfFii4YQ0qmdXJt6/wfa73IDnl36Ke7f2JYOTK+RaX/mJOouO3pVdEVIbhPUHGb/InwlVP</DTS:Password>
         </DTS:ConnectionManager>
       </DTS:ObjectData>
     </DTS:ConnectionManager>
@@ -44,7 +44,7 @@
           <DTS:Password
             DTS:Name="Password"
             Sensitive="1"
-            Encrypted="1">AQAAANCMnd8BFdERjHoAwE/Cl+sBAAAA0cnV3L9sZUGZvr3Q4+g2VgAAAAAIAAAARABUAFMAAAAQZgAAAAEAACAAAADjMlnwXPQMZI5MMfpEVMtsMa70ZuxRrrL5MKXUPZEjXQAAAAAOgAAAAAIAACAAAAB9jt+4ekmsmLVhBhEnSXz4Cg3+6hUs7ZUZhsK/XrrMjCAAAABNsVkEhxPSquOjjZ13gcXvykUdSsgtyZIZLaOEHhDVcEAAAADmta5NFtXobUX+GpD+kIjhrFjDCpk3bYONpktTzj87dgPq8oEsJZS1Mwb1JlAnj/Q6qTmk4khCLz7V7J2iNMGU</DTS:Password>
+            Encrypted="1">AQAAANCMnd8BFdERjHoAwE/Cl+sBAAAA0cnV3L9sZUGZvr3Q4+g2VgAAAAAIAAAARABUAFMAAAAQZgAAAAEAACAAAACGdXAX3Qn1RyZ0/68peM9CxBWEGNP9YG6qTzCF7/rKUgAAAAAOgAAAAAIAACAAAABNmSkm4UlUTtAbSJKgZuk9TDUZbm3TFBaTj6HWks/B0SAAAAAf5aPo99ENc4BR129mb2lmMFavo/r87hYu5FJTHYyoJUAAAACRRXXCkujGuViUnxGvo/h7eS9xhfvzJYWMQHCIGsxg9PuOcouL5e3IR4p3xLnpHAF4+MMM9op+CgxciHesP2eq</DTS:Password>
         </DTS:ConnectionManager>
       </DTS:ObjectData>
     </DTS:ConnectionManager>
@@ -73,29 +73,6 @@
     </DTS:Variable>
   </DTS:Variables>
   <DTS:Executables>
-    <DTS:Executable
-      DTS:refId="Package\Lectura de Parametros"
-      DTS:CreationName="Microsoft.ExecuteSQLTask"
-      DTS:Description="Execute SQL Task"
-      DTS:DTSID="{77E3E058-5BAC-4C79-AA16-7838403FD2EB}"
-      DTS:ExecutableType="Microsoft.ExecuteSQLTask"
-      DTS:LocaleID="-1"
-      DTS:ObjectName="Lectura de Parametros"
-      DTS:TaskContact="Execute SQL Task; Microsoft Corporation; SQL Server 2022; © 2022 Microsoft Corporation; All Rights Reserved;http://www.microsoft.com/sql/support/default.asp;1"
-      DTS:ThreadHint="0">
-      <DTS:Variables />
-      <DTS:ObjectData>
-        <SQLTask:SqlTaskData
-          SQLTask:Connection="{8DAC9683-5623-45C1-BBD0-381EF1BC7210}"
-          SQLTask:BypassPrepare="False"
-          SQLTask:SqlStatementSource="SELECT ValorParametro FROM Parametros WHERE NombreParametro = 'Fecha_Ultima_Ejecucion_Reportes';&#xA;"
-          SQLTask:ResultType="ResultSetType_SingleRow" xmlns:SQLTask="www.microsoft.com/sqlserver/dts/tasks/sqltask">
-          <SQLTask:ResultBinding
-            SQLTask:ResultName="ValorParametro"
-            SQLTask:DtsVariableName="User::FechaActual" />
-        </SQLTask:SqlTaskData>
-      </DTS:ObjectData>
-    </DTS:Executable>
     <DTS:Executable
       DTS:refId="Package\Llenado de FactReporteCampaniaFotoDiaria"
       DTS:CreationName="Microsoft.Pipeline"
@@ -3262,16 +3239,6 @@ where [refTable].[Fecha] = ?</property>
       </DTS:ObjectData>
     </DTS:Executable>
   </DTS:Executables>
-  <DTS:PrecedenceConstraints>
-    <DTS:PrecedenceConstraint
-      DTS:refId="Package.PrecedenceConstraints[Constraint]"
-      DTS:CreationName=""
-      DTS:DTSID="{3A7B342B-4704-40B8-BC10-F38E805350EF}"
-      DTS:From="Package\Lectura de Parametros"
-      DTS:LogicalAnd="True"
-      DTS:ObjectName="Constraint"
-      DTS:To="Package\Llenado de FactReporteCampaniaFotoDiaria" />
-  </DTS:PrecedenceConstraints>
   <DTS:DesignTimeProperties><![CDATA[<?xml version="1.0"?>
 <!--Esta sección CDATA contiene la información de diseño del paquete. Esta sección incluye información como, por ejemplo, las coordenadas (x,y), el ancho y el alto.-->
 <!--Si edita manualmente esta sección y comete un error, puede eliminarlo. -->
@@ -3283,49 +3250,11 @@ where [refTable].[Fecha] = ?</property>
     design-time-name="Package">
     <LayoutInfo>
       <GraphLayout
-        Capacity="4" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml">
-        <NodeLayout
-          Size="191,42"
-          Id="Package\Lectura de Parametros"
-          TopLeft="293,241" />
+        Capacity="4" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph">
         <NodeLayout
           Size="298,42"
           Id="Package\Llenado de FactReporteCampaniaFotoDiaria"
-          TopLeft="513,407" />
-        <EdgeLayout
-          Id="Package.PrecedenceConstraints[Constraint]"
-          TopLeft="388.5,283">
-          <EdgeLayout.Curve>
-            <mssgle:Curve
-              StartConnector="{assembly:Null}"
-              EndConnector="273.5,124"
-              Start="0,0"
-              End="273.5,116.5">
-              <mssgle:Curve.Segments>
-                <mssgle:SegmentCollection
-                  Capacity="5">
-                  <mssgle:LineSegment
-                    End="0,58" />
-                  <mssgle:CubicBezierSegment
-                    Point1="0,58"
-                    Point2="0,62"
-                    Point3="4,62" />
-                  <mssgle:LineSegment
-                    End="269.5,62" />
-                  <mssgle:CubicBezierSegment
-                    Point1="269.5,62"
-                    Point2="273.5,62"
-                    Point3="273.5,66" />
-                  <mssgle:LineSegment
-                    End="273.5,116.5" />
-                </mssgle:SegmentCollection>
-              </mssgle:Curve.Segments>
-            </mssgle:Curve>
-          </EdgeLayout.Curve>
-          <EdgeLayout.Labels>
-            <EdgeLabelCollection />
-          </EdgeLayout.Labels>
-        </EdgeLayout>
+          TopLeft="414,334" />
       </GraphLayout>
     </LayoutInfo>
   </Package>
