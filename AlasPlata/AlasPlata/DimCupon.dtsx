@@ -11,8 +11,8 @@
   DTS:LocaleID="1033"
   DTS:ObjectName="DimCupon"
   DTS:PackageType="5"
-  DTS:VersionBuild="50"
-  DTS:VersionGUID="{71309D6A-75FA-4299-A099-31211FAE7E90}">
+  DTS:VersionBuild="51"
+  DTS:VersionGUID="{B31D60D7-8388-4F37-9CB5-A75A337451E3}">
   <DTS:Property
     DTS:Name="PackageFormatVersion">8</DTS:Property>
   <DTS:ConnectionManagers>
@@ -27,7 +27,7 @@
           <DTS:Password
             DTS:Name="Password"
             Sensitive="1"
-            Encrypted="1">AQAAANCMnd8BFdERjHoAwE/Cl+sBAAAA0cnV3L9sZUGZvr3Q4+g2VgAAAAAIAAAARABUAFMAAAAQZgAAAAEAACAAAACJ3MPp/tyoYHUnhy8gGsCuRpmzCX8IECru3SYo76WI0gAAAAAOgAAAAAIAACAAAACmSVQdEaqoJYQ5Me//T1FqZ2UQBb0g132ofPWa3GzNQiAAAAAOoN6KHj32iqnyen09JV4ntDxAXrEvoAE30VUK+K1P10AAAAC5JnyTq22IPHwoYV6B3I/NpHifjPIaje9nQAFRv887A1Gn5I0BEqwf80LKjgTTUsP+3XHPhyPLHBEusk7Mwcro</DTS:Password>
+            Encrypted="1">AQAAANCMnd8BFdERjHoAwE/Cl+sBAAAA0cnV3L9sZUGZvr3Q4+g2VgAAAAAIAAAARABUAFMAAAAQZgAAAAEAACAAAAA61JJTBtztwKWGRiDYX+aOar1Ej2oOXuuEVTUyVoH9GgAAAAAOgAAAAAIAACAAAABG+hPokZ25pIwqnGNEGvdW2ZW0gBgMp942wjA9Ajlm1SAAAADXSWAqAN9VnIzHNOfoophP86nmtTX/Ch0HBMJZ8065hEAAAAAix1yi4wcAnFYhrzaEkyWfwC4p9qUeEM/ONs6l8E9oAdVRsupy2lrsYDQAfLv2BY+c20kz1VsZ78ZRef7n44wL</DTS:Password>
         </DTS:ConnectionManager>
       </DTS:ObjectData>
     </DTS:ConnectionManager>
@@ -44,7 +44,7 @@
           <DTS:Password
             DTS:Name="Password"
             Sensitive="1"
-            Encrypted="1">AQAAANCMnd8BFdERjHoAwE/Cl+sBAAAA0cnV3L9sZUGZvr3Q4+g2VgAAAAAIAAAARABUAFMAAAAQZgAAAAEAACAAAAAkGhtQNVfkBFRwec5nS3a4ypFmTX+utJ/2KcqHPdBPaAAAAAAOgAAAAAIAACAAAACK8p44Wf1aZiTM88qjsW/CzJBv8A/Wafu2L5RyxPLAoSAAAAA7JeVZcUbh7Wi3OxmEOD1pSdDKAjQntw6lFVCAjuQErEAAAADWlGFOOIgcoVc6h+eML61NPN/QmyBKFGLcDGpZzZuXqS0vqpof67Y+3+VB0pRzc7UhhjdsouYy711YFbjKtDrP</DTS:Password>
+            Encrypted="1">AQAAANCMnd8BFdERjHoAwE/Cl+sBAAAA0cnV3L9sZUGZvr3Q4+g2VgAAAAAIAAAARABUAFMAAAAQZgAAAAEAACAAAABSsXL+FGnD4oE7XRrUsaCvFCuaaiN0+cOhHKTyeFIPjgAAAAAOgAAAAAIAACAAAADJFCIzcbLuc5TksmriWpGt/BbgCwgn8ZafSYjyYCfDPSAAAACXVQb7aahKlX1RynCYEwmZh/W1jEkPg5KNuf3iO12g5EAAAABqTc/0iQPHE2gaxkveNXpy3jRlQ91pYrj6qohTEp41A7VLgxVonGnBYWWXFbSTcfu41ki5DtOLYmXvcXXsB/sv</DTS:Password>
         </DTS:ConnectionManager>
       </DTS:ObjectData>
     </DTS:ConnectionManager>
@@ -2361,6 +2361,7 @@ where [refTable].[CuponId] = ?</property>
       DTS:refId="Package\Vaciar DimCupon"
       DTS:CreationName="Microsoft.ExecuteSQLTask"
       DTS:Description="Tarea Ejecutar SQL"
+      DTS:Disabled="True"
       DTS:DTSID="{25CA7924-AF16-4217-9CEF-BABA6AEE033A}"
       DTS:ExecutableType="Microsoft.ExecuteSQLTask"
       DTS:LocaleID="-1"

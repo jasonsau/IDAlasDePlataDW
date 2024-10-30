@@ -11,8 +11,8 @@
   DTS:LocaleID="1033"
   DTS:ObjectName="DimCliente"
   DTS:PackageType="5"
-  DTS:VersionBuild="37"
-  DTS:VersionGUID="{8923E12F-8794-470E-A3E5-BD0FE52FB13E}">
+  DTS:VersionBuild="39"
+  DTS:VersionGUID="{19C207DA-B0A9-4687-A5F4-C1343BBE59B0}">
   <DTS:Property
     DTS:Name="PackageFormatVersion">8</DTS:Property>
   <DTS:ConnectionManagers>
@@ -27,7 +27,7 @@
           <DTS:Password
             DTS:Name="Password"
             Sensitive="1"
-            Encrypted="1">AQAAANCMnd8BFdERjHoAwE/Cl+sBAAAA0cnV3L9sZUGZvr3Q4+g2VgAAAAAIAAAARABUAFMAAAAQZgAAAAEAACAAAAB0LeDq8BiTK0XJWFCTNBuAc8QMBDrh8y+FiKw9N8Q37AAAAAAOgAAAAAIAACAAAADKPAxs0059skw6xBo+EV6R9xYZxUx6W00HJYBkioWAByAAAAA+UiVLezzjJLD6M3Dbzq+7IAQG6KT8aspmcy5wbNCbI0AAAAAOusXfg2u7t30RRpzEXjtPdGJlS5yq9oOsp0Bhxyay9LGtmF09wGn8nzot5syWx299+3f6hdBESwtPUlkshOmm</DTS:Password>
+            Encrypted="1">AQAAANCMnd8BFdERjHoAwE/Cl+sBAAAA0cnV3L9sZUGZvr3Q4+g2VgAAAAAIAAAARABUAFMAAAAQZgAAAAEAACAAAAC3N6jSyS1vd8AmHfYR9L5ZIknyrn14cNPSn3w0xLAcSgAAAAAOgAAAAAIAACAAAADxiY0s14rrIpRS9eGO/TDlr/wnc95qr40SpffmSMOFdyAAAAA7s9zqj/3MYLAs3DRKOaMgPWW+e+Uapqc3kBgfwAtQ6UAAAACnlfqzq8NFIo9aPD+jHhDJGfVS1NpLvHZGB6bJTzWqOF2g/wozmaWLsyMnjqA9+IGjBDeWIgJKDZIo9AEpb20W</DTS:Password>
         </DTS:ConnectionManager>
       </DTS:ObjectData>
     </DTS:ConnectionManager>
@@ -44,7 +44,7 @@
           <DTS:Password
             DTS:Name="Password"
             Sensitive="1"
-            Encrypted="1">AQAAANCMnd8BFdERjHoAwE/Cl+sBAAAA0cnV3L9sZUGZvr3Q4+g2VgAAAAAIAAAARABUAFMAAAAQZgAAAAEAACAAAACuXBS6mSbCuu/DcryU69hew6nuoizxd50iih0veSaknQAAAAAOgAAAAAIAACAAAAAmhwubU+hRGyUwPjnSeo6AZIX4SltpDqPoZebN1NclTyAAAADVW2w7Pw90kz1cW4yCmY/CFutusG7sJbEtJK5vbHsK4kAAAABePtsxAqhuC4OL5fEzgMFhddo/I9yuuFQy5N4LMOq2HESSKOwCRB+HN6HZ3f6+XzflPrSg9ikS9NtX0kqdef1Z</DTS:Password>
+            Encrypted="1">AQAAANCMnd8BFdERjHoAwE/Cl+sBAAAA0cnV3L9sZUGZvr3Q4+g2VgAAAAAIAAAARABUAFMAAAAQZgAAAAEAACAAAABaC10gtvhcm8q6p8uHDY3t62Hp1mGYLmul6w7ynjo9MwAAAAAOgAAAAAIAACAAAADeDJLd3FaQj3dt4iYUwDKUdcMmPvVMZDFqN9TAfaHJfyAAAABBmcobx+G2doBxDzPd3e/RPt6lGvRiAtBAS7l9YPnFeUAAAAAv7ZhS8jd1FZeoIoHXUwX/XjLkZktgK18AhQgAj545OiuuNh3AQxkGWF6Zcpg7bZ5JFA1nhJRj5o8iWeMakbJ/</DTS:Password>
         </DTS:ConnectionManager>
       </DTS:ObjectData>
     </DTS:ConnectionManager>
@@ -1643,7 +1643,7 @@ AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA]]></arrayElement>
                   expressionType="Notify"
                   name="SqlCommandParam"
                   UITypeEditor="Microsoft.DataTransformationServices.Controls.ModalMultilineStringEditor">select * from (select * from [dbo].[DimCliente]) [refTable]
-where [refTable].[ClienteId] = ?</property>
+where [refTable].[Email] = ?</property>
                 <property
                   dataType="System.Int32"
                   description="Specifies the type of connection used to access the reference dataset."
@@ -1674,12 +1674,12 @@ where [refTable].[ClienteId] = ?</property>
                 <property
                   dataType="System.String"
                   description="Indicates whether to reference metadata in an XML format."
-                  name="ReferenceMetadataXml">&lt;referenceMetadata&gt;&lt;referenceColumns&gt;&lt;referenceColumn name="ClienteKey" dataType="DT_I4" length="0" precision="0" scale="0" codePage="0"/&gt;&lt;referenceColumn name="ClienteId" dataType="DT_STR" length="255" precision="0" scale="0" codePage="1252"/&gt;&lt;referenceColumn name="NombreCliente" dataType="DT_STR" length="255" precision="0" scale="0" codePage="1252"/&gt;&lt;referenceColumn name="Telefono" dataType="DT_STR" length="50" precision="0" scale="0" codePage="1252"/&gt;&lt;referenceColumn name="Email" dataType="DT_STR" length="50" precision="0" scale="0" codePage="1252"/&gt;&lt;/referenceColumns&gt;&lt;/referenceMetadata&gt;</property>
+                  name="ReferenceMetadataXml">&lt;referenceMetadata&gt;&lt;referenceColumns&gt;&lt;referenceColumn name="ClienteKey" dataType="DT_I4" length="0" precision="0" scale="0" codePage="0"/&gt;&lt;referenceColumn name="ClienteId" dataType="DT_STR" length="255" precision="0" scale="0" codePage="1252"/&gt;&lt;referenceColumn name="NombreCliente" dataType="DT_STR" length="255" precision="0" scale="0" codePage="1252"/&gt;&lt;referenceColumn name="Telefono" dataType="DT_STR" length="50" precision="0" scale="0" codePage="1252"/&gt;&lt;referenceColumn name="Email" dataType="DT_STR" length="50" precision="0" scale="0" codePage="1252"/&gt;&lt;referenceColumn name="NombreEmpresa" dataType="DT_STR" length="255" precision="0" scale="0" codePage="1252"/&gt;&lt;referenceColumn name="FechaCreacion" dataType="DT_DBDATE" length="0" precision="0" scale="0" codePage="0"/&gt;&lt;/referenceColumns&gt;&lt;/referenceMetadata&gt;</property>
                 <property
                   containsID="true"
                   dataType="System.String"
                   description="Specifies the list of lineage identifiers that map to the parameters that the SQL statement in the SQLCommand property uses. Entries in the list are separated by semicolons."
-                  name="ParameterMap">#{Package\Llenar de DimCliente\Lectura Archivo JSON.Outputs[Output 0].Columns[ClienteId]};</property>
+                  name="ParameterMap">#{Package\Llenar de DimCliente\Lectura Archivo JSON.Outputs[Output 0].Columns[Email]};</property>
                 <property
                   dataType="System.Int32"
                   description="Specifies the column code page to use when code page information is unavailable from the data source."
@@ -1703,17 +1703,17 @@ where [refTable].[ClienteId] = ?</property>
                   name="Lookup Input">
                   <inputColumns>
                     <inputColumn
-                      refId="Package\Llenar de DimCliente\Verificacion Existe.Inputs[Lookup Input].Columns[ClienteId]"
+                      refId="Package\Llenar de DimCliente\Verificacion Existe.Inputs[Lookup Input].Columns[Email]"
                       cachedCodepage="1252"
                       cachedDataType="str"
                       cachedLength="50"
-                      cachedName="ClienteId"
-                      lineageId="Package\Llenar de DimCliente\Lectura Archivo JSON.Outputs[Output 0].Columns[ClienteId]">
+                      cachedName="Email"
+                      lineageId="Package\Llenar de DimCliente\Lectura Archivo JSON.Outputs[Output 0].Columns[Email]">
                       <properties>
                         <property
                           dataType="System.String"
                           description="Specifies the column in the reference table that a column joins."
-                          name="JoinToReferenceColumn">ClienteId</property>
+                          name="JoinToReferenceColumn">Email</property>
                         <property
                           dataType="System.Null"
                           description="Specifies the column in the reference table from which a column is copied."
@@ -1806,6 +1806,7 @@ where [refTable].[ClienteId] = ?</property>
       DTS:refId="Package\Vaciar DimCliente"
       DTS:CreationName="Microsoft.ExecuteSQLTask"
       DTS:Description="Tarea Ejecutar SQL"
+      DTS:Disabled="True"
       DTS:DTSID="{BF6376BC-A36B-4EF0-8348-091AC71725C4}"
       DTS:ExecutableType="Microsoft.ExecuteSQLTask"
       DTS:LocaleID="-1"
@@ -1927,9 +1928,7 @@ where [refTable].[ClienteId] = ?</property>
             </mssgle:Curve>
           </EdgeLayout.Curve>
           <EdgeLayout.Labels>
-            <mssgm:EdgeLabel
-              BoundingBox="0,0,0,0"
-              RelativePosition="Any" />
+            <EdgeLabelCollection />
           </EdgeLayout.Labels>
         </EdgeLayout>
         <EdgeLayout
@@ -2021,7 +2020,7 @@ where [refTable].[ClienteId] = ?</property>
       <Property>
         <Name>OverwriteParamsSQLProp</Name>
         <Value
-          type="q2:string">false</Value>
+          type="q2:boolean">false</Value>
       </Property>
       <Property>
         <Name>UsedTableName</Name>
@@ -2031,7 +2030,7 @@ where [refTable].[ClienteId] = ?</property>
       <Property>
         <Name>TableInfoObjectType</Name>
         <Value
-          type="q4:string">0</Value>
+          type="q4:int">0</Value>
       </Property>
       <Property>
         <Name>DataSourceViewID</Name>

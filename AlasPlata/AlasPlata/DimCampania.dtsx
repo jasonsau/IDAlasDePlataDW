@@ -11,8 +11,8 @@
   DTS:LocaleID="1033"
   DTS:ObjectName="Package1"
   DTS:PackageType="5"
-  DTS:VersionBuild="32"
-  DTS:VersionGUID="{7239453D-CA59-43C2-BAE2-6229ADB9A49B}">
+  DTS:VersionBuild="33"
+  DTS:VersionGUID="{BF363406-2CEA-49F5-B73F-66564E3EE3E6}">
   <DTS:Property
     DTS:Name="PackageFormatVersion">8</DTS:Property>
   <DTS:ConnectionManagers>
@@ -27,7 +27,7 @@
           <DTS:Password
             DTS:Name="Password"
             Sensitive="1"
-            Encrypted="1">AQAAANCMnd8BFdERjHoAwE/Cl+sBAAAA0cnV3L9sZUGZvr3Q4+g2VgAAAAAIAAAARABUAFMAAAAQZgAAAAEAACAAAADppCgq4C1LN1KEZ13Tb7ENTCuGtjkUTYY4LAYPzClD9wAAAAAOgAAAAAIAACAAAAB3Y4qf5bdqjkmOCRx500lG3YwfWuiH3D19tnQMlpGQ3CAAAACBEqIq8lL8Mt0MPu5OItxCc2qWlhTN+tvUCg27Ka03YEAAAACnnFpEyKhZnzSIRwwgouoV1zX+3oTwJLjjFRCF5lSykAYW7QqtnXvdfI1jO85JC7g3QipGfUfF9as8Ta454A28</DTS:Password>
+            Encrypted="1">AQAAANCMnd8BFdERjHoAwE/Cl+sBAAAA0cnV3L9sZUGZvr3Q4+g2VgAAAAAIAAAARABUAFMAAAAQZgAAAAEAACAAAAD2p4X4b9rngNV0taFNCwoEedxPCRhf1gQ/x2JXUnEGlwAAAAAOgAAAAAIAACAAAAAI3lmDbtL88UgUgAXLH1HWbUuwRonb6+ceduKxgSFhbSAAAACY3l0hPCyQqJ0GA57qecqoDgTDqJSd2bpdr8qEkIR1PUAAAAChcRQfRQL/rrBF0vqJ9adf7TZGHj3C/ocizNYc0trTzs8qogjM0CUi/xERyk7MW6bufxzPIAMmpImemc2dfRiZ</DTS:Password>
         </DTS:ConnectionManager>
       </DTS:ObjectData>
     </DTS:ConnectionManager>
@@ -44,7 +44,7 @@
           <DTS:Password
             DTS:Name="Password"
             Sensitive="1"
-            Encrypted="1">AQAAANCMnd8BFdERjHoAwE/Cl+sBAAAA0cnV3L9sZUGZvr3Q4+g2VgAAAAAIAAAARABUAFMAAAAQZgAAAAEAACAAAACbtedZGcjfYK5MPnY3N0O6tfnb5Yp5qniUi/OlCjwNkgAAAAAOgAAAAAIAACAAAACm25auIGdNWwpE6OirMx6xyJSE32asIsURJaJHGDl+XCAAAADhM4kBPHmBXHk1vFAHFbysx3EUbGsEZCTiStvjBGzSRUAAAADm+4Nc/ywPPdzUWEXL38h8j1EMMq/k1wNGgN5IPsyyVavaZjgSS1GyUMEQ9GsoFaGc/PYgI78Tba++oXnsDNYp</DTS:Password>
+            Encrypted="1">AQAAANCMnd8BFdERjHoAwE/Cl+sBAAAA0cnV3L9sZUGZvr3Q4+g2VgAAAAAIAAAARABUAFMAAAAQZgAAAAEAACAAAAAeX0fptP5E3obcx9zmP7kSbLIBorEzX6iLXOmiGbODCQAAAAAOgAAAAAIAACAAAABvdVuiThO4lt6HkF4bvEMKrg6y9JXPPEOm7hbzMyoyXiAAAABGUF/H+O7o8v9JM0t2sWgYKK6/FquOhgCQNWD9vmBPGUAAAAAFSZptf1QFvlN6DzU7GFlRRUxOL6yGNyKVW9PDkcnLMXgzxJHiS1C8Nk/u9EvFWrcNeUWCuvLahmGRGeXcJhFX</DTS:Password>
         </DTS:ConnectionManager>
       </DTS:ObjectData>
     </DTS:ConnectionManager>
@@ -2091,6 +2091,7 @@ where [refTable].[CampaniaId] = ?</property>
       DTS:refId="Package\Vaciar DimCampania"
       DTS:CreationName="Microsoft.ExecuteSQLTask"
       DTS:Description="Tarea Ejecutar SQL"
+      DTS:Disabled="True"
       DTS:DTSID="{526F529F-B5AF-433B-AD78-AF57F11A4568}"
       DTS:ExecutableType="Microsoft.ExecuteSQLTask"
       DTS:LocaleID="-1"
