@@ -11,8 +11,8 @@
   DTS:LocaleID="1033"
   DTS:ObjectName="Package1"
   DTS:PackageType="5"
-  DTS:VersionBuild="66"
-  DTS:VersionGUID="{A30F102C-17F7-46A4-9B88-1F84351147F2}">
+  DTS:VersionBuild="68"
+  DTS:VersionGUID="{6AC03A72-9D38-4082-B81B-AB58A4C1FB54}">
   <DTS:Property
     DTS:Name="PackageFormatVersion">8</DTS:Property>
   <DTS:ConnectionManagers>
@@ -27,7 +27,7 @@
           <DTS:Password
             DTS:Name="Password"
             Sensitive="1"
-            Encrypted="1">AQAAANCMnd8BFdERjHoAwE/Cl+sBAAAA0cnV3L9sZUGZvr3Q4+g2VgAAAAAIAAAARABUAFMAAAAQZgAAAAEAACAAAACfCiALStYEaotif8V03APpT+hnv84bLg4ltDjzUAlyNgAAAAAOgAAAAAIAACAAAABxtYi4NXXL8SxOtE/4ZzviHzb6DB7t5xWH299tXG1MySAAAACD8vWIGIMfYxwjnyNbwThbfkPQANb/iztmD/I3E1/FfUAAAACum2Oc+n5jdT2eL5YmfNKcf6ooEQgto+TKHpwwEq9er4QgYKRL9M/2wIT7o06fd+MpQJdA4+k1EcGm07doDSv2</DTS:Password>
+            Encrypted="1">AQAAANCMnd8BFdERjHoAwE/Cl+sBAAAAVjEO+z0Wqk6tj7LRX+YGJAAAAAAIAAAARABUAFMAAAAQZgAAAAEAACAAAACEiJJMD2PEtkfgoCfcA4zW0CWatKlK+yrCGcSLnigF8gAAAAAOgAAAAAIAACAAAAC4QLyIWtUQQpVyen/M1y2cu/WMr1WnHo2O6s4ZG1CDyyAAAACETL+Wlkg9DREP7/9WLk7aNTM9cRb/h1EFECJSrvgTIEAAAABUclyuWVPM5JAe310XHsrclUQ6OovYZdBO5LUShUBJkJucCqqvGKyhLTpO1BjCeqnPbsr5i2IlM+7Ajusg6W5B</DTS:Password>
         </DTS:ConnectionManager>
       </DTS:ObjectData>
     </DTS:ConnectionManager>
@@ -44,7 +44,7 @@
           <DTS:Password
             DTS:Name="Password"
             Sensitive="1"
-            Encrypted="1">AQAAANCMnd8BFdERjHoAwE/Cl+sBAAAA0cnV3L9sZUGZvr3Q4+g2VgAAAAAIAAAARABUAFMAAAAQZgAAAAEAACAAAAD1l9fa1BnaC9mej+s3iprUL29SzfA6JZKMa6jsSR1ygwAAAAAOgAAAAAIAACAAAADwfHK6IQmw4p2WR8RaXvh2QC2DDX8FSJRNA3xwoZO19yAAAAD3rRd2uEV74d9jUGwDWQD9A3PMvxRLX+QohJ6/BxD5SkAAAABJuKxlPMfINLqPQkvSsAmSgyZuXxdAJRjgBU9vDmWUgKb3nV7MWe3iZegjqFgNf50uVahzfPzWplH6dXH/NadC</DTS:Password>
+            Encrypted="1">AQAAANCMnd8BFdERjHoAwE/Cl+sBAAAAVjEO+z0Wqk6tj7LRX+YGJAAAAAAIAAAARABUAFMAAAAQZgAAAAEAACAAAABKeSEKnnTJhF4kZaPK/NCR4iks46WFpWQ87SNRy9q32gAAAAAOgAAAAAIAACAAAADGE+9Hnj7EzR0oIh/V6UmCsV5wpWTJfyenf3PH6ZodSCAAAABWkmdUM9BzYSJ0ICIZUOl9TyXl9qr1HG5qkt1D1zXkjEAAAABNmIWqJ2sl38lSOcInPuwJgEE0Nabpu5tSC3VQsf8DvvSniDGS2kZ4keBKo84I3Gjza+r+JmJB5uY3pF2O9SqQ</DTS:Password>
         </DTS:ConnectionManager>
       </DTS:ObjectData>
     </DTS:ConnectionManager>
@@ -57,7 +57,7 @@
       DTS:ObjectName="JsonFilePath">
       <DTS:Property
         DTS:DataType="8"
-        DTS:Name="ParameterValue">C:\UES\IDAlasDePlataDW\CSV\Products\Products.json</DTS:Property>
+        DTS:Name="ParameterValue">C:\Users\js\Documents\ID\Proyecto\CSV\Products/Products.json</DTS:Property>
     </DTS:PackageParameter>
   </DTS:PackageParameters>
   <DTS:Variables />
@@ -2801,12 +2801,12 @@ where [refTable].[ProductoId] = ?</property>
       DTS:To="Package\Llenado de DimProducto" />
   </DTS:PrecedenceConstraints>
   <DTS:DesignTimeProperties><![CDATA[<?xml version="1.0"?>
-<!--Esta sección CDATA contiene la información de diseño del paquete. Esta sección incluye información como, por ejemplo, las coordenadas (x,y), el ancho y el alto.-->
-<!--Si edita manualmente esta sección y comete un error, puede eliminarlo. -->
-<!--El paquete podrá cargarse normalmente, pero se perderá la información de diseño anterior y el diseñador reorganizará los elementos automáticamente en la superficie de diseño.-->
+<!--This CDATA section contains the layout information of the package. The section includes information such as (x,y) coordinates, width, and height.-->
+<!--If you manually edit this section and make a mistake, you can delete it. -->
+<!--The package will still be able to load normally but the previous layout information will be lost and the designer will automatically re-arrange the elements on the design surface.-->
 <Objects
   Version="8">
-  <!--Cada uno de los nodos siguientes contiene propiedades que no afectan al comportamiento en tiempo de ejecución.-->
+  <!--Each node below will contain properties that do not affect runtime behavior.-->
   <Package
     design-time-name="Package">
     <LayoutInfo>
@@ -2897,9 +2897,7 @@ where [refTable].[ProductoId] = ?</property>
             </mssgle:Curve>
           </EdgeLayout.Curve>
           <EdgeLayout.Labels>
-            <mssgm:EdgeLabel
-              BoundingBox="0,0,0,0"
-              RelativePosition="Any" />
+            <EdgeLabelCollection />
           </EdgeLayout.Labels>
         </EdgeLayout>
         <EdgeLayout
@@ -2934,7 +2932,7 @@ where [refTable].[ProductoId] = ?</property>
           </EdgeLayout.Curve>
           <EdgeLayout.Labels>
             <mssgm:EdgeLabel
-              BoundingBox="-155.973053385417,62.8397017707363,111.6127734375,11.609375"
+              BoundingBox="-155.973053385417,62.8397017707363,129.350078125,16"
               RelativePosition="Any" />
           </EdgeLayout.Labels>
         </EdgeLayout>

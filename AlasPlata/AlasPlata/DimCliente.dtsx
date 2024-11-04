@@ -11,8 +11,8 @@
   DTS:LocaleID="1033"
   DTS:ObjectName="DimCliente"
   DTS:PackageType="5"
-  DTS:VersionBuild="39"
-  DTS:VersionGUID="{19C207DA-B0A9-4687-A5F4-C1343BBE59B0}">
+  DTS:VersionBuild="42"
+  DTS:VersionGUID="{A42FF7B9-E049-4F58-A322-3D1D78BF11CF}">
   <DTS:Property
     DTS:Name="PackageFormatVersion">8</DTS:Property>
   <DTS:ConnectionManagers>
@@ -27,7 +27,7 @@
           <DTS:Password
             DTS:Name="Password"
             Sensitive="1"
-            Encrypted="1">AQAAANCMnd8BFdERjHoAwE/Cl+sBAAAA0cnV3L9sZUGZvr3Q4+g2VgAAAAAIAAAARABUAFMAAAAQZgAAAAEAACAAAAC3N6jSyS1vd8AmHfYR9L5ZIknyrn14cNPSn3w0xLAcSgAAAAAOgAAAAAIAACAAAADxiY0s14rrIpRS9eGO/TDlr/wnc95qr40SpffmSMOFdyAAAAA7s9zqj/3MYLAs3DRKOaMgPWW+e+Uapqc3kBgfwAtQ6UAAAACnlfqzq8NFIo9aPD+jHhDJGfVS1NpLvHZGB6bJTzWqOF2g/wozmaWLsyMnjqA9+IGjBDeWIgJKDZIo9AEpb20W</DTS:Password>
+            Encrypted="1">AQAAANCMnd8BFdERjHoAwE/Cl+sBAAAAVjEO+z0Wqk6tj7LRX+YGJAAAAAAIAAAARABUAFMAAAAQZgAAAAEAACAAAAD4U3tAO3JWNLJnc0JrUocI3JlXktBGRaX8yvkWry78TwAAAAAOgAAAAAIAACAAAAC+A9iNJbrOVeAXHESvOQsFWPqQxBhG53+nOGpt3WmKayAAAADqF9+P3Rr3j6CF7J1E4KwAR8JgowUaOYzmoW8ujPuobkAAAAD9xfg2Vyg9sc+KKPShkov2fkCpVgwRMBK5S1hgcM+4zz7eSjam/NO4gR8r+ffSMKGchjdXkb43F+BR19M1i/jv</DTS:Password>
         </DTS:ConnectionManager>
       </DTS:ObjectData>
     </DTS:ConnectionManager>
@@ -44,7 +44,7 @@
           <DTS:Password
             DTS:Name="Password"
             Sensitive="1"
-            Encrypted="1">AQAAANCMnd8BFdERjHoAwE/Cl+sBAAAA0cnV3L9sZUGZvr3Q4+g2VgAAAAAIAAAARABUAFMAAAAQZgAAAAEAACAAAABaC10gtvhcm8q6p8uHDY3t62Hp1mGYLmul6w7ynjo9MwAAAAAOgAAAAAIAACAAAADeDJLd3FaQj3dt4iYUwDKUdcMmPvVMZDFqN9TAfaHJfyAAAABBmcobx+G2doBxDzPd3e/RPt6lGvRiAtBAS7l9YPnFeUAAAAAv7ZhS8jd1FZeoIoHXUwX/XjLkZktgK18AhQgAj545OiuuNh3AQxkGWF6Zcpg7bZ5JFA1nhJRj5o8iWeMakbJ/</DTS:Password>
+            Encrypted="1">AQAAANCMnd8BFdERjHoAwE/Cl+sBAAAAVjEO+z0Wqk6tj7LRX+YGJAAAAAAIAAAARABUAFMAAAAQZgAAAAEAACAAAACAoTMxieFNnGaSuR6sVn/TACI6EuCOSoUTMAtmpHJqhAAAAAAOgAAAAAIAACAAAADfZLdahhpPqjEWfNjbbh3TQ8BeBICGOF/PHAqa+zxytSAAAAAooKwECb5W7Je82WW9ndsl1nozmJN+StcNLvtTVRQQR0AAAACbFZK1WElqwEN2/0gIYeJvXuU2qvTuCsqoxy3i0cIKMN6w1WnmEritSIDQGOdFQ5/xBibcLan9n5oUDEFnUNIe</DTS:Password>
         </DTS:ConnectionManager>
       </DTS:ObjectData>
     </DTS:ConnectionManager>
@@ -57,7 +57,7 @@
       DTS:ObjectName="JsonFilePath">
       <DTS:Property
         DTS:DataType="8"
-        DTS:Name="ParameterValue">C:\UES\IDAlasDePlataDW\CSV\Contacts\ListContacts.json</DTS:Property>
+        DTS:Name="ParameterValue">C:\Users\js\Documents\ID\Proyecto\CSV\Contacts\ListContacts.json</DTS:Property>
     </DTS:PackageParameter>
   </DTS:PackageParameters>
   <DTS:Variables />
@@ -1832,12 +1832,12 @@ where [refTable].[Email] = ?</property>
       DTS:To="Package\Llenar de DimCliente" />
   </DTS:PrecedenceConstraints>
   <DTS:DesignTimeProperties><![CDATA[<?xml version="1.0"?>
-<!--Esta sección CDATA contiene la información de diseño del paquete. Esta sección incluye información como, por ejemplo, las coordenadas (x,y), el ancho y el alto.-->
-<!--Si edita manualmente esta sección y comete un error, puede eliminarlo. -->
-<!--El paquete podrá cargarse normalmente, pero se perderá la información de diseño anterior y el diseñador reorganizará los elementos automáticamente en la superficie de diseño.-->
+<!--This CDATA section contains the layout information of the package. The section includes information such as (x,y) coordinates, width, and height.-->
+<!--If you manually edit this section and make a mistake, you can delete it. -->
+<!--The package will still be able to load normally but the previous layout information will be lost and the designer will automatically re-arrange the elements on the design surface.-->
 <Objects
   Version="8">
-  <!--Cada uno de los nodos siguientes contiene propiedades que no afectan al comportamiento en tiempo de ejecución.-->
+  <!--Each node below will contain properties that do not affect runtime behavior.-->
   <Package
     design-time-name="Package">
     <LayoutInfo>
@@ -2020,7 +2020,7 @@ where [refTable].[Email] = ?</property>
       <Property>
         <Name>OverwriteParamsSQLProp</Name>
         <Value
-          type="q2:boolean">false</Value>
+          type="q2:string">false</Value>
       </Property>
       <Property>
         <Name>UsedTableName</Name>
@@ -2030,7 +2030,7 @@ where [refTable].[Email] = ?</property>
       <Property>
         <Name>TableInfoObjectType</Name>
         <Value
-          type="q4:int">0</Value>
+          type="q4:string">0</Value>
       </Property>
       <Property>
         <Name>DataSourceViewID</Name>

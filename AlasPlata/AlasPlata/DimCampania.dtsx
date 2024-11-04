@@ -11,8 +11,8 @@
   DTS:LocaleID="1033"
   DTS:ObjectName="Package1"
   DTS:PackageType="5"
-  DTS:VersionBuild="33"
-  DTS:VersionGUID="{BF363406-2CEA-49F5-B73F-66564E3EE3E6}">
+  DTS:VersionBuild="34"
+  DTS:VersionGUID="{7C454D06-37CB-4134-A000-F27CADA53EC3}">
   <DTS:Property
     DTS:Name="PackageFormatVersion">8</DTS:Property>
   <DTS:ConnectionManagers>
@@ -27,7 +27,7 @@
           <DTS:Password
             DTS:Name="Password"
             Sensitive="1"
-            Encrypted="1">AQAAANCMnd8BFdERjHoAwE/Cl+sBAAAA0cnV3L9sZUGZvr3Q4+g2VgAAAAAIAAAARABUAFMAAAAQZgAAAAEAACAAAAD2p4X4b9rngNV0taFNCwoEedxPCRhf1gQ/x2JXUnEGlwAAAAAOgAAAAAIAACAAAAAI3lmDbtL88UgUgAXLH1HWbUuwRonb6+ceduKxgSFhbSAAAACY3l0hPCyQqJ0GA57qecqoDgTDqJSd2bpdr8qEkIR1PUAAAAChcRQfRQL/rrBF0vqJ9adf7TZGHj3C/ocizNYc0trTzs8qogjM0CUi/xERyk7MW6bufxzPIAMmpImemc2dfRiZ</DTS:Password>
+            Encrypted="1">AQAAANCMnd8BFdERjHoAwE/Cl+sBAAAAVjEO+z0Wqk6tj7LRX+YGJAAAAAAIAAAARABUAFMAAAAQZgAAAAEAACAAAAB/3hMqPqhHmT+Cajf1ctKOYH6Cc+kxpB7+CvsqLnD+0gAAAAAOgAAAAAIAACAAAADlMTnyG9aVowMpNgMquDfD3unJO/ynedfwQChFdJQbGyAAAABX6DogjbiizfruYs1gaSRIxWYoNhJBodPZShb0FlARQEAAAABMqj8vvcoBoI9iH3NS/o1QDPexzXnWVh3+2elj11w2qsg5DZEFj+MvVpc3QRuXwtSohRGBxizp927t1tc4EuL6</DTS:Password>
         </DTS:ConnectionManager>
       </DTS:ObjectData>
     </DTS:ConnectionManager>
@@ -44,7 +44,7 @@
           <DTS:Password
             DTS:Name="Password"
             Sensitive="1"
-            Encrypted="1">AQAAANCMnd8BFdERjHoAwE/Cl+sBAAAA0cnV3L9sZUGZvr3Q4+g2VgAAAAAIAAAARABUAFMAAAAQZgAAAAEAACAAAAAeX0fptP5E3obcx9zmP7kSbLIBorEzX6iLXOmiGbODCQAAAAAOgAAAAAIAACAAAABvdVuiThO4lt6HkF4bvEMKrg6y9JXPPEOm7hbzMyoyXiAAAABGUF/H+O7o8v9JM0t2sWgYKK6/FquOhgCQNWD9vmBPGUAAAAAFSZptf1QFvlN6DzU7GFlRRUxOL6yGNyKVW9PDkcnLMXgzxJHiS1C8Nk/u9EvFWrcNeUWCuvLahmGRGeXcJhFX</DTS:Password>
+            Encrypted="1">AQAAANCMnd8BFdERjHoAwE/Cl+sBAAAAVjEO+z0Wqk6tj7LRX+YGJAAAAAAIAAAARABUAFMAAAAQZgAAAAEAACAAAAA4g2ezWCJGUbFYDAVqx99JU3agvoVf7u+f24FiIUsVtgAAAAAOgAAAAAIAACAAAAC9D776IGrmkpm1Q4lTwNae9Osc4qM9EpLhFqP101XKjSAAAACWTey0qQs3qCrUFoOSeQyrCsn2mFyl89XLpsGk0ekKc0AAAABVWlF53xF+15JsDZwDObiH0yPcGgnUWchah1S1Vg5QOzeIBZjdl2GznMJsbuHpaw/00FPi4L7dU+gP/oCefybL</DTS:Password>
         </DTS:ConnectionManager>
       </DTS:ObjectData>
     </DTS:ConnectionManager>
@@ -57,7 +57,7 @@
       DTS:ObjectName="JsonFilePath">
       <DTS:Property
         DTS:DataType="8"
-        DTS:Name="ParameterValue">C:\UES\IDAlasDePlataDW\CSV\Campaings\RecentCampaigns.json</DTS:Property>
+        DTS:Name="ParameterValue">C:\Users\js\Documents\ID\Proyecto\CSV\Campaings\RecentCampaigns.json</DTS:Property>
     </DTS:PackageParameter>
   </DTS:PackageParameters>
   <DTS:Variables />
@@ -2117,12 +2117,12 @@ where [refTable].[CampaniaId] = ?</property>
       DTS:To="Package\Llenado de DimCampania" />
   </DTS:PrecedenceConstraints>
   <DTS:DesignTimeProperties><![CDATA[<?xml version="1.0"?>
-<!--Esta sección CDATA contiene la información de diseño del paquete. Esta sección incluye información como, por ejemplo, las coordenadas (x,y), el ancho y el alto.-->
-<!--Si edita manualmente esta sección y comete un error, puede eliminarlo. -->
-<!--El paquete podrá cargarse normalmente, pero se perderá la información de diseño anterior y el diseñador reorganizará los elementos automáticamente en la superficie de diseño.-->
+<!--This CDATA section contains the layout information of the package. The section includes information such as (x,y) coordinates, width, and height.-->
+<!--If you manually edit this section and make a mistake, you can delete it. -->
+<!--The package will still be able to load normally but the previous layout information will be lost and the designer will automatically re-arrange the elements on the design surface.-->
 <Objects
   Version="8">
-  <!--Cada uno de los nodos siguientes contiene propiedades que no afectan al comportamiento en tiempo de ejecución.-->
+  <!--Each node below will contain properties that do not affect runtime behavior.-->
   <Package
     design-time-name="Package">
     <LayoutInfo>
