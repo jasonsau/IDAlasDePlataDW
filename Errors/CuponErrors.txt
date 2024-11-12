@@ -1,0 +1,1 @@
+""VarianteId"",""PrecioUnitario"",""Total"",""CuponId"",""NumeroOrden"",""TotalConDescuento"",""Descuento"",""Cantidad"",""ProductoId"",""EmailCliente"",""FechaOrden"",""PrecioUnitarioConDescuento"",""CodigoCupon"",""ProductoKey"",""ClienteKey"",""ErrorCode"",""ErrorColumn""

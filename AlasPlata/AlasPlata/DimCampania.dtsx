@@ -11,8 +11,8 @@
   DTS:LocaleID="1033"
   DTS:ObjectName="Package1"
   DTS:PackageType="5"
-  DTS:VersionBuild="34"
-  DTS:VersionGUID="{7C454D06-37CB-4134-A000-F27CADA53EC3}">
+  DTS:VersionBuild="36"
+  DTS:VersionGUID="{DE3D45A4-BABA-4B90-9C41-B96E24D7D28E}">
   <DTS:Property
     DTS:Name="PackageFormatVersion">8</DTS:Property>
   <DTS:ConnectionManagers>
@@ -27,7 +27,7 @@
           <DTS:Password
             DTS:Name="Password"
             Sensitive="1"
-            Encrypted="1">AQAAANCMnd8BFdERjHoAwE/Cl+sBAAAAVjEO+z0Wqk6tj7LRX+YGJAAAAAAIAAAARABUAFMAAAAQZgAAAAEAACAAAAB/3hMqPqhHmT+Cajf1ctKOYH6Cc+kxpB7+CvsqLnD+0gAAAAAOgAAAAAIAACAAAADlMTnyG9aVowMpNgMquDfD3unJO/ynedfwQChFdJQbGyAAAABX6DogjbiizfruYs1gaSRIxWYoNhJBodPZShb0FlARQEAAAABMqj8vvcoBoI9iH3NS/o1QDPexzXnWVh3+2elj11w2qsg5DZEFj+MvVpc3QRuXwtSohRGBxizp927t1tc4EuL6</DTS:Password>
+            Encrypted="1">AQAAANCMnd8BFdERjHoAwE/Cl+sBAAAAVjEO+z0Wqk6tj7LRX+YGJAAAAAAIAAAARABUAFMAAAAQZgAAAAEAACAAAABmNY7sqc+b3eHBxWzoFThh0R2P4q/YzDoNXUUUsk3ZSwAAAAAOgAAAAAIAACAAAAAMmviRy5efj4tHpmjHx252Bqx13QsGaO+AUvt43ZJhjCAAAAD7THkr6flSfaCvaY9zsgx2u/ACIk/cyl8a1lhtYIAk9UAAAACqe7J9xQozV8ON4ld6KP44vt6yyLydt2IpQxHEtJLLCUgBeCtfkTCftk16Acl+iAk136YAo0AeYgGILiIkcbgS</DTS:Password>
         </DTS:ConnectionManager>
       </DTS:ObjectData>
     </DTS:ConnectionManager>
@@ -44,7 +44,7 @@
           <DTS:Password
             DTS:Name="Password"
             Sensitive="1"
-            Encrypted="1">AQAAANCMnd8BFdERjHoAwE/Cl+sBAAAAVjEO+z0Wqk6tj7LRX+YGJAAAAAAIAAAARABUAFMAAAAQZgAAAAEAACAAAAA4g2ezWCJGUbFYDAVqx99JU3agvoVf7u+f24FiIUsVtgAAAAAOgAAAAAIAACAAAAC9D776IGrmkpm1Q4lTwNae9Osc4qM9EpLhFqP101XKjSAAAACWTey0qQs3qCrUFoOSeQyrCsn2mFyl89XLpsGk0ekKc0AAAABVWlF53xF+15JsDZwDObiH0yPcGgnUWchah1S1Vg5QOzeIBZjdl2GznMJsbuHpaw/00FPi4L7dU+gP/oCefybL</DTS:Password>
+            Encrypted="1">AQAAANCMnd8BFdERjHoAwE/Cl+sBAAAAVjEO+z0Wqk6tj7LRX+YGJAAAAAAIAAAARABUAFMAAAAQZgAAAAEAACAAAACHJCgRkho/ZczpPI+GSM79zKGA3FpaTQCg8aHgIsxgoQAAAAAOgAAAAAIAACAAAABGAAKhnHUEQu4WSEcDEl7TUAqeuslKhBDWuoB2082TuyAAAADHCC0ry0InLL3WveDo2PKKDUIQr6aYsm6nErvjHDn8HEAAAAAjmXZyvn+gWCwf7bmQOYX/4SjbDu3Rt8t4aSaNpmPb3VRcdyFq26Pqcrfqf2H4fZiHzBq52lrPUzKJH3lAAZva</DTS:Password>
         </DTS:ConnectionManager>
       </DTS:ObjectData>
     </DTS:ConnectionManager>
@@ -2213,7 +2213,9 @@ where [refTable].[CampaniaId] = ?</property>
             </mssgle:Curve>
           </EdgeLayout.Curve>
           <EdgeLayout.Labels>
-            <EdgeLabelCollection />
+            <mssgm:EdgeLabel
+              BoundingBox="53.25,5,16,16"
+              RelativePosition="Any" />
           </EdgeLayout.Labels>
         </EdgeLayout>
         <EdgeLayout

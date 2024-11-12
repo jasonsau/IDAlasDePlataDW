@@ -5,7 +5,6 @@ GO
 USE AlasDePlataDW;
 GO
 
-/*
 DROP TABLE DimProducto;
 DROP TABLE DimCliente;
 DROP TABLE DimTiempo;
@@ -13,7 +12,8 @@ DROP TABLE DimCupon;
 DROP TABLE DimCampania;
 DROP TABLE Date_Dimension;
 DROP TABLE FactVentasPorCampania;
-*/
+DROP TABLE Parametros;
+ 
 
 CREATE TABLE DimProducto
 (
@@ -166,7 +166,7 @@ CREATE TABLE Parametros
 GO
 
 -- Comandos Importantes para poder ejecutar el ETL.
-
+DELETE FROM Parametros;
 INSERT INTO Parametros
 	(NombreParametro, ValorParametro)
 VALUES('Fecha_Ultima_Ejecucion', CONVERT(VARCHAR, CONVERT(DATETIME,'01/01/2023')));
@@ -184,3 +184,4 @@ VALUES(0, 'No se aplico un cupon', 'Por Defecto', 'Por Defecto', 'pordefecto@def
 
 
 UPDATE Parametros SET ValorParametro = CONVERT(VARCHAR, CONVERT(DATETIME,'01/01/2023')) WHERE NombreParametro='Fecha_Ultima_Ejecucion';
+SELECT *FROM Parametros;
