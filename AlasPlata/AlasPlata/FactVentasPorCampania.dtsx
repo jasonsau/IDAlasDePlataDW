@@ -624,12 +624,12 @@
           version="1">
           <components>
             <component
-              refId="Package\Llenado de FactVentasPorCampania\ErrorCupon"
+              refId="Package\Llenado de FactVentasPorCampania\Error Campanias"
               componentClassID="Microsoft.FlatFileDestination"
               contactInfo="Flat File Destination;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; All Rights Reserved; http://www.microsoft.com/sql/support;1"
               description="Flat File Destination"
               localeId="1033"
-              name="ErrorCupon"
+              name="Error Campanias"
               version="1">
               <properties>
                 <property
@@ -648,700 +648,700 @@
               </properties>
               <connections>
                 <connection
-                  refId="Package\Llenado de FactVentasPorCampania\ErrorCupon.Connections[FlatFileConnection]"
-                  connectionManagerID="Package.ConnectionManagers[ErrorsCupons]"
-                  connectionManagerRefId="Package.ConnectionManagers[ErrorsCupons]"
-                  name="FlatFileConnection" />
-              </connections>
-              <inputs>
-                <input
-                  refId="Package\Llenado de FactVentasPorCampania\ErrorCupon.Inputs[Flat File Destination Input]"
-                  hasSideEffects="true"
-                  name="Flat File Destination Input">
-                  <inputColumns>
-                    <inputColumn
-                      refId="Package\Llenado de FactVentasPorCampania\ErrorCupon.Inputs[Flat File Destination Input].Columns[VarianteId]"
-                      cachedCodepage="1252"
-                      cachedDataType="str"
-                      cachedLength="50"
-                      cachedName="VarianteId"
-                      externalMetadataColumnId="Package\Llenado de FactVentasPorCampania\ErrorCupon.Inputs[Flat File Destination Input].ExternalColumns[VarianteId]"
-                      lineageId="Package\Llenado de FactVentasPorCampania\Lectura de metricas y llaves del negocio.Outputs[Output 0].Columns[VarianteId]" />
-                    <inputColumn
-                      refId="Package\Llenado de FactVentasPorCampania\ErrorCupon.Inputs[Flat File Destination Input].Columns[PrecioUnitario]"
-                      cachedDataType="r8"
-                      cachedName="PrecioUnitario"
-                      externalMetadataColumnId="Package\Llenado de FactVentasPorCampania\ErrorCupon.Inputs[Flat File Destination Input].ExternalColumns[PrecioUnitario]"
-                      lineageId="Package\Llenado de FactVentasPorCampania\Lectura de metricas y llaves del negocio.Outputs[Output 0].Columns[PrecioUnitario]" />
-                    <inputColumn
-                      refId="Package\Llenado de FactVentasPorCampania\ErrorCupon.Inputs[Flat File Destination Input].Columns[Total]"
-                      cachedDataType="r8"
-                      cachedName="Total"
-                      externalMetadataColumnId="Package\Llenado de FactVentasPorCampania\ErrorCupon.Inputs[Flat File Destination Input].ExternalColumns[Total]"
-                      lineageId="Package\Llenado de FactVentasPorCampania\Lectura de metricas y llaves del negocio.Outputs[Output 0].Columns[Total]" />
-                    <inputColumn
-                      refId="Package\Llenado de FactVentasPorCampania\ErrorCupon.Inputs[Flat File Destination Input].Columns[CuponId]"
-                      cachedCodepage="1252"
-                      cachedDataType="str"
-                      cachedLength="250"
-                      cachedName="CuponId"
-                      externalMetadataColumnId="Package\Llenado de FactVentasPorCampania\ErrorCupon.Inputs[Flat File Destination Input].ExternalColumns[CuponId]"
-                      lineageId="Package\Llenado de FactVentasPorCampania\Lectura de metricas y llaves del negocio.Outputs[Output 0].Columns[CuponId]" />
-                    <inputColumn
-                      refId="Package\Llenado de FactVentasPorCampania\ErrorCupon.Inputs[Flat File Destination Input].Columns[NumeroOrden]"
-                      cachedCodepage="1252"
-                      cachedDataType="str"
-                      cachedLength="260"
-                      cachedName="NumeroOrden"
-                      externalMetadataColumnId="Package\Llenado de FactVentasPorCampania\ErrorCupon.Inputs[Flat File Destination Input].ExternalColumns[NumeroOrden]"
-                      lineageId="Package\Llenado de FactVentasPorCampania\Lectura de metricas y llaves del negocio.Outputs[Output 0].Columns[NumeroOrden]" />
-                    <inputColumn
-                      refId="Package\Llenado de FactVentasPorCampania\ErrorCupon.Inputs[Flat File Destination Input].Columns[TotalConDescuento]"
-                      cachedDataType="r8"
-                      cachedName="TotalConDescuento"
-                      externalMetadataColumnId="Package\Llenado de FactVentasPorCampania\ErrorCupon.Inputs[Flat File Destination Input].ExternalColumns[TotalConDescuento]"
-                      lineageId="Package\Llenado de FactVentasPorCampania\Lectura de metricas y llaves del negocio.Outputs[Output 0].Columns[TotalConDescuento]" />
-                    <inputColumn
-                      refId="Package\Llenado de FactVentasPorCampania\ErrorCupon.Inputs[Flat File Destination Input].Columns[Descuento]"
-                      cachedDataType="r8"
-                      cachedName="Descuento"
-                      externalMetadataColumnId="Package\Llenado de FactVentasPorCampania\ErrorCupon.Inputs[Flat File Destination Input].ExternalColumns[Descuento]"
-                      lineageId="Package\Llenado de FactVentasPorCampania\Lectura de metricas y llaves del negocio.Outputs[Output 0].Columns[Descuento]" />
-                    <inputColumn
-                      refId="Package\Llenado de FactVentasPorCampania\ErrorCupon.Inputs[Flat File Destination Input].Columns[Cantidad]"
-                      cachedDataType="r8"
-                      cachedName="Cantidad"
-                      externalMetadataColumnId="Package\Llenado de FactVentasPorCampania\ErrorCupon.Inputs[Flat File Destination Input].ExternalColumns[Cantidad]"
-                      lineageId="Package\Llenado de FactVentasPorCampania\Lectura de metricas y llaves del negocio.Outputs[Output 0].Columns[Cantidad]" />
-                    <inputColumn
-                      refId="Package\Llenado de FactVentasPorCampania\ErrorCupon.Inputs[Flat File Destination Input].Columns[ProductoId]"
-                      cachedCodepage="1252"
-                      cachedDataType="str"
-                      cachedLength="250"
-                      cachedName="ProductoId"
-                      externalMetadataColumnId="Package\Llenado de FactVentasPorCampania\ErrorCupon.Inputs[Flat File Destination Input].ExternalColumns[ProductoId]"
-                      lineageId="Package\Llenado de FactVentasPorCampania\Lectura de metricas y llaves del negocio.Outputs[Output 0].Columns[ProductoId]" />
-                    <inputColumn
-                      refId="Package\Llenado de FactVentasPorCampania\ErrorCupon.Inputs[Flat File Destination Input].Columns[EmailCliente]"
-                      cachedCodepage="1252"
-                      cachedDataType="str"
-                      cachedLength="100"
-                      cachedName="EmailCliente"
-                      externalMetadataColumnId="Package\Llenado de FactVentasPorCampania\ErrorCupon.Inputs[Flat File Destination Input].ExternalColumns[EmailCliente]"
-                      lineageId="Package\Llenado de FactVentasPorCampania\Lectura de metricas y llaves del negocio.Outputs[Output 0].Columns[EmailCliente]" />
-                    <inputColumn
-                      refId="Package\Llenado de FactVentasPorCampania\ErrorCupon.Inputs[Flat File Destination Input].Columns[FechaOrden]"
-                      cachedDataType="dbTimeStamp"
-                      cachedName="FechaOrden"
-                      externalMetadataColumnId="Package\Llenado de FactVentasPorCampania\ErrorCupon.Inputs[Flat File Destination Input].ExternalColumns[FechaOrden]"
-                      lineageId="Package\Llenado de FactVentasPorCampania\Lectura de metricas y llaves del negocio.Outputs[Output 0].Columns[FechaOrden]" />
-                    <inputColumn
-                      refId="Package\Llenado de FactVentasPorCampania\ErrorCupon.Inputs[Flat File Destination Input].Columns[PrecioUnitarioConDescuento]"
-                      cachedDataType="r8"
-                      cachedName="PrecioUnitarioConDescuento"
-                      externalMetadataColumnId="Package\Llenado de FactVentasPorCampania\ErrorCupon.Inputs[Flat File Destination Input].ExternalColumns[PrecioUnitarioConDescuento]"
-                      lineageId="Package\Llenado de FactVentasPorCampania\Lectura de metricas y llaves del negocio.Outputs[Output 0].Columns[PrecioUnitarioConDescuento]" />
-                    <inputColumn
-                      refId="Package\Llenado de FactVentasPorCampania\ErrorCupon.Inputs[Flat File Destination Input].Columns[CodigoCupon]"
-                      cachedCodepage="1252"
-                      cachedDataType="str"
-                      cachedLength="50"
-                      cachedName="CodigoCupon"
-                      externalMetadataColumnId="Package\Llenado de FactVentasPorCampania\ErrorCupon.Inputs[Flat File Destination Input].ExternalColumns[CodigoCupon]"
-                      lineageId="Package\Llenado de FactVentasPorCampania\Lectura de metricas y llaves del negocio.Outputs[Output 0].Columns[CodigoCupon]" />
-                    <inputColumn
-                      refId="Package\Llenado de FactVentasPorCampania\ErrorCupon.Inputs[Flat File Destination Input].Columns[ProductoKey]"
-                      cachedDataType="i4"
-                      cachedName="ProductoKey"
-                      externalMetadataColumnId="Package\Llenado de FactVentasPorCampania\ErrorCupon.Inputs[Flat File Destination Input].ExternalColumns[ProductoKey]"
-                      lineageId="Package\Llenado de FactVentasPorCampania\Obtener ProductoKey.Outputs[Lookup Match Output].Columns[ProductoKey]" />
-                    <inputColumn
-                      refId="Package\Llenado de FactVentasPorCampania\ErrorCupon.Inputs[Flat File Destination Input].Columns[ClienteKey]"
-                      cachedDataType="i4"
-                      cachedName="ClienteKey"
-                      externalMetadataColumnId="Package\Llenado de FactVentasPorCampania\ErrorCupon.Inputs[Flat File Destination Input].ExternalColumns[ClienteKey]"
-                      lineageId="Package\Llenado de FactVentasPorCampania\Obetener ClienteKey.Outputs[Lookup Match Output].Columns[ClienteKey]" />
-                    <inputColumn
-                      refId="Package\Llenado de FactVentasPorCampania\ErrorCupon.Inputs[Flat File Destination Input].Columns[ErrorCode]"
-                      cachedDataType="i4"
-                      cachedName="ErrorCode"
-                      externalMetadataColumnId="Package\Llenado de FactVentasPorCampania\ErrorCupon.Inputs[Flat File Destination Input].ExternalColumns[ErrorCode]"
-                      lineageId="Package\Llenado de FactVentasPorCampania\Obtener CuponKey.Outputs[Lookup Error Output].Columns[ErrorCode]" />
-                    <inputColumn
-                      refId="Package\Llenado de FactVentasPorCampania\ErrorCupon.Inputs[Flat File Destination Input].Columns[ErrorColumn]"
-                      cachedDataType="i4"
-                      cachedName="ErrorColumn"
-                      externalMetadataColumnId="Package\Llenado de FactVentasPorCampania\ErrorCupon.Inputs[Flat File Destination Input].ExternalColumns[ErrorColumn]"
-                      lineageId="Package\Llenado de FactVentasPorCampania\Obtener CuponKey.Outputs[Lookup Error Output].Columns[ErrorColumn]" />
-                  </inputColumns>
-                  <externalMetadataColumns
-                    isUsed="True">
-                    <externalMetadataColumn
-                      refId="Package\Llenado de FactVentasPorCampania\ErrorCupon.Inputs[Flat File Destination Input].ExternalColumns[VarianteId]"
-                      codePage="1252"
-                      dataType="str"
-                      length="50"
-                      name="VarianteId" />
-                    <externalMetadataColumn
-                      refId="Package\Llenado de FactVentasPorCampania\ErrorCupon.Inputs[Flat File Destination Input].ExternalColumns[PrecioUnitario]"
-                      dataType="r8"
-                      name="PrecioUnitario" />
-                    <externalMetadataColumn
-                      refId="Package\Llenado de FactVentasPorCampania\ErrorCupon.Inputs[Flat File Destination Input].ExternalColumns[Total]"
-                      dataType="r8"
-                      name="Total" />
-                    <externalMetadataColumn
-                      refId="Package\Llenado de FactVentasPorCampania\ErrorCupon.Inputs[Flat File Destination Input].ExternalColumns[CuponId]"
-                      codePage="1252"
-                      dataType="str"
-                      length="250"
-                      name="CuponId" />
-                    <externalMetadataColumn
-                      refId="Package\Llenado de FactVentasPorCampania\ErrorCupon.Inputs[Flat File Destination Input].ExternalColumns[NumeroOrden]"
-                      codePage="1252"
-                      dataType="str"
-                      length="260"
-                      name="NumeroOrden" />
-                    <externalMetadataColumn
-                      refId="Package\Llenado de FactVentasPorCampania\ErrorCupon.Inputs[Flat File Destination Input].ExternalColumns[TotalConDescuento]"
-                      dataType="r8"
-                      name="TotalConDescuento" />
-                    <externalMetadataColumn
-                      refId="Package\Llenado de FactVentasPorCampania\ErrorCupon.Inputs[Flat File Destination Input].ExternalColumns[Descuento]"
-                      dataType="r8"
-                      name="Descuento" />
-                    <externalMetadataColumn
-                      refId="Package\Llenado de FactVentasPorCampania\ErrorCupon.Inputs[Flat File Destination Input].ExternalColumns[Cantidad]"
-                      dataType="r8"
-                      name="Cantidad" />
-                    <externalMetadataColumn
-                      refId="Package\Llenado de FactVentasPorCampania\ErrorCupon.Inputs[Flat File Destination Input].ExternalColumns[ProductoId]"
-                      codePage="1252"
-                      dataType="str"
-                      length="250"
-                      name="ProductoId" />
-                    <externalMetadataColumn
-                      refId="Package\Llenado de FactVentasPorCampania\ErrorCupon.Inputs[Flat File Destination Input].ExternalColumns[EmailCliente]"
-                      codePage="1252"
-                      dataType="str"
-                      length="100"
-                      name="EmailCliente" />
-                    <externalMetadataColumn
-                      refId="Package\Llenado de FactVentasPorCampania\ErrorCupon.Inputs[Flat File Destination Input].ExternalColumns[FechaOrden]"
-                      dataType="dbTimeStamp"
-                      name="FechaOrden" />
-                    <externalMetadataColumn
-                      refId="Package\Llenado de FactVentasPorCampania\ErrorCupon.Inputs[Flat File Destination Input].ExternalColumns[PrecioUnitarioConDescuento]"
-                      dataType="r8"
-                      name="PrecioUnitarioConDescuento" />
-                    <externalMetadataColumn
-                      refId="Package\Llenado de FactVentasPorCampania\ErrorCupon.Inputs[Flat File Destination Input].ExternalColumns[CodigoCupon]"
-                      codePage="1252"
-                      dataType="str"
-                      length="50"
-                      name="CodigoCupon" />
-                    <externalMetadataColumn
-                      refId="Package\Llenado de FactVentasPorCampania\ErrorCupon.Inputs[Flat File Destination Input].ExternalColumns[ProductoKey]"
-                      dataType="i4"
-                      name="ProductoKey" />
-                    <externalMetadataColumn
-                      refId="Package\Llenado de FactVentasPorCampania\ErrorCupon.Inputs[Flat File Destination Input].ExternalColumns[ClienteKey]"
-                      dataType="i4"
-                      name="ClienteKey" />
-                    <externalMetadataColumn
-                      refId="Package\Llenado de FactVentasPorCampania\ErrorCupon.Inputs[Flat File Destination Input].ExternalColumns[ErrorCode]"
-                      dataType="i4"
-                      name="ErrorCode" />
-                    <externalMetadataColumn
-                      refId="Package\Llenado de FactVentasPorCampania\ErrorCupon.Inputs[Flat File Destination Input].ExternalColumns[ErrorColumn]"
-                      dataType="i4"
-                      name="ErrorColumn" />
-                  </externalMetadataColumns>
-                </input>
-              </inputs>
-            </component>
-            <component
-              refId="Package\Llenado de FactVentasPorCampania\ErrorsProductos"
-              componentClassID="Microsoft.FlatFileDestination"
-              contactInfo="Flat File Destination;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; All Rights Reserved; http://www.microsoft.com/sql/support;1"
-              description="Flat File Destination"
-              localeId="1033"
-              name="ErrorsProductos"
-              version="1">
-              <properties>
-                <property
-                  dataType="System.Boolean"
-                  description="Specifies whether the data will overwrite or append to the destination file."
-                  name="Overwrite">true</property>
-                <property
-                  dataType="System.Null"
-                  description="Specifies the text to write to the destination file before any data is written."
-                  expressionType="Notify"
-                  name="Header" />
-                <property
-                  dataType="System.Boolean"
-                  description="When text qualifier is enabled, specifies whether the text qualifier in the data written to the destination file will be escaped or not."
-                  name="EscapeQualifier">false</property>
-              </properties>
-              <connections>
-                <connection
-                  refId="Package\Llenado de FactVentasPorCampania\ErrorsProductos.Connections[FlatFileConnection]"
-                  connectionManagerID="Package.ConnectionManagers[Flat File Connection Manager]"
-                  connectionManagerRefId="Package.ConnectionManagers[Flat File Connection Manager]"
-                  name="FlatFileConnection" />
-              </connections>
-              <inputs>
-                <input
-                  refId="Package\Llenado de FactVentasPorCampania\ErrorsProductos.Inputs[Flat File Destination Input]"
-                  hasSideEffects="true"
-                  name="Flat File Destination Input">
-                  <inputColumns>
-                    <inputColumn
-                      refId="Package\Llenado de FactVentasPorCampania\ErrorsProductos.Inputs[Flat File Destination Input].Columns[VarianteId]"
-                      cachedCodepage="1252"
-                      cachedDataType="str"
-                      cachedLength="50"
-                      cachedName="VarianteId"
-                      externalMetadataColumnId="Package\Llenado de FactVentasPorCampania\ErrorsProductos.Inputs[Flat File Destination Input].ExternalColumns[VarianteId]"
-                      lineageId="Package\Llenado de FactVentasPorCampania\Lectura de metricas y llaves del negocio.Outputs[Output 0].Columns[VarianteId]" />
-                    <inputColumn
-                      refId="Package\Llenado de FactVentasPorCampania\ErrorsProductos.Inputs[Flat File Destination Input].Columns[PrecioUnitario]"
-                      cachedDataType="r8"
-                      cachedName="PrecioUnitario"
-                      externalMetadataColumnId="Package\Llenado de FactVentasPorCampania\ErrorsProductos.Inputs[Flat File Destination Input].ExternalColumns[PrecioUnitario]"
-                      lineageId="Package\Llenado de FactVentasPorCampania\Lectura de metricas y llaves del negocio.Outputs[Output 0].Columns[PrecioUnitario]" />
-                    <inputColumn
-                      refId="Package\Llenado de FactVentasPorCampania\ErrorsProductos.Inputs[Flat File Destination Input].Columns[Total]"
-                      cachedDataType="r8"
-                      cachedName="Total"
-                      externalMetadataColumnId="Package\Llenado de FactVentasPorCampania\ErrorsProductos.Inputs[Flat File Destination Input].ExternalColumns[Total]"
-                      lineageId="Package\Llenado de FactVentasPorCampania\Lectura de metricas y llaves del negocio.Outputs[Output 0].Columns[Total]" />
-                    <inputColumn
-                      refId="Package\Llenado de FactVentasPorCampania\ErrorsProductos.Inputs[Flat File Destination Input].Columns[CuponId]"
-                      cachedCodepage="1252"
-                      cachedDataType="str"
-                      cachedLength="250"
-                      cachedName="CuponId"
-                      externalMetadataColumnId="Package\Llenado de FactVentasPorCampania\ErrorsProductos.Inputs[Flat File Destination Input].ExternalColumns[CuponId]"
-                      lineageId="Package\Llenado de FactVentasPorCampania\Lectura de metricas y llaves del negocio.Outputs[Output 0].Columns[CuponId]" />
-                    <inputColumn
-                      refId="Package\Llenado de FactVentasPorCampania\ErrorsProductos.Inputs[Flat File Destination Input].Columns[NumeroOrden]"
-                      cachedCodepage="1252"
-                      cachedDataType="str"
-                      cachedLength="260"
-                      cachedName="NumeroOrden"
-                      externalMetadataColumnId="Package\Llenado de FactVentasPorCampania\ErrorsProductos.Inputs[Flat File Destination Input].ExternalColumns[NumeroOrden]"
-                      lineageId="Package\Llenado de FactVentasPorCampania\Lectura de metricas y llaves del negocio.Outputs[Output 0].Columns[NumeroOrden]" />
-                    <inputColumn
-                      refId="Package\Llenado de FactVentasPorCampania\ErrorsProductos.Inputs[Flat File Destination Input].Columns[TotalConDescuento]"
-                      cachedDataType="r8"
-                      cachedName="TotalConDescuento"
-                      externalMetadataColumnId="Package\Llenado de FactVentasPorCampania\ErrorsProductos.Inputs[Flat File Destination Input].ExternalColumns[TotalConDescuento]"
-                      lineageId="Package\Llenado de FactVentasPorCampania\Lectura de metricas y llaves del negocio.Outputs[Output 0].Columns[TotalConDescuento]" />
-                    <inputColumn
-                      refId="Package\Llenado de FactVentasPorCampania\ErrorsProductos.Inputs[Flat File Destination Input].Columns[Descuento]"
-                      cachedDataType="r8"
-                      cachedName="Descuento"
-                      externalMetadataColumnId="Package\Llenado de FactVentasPorCampania\ErrorsProductos.Inputs[Flat File Destination Input].ExternalColumns[Descuento]"
-                      lineageId="Package\Llenado de FactVentasPorCampania\Lectura de metricas y llaves del negocio.Outputs[Output 0].Columns[Descuento]" />
-                    <inputColumn
-                      refId="Package\Llenado de FactVentasPorCampania\ErrorsProductos.Inputs[Flat File Destination Input].Columns[Cantidad]"
-                      cachedDataType="r8"
-                      cachedName="Cantidad"
-                      externalMetadataColumnId="Package\Llenado de FactVentasPorCampania\ErrorsProductos.Inputs[Flat File Destination Input].ExternalColumns[Cantidad]"
-                      lineageId="Package\Llenado de FactVentasPorCampania\Lectura de metricas y llaves del negocio.Outputs[Output 0].Columns[Cantidad]" />
-                    <inputColumn
-                      refId="Package\Llenado de FactVentasPorCampania\ErrorsProductos.Inputs[Flat File Destination Input].Columns[ProductoId]"
-                      cachedCodepage="1252"
-                      cachedDataType="str"
-                      cachedLength="250"
-                      cachedName="ProductoId"
-                      externalMetadataColumnId="Package\Llenado de FactVentasPorCampania\ErrorsProductos.Inputs[Flat File Destination Input].ExternalColumns[ProductoId]"
-                      lineageId="Package\Llenado de FactVentasPorCampania\Lectura de metricas y llaves del negocio.Outputs[Output 0].Columns[ProductoId]" />
-                    <inputColumn
-                      refId="Package\Llenado de FactVentasPorCampania\ErrorsProductos.Inputs[Flat File Destination Input].Columns[EmailCliente]"
-                      cachedCodepage="1252"
-                      cachedDataType="str"
-                      cachedLength="100"
-                      cachedName="EmailCliente"
-                      externalMetadataColumnId="Package\Llenado de FactVentasPorCampania\ErrorsProductos.Inputs[Flat File Destination Input].ExternalColumns[EmailCliente]"
-                      lineageId="Package\Llenado de FactVentasPorCampania\Lectura de metricas y llaves del negocio.Outputs[Output 0].Columns[EmailCliente]" />
-                    <inputColumn
-                      refId="Package\Llenado de FactVentasPorCampania\ErrorsProductos.Inputs[Flat File Destination Input].Columns[FechaOrden]"
-                      cachedDataType="dbTimeStamp"
-                      cachedName="FechaOrden"
-                      externalMetadataColumnId="Package\Llenado de FactVentasPorCampania\ErrorsProductos.Inputs[Flat File Destination Input].ExternalColumns[FechaOrden]"
-                      lineageId="Package\Llenado de FactVentasPorCampania\Lectura de metricas y llaves del negocio.Outputs[Output 0].Columns[FechaOrden]" />
-                    <inputColumn
-                      refId="Package\Llenado de FactVentasPorCampania\ErrorsProductos.Inputs[Flat File Destination Input].Columns[PrecioUnitarioConDescuento]"
-                      cachedDataType="r8"
-                      cachedName="PrecioUnitarioConDescuento"
-                      externalMetadataColumnId="Package\Llenado de FactVentasPorCampania\ErrorsProductos.Inputs[Flat File Destination Input].ExternalColumns[PrecioUnitarioConDescuento]"
-                      lineageId="Package\Llenado de FactVentasPorCampania\Lectura de metricas y llaves del negocio.Outputs[Output 0].Columns[PrecioUnitarioConDescuento]" />
-                    <inputColumn
-                      refId="Package\Llenado de FactVentasPorCampania\ErrorsProductos.Inputs[Flat File Destination Input].Columns[CodigoCupon]"
-                      cachedCodepage="1252"
-                      cachedDataType="str"
-                      cachedLength="50"
-                      cachedName="CodigoCupon"
-                      externalMetadataColumnId="Package\Llenado de FactVentasPorCampania\ErrorsProductos.Inputs[Flat File Destination Input].ExternalColumns[CodigoCupon]"
-                      lineageId="Package\Llenado de FactVentasPorCampania\Lectura de metricas y llaves del negocio.Outputs[Output 0].Columns[CodigoCupon]" />
-                    <inputColumn
-                      refId="Package\Llenado de FactVentasPorCampania\ErrorsProductos.Inputs[Flat File Destination Input].Columns[ErrorCode]"
-                      cachedDataType="i4"
-                      cachedName="ErrorCode"
-                      externalMetadataColumnId="Package\Llenado de FactVentasPorCampania\ErrorsProductos.Inputs[Flat File Destination Input].ExternalColumns[ErrorCode]"
-                      lineageId="Package\Llenado de FactVentasPorCampania\Obtener ProductoKey.Outputs[Lookup Error Output].Columns[ErrorCode]" />
-                    <inputColumn
-                      refId="Package\Llenado de FactVentasPorCampania\ErrorsProductos.Inputs[Flat File Destination Input].Columns[ErrorColumn]"
-                      cachedDataType="i4"
-                      cachedName="ErrorColumn"
-                      externalMetadataColumnId="Package\Llenado de FactVentasPorCampania\ErrorsProductos.Inputs[Flat File Destination Input].ExternalColumns[ErrorColumn]"
-                      lineageId="Package\Llenado de FactVentasPorCampania\Obtener ProductoKey.Outputs[Lookup Error Output].Columns[ErrorColumn]" />
-                  </inputColumns>
-                  <externalMetadataColumns
-                    isUsed="True">
-                    <externalMetadataColumn
-                      refId="Package\Llenado de FactVentasPorCampania\ErrorsProductos.Inputs[Flat File Destination Input].ExternalColumns[VarianteId]"
-                      codePage="1252"
-                      dataType="str"
-                      length="50"
-                      name="VarianteId" />
-                    <externalMetadataColumn
-                      refId="Package\Llenado de FactVentasPorCampania\ErrorsProductos.Inputs[Flat File Destination Input].ExternalColumns[PrecioUnitario]"
-                      dataType="r8"
-                      name="PrecioUnitario" />
-                    <externalMetadataColumn
-                      refId="Package\Llenado de FactVentasPorCampania\ErrorsProductos.Inputs[Flat File Destination Input].ExternalColumns[Total]"
-                      dataType="r8"
-                      name="Total" />
-                    <externalMetadataColumn
-                      refId="Package\Llenado de FactVentasPorCampania\ErrorsProductos.Inputs[Flat File Destination Input].ExternalColumns[CuponId]"
-                      codePage="1252"
-                      dataType="str"
-                      length="250"
-                      name="CuponId" />
-                    <externalMetadataColumn
-                      refId="Package\Llenado de FactVentasPorCampania\ErrorsProductos.Inputs[Flat File Destination Input].ExternalColumns[NumeroOrden]"
-                      codePage="1252"
-                      dataType="str"
-                      length="260"
-                      name="NumeroOrden" />
-                    <externalMetadataColumn
-                      refId="Package\Llenado de FactVentasPorCampania\ErrorsProductos.Inputs[Flat File Destination Input].ExternalColumns[TotalConDescuento]"
-                      dataType="r8"
-                      name="TotalConDescuento" />
-                    <externalMetadataColumn
-                      refId="Package\Llenado de FactVentasPorCampania\ErrorsProductos.Inputs[Flat File Destination Input].ExternalColumns[Descuento]"
-                      dataType="r8"
-                      name="Descuento" />
-                    <externalMetadataColumn
-                      refId="Package\Llenado de FactVentasPorCampania\ErrorsProductos.Inputs[Flat File Destination Input].ExternalColumns[Cantidad]"
-                      dataType="r8"
-                      name="Cantidad" />
-                    <externalMetadataColumn
-                      refId="Package\Llenado de FactVentasPorCampania\ErrorsProductos.Inputs[Flat File Destination Input].ExternalColumns[ProductoId]"
-                      codePage="1252"
-                      dataType="str"
-                      length="250"
-                      name="ProductoId" />
-                    <externalMetadataColumn
-                      refId="Package\Llenado de FactVentasPorCampania\ErrorsProductos.Inputs[Flat File Destination Input].ExternalColumns[EmailCliente]"
-                      codePage="1252"
-                      dataType="str"
-                      length="100"
-                      name="EmailCliente" />
-                    <externalMetadataColumn
-                      refId="Package\Llenado de FactVentasPorCampania\ErrorsProductos.Inputs[Flat File Destination Input].ExternalColumns[FechaOrden]"
-                      dataType="dbTimeStamp"
-                      name="FechaOrden" />
-                    <externalMetadataColumn
-                      refId="Package\Llenado de FactVentasPorCampania\ErrorsProductos.Inputs[Flat File Destination Input].ExternalColumns[PrecioUnitarioConDescuento]"
-                      dataType="r8"
-                      name="PrecioUnitarioConDescuento" />
-                    <externalMetadataColumn
-                      refId="Package\Llenado de FactVentasPorCampania\ErrorsProductos.Inputs[Flat File Destination Input].ExternalColumns[CodigoCupon]"
-                      codePage="1252"
-                      dataType="str"
-                      length="50"
-                      name="CodigoCupon" />
-                    <externalMetadataColumn
-                      refId="Package\Llenado de FactVentasPorCampania\ErrorsProductos.Inputs[Flat File Destination Input].ExternalColumns[ErrorCode]"
-                      dataType="i4"
-                      name="ErrorCode" />
-                    <externalMetadataColumn
-                      refId="Package\Llenado de FactVentasPorCampania\ErrorsProductos.Inputs[Flat File Destination Input].ExternalColumns[ErrorColumn]"
-                      dataType="i4"
-                      name="ErrorColumn" />
-                  </externalMetadataColumns>
-                </input>
-              </inputs>
-            </component>
-            <component
-              refId="Package\Llenado de FactVentasPorCampania\Flat File Destination 2"
-              componentClassID="Microsoft.FlatFileDestination"
-              contactInfo="Flat File Destination;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; All Rights Reserved; http://www.microsoft.com/sql/support;1"
-              description="Flat File Destination"
-              localeId="1033"
-              name="Flat File Destination 2"
-              version="1">
-              <properties>
-                <property
-                  dataType="System.Boolean"
-                  description="Specifies whether the data will overwrite or append to the destination file."
-                  name="Overwrite">true</property>
-                <property
-                  dataType="System.Null"
-                  description="Specifies the text to write to the destination file before any data is written."
-                  expressionType="Notify"
-                  name="Header" />
-                <property
-                  dataType="System.Boolean"
-                  description="When text qualifier is enabled, specifies whether the text qualifier in the data written to the destination file will be escaped or not."
-                  name="EscapeQualifier">false</property>
-              </properties>
-              <connections>
-                <connection
-                  refId="Package\Llenado de FactVentasPorCampania\Flat File Destination 2.Connections[FlatFileConnection]"
+                  refId="Package\Llenado de FactVentasPorCampania\Error Campanias.Connections[FlatFileConnection]"
                   connectionManagerID="Package.ConnectionManagers[ErrorCampania]"
                   connectionManagerRefId="Package.ConnectionManagers[ErrorCampania]"
                   name="FlatFileConnection" />
               </connections>
               <inputs>
                 <input
-                  refId="Package\Llenado de FactVentasPorCampania\Flat File Destination 2.Inputs[Flat File Destination Input]"
+                  refId="Package\Llenado de FactVentasPorCampania\Error Campanias.Inputs[Flat File Destination Input]"
                   hasSideEffects="true"
                   name="Flat File Destination Input">
                   <inputColumns>
                     <inputColumn
-                      refId="Package\Llenado de FactVentasPorCampania\Flat File Destination 2.Inputs[Flat File Destination Input].Columns[VarianteId]"
+                      refId="Package\Llenado de FactVentasPorCampania\Error Campanias.Inputs[Flat File Destination Input].Columns[VarianteId]"
                       cachedCodepage="1252"
                       cachedDataType="str"
                       cachedLength="50"
                       cachedName="VarianteId"
-                      externalMetadataColumnId="Package\Llenado de FactVentasPorCampania\Flat File Destination 2.Inputs[Flat File Destination Input].ExternalColumns[VarianteId]"
+                      externalMetadataColumnId="Package\Llenado de FactVentasPorCampania\Error Campanias.Inputs[Flat File Destination Input].ExternalColumns[VarianteId]"
                       lineageId="Package\Llenado de FactVentasPorCampania\Lectura de metricas y llaves del negocio.Outputs[Output 0].Columns[VarianteId]" />
                     <inputColumn
-                      refId="Package\Llenado de FactVentasPorCampania\Flat File Destination 2.Inputs[Flat File Destination Input].Columns[PrecioUnitario]"
+                      refId="Package\Llenado de FactVentasPorCampania\Error Campanias.Inputs[Flat File Destination Input].Columns[PrecioUnitario]"
                       cachedDataType="r8"
                       cachedName="PrecioUnitario"
-                      externalMetadataColumnId="Package\Llenado de FactVentasPorCampania\Flat File Destination 2.Inputs[Flat File Destination Input].ExternalColumns[PrecioUnitario]"
+                      externalMetadataColumnId="Package\Llenado de FactVentasPorCampania\Error Campanias.Inputs[Flat File Destination Input].ExternalColumns[PrecioUnitario]"
                       lineageId="Package\Llenado de FactVentasPorCampania\Lectura de metricas y llaves del negocio.Outputs[Output 0].Columns[PrecioUnitario]" />
                     <inputColumn
-                      refId="Package\Llenado de FactVentasPorCampania\Flat File Destination 2.Inputs[Flat File Destination Input].Columns[Total]"
+                      refId="Package\Llenado de FactVentasPorCampania\Error Campanias.Inputs[Flat File Destination Input].Columns[Total]"
                       cachedDataType="r8"
                       cachedName="Total"
-                      externalMetadataColumnId="Package\Llenado de FactVentasPorCampania\Flat File Destination 2.Inputs[Flat File Destination Input].ExternalColumns[Total]"
+                      externalMetadataColumnId="Package\Llenado de FactVentasPorCampania\Error Campanias.Inputs[Flat File Destination Input].ExternalColumns[Total]"
                       lineageId="Package\Llenado de FactVentasPorCampania\Lectura de metricas y llaves del negocio.Outputs[Output 0].Columns[Total]" />
                     <inputColumn
-                      refId="Package\Llenado de FactVentasPorCampania\Flat File Destination 2.Inputs[Flat File Destination Input].Columns[CuponId]"
+                      refId="Package\Llenado de FactVentasPorCampania\Error Campanias.Inputs[Flat File Destination Input].Columns[CuponId]"
                       cachedCodepage="1252"
                       cachedDataType="str"
                       cachedLength="250"
                       cachedName="CuponId"
-                      externalMetadataColumnId="Package\Llenado de FactVentasPorCampania\Flat File Destination 2.Inputs[Flat File Destination Input].ExternalColumns[CuponId]"
+                      externalMetadataColumnId="Package\Llenado de FactVentasPorCampania\Error Campanias.Inputs[Flat File Destination Input].ExternalColumns[CuponId]"
                       lineageId="Package\Llenado de FactVentasPorCampania\Lectura de metricas y llaves del negocio.Outputs[Output 0].Columns[CuponId]" />
                     <inputColumn
-                      refId="Package\Llenado de FactVentasPorCampania\Flat File Destination 2.Inputs[Flat File Destination Input].Columns[NumeroOrden]"
+                      refId="Package\Llenado de FactVentasPorCampania\Error Campanias.Inputs[Flat File Destination Input].Columns[NumeroOrden]"
                       cachedCodepage="1252"
                       cachedDataType="str"
                       cachedLength="260"
                       cachedName="NumeroOrden"
-                      externalMetadataColumnId="Package\Llenado de FactVentasPorCampania\Flat File Destination 2.Inputs[Flat File Destination Input].ExternalColumns[NumeroOrden]"
+                      externalMetadataColumnId="Package\Llenado de FactVentasPorCampania\Error Campanias.Inputs[Flat File Destination Input].ExternalColumns[NumeroOrden]"
                       lineageId="Package\Llenado de FactVentasPorCampania\Lectura de metricas y llaves del negocio.Outputs[Output 0].Columns[NumeroOrden]" />
                     <inputColumn
-                      refId="Package\Llenado de FactVentasPorCampania\Flat File Destination 2.Inputs[Flat File Destination Input].Columns[TotalConDescuento]"
+                      refId="Package\Llenado de FactVentasPorCampania\Error Campanias.Inputs[Flat File Destination Input].Columns[TotalConDescuento]"
                       cachedDataType="r8"
                       cachedName="TotalConDescuento"
-                      externalMetadataColumnId="Package\Llenado de FactVentasPorCampania\Flat File Destination 2.Inputs[Flat File Destination Input].ExternalColumns[TotalConDescuento]"
+                      externalMetadataColumnId="Package\Llenado de FactVentasPorCampania\Error Campanias.Inputs[Flat File Destination Input].ExternalColumns[TotalConDescuento]"
                       lineageId="Package\Llenado de FactVentasPorCampania\Lectura de metricas y llaves del negocio.Outputs[Output 0].Columns[TotalConDescuento]" />
                     <inputColumn
-                      refId="Package\Llenado de FactVentasPorCampania\Flat File Destination 2.Inputs[Flat File Destination Input].Columns[Descuento]"
+                      refId="Package\Llenado de FactVentasPorCampania\Error Campanias.Inputs[Flat File Destination Input].Columns[Descuento]"
                       cachedDataType="r8"
                       cachedName="Descuento"
-                      externalMetadataColumnId="Package\Llenado de FactVentasPorCampania\Flat File Destination 2.Inputs[Flat File Destination Input].ExternalColumns[Descuento]"
+                      externalMetadataColumnId="Package\Llenado de FactVentasPorCampania\Error Campanias.Inputs[Flat File Destination Input].ExternalColumns[Descuento]"
                       lineageId="Package\Llenado de FactVentasPorCampania\Lectura de metricas y llaves del negocio.Outputs[Output 0].Columns[Descuento]" />
                     <inputColumn
-                      refId="Package\Llenado de FactVentasPorCampania\Flat File Destination 2.Inputs[Flat File Destination Input].Columns[Cantidad]"
+                      refId="Package\Llenado de FactVentasPorCampania\Error Campanias.Inputs[Flat File Destination Input].Columns[Cantidad]"
                       cachedDataType="r8"
                       cachedName="Cantidad"
-                      externalMetadataColumnId="Package\Llenado de FactVentasPorCampania\Flat File Destination 2.Inputs[Flat File Destination Input].ExternalColumns[Cantidad]"
+                      externalMetadataColumnId="Package\Llenado de FactVentasPorCampania\Error Campanias.Inputs[Flat File Destination Input].ExternalColumns[Cantidad]"
                       lineageId="Package\Llenado de FactVentasPorCampania\Lectura de metricas y llaves del negocio.Outputs[Output 0].Columns[Cantidad]" />
                     <inputColumn
-                      refId="Package\Llenado de FactVentasPorCampania\Flat File Destination 2.Inputs[Flat File Destination Input].Columns[ProductoId]"
+                      refId="Package\Llenado de FactVentasPorCampania\Error Campanias.Inputs[Flat File Destination Input].Columns[ProductoId]"
                       cachedCodepage="1252"
                       cachedDataType="str"
                       cachedLength="250"
                       cachedName="ProductoId"
-                      externalMetadataColumnId="Package\Llenado de FactVentasPorCampania\Flat File Destination 2.Inputs[Flat File Destination Input].ExternalColumns[ProductoId]"
+                      externalMetadataColumnId="Package\Llenado de FactVentasPorCampania\Error Campanias.Inputs[Flat File Destination Input].ExternalColumns[ProductoId]"
                       lineageId="Package\Llenado de FactVentasPorCampania\Lectura de metricas y llaves del negocio.Outputs[Output 0].Columns[ProductoId]" />
                     <inputColumn
-                      refId="Package\Llenado de FactVentasPorCampania\Flat File Destination 2.Inputs[Flat File Destination Input].Columns[EmailCliente]"
+                      refId="Package\Llenado de FactVentasPorCampania\Error Campanias.Inputs[Flat File Destination Input].Columns[EmailCliente]"
                       cachedCodepage="1252"
                       cachedDataType="str"
                       cachedLength="100"
                       cachedName="EmailCliente"
-                      externalMetadataColumnId="Package\Llenado de FactVentasPorCampania\Flat File Destination 2.Inputs[Flat File Destination Input].ExternalColumns[EmailCliente]"
+                      externalMetadataColumnId="Package\Llenado de FactVentasPorCampania\Error Campanias.Inputs[Flat File Destination Input].ExternalColumns[EmailCliente]"
                       lineageId="Package\Llenado de FactVentasPorCampania\Lectura de metricas y llaves del negocio.Outputs[Output 0].Columns[EmailCliente]" />
                     <inputColumn
-                      refId="Package\Llenado de FactVentasPorCampania\Flat File Destination 2.Inputs[Flat File Destination Input].Columns[FechaOrden]"
+                      refId="Package\Llenado de FactVentasPorCampania\Error Campanias.Inputs[Flat File Destination Input].Columns[FechaOrden]"
                       cachedDataType="dbTimeStamp"
                       cachedName="FechaOrden"
-                      externalMetadataColumnId="Package\Llenado de FactVentasPorCampania\Flat File Destination 2.Inputs[Flat File Destination Input].ExternalColumns[FechaOrden]"
+                      externalMetadataColumnId="Package\Llenado de FactVentasPorCampania\Error Campanias.Inputs[Flat File Destination Input].ExternalColumns[FechaOrden]"
                       lineageId="Package\Llenado de FactVentasPorCampania\Lectura de metricas y llaves del negocio.Outputs[Output 0].Columns[FechaOrden]" />
                     <inputColumn
-                      refId="Package\Llenado de FactVentasPorCampania\Flat File Destination 2.Inputs[Flat File Destination Input].Columns[PrecioUnitarioConDescuento]"
+                      refId="Package\Llenado de FactVentasPorCampania\Error Campanias.Inputs[Flat File Destination Input].Columns[PrecioUnitarioConDescuento]"
                       cachedDataType="r8"
                       cachedName="PrecioUnitarioConDescuento"
-                      externalMetadataColumnId="Package\Llenado de FactVentasPorCampania\Flat File Destination 2.Inputs[Flat File Destination Input].ExternalColumns[PrecioUnitarioConDescuento]"
+                      externalMetadataColumnId="Package\Llenado de FactVentasPorCampania\Error Campanias.Inputs[Flat File Destination Input].ExternalColumns[PrecioUnitarioConDescuento]"
                       lineageId="Package\Llenado de FactVentasPorCampania\Lectura de metricas y llaves del negocio.Outputs[Output 0].Columns[PrecioUnitarioConDescuento]" />
                     <inputColumn
-                      refId="Package\Llenado de FactVentasPorCampania\Flat File Destination 2.Inputs[Flat File Destination Input].Columns[CodigoCupon]"
+                      refId="Package\Llenado de FactVentasPorCampania\Error Campanias.Inputs[Flat File Destination Input].Columns[CodigoCupon]"
                       cachedCodepage="1252"
                       cachedDataType="str"
                       cachedLength="50"
                       cachedName="CodigoCupon"
-                      externalMetadataColumnId="Package\Llenado de FactVentasPorCampania\Flat File Destination 2.Inputs[Flat File Destination Input].ExternalColumns[CodigoCupon]"
+                      externalMetadataColumnId="Package\Llenado de FactVentasPorCampania\Error Campanias.Inputs[Flat File Destination Input].ExternalColumns[CodigoCupon]"
                       lineageId="Package\Llenado de FactVentasPorCampania\Lectura de metricas y llaves del negocio.Outputs[Output 0].Columns[CodigoCupon]" />
                     <inputColumn
-                      refId="Package\Llenado de FactVentasPorCampania\Flat File Destination 2.Inputs[Flat File Destination Input].Columns[ProductoKey]"
+                      refId="Package\Llenado de FactVentasPorCampania\Error Campanias.Inputs[Flat File Destination Input].Columns[ProductoKey]"
                       cachedDataType="i4"
                       cachedName="ProductoKey"
-                      externalMetadataColumnId="Package\Llenado de FactVentasPorCampania\Flat File Destination 2.Inputs[Flat File Destination Input].ExternalColumns[ProductoKey]"
+                      externalMetadataColumnId="Package\Llenado de FactVentasPorCampania\Error Campanias.Inputs[Flat File Destination Input].ExternalColumns[ProductoKey]"
                       lineageId="Package\Llenado de FactVentasPorCampania\Obtener ProductoKey.Outputs[Lookup Match Output].Columns[ProductoKey]" />
                     <inputColumn
-                      refId="Package\Llenado de FactVentasPorCampania\Flat File Destination 2.Inputs[Flat File Destination Input].Columns[ClienteKey]"
+                      refId="Package\Llenado de FactVentasPorCampania\Error Campanias.Inputs[Flat File Destination Input].Columns[ClienteKey]"
                       cachedDataType="i4"
                       cachedName="ClienteKey"
-                      externalMetadataColumnId="Package\Llenado de FactVentasPorCampania\Flat File Destination 2.Inputs[Flat File Destination Input].ExternalColumns[ClienteKey]"
+                      externalMetadataColumnId="Package\Llenado de FactVentasPorCampania\Error Campanias.Inputs[Flat File Destination Input].ExternalColumns[ClienteKey]"
                       lineageId="Package\Llenado de FactVentasPorCampania\Obetener ClienteKey.Outputs[Lookup Match Output].Columns[ClienteKey]" />
                     <inputColumn
-                      refId="Package\Llenado de FactVentasPorCampania\Flat File Destination 2.Inputs[Flat File Destination Input].Columns[CuponKey]"
+                      refId="Package\Llenado de FactVentasPorCampania\Error Campanias.Inputs[Flat File Destination Input].Columns[CuponKey]"
                       cachedDataType="i4"
                       cachedName="CuponKey"
-                      externalMetadataColumnId="Package\Llenado de FactVentasPorCampania\Flat File Destination 2.Inputs[Flat File Destination Input].ExternalColumns[CuponKey]"
+                      externalMetadataColumnId="Package\Llenado de FactVentasPorCampania\Error Campanias.Inputs[Flat File Destination Input].ExternalColumns[CuponKey]"
                       lineageId="Package\Llenado de FactVentasPorCampania\Obtener CuponKey.Outputs[Lookup Match Output].Columns[CuponKey]" />
                     <inputColumn
-                      refId="Package\Llenado de FactVentasPorCampania\Flat File Destination 2.Inputs[Flat File Destination Input].Columns[NombreCupon]"
+                      refId="Package\Llenado de FactVentasPorCampania\Error Campanias.Inputs[Flat File Destination Input].Columns[NombreCupon]"
                       cachedCodepage="1252"
                       cachedDataType="str"
                       cachedLength="255"
                       cachedName="NombreCupon"
-                      externalMetadataColumnId="Package\Llenado de FactVentasPorCampania\Flat File Destination 2.Inputs[Flat File Destination Input].ExternalColumns[NombreCupon]"
+                      externalMetadataColumnId="Package\Llenado de FactVentasPorCampania\Error Campanias.Inputs[Flat File Destination Input].ExternalColumns[NombreCupon]"
                       lineageId="Package\Llenado de FactVentasPorCampania\Obtener CuponKey.Outputs[Lookup Match Output].Columns[NombreCupon]" />
                     <inputColumn
-                      refId="Package\Llenado de FactVentasPorCampania\Flat File Destination 2.Inputs[Flat File Destination Input].Columns[FechaCreacion]"
+                      refId="Package\Llenado de FactVentasPorCampania\Error Campanias.Inputs[Flat File Destination Input].Columns[FechaCreacion]"
                       cachedDataType="dbDate"
                       cachedName="FechaCreacion"
-                      externalMetadataColumnId="Package\Llenado de FactVentasPorCampania\Flat File Destination 2.Inputs[Flat File Destination Input].ExternalColumns[FechaCreacion]"
+                      externalMetadataColumnId="Package\Llenado de FactVentasPorCampania\Error Campanias.Inputs[Flat File Destination Input].ExternalColumns[FechaCreacion]"
                       lineageId="Package\Llenado de FactVentasPorCampania\Obtener CuponKey.Outputs[Lookup Match Output].Columns[FechaCreacion]" />
                     <inputColumn
-                      refId="Package\Llenado de FactVentasPorCampania\Flat File Destination 2.Inputs[Flat File Destination Input].Columns[ErrorCode]"
+                      refId="Package\Llenado de FactVentasPorCampania\Error Campanias.Inputs[Flat File Destination Input].Columns[ErrorCode]"
                       cachedDataType="i4"
                       cachedName="ErrorCode"
-                      externalMetadataColumnId="Package\Llenado de FactVentasPorCampania\Flat File Destination 2.Inputs[Flat File Destination Input].ExternalColumns[ErrorCode]"
+                      externalMetadataColumnId="Package\Llenado de FactVentasPorCampania\Error Campanias.Inputs[Flat File Destination Input].ExternalColumns[ErrorCode]"
                       lineageId="Package\Llenado de FactVentasPorCampania\Obtener Campania Key.Outputs[Lookup Error Output].Columns[ErrorCode]" />
                     <inputColumn
-                      refId="Package\Llenado de FactVentasPorCampania\Flat File Destination 2.Inputs[Flat File Destination Input].Columns[ErrorColumn]"
+                      refId="Package\Llenado de FactVentasPorCampania\Error Campanias.Inputs[Flat File Destination Input].Columns[ErrorColumn]"
                       cachedDataType="i4"
                       cachedName="ErrorColumn"
-                      externalMetadataColumnId="Package\Llenado de FactVentasPorCampania\Flat File Destination 2.Inputs[Flat File Destination Input].ExternalColumns[ErrorColumn]"
+                      externalMetadataColumnId="Package\Llenado de FactVentasPorCampania\Error Campanias.Inputs[Flat File Destination Input].ExternalColumns[ErrorColumn]"
                       lineageId="Package\Llenado de FactVentasPorCampania\Obtener Campania Key.Outputs[Lookup Error Output].Columns[ErrorColumn]" />
                   </inputColumns>
                   <externalMetadataColumns
                     isUsed="True">
                     <externalMetadataColumn
-                      refId="Package\Llenado de FactVentasPorCampania\Flat File Destination 2.Inputs[Flat File Destination Input].ExternalColumns[VarianteId]"
+                      refId="Package\Llenado de FactVentasPorCampania\Error Campanias.Inputs[Flat File Destination Input].ExternalColumns[VarianteId]"
                       codePage="1252"
                       dataType="str"
                       length="50"
                       name="VarianteId" />
                     <externalMetadataColumn
-                      refId="Package\Llenado de FactVentasPorCampania\Flat File Destination 2.Inputs[Flat File Destination Input].ExternalColumns[PrecioUnitario]"
+                      refId="Package\Llenado de FactVentasPorCampania\Error Campanias.Inputs[Flat File Destination Input].ExternalColumns[PrecioUnitario]"
                       dataType="r8"
                       name="PrecioUnitario" />
                     <externalMetadataColumn
-                      refId="Package\Llenado de FactVentasPorCampania\Flat File Destination 2.Inputs[Flat File Destination Input].ExternalColumns[Total]"
+                      refId="Package\Llenado de FactVentasPorCampania\Error Campanias.Inputs[Flat File Destination Input].ExternalColumns[Total]"
                       dataType="r8"
                       name="Total" />
                     <externalMetadataColumn
-                      refId="Package\Llenado de FactVentasPorCampania\Flat File Destination 2.Inputs[Flat File Destination Input].ExternalColumns[CuponId]"
+                      refId="Package\Llenado de FactVentasPorCampania\Error Campanias.Inputs[Flat File Destination Input].ExternalColumns[CuponId]"
                       codePage="1252"
                       dataType="str"
                       length="250"
                       name="CuponId" />
                     <externalMetadataColumn
-                      refId="Package\Llenado de FactVentasPorCampania\Flat File Destination 2.Inputs[Flat File Destination Input].ExternalColumns[NumeroOrden]"
+                      refId="Package\Llenado de FactVentasPorCampania\Error Campanias.Inputs[Flat File Destination Input].ExternalColumns[NumeroOrden]"
                       codePage="1252"
                       dataType="str"
                       length="260"
                       name="NumeroOrden" />
                     <externalMetadataColumn
-                      refId="Package\Llenado de FactVentasPorCampania\Flat File Destination 2.Inputs[Flat File Destination Input].ExternalColumns[TotalConDescuento]"
+                      refId="Package\Llenado de FactVentasPorCampania\Error Campanias.Inputs[Flat File Destination Input].ExternalColumns[TotalConDescuento]"
                       dataType="r8"
                       name="TotalConDescuento" />
                     <externalMetadataColumn
-                      refId="Package\Llenado de FactVentasPorCampania\Flat File Destination 2.Inputs[Flat File Destination Input].ExternalColumns[Descuento]"
+                      refId="Package\Llenado de FactVentasPorCampania\Error Campanias.Inputs[Flat File Destination Input].ExternalColumns[Descuento]"
                       dataType="r8"
                       name="Descuento" />
                     <externalMetadataColumn
-                      refId="Package\Llenado de FactVentasPorCampania\Flat File Destination 2.Inputs[Flat File Destination Input].ExternalColumns[Cantidad]"
+                      refId="Package\Llenado de FactVentasPorCampania\Error Campanias.Inputs[Flat File Destination Input].ExternalColumns[Cantidad]"
                       dataType="r8"
                       name="Cantidad" />
                     <externalMetadataColumn
-                      refId="Package\Llenado de FactVentasPorCampania\Flat File Destination 2.Inputs[Flat File Destination Input].ExternalColumns[ProductoId]"
+                      refId="Package\Llenado de FactVentasPorCampania\Error Campanias.Inputs[Flat File Destination Input].ExternalColumns[ProductoId]"
                       codePage="1252"
                       dataType="str"
                       length="250"
                       name="ProductoId" />
                     <externalMetadataColumn
-                      refId="Package\Llenado de FactVentasPorCampania\Flat File Destination 2.Inputs[Flat File Destination Input].ExternalColumns[EmailCliente]"
+                      refId="Package\Llenado de FactVentasPorCampania\Error Campanias.Inputs[Flat File Destination Input].ExternalColumns[EmailCliente]"
                       codePage="1252"
                       dataType="str"
                       length="100"
                       name="EmailCliente" />
                     <externalMetadataColumn
-                      refId="Package\Llenado de FactVentasPorCampania\Flat File Destination 2.Inputs[Flat File Destination Input].ExternalColumns[FechaOrden]"
+                      refId="Package\Llenado de FactVentasPorCampania\Error Campanias.Inputs[Flat File Destination Input].ExternalColumns[FechaOrden]"
                       dataType="dbTimeStamp"
                       name="FechaOrden" />
                     <externalMetadataColumn
-                      refId="Package\Llenado de FactVentasPorCampania\Flat File Destination 2.Inputs[Flat File Destination Input].ExternalColumns[PrecioUnitarioConDescuento]"
+                      refId="Package\Llenado de FactVentasPorCampania\Error Campanias.Inputs[Flat File Destination Input].ExternalColumns[PrecioUnitarioConDescuento]"
                       dataType="r8"
                       name="PrecioUnitarioConDescuento" />
                     <externalMetadataColumn
-                      refId="Package\Llenado de FactVentasPorCampania\Flat File Destination 2.Inputs[Flat File Destination Input].ExternalColumns[CodigoCupon]"
+                      refId="Package\Llenado de FactVentasPorCampania\Error Campanias.Inputs[Flat File Destination Input].ExternalColumns[CodigoCupon]"
                       codePage="1252"
                       dataType="str"
                       length="50"
                       name="CodigoCupon" />
                     <externalMetadataColumn
-                      refId="Package\Llenado de FactVentasPorCampania\Flat File Destination 2.Inputs[Flat File Destination Input].ExternalColumns[ProductoKey]"
+                      refId="Package\Llenado de FactVentasPorCampania\Error Campanias.Inputs[Flat File Destination Input].ExternalColumns[ProductoKey]"
                       dataType="i4"
                       name="ProductoKey" />
                     <externalMetadataColumn
-                      refId="Package\Llenado de FactVentasPorCampania\Flat File Destination 2.Inputs[Flat File Destination Input].ExternalColumns[ClienteKey]"
+                      refId="Package\Llenado de FactVentasPorCampania\Error Campanias.Inputs[Flat File Destination Input].ExternalColumns[ClienteKey]"
                       dataType="i4"
                       name="ClienteKey" />
                     <externalMetadataColumn
-                      refId="Package\Llenado de FactVentasPorCampania\Flat File Destination 2.Inputs[Flat File Destination Input].ExternalColumns[CuponKey]"
+                      refId="Package\Llenado de FactVentasPorCampania\Error Campanias.Inputs[Flat File Destination Input].ExternalColumns[CuponKey]"
                       dataType="i4"
                       name="CuponKey" />
                     <externalMetadataColumn
-                      refId="Package\Llenado de FactVentasPorCampania\Flat File Destination 2.Inputs[Flat File Destination Input].ExternalColumns[NombreCupon]"
+                      refId="Package\Llenado de FactVentasPorCampania\Error Campanias.Inputs[Flat File Destination Input].ExternalColumns[NombreCupon]"
                       codePage="1252"
                       dataType="str"
                       length="255"
                       name="NombreCupon" />
                     <externalMetadataColumn
-                      refId="Package\Llenado de FactVentasPorCampania\Flat File Destination 2.Inputs[Flat File Destination Input].ExternalColumns[FechaCreacion]"
+                      refId="Package\Llenado de FactVentasPorCampania\Error Campanias.Inputs[Flat File Destination Input].ExternalColumns[FechaCreacion]"
                       dataType="dbDate"
                       name="FechaCreacion" />
                     <externalMetadataColumn
-                      refId="Package\Llenado de FactVentasPorCampania\Flat File Destination 2.Inputs[Flat File Destination Input].ExternalColumns[ErrorCode]"
+                      refId="Package\Llenado de FactVentasPorCampania\Error Campanias.Inputs[Flat File Destination Input].ExternalColumns[ErrorCode]"
                       dataType="i4"
                       name="ErrorCode" />
                     <externalMetadataColumn
-                      refId="Package\Llenado de FactVentasPorCampania\Flat File Destination 2.Inputs[Flat File Destination Input].ExternalColumns[ErrorColumn]"
+                      refId="Package\Llenado de FactVentasPorCampania\Error Campanias.Inputs[Flat File Destination Input].ExternalColumns[ErrorColumn]"
+                      dataType="i4"
+                      name="ErrorColumn" />
+                  </externalMetadataColumns>
+                </input>
+              </inputs>
+            </component>
+            <component
+              refId="Package\Llenado de FactVentasPorCampania\Error Cupones"
+              componentClassID="Microsoft.FlatFileDestination"
+              contactInfo="Flat File Destination;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; All Rights Reserved; http://www.microsoft.com/sql/support;1"
+              description="Flat File Destination"
+              localeId="1033"
+              name="Error Cupones"
+              version="1">
+              <properties>
+                <property
+                  dataType="System.Boolean"
+                  description="Specifies whether the data will overwrite or append to the destination file."
+                  name="Overwrite">true</property>
+                <property
+                  dataType="System.Null"
+                  description="Specifies the text to write to the destination file before any data is written."
+                  expressionType="Notify"
+                  name="Header" />
+                <property
+                  dataType="System.Boolean"
+                  description="When text qualifier is enabled, specifies whether the text qualifier in the data written to the destination file will be escaped or not."
+                  name="EscapeQualifier">false</property>
+              </properties>
+              <connections>
+                <connection
+                  refId="Package\Llenado de FactVentasPorCampania\Error Cupones.Connections[FlatFileConnection]"
+                  connectionManagerID="Package.ConnectionManagers[ErrorsCupons]"
+                  connectionManagerRefId="Package.ConnectionManagers[ErrorsCupons]"
+                  name="FlatFileConnection" />
+              </connections>
+              <inputs>
+                <input
+                  refId="Package\Llenado de FactVentasPorCampania\Error Cupones.Inputs[Flat File Destination Input]"
+                  hasSideEffects="true"
+                  name="Flat File Destination Input">
+                  <inputColumns>
+                    <inputColumn
+                      refId="Package\Llenado de FactVentasPorCampania\Error Cupones.Inputs[Flat File Destination Input].Columns[VarianteId]"
+                      cachedCodepage="1252"
+                      cachedDataType="str"
+                      cachedLength="50"
+                      cachedName="VarianteId"
+                      externalMetadataColumnId="Package\Llenado de FactVentasPorCampania\Error Cupones.Inputs[Flat File Destination Input].ExternalColumns[VarianteId]"
+                      lineageId="Package\Llenado de FactVentasPorCampania\Lectura de metricas y llaves del negocio.Outputs[Output 0].Columns[VarianteId]" />
+                    <inputColumn
+                      refId="Package\Llenado de FactVentasPorCampania\Error Cupones.Inputs[Flat File Destination Input].Columns[PrecioUnitario]"
+                      cachedDataType="r8"
+                      cachedName="PrecioUnitario"
+                      externalMetadataColumnId="Package\Llenado de FactVentasPorCampania\Error Cupones.Inputs[Flat File Destination Input].ExternalColumns[PrecioUnitario]"
+                      lineageId="Package\Llenado de FactVentasPorCampania\Lectura de metricas y llaves del negocio.Outputs[Output 0].Columns[PrecioUnitario]" />
+                    <inputColumn
+                      refId="Package\Llenado de FactVentasPorCampania\Error Cupones.Inputs[Flat File Destination Input].Columns[Total]"
+                      cachedDataType="r8"
+                      cachedName="Total"
+                      externalMetadataColumnId="Package\Llenado de FactVentasPorCampania\Error Cupones.Inputs[Flat File Destination Input].ExternalColumns[Total]"
+                      lineageId="Package\Llenado de FactVentasPorCampania\Lectura de metricas y llaves del negocio.Outputs[Output 0].Columns[Total]" />
+                    <inputColumn
+                      refId="Package\Llenado de FactVentasPorCampania\Error Cupones.Inputs[Flat File Destination Input].Columns[CuponId]"
+                      cachedCodepage="1252"
+                      cachedDataType="str"
+                      cachedLength="250"
+                      cachedName="CuponId"
+                      externalMetadataColumnId="Package\Llenado de FactVentasPorCampania\Error Cupones.Inputs[Flat File Destination Input].ExternalColumns[CuponId]"
+                      lineageId="Package\Llenado de FactVentasPorCampania\Lectura de metricas y llaves del negocio.Outputs[Output 0].Columns[CuponId]" />
+                    <inputColumn
+                      refId="Package\Llenado de FactVentasPorCampania\Error Cupones.Inputs[Flat File Destination Input].Columns[NumeroOrden]"
+                      cachedCodepage="1252"
+                      cachedDataType="str"
+                      cachedLength="260"
+                      cachedName="NumeroOrden"
+                      externalMetadataColumnId="Package\Llenado de FactVentasPorCampania\Error Cupones.Inputs[Flat File Destination Input].ExternalColumns[NumeroOrden]"
+                      lineageId="Package\Llenado de FactVentasPorCampania\Lectura de metricas y llaves del negocio.Outputs[Output 0].Columns[NumeroOrden]" />
+                    <inputColumn
+                      refId="Package\Llenado de FactVentasPorCampania\Error Cupones.Inputs[Flat File Destination Input].Columns[TotalConDescuento]"
+                      cachedDataType="r8"
+                      cachedName="TotalConDescuento"
+                      externalMetadataColumnId="Package\Llenado de FactVentasPorCampania\Error Cupones.Inputs[Flat File Destination Input].ExternalColumns[TotalConDescuento]"
+                      lineageId="Package\Llenado de FactVentasPorCampania\Lectura de metricas y llaves del negocio.Outputs[Output 0].Columns[TotalConDescuento]" />
+                    <inputColumn
+                      refId="Package\Llenado de FactVentasPorCampania\Error Cupones.Inputs[Flat File Destination Input].Columns[Descuento]"
+                      cachedDataType="r8"
+                      cachedName="Descuento"
+                      externalMetadataColumnId="Package\Llenado de FactVentasPorCampania\Error Cupones.Inputs[Flat File Destination Input].ExternalColumns[Descuento]"
+                      lineageId="Package\Llenado de FactVentasPorCampania\Lectura de metricas y llaves del negocio.Outputs[Output 0].Columns[Descuento]" />
+                    <inputColumn
+                      refId="Package\Llenado de FactVentasPorCampania\Error Cupones.Inputs[Flat File Destination Input].Columns[Cantidad]"
+                      cachedDataType="r8"
+                      cachedName="Cantidad"
+                      externalMetadataColumnId="Package\Llenado de FactVentasPorCampania\Error Cupones.Inputs[Flat File Destination Input].ExternalColumns[Cantidad]"
+                      lineageId="Package\Llenado de FactVentasPorCampania\Lectura de metricas y llaves del negocio.Outputs[Output 0].Columns[Cantidad]" />
+                    <inputColumn
+                      refId="Package\Llenado de FactVentasPorCampania\Error Cupones.Inputs[Flat File Destination Input].Columns[ProductoId]"
+                      cachedCodepage="1252"
+                      cachedDataType="str"
+                      cachedLength="250"
+                      cachedName="ProductoId"
+                      externalMetadataColumnId="Package\Llenado de FactVentasPorCampania\Error Cupones.Inputs[Flat File Destination Input].ExternalColumns[ProductoId]"
+                      lineageId="Package\Llenado de FactVentasPorCampania\Lectura de metricas y llaves del negocio.Outputs[Output 0].Columns[ProductoId]" />
+                    <inputColumn
+                      refId="Package\Llenado de FactVentasPorCampania\Error Cupones.Inputs[Flat File Destination Input].Columns[EmailCliente]"
+                      cachedCodepage="1252"
+                      cachedDataType="str"
+                      cachedLength="100"
+                      cachedName="EmailCliente"
+                      externalMetadataColumnId="Package\Llenado de FactVentasPorCampania\Error Cupones.Inputs[Flat File Destination Input].ExternalColumns[EmailCliente]"
+                      lineageId="Package\Llenado de FactVentasPorCampania\Lectura de metricas y llaves del negocio.Outputs[Output 0].Columns[EmailCliente]" />
+                    <inputColumn
+                      refId="Package\Llenado de FactVentasPorCampania\Error Cupones.Inputs[Flat File Destination Input].Columns[FechaOrden]"
+                      cachedDataType="dbTimeStamp"
+                      cachedName="FechaOrden"
+                      externalMetadataColumnId="Package\Llenado de FactVentasPorCampania\Error Cupones.Inputs[Flat File Destination Input].ExternalColumns[FechaOrden]"
+                      lineageId="Package\Llenado de FactVentasPorCampania\Lectura de metricas y llaves del negocio.Outputs[Output 0].Columns[FechaOrden]" />
+                    <inputColumn
+                      refId="Package\Llenado de FactVentasPorCampania\Error Cupones.Inputs[Flat File Destination Input].Columns[PrecioUnitarioConDescuento]"
+                      cachedDataType="r8"
+                      cachedName="PrecioUnitarioConDescuento"
+                      externalMetadataColumnId="Package\Llenado de FactVentasPorCampania\Error Cupones.Inputs[Flat File Destination Input].ExternalColumns[PrecioUnitarioConDescuento]"
+                      lineageId="Package\Llenado de FactVentasPorCampania\Lectura de metricas y llaves del negocio.Outputs[Output 0].Columns[PrecioUnitarioConDescuento]" />
+                    <inputColumn
+                      refId="Package\Llenado de FactVentasPorCampania\Error Cupones.Inputs[Flat File Destination Input].Columns[CodigoCupon]"
+                      cachedCodepage="1252"
+                      cachedDataType="str"
+                      cachedLength="50"
+                      cachedName="CodigoCupon"
+                      externalMetadataColumnId="Package\Llenado de FactVentasPorCampania\Error Cupones.Inputs[Flat File Destination Input].ExternalColumns[CodigoCupon]"
+                      lineageId="Package\Llenado de FactVentasPorCampania\Lectura de metricas y llaves del negocio.Outputs[Output 0].Columns[CodigoCupon]" />
+                    <inputColumn
+                      refId="Package\Llenado de FactVentasPorCampania\Error Cupones.Inputs[Flat File Destination Input].Columns[ProductoKey]"
+                      cachedDataType="i4"
+                      cachedName="ProductoKey"
+                      externalMetadataColumnId="Package\Llenado de FactVentasPorCampania\Error Cupones.Inputs[Flat File Destination Input].ExternalColumns[ProductoKey]"
+                      lineageId="Package\Llenado de FactVentasPorCampania\Obtener ProductoKey.Outputs[Lookup Match Output].Columns[ProductoKey]" />
+                    <inputColumn
+                      refId="Package\Llenado de FactVentasPorCampania\Error Cupones.Inputs[Flat File Destination Input].Columns[ClienteKey]"
+                      cachedDataType="i4"
+                      cachedName="ClienteKey"
+                      externalMetadataColumnId="Package\Llenado de FactVentasPorCampania\Error Cupones.Inputs[Flat File Destination Input].ExternalColumns[ClienteKey]"
+                      lineageId="Package\Llenado de FactVentasPorCampania\Obetener ClienteKey.Outputs[Lookup Match Output].Columns[ClienteKey]" />
+                    <inputColumn
+                      refId="Package\Llenado de FactVentasPorCampania\Error Cupones.Inputs[Flat File Destination Input].Columns[ErrorCode]"
+                      cachedDataType="i4"
+                      cachedName="ErrorCode"
+                      externalMetadataColumnId="Package\Llenado de FactVentasPorCampania\Error Cupones.Inputs[Flat File Destination Input].ExternalColumns[ErrorCode]"
+                      lineageId="Package\Llenado de FactVentasPorCampania\Obtener CuponKey.Outputs[Lookup Error Output].Columns[ErrorCode]" />
+                    <inputColumn
+                      refId="Package\Llenado de FactVentasPorCampania\Error Cupones.Inputs[Flat File Destination Input].Columns[ErrorColumn]"
+                      cachedDataType="i4"
+                      cachedName="ErrorColumn"
+                      externalMetadataColumnId="Package\Llenado de FactVentasPorCampania\Error Cupones.Inputs[Flat File Destination Input].ExternalColumns[ErrorColumn]"
+                      lineageId="Package\Llenado de FactVentasPorCampania\Obtener CuponKey.Outputs[Lookup Error Output].Columns[ErrorColumn]" />
+                  </inputColumns>
+                  <externalMetadataColumns
+                    isUsed="True">
+                    <externalMetadataColumn
+                      refId="Package\Llenado de FactVentasPorCampania\Error Cupones.Inputs[Flat File Destination Input].ExternalColumns[VarianteId]"
+                      codePage="1252"
+                      dataType="str"
+                      length="50"
+                      name="VarianteId" />
+                    <externalMetadataColumn
+                      refId="Package\Llenado de FactVentasPorCampania\Error Cupones.Inputs[Flat File Destination Input].ExternalColumns[PrecioUnitario]"
+                      dataType="r8"
+                      name="PrecioUnitario" />
+                    <externalMetadataColumn
+                      refId="Package\Llenado de FactVentasPorCampania\Error Cupones.Inputs[Flat File Destination Input].ExternalColumns[Total]"
+                      dataType="r8"
+                      name="Total" />
+                    <externalMetadataColumn
+                      refId="Package\Llenado de FactVentasPorCampania\Error Cupones.Inputs[Flat File Destination Input].ExternalColumns[CuponId]"
+                      codePage="1252"
+                      dataType="str"
+                      length="250"
+                      name="CuponId" />
+                    <externalMetadataColumn
+                      refId="Package\Llenado de FactVentasPorCampania\Error Cupones.Inputs[Flat File Destination Input].ExternalColumns[NumeroOrden]"
+                      codePage="1252"
+                      dataType="str"
+                      length="260"
+                      name="NumeroOrden" />
+                    <externalMetadataColumn
+                      refId="Package\Llenado de FactVentasPorCampania\Error Cupones.Inputs[Flat File Destination Input].ExternalColumns[TotalConDescuento]"
+                      dataType="r8"
+                      name="TotalConDescuento" />
+                    <externalMetadataColumn
+                      refId="Package\Llenado de FactVentasPorCampania\Error Cupones.Inputs[Flat File Destination Input].ExternalColumns[Descuento]"
+                      dataType="r8"
+                      name="Descuento" />
+                    <externalMetadataColumn
+                      refId="Package\Llenado de FactVentasPorCampania\Error Cupones.Inputs[Flat File Destination Input].ExternalColumns[Cantidad]"
+                      dataType="r8"
+                      name="Cantidad" />
+                    <externalMetadataColumn
+                      refId="Package\Llenado de FactVentasPorCampania\Error Cupones.Inputs[Flat File Destination Input].ExternalColumns[ProductoId]"
+                      codePage="1252"
+                      dataType="str"
+                      length="250"
+                      name="ProductoId" />
+                    <externalMetadataColumn
+                      refId="Package\Llenado de FactVentasPorCampania\Error Cupones.Inputs[Flat File Destination Input].ExternalColumns[EmailCliente]"
+                      codePage="1252"
+                      dataType="str"
+                      length="100"
+                      name="EmailCliente" />
+                    <externalMetadataColumn
+                      refId="Package\Llenado de FactVentasPorCampania\Error Cupones.Inputs[Flat File Destination Input].ExternalColumns[FechaOrden]"
+                      dataType="dbTimeStamp"
+                      name="FechaOrden" />
+                    <externalMetadataColumn
+                      refId="Package\Llenado de FactVentasPorCampania\Error Cupones.Inputs[Flat File Destination Input].ExternalColumns[PrecioUnitarioConDescuento]"
+                      dataType="r8"
+                      name="PrecioUnitarioConDescuento" />
+                    <externalMetadataColumn
+                      refId="Package\Llenado de FactVentasPorCampania\Error Cupones.Inputs[Flat File Destination Input].ExternalColumns[CodigoCupon]"
+                      codePage="1252"
+                      dataType="str"
+                      length="50"
+                      name="CodigoCupon" />
+                    <externalMetadataColumn
+                      refId="Package\Llenado de FactVentasPorCampania\Error Cupones.Inputs[Flat File Destination Input].ExternalColumns[ProductoKey]"
+                      dataType="i4"
+                      name="ProductoKey" />
+                    <externalMetadataColumn
+                      refId="Package\Llenado de FactVentasPorCampania\Error Cupones.Inputs[Flat File Destination Input].ExternalColumns[ClienteKey]"
+                      dataType="i4"
+                      name="ClienteKey" />
+                    <externalMetadataColumn
+                      refId="Package\Llenado de FactVentasPorCampania\Error Cupones.Inputs[Flat File Destination Input].ExternalColumns[ErrorCode]"
+                      dataType="i4"
+                      name="ErrorCode" />
+                    <externalMetadataColumn
+                      refId="Package\Llenado de FactVentasPorCampania\Error Cupones.Inputs[Flat File Destination Input].ExternalColumns[ErrorColumn]"
+                      dataType="i4"
+                      name="ErrorColumn" />
+                  </externalMetadataColumns>
+                </input>
+              </inputs>
+            </component>
+            <component
+              refId="Package\Llenado de FactVentasPorCampania\Error Productos"
+              componentClassID="Microsoft.FlatFileDestination"
+              contactInfo="Flat File Destination;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; All Rights Reserved; http://www.microsoft.com/sql/support;1"
+              description="Flat File Destination"
+              localeId="1033"
+              name="Error Productos"
+              version="1">
+              <properties>
+                <property
+                  dataType="System.Boolean"
+                  description="Specifies whether the data will overwrite or append to the destination file."
+                  name="Overwrite">true</property>
+                <property
+                  dataType="System.Null"
+                  description="Specifies the text to write to the destination file before any data is written."
+                  expressionType="Notify"
+                  name="Header" />
+                <property
+                  dataType="System.Boolean"
+                  description="When text qualifier is enabled, specifies whether the text qualifier in the data written to the destination file will be escaped or not."
+                  name="EscapeQualifier">false</property>
+              </properties>
+              <connections>
+                <connection
+                  refId="Package\Llenado de FactVentasPorCampania\Error Productos.Connections[FlatFileConnection]"
+                  connectionManagerID="Package.ConnectionManagers[Flat File Connection Manager]"
+                  connectionManagerRefId="Package.ConnectionManagers[Flat File Connection Manager]"
+                  name="FlatFileConnection" />
+              </connections>
+              <inputs>
+                <input
+                  refId="Package\Llenado de FactVentasPorCampania\Error Productos.Inputs[Flat File Destination Input]"
+                  hasSideEffects="true"
+                  name="Flat File Destination Input">
+                  <inputColumns>
+                    <inputColumn
+                      refId="Package\Llenado de FactVentasPorCampania\Error Productos.Inputs[Flat File Destination Input].Columns[VarianteId]"
+                      cachedCodepage="1252"
+                      cachedDataType="str"
+                      cachedLength="50"
+                      cachedName="VarianteId"
+                      externalMetadataColumnId="Package\Llenado de FactVentasPorCampania\Error Productos.Inputs[Flat File Destination Input].ExternalColumns[VarianteId]"
+                      lineageId="Package\Llenado de FactVentasPorCampania\Lectura de metricas y llaves del negocio.Outputs[Output 0].Columns[VarianteId]" />
+                    <inputColumn
+                      refId="Package\Llenado de FactVentasPorCampania\Error Productos.Inputs[Flat File Destination Input].Columns[PrecioUnitario]"
+                      cachedDataType="r8"
+                      cachedName="PrecioUnitario"
+                      externalMetadataColumnId="Package\Llenado de FactVentasPorCampania\Error Productos.Inputs[Flat File Destination Input].ExternalColumns[PrecioUnitario]"
+                      lineageId="Package\Llenado de FactVentasPorCampania\Lectura de metricas y llaves del negocio.Outputs[Output 0].Columns[PrecioUnitario]" />
+                    <inputColumn
+                      refId="Package\Llenado de FactVentasPorCampania\Error Productos.Inputs[Flat File Destination Input].Columns[Total]"
+                      cachedDataType="r8"
+                      cachedName="Total"
+                      externalMetadataColumnId="Package\Llenado de FactVentasPorCampania\Error Productos.Inputs[Flat File Destination Input].ExternalColumns[Total]"
+                      lineageId="Package\Llenado de FactVentasPorCampania\Lectura de metricas y llaves del negocio.Outputs[Output 0].Columns[Total]" />
+                    <inputColumn
+                      refId="Package\Llenado de FactVentasPorCampania\Error Productos.Inputs[Flat File Destination Input].Columns[CuponId]"
+                      cachedCodepage="1252"
+                      cachedDataType="str"
+                      cachedLength="250"
+                      cachedName="CuponId"
+                      externalMetadataColumnId="Package\Llenado de FactVentasPorCampania\Error Productos.Inputs[Flat File Destination Input].ExternalColumns[CuponId]"
+                      lineageId="Package\Llenado de FactVentasPorCampania\Lectura de metricas y llaves del negocio.Outputs[Output 0].Columns[CuponId]" />
+                    <inputColumn
+                      refId="Package\Llenado de FactVentasPorCampania\Error Productos.Inputs[Flat File Destination Input].Columns[NumeroOrden]"
+                      cachedCodepage="1252"
+                      cachedDataType="str"
+                      cachedLength="260"
+                      cachedName="NumeroOrden"
+                      externalMetadataColumnId="Package\Llenado de FactVentasPorCampania\Error Productos.Inputs[Flat File Destination Input].ExternalColumns[NumeroOrden]"
+                      lineageId="Package\Llenado de FactVentasPorCampania\Lectura de metricas y llaves del negocio.Outputs[Output 0].Columns[NumeroOrden]" />
+                    <inputColumn
+                      refId="Package\Llenado de FactVentasPorCampania\Error Productos.Inputs[Flat File Destination Input].Columns[TotalConDescuento]"
+                      cachedDataType="r8"
+                      cachedName="TotalConDescuento"
+                      externalMetadataColumnId="Package\Llenado de FactVentasPorCampania\Error Productos.Inputs[Flat File Destination Input].ExternalColumns[TotalConDescuento]"
+                      lineageId="Package\Llenado de FactVentasPorCampania\Lectura de metricas y llaves del negocio.Outputs[Output 0].Columns[TotalConDescuento]" />
+                    <inputColumn
+                      refId="Package\Llenado de FactVentasPorCampania\Error Productos.Inputs[Flat File Destination Input].Columns[Descuento]"
+                      cachedDataType="r8"
+                      cachedName="Descuento"
+                      externalMetadataColumnId="Package\Llenado de FactVentasPorCampania\Error Productos.Inputs[Flat File Destination Input].ExternalColumns[Descuento]"
+                      lineageId="Package\Llenado de FactVentasPorCampania\Lectura de metricas y llaves del negocio.Outputs[Output 0].Columns[Descuento]" />
+                    <inputColumn
+                      refId="Package\Llenado de FactVentasPorCampania\Error Productos.Inputs[Flat File Destination Input].Columns[Cantidad]"
+                      cachedDataType="r8"
+                      cachedName="Cantidad"
+                      externalMetadataColumnId="Package\Llenado de FactVentasPorCampania\Error Productos.Inputs[Flat File Destination Input].ExternalColumns[Cantidad]"
+                      lineageId="Package\Llenado de FactVentasPorCampania\Lectura de metricas y llaves del negocio.Outputs[Output 0].Columns[Cantidad]" />
+                    <inputColumn
+                      refId="Package\Llenado de FactVentasPorCampania\Error Productos.Inputs[Flat File Destination Input].Columns[ProductoId]"
+                      cachedCodepage="1252"
+                      cachedDataType="str"
+                      cachedLength="250"
+                      cachedName="ProductoId"
+                      externalMetadataColumnId="Package\Llenado de FactVentasPorCampania\Error Productos.Inputs[Flat File Destination Input].ExternalColumns[ProductoId]"
+                      lineageId="Package\Llenado de FactVentasPorCampania\Lectura de metricas y llaves del negocio.Outputs[Output 0].Columns[ProductoId]" />
+                    <inputColumn
+                      refId="Package\Llenado de FactVentasPorCampania\Error Productos.Inputs[Flat File Destination Input].Columns[EmailCliente]"
+                      cachedCodepage="1252"
+                      cachedDataType="str"
+                      cachedLength="100"
+                      cachedName="EmailCliente"
+                      externalMetadataColumnId="Package\Llenado de FactVentasPorCampania\Error Productos.Inputs[Flat File Destination Input].ExternalColumns[EmailCliente]"
+                      lineageId="Package\Llenado de FactVentasPorCampania\Lectura de metricas y llaves del negocio.Outputs[Output 0].Columns[EmailCliente]" />
+                    <inputColumn
+                      refId="Package\Llenado de FactVentasPorCampania\Error Productos.Inputs[Flat File Destination Input].Columns[FechaOrden]"
+                      cachedDataType="dbTimeStamp"
+                      cachedName="FechaOrden"
+                      externalMetadataColumnId="Package\Llenado de FactVentasPorCampania\Error Productos.Inputs[Flat File Destination Input].ExternalColumns[FechaOrden]"
+                      lineageId="Package\Llenado de FactVentasPorCampania\Lectura de metricas y llaves del negocio.Outputs[Output 0].Columns[FechaOrden]" />
+                    <inputColumn
+                      refId="Package\Llenado de FactVentasPorCampania\Error Productos.Inputs[Flat File Destination Input].Columns[PrecioUnitarioConDescuento]"
+                      cachedDataType="r8"
+                      cachedName="PrecioUnitarioConDescuento"
+                      externalMetadataColumnId="Package\Llenado de FactVentasPorCampania\Error Productos.Inputs[Flat File Destination Input].ExternalColumns[PrecioUnitarioConDescuento]"
+                      lineageId="Package\Llenado de FactVentasPorCampania\Lectura de metricas y llaves del negocio.Outputs[Output 0].Columns[PrecioUnitarioConDescuento]" />
+                    <inputColumn
+                      refId="Package\Llenado de FactVentasPorCampania\Error Productos.Inputs[Flat File Destination Input].Columns[CodigoCupon]"
+                      cachedCodepage="1252"
+                      cachedDataType="str"
+                      cachedLength="50"
+                      cachedName="CodigoCupon"
+                      externalMetadataColumnId="Package\Llenado de FactVentasPorCampania\Error Productos.Inputs[Flat File Destination Input].ExternalColumns[CodigoCupon]"
+                      lineageId="Package\Llenado de FactVentasPorCampania\Lectura de metricas y llaves del negocio.Outputs[Output 0].Columns[CodigoCupon]" />
+                    <inputColumn
+                      refId="Package\Llenado de FactVentasPorCampania\Error Productos.Inputs[Flat File Destination Input].Columns[ErrorCode]"
+                      cachedDataType="i4"
+                      cachedName="ErrorCode"
+                      externalMetadataColumnId="Package\Llenado de FactVentasPorCampania\Error Productos.Inputs[Flat File Destination Input].ExternalColumns[ErrorCode]"
+                      lineageId="Package\Llenado de FactVentasPorCampania\Obtener ProductoKey.Outputs[Lookup Error Output].Columns[ErrorCode]" />
+                    <inputColumn
+                      refId="Package\Llenado de FactVentasPorCampania\Error Productos.Inputs[Flat File Destination Input].Columns[ErrorColumn]"
+                      cachedDataType="i4"
+                      cachedName="ErrorColumn"
+                      externalMetadataColumnId="Package\Llenado de FactVentasPorCampania\Error Productos.Inputs[Flat File Destination Input].ExternalColumns[ErrorColumn]"
+                      lineageId="Package\Llenado de FactVentasPorCampania\Obtener ProductoKey.Outputs[Lookup Error Output].Columns[ErrorColumn]" />
+                  </inputColumns>
+                  <externalMetadataColumns
+                    isUsed="True">
+                    <externalMetadataColumn
+                      refId="Package\Llenado de FactVentasPorCampania\Error Productos.Inputs[Flat File Destination Input].ExternalColumns[VarianteId]"
+                      codePage="1252"
+                      dataType="str"
+                      length="50"
+                      name="VarianteId" />
+                    <externalMetadataColumn
+                      refId="Package\Llenado de FactVentasPorCampania\Error Productos.Inputs[Flat File Destination Input].ExternalColumns[PrecioUnitario]"
+                      dataType="r8"
+                      name="PrecioUnitario" />
+                    <externalMetadataColumn
+                      refId="Package\Llenado de FactVentasPorCampania\Error Productos.Inputs[Flat File Destination Input].ExternalColumns[Total]"
+                      dataType="r8"
+                      name="Total" />
+                    <externalMetadataColumn
+                      refId="Package\Llenado de FactVentasPorCampania\Error Productos.Inputs[Flat File Destination Input].ExternalColumns[CuponId]"
+                      codePage="1252"
+                      dataType="str"
+                      length="250"
+                      name="CuponId" />
+                    <externalMetadataColumn
+                      refId="Package\Llenado de FactVentasPorCampania\Error Productos.Inputs[Flat File Destination Input].ExternalColumns[NumeroOrden]"
+                      codePage="1252"
+                      dataType="str"
+                      length="260"
+                      name="NumeroOrden" />
+                    <externalMetadataColumn
+                      refId="Package\Llenado de FactVentasPorCampania\Error Productos.Inputs[Flat File Destination Input].ExternalColumns[TotalConDescuento]"
+                      dataType="r8"
+                      name="TotalConDescuento" />
+                    <externalMetadataColumn
+                      refId="Package\Llenado de FactVentasPorCampania\Error Productos.Inputs[Flat File Destination Input].ExternalColumns[Descuento]"
+                      dataType="r8"
+                      name="Descuento" />
+                    <externalMetadataColumn
+                      refId="Package\Llenado de FactVentasPorCampania\Error Productos.Inputs[Flat File Destination Input].ExternalColumns[Cantidad]"
+                      dataType="r8"
+                      name="Cantidad" />
+                    <externalMetadataColumn
+                      refId="Package\Llenado de FactVentasPorCampania\Error Productos.Inputs[Flat File Destination Input].ExternalColumns[ProductoId]"
+                      codePage="1252"
+                      dataType="str"
+                      length="250"
+                      name="ProductoId" />
+                    <externalMetadataColumn
+                      refId="Package\Llenado de FactVentasPorCampania\Error Productos.Inputs[Flat File Destination Input].ExternalColumns[EmailCliente]"
+                      codePage="1252"
+                      dataType="str"
+                      length="100"
+                      name="EmailCliente" />
+                    <externalMetadataColumn
+                      refId="Package\Llenado de FactVentasPorCampania\Error Productos.Inputs[Flat File Destination Input].ExternalColumns[FechaOrden]"
+                      dataType="dbTimeStamp"
+                      name="FechaOrden" />
+                    <externalMetadataColumn
+                      refId="Package\Llenado de FactVentasPorCampania\Error Productos.Inputs[Flat File Destination Input].ExternalColumns[PrecioUnitarioConDescuento]"
+                      dataType="r8"
+                      name="PrecioUnitarioConDescuento" />
+                    <externalMetadataColumn
+                      refId="Package\Llenado de FactVentasPorCampania\Error Productos.Inputs[Flat File Destination Input].ExternalColumns[CodigoCupon]"
+                      codePage="1252"
+                      dataType="str"
+                      length="50"
+                      name="CodigoCupon" />
+                    <externalMetadataColumn
+                      refId="Package\Llenado de FactVentasPorCampania\Error Productos.Inputs[Flat File Destination Input].ExternalColumns[ErrorCode]"
+                      dataType="i4"
+                      name="ErrorCode" />
+                    <externalMetadataColumn
+                      refId="Package\Llenado de FactVentasPorCampania\Error Productos.Inputs[Flat File Destination Input].ExternalColumns[ErrorColumn]"
                       dataType="i4"
                       name="ErrorColumn" />
                   </externalMetadataColumns>
@@ -5830,17 +5830,17 @@ where [refTable].[VarianteId] = ? and [refTable].[ProductoId] = ?</property>
           <paths>
             <path
               refId="Package\Llenado de FactVentasPorCampania.Paths[Lookup Error Output]"
-              endId="Package\Llenado de FactVentasPorCampania\ErrorsProductos.Inputs[Flat File Destination Input]"
+              endId="Package\Llenado de FactVentasPorCampania\Error Productos.Inputs[Flat File Destination Input]"
               name="Lookup Error Output"
               startId="Package\Llenado de FactVentasPorCampania\Obtener ProductoKey.Outputs[Lookup Error Output]" />
             <path
               refId="Package\Llenado de FactVentasPorCampania.Paths[Lookup Error Output1]"
-              endId="Package\Llenado de FactVentasPorCampania\ErrorCupon.Inputs[Flat File Destination Input]"
+              endId="Package\Llenado de FactVentasPorCampania\Error Cupones.Inputs[Flat File Destination Input]"
               name="Lookup Error Output"
               startId="Package\Llenado de FactVentasPorCampania\Obtener CuponKey.Outputs[Lookup Error Output]" />
             <path
               refId="Package\Llenado de FactVentasPorCampania.Paths[Lookup Error Output2]"
-              endId="Package\Llenado de FactVentasPorCampania\Flat File Destination 2.Inputs[Flat File Destination Input]"
+              endId="Package\Llenado de FactVentasPorCampania\Error Campanias.Inputs[Flat File Destination Input]"
               name="Lookup Error Output"
               startId="Package\Llenado de FactVentasPorCampania\Obtener Campania Key.Outputs[Lookup Error Output]" />
             <path
@@ -5897,12 +5897,12 @@ where [refTable].[VarianteId] = ? and [refTable].[ProductoId] = ?</property>
       DTS:To="Package\Actualizar Fecha de Ultima Ejecucion" />
   </DTS:PrecedenceConstraints>
   <DTS:DesignTimeProperties><![CDATA[<?xml version="1.0"?>
-<!--This CDATA section contains the layout information of the package. The section includes information such as (x,y) coordinates, width, and height.-->
-<!--If you manually edit this section and make a mistake, you can delete it. -->
-<!--The package will still be able to load normally but the previous layout information will be lost and the designer will automatically re-arrange the elements on the design surface.-->
+<!--Esta sección CDATA contiene la información de diseño del paquete. Esta sección incluye información como, por ejemplo, las coordenadas (x,y), el ancho y el alto.-->
+<!--Si edita manualmente esta sección y comete un error, puede eliminarlo. -->
+<!--El paquete podrá cargarse normalmente, pero se perderá la información de diseño anterior y el diseñador reorganizará los elementos automáticamente en la superficie de diseño.-->
 <Objects
   Version="8">
-  <!--Each node below will contain properties that do not affect runtime behavior.-->
+  <!--Cada uno de los nodos siguientes contiene propiedades que no afectan al comportamiento en tiempo de ejecución.-->
   <Package
     design-time-name="Package">
     <LayoutInfo>
@@ -5997,18 +5997,34 @@ where [refTable].[VarianteId] = ? and [refTable].[ProductoId] = ?</property>
       <GraphLayout
         Capacity="32" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml" xmlns:mssgm="clr-namespace:Microsoft.SqlServer.Graph.Model;assembly=Microsoft.SqlServer.Graph">
         <NodeLayout
+<<<<<<< HEAD
+=======
+          Size="173,42"
+          Id="Package\Llenado de FactVentasPorCampania\Obtener CuponKey"
+          TopLeft="101.142857142857,364.650793650794" />
+        <NodeLayout
+          Size="185,42"
+          Id="Package\Llenado de FactVentasPorCampania\Obtener ProductoKey"
+          TopLeft="428.142857142857,268" />
+        <NodeLayout
+>>>>>>> a53f88090525252c70d869e9dcb24e0825e604ab
           Size="181,42"
           Id="Package\Llenado de FactVentasPorCampania\Obetener ClienteKey"
           TopLeft="691.68253968254,270.380952380952" />
         <NodeLayout
           Size="226,42"
           Id="Package\Llenado de FactVentasPorCampania\Llenar FactVentasPorCampania"
-          TopLeft="1046.42857142857,379.698412698412" />
+          TopLeft="833.42857142857,474.698412698412" />
+        <NodeLayout
+          Size="162,42"
+          Id="Package\Llenado de FactVentasPorCampania\Error Campanias"
+          TopLeft="408,490" />
         <NodeLayout
           Size="223,42"
           Id="Package\Llenado de FactVentasPorCampania\Obtener Fecha de Orden Key"
           TopLeft="630.857142857143,374.714285714285" />
         <NodeLayout
+<<<<<<< HEAD
           Size="185,42"
           Id="Package\Llenado de FactVentasPorCampania\Flat File Destination 2"
           TopLeft="408,490" />
@@ -6016,11 +6032,21 @@ where [refTable].[VarianteId] = ? and [refTable].[ProductoId] = ?</property>
           Size="158,42"
           Id="Package\Llenado de FactVentasPorCampania\ErrorsProductos"
           TopLeft="430,77" />
+=======
+          Size="156,42"
+          Id="Package\Llenado de FactVentasPorCampania\Error Productos"
+          TopLeft="430,77" />
+        <NodeLayout
+          Size="274,42"
+          Id="Package\Llenado de FactVentasPorCampania\Lectura de metricas y llaves del negocio"
+          TopLeft="88.8095238095239,265.714285714286" />
+>>>>>>> a53f88090525252c70d869e9dcb24e0825e604ab
         <NodeLayout
           Size="194,42"
           Id="Package\Llenado de FactVentasPorCampania\Obtener Campania Key"
           TopLeft="344.428571428571,369.428571428571" />
         <NodeLayout
+<<<<<<< HEAD
           Size="274,42"
           Id="Package\Llenado de FactVentasPorCampania\Lectura de metricas y llaves del negocio"
           TopLeft="88.8095238095239,265.714285714286" />
@@ -6058,27 +6084,138 @@ where [refTable].[VarianteId] = ? and [refTable].[ProductoId] = ?</property>
             <EdgeLabelCollection />
           </EdgeLayout.Labels>
         </EdgeLayout>
+=======
+          Size="150,42"
+          Id="Package\Llenado de FactVentasPorCampania\Error Cupones"
+          TopLeft="166,492" />
+>>>>>>> a53f88090525252c70d869e9dcb24e0825e604ab
         <EdgeLayout
-          Id="Package\Llenado de FactVentasPorCampania.Paths[Lookup Match Output4]"
-          TopLeft="853.857142857143,398.206349206348">
+          Id="Package\Llenado de FactVentasPorCampania.Paths[Lookup Error Output1]"
+          TopLeft="187.642857142857,406.650793650794">
           <EdgeLayout.Curve>
             <mssgle:Curve
               StartConnector="{assembly:Null}"
-              EndConnector="192.571428571428,0"
+              EndConnector="53.357142857143,85.349206349206"
               Start="0,0"
-              End="185.071428571428,0">
+              End="53.357142857143,77.849206349206">
               <mssgle:Curve.Segments>
                 <mssgle:SegmentCollection
                   Capacity="5">
                   <mssgle:LineSegment
-                    End="185.071428571428,0" />
+                    End="0,38.674603174603" />
+                  <mssgle:CubicBezierSegment
+                    Point1="0,38.674603174603"
+                    Point2="0,42.674603174603"
+                    Point3="4,42.674603174603" />
+                  <mssgle:LineSegment
+                    End="49.357142857143,42.674603174603" />
+                  <mssgle:CubicBezierSegment
+                    Point1="49.357142857143,42.674603174603"
+                    Point2="53.357142857143,42.674603174603"
+                    Point3="53.357142857143,46.674603174603" />
+                  <mssgle:LineSegment
+                    End="53.357142857143,77.849206349206" />
                 </mssgle:SegmentCollection>
               </mssgle:Curve.Segments>
             </mssgle:Curve>
           </EdgeLayout.Curve>
           <EdgeLayout.Labels>
             <mssgm:EdgeLabel
-              BoundingBox="44.344327566964,5,96.3827734375,11.609375"
+              BoundingBox="-19.1878152901785,47.674603174603,91.7327734375,11.609375"
+              RelativePosition="Any" />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <EdgeLayout
+          Id="Package\Llenado de FactVentasPorCampania.Paths[Lookup Error Output]"
+          TopLeft="520.642857142857,268">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="-12.642857142857,-149"
+              Start="0,0"
+              End="-12.642857142857,-141.5">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,-70.5" />
+                  <mssgle:CubicBezierSegment
+                    Point1="0,-70.5"
+                    Point2="0,-74.5"
+                    Point3="-4,-74.5" />
+                  <mssgle:LineSegment
+                    End="-8.642857142857,-74.5" />
+                  <mssgle:CubicBezierSegment
+                    Point1="-8.642857142857,-74.5"
+                    Point2="-12.642857142857,-74.5"
+                    Point3="-12.642857142857,-78.5" />
+                  <mssgle:LineSegment
+                    End="-12.642857142857,-141.5" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <mssgm:EdgeLabel
+              BoundingBox="-52.1878152901785,-69.5,91.7327734375,11.609375"
+              RelativePosition="Any" />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <EdgeLayout
+          Id="Package\Llenado de FactVentasPorCampania.Paths[Output 0]"
+          TopLeft="362.809523809524,287.857142857143">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="65.3333333333331,0"
+              Start="0,0"
+              End="57.8333333333331,0">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="57.8333333333331,0" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <EdgeLayout
+          Id="Package\Llenado de FactVentasPorCampania.Paths[Lookup Match Output4]"
+          TopLeft="742.357142857143,416.714285714285">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="204.071428571427,57.984126984127"
+              Start="0,0"
+              End="204.071428571427,50.484126984127">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,24.9920634920635" />
+                  <mssgle:CubicBezierSegment
+                    Point1="0,24.9920634920635"
+                    Point2="0,28.9920634920635"
+                    Point3="4,28.9920634920635" />
+                  <mssgle:LineSegment
+                    End="200.071428571427,28.9920634920635" />
+                  <mssgle:CubicBezierSegment
+                    Point1="200.071428571427,28.9920634920635"
+                    Point2="204.071428571427,28.9920634920635"
+                    Point3="204.071428571427,32.9920634920635" />
+                  <mssgle:LineSegment
+                    End="204.071428571427,50.484126984127" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <mssgm:EdgeLabel
+              BoundingBox="53.8443275669635,33.9920634920635,96.3827734375,11.609375"
               RelativePosition="Any" />
           </EdgeLayout.Labels>
         </EdgeLayout>
@@ -6193,6 +6330,7 @@ where [refTable].[VarianteId] = ? and [refTable].[ProductoId] = ?</property>
         <EdgeLayout
           Id="Package\Llenado de FactVentasPorCampania.Paths[Lookup Error Output2]"
           TopLeft="441.428571428571,411.428571428571">
+<<<<<<< HEAD
           <EdgeLayout.Curve>
             <mssgle:Curve
               StartConnector="{assembly:Null}"
@@ -6271,6 +6409,14 @@ where [refTable].[VarianteId] = ? and [refTable].[ProductoId] = ?</property>
               EndConnector="-11.642857142857,-149"
               Start="0,0"
               End="-11.642857142857,-141.5">
+=======
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="47.571428571429,78.571428571429"
+              Start="0,0"
+              End="47.571428571429,71.071428571429">
+>>>>>>> a53f88090525252c70d869e9dcb24e0825e604ab
               <mssgle:Curve.Segments>
                 <mssgle:SegmentCollection
                   Capacity="5">
@@ -6281,6 +6427,7 @@ where [refTable].[VarianteId] = ? and [refTable].[ProductoId] = ?</property>
                     Point2="0,-74.5"
                     Point3="-4,-74.5" />
                   <mssgle:LineSegment
+<<<<<<< HEAD
                     End="-7.642857142857,-74.5" />
                   <mssgle:CubicBezierSegment
                     Point1="-7.642857142857,-74.5"
@@ -6288,13 +6435,26 @@ where [refTable].[VarianteId] = ? and [refTable].[ProductoId] = ?</property>
                     Point3="-11.642857142857,-78.5" />
                   <mssgle:LineSegment
                     End="-11.642857142857,-141.5" />
+=======
+                    End="43.571428571429,39.2857142857145" />
+                  <mssgle:CubicBezierSegment
+                    Point1="43.571428571429,39.2857142857145"
+                    Point2="47.571428571429,39.2857142857145"
+                    Point3="47.571428571429,43.2857142857145" />
+                  <mssgle:LineSegment
+                    End="47.571428571429,71.071428571429" />
+>>>>>>> a53f88090525252c70d869e9dcb24e0825e604ab
                 </mssgle:SegmentCollection>
               </mssgle:Curve.Segments>
             </mssgle:Curve>
           </EdgeLayout.Curve>
           <EdgeLayout.Labels>
             <mssgm:EdgeLabel
+<<<<<<< HEAD
               BoundingBox="-51.6878152901785,-69.5,91.7327734375,11.609375"
+=======
+              BoundingBox="-22.0806724330355,44.2857142857145,91.7327734375,11.609375"
+>>>>>>> a53f88090525252c70d869e9dcb24e0825e604ab
               RelativePosition="Any" />
           </EdgeLayout.Labels>
         </EdgeLayout>
@@ -6302,6 +6462,55 @@ where [refTable].[VarianteId] = ? and [refTable].[ProductoId] = ?</property>
     </LayoutInfo>
   </TaskHost>
   <PipelineComponentMetadata
+<<<<<<< HEAD
+=======
+    design-time-name="Package\Llenado de FactVentasPorCampania\Obtener CuponKey">
+    <Properties>
+      <Property>
+        <Name>OverwriteParamsSQLProp</Name>
+        <Value
+          type="q2:string">false</Value>
+      </Property>
+      <Property>
+        <Name>UsedTableName</Name>
+        <Value
+          type="q3:string">[dbo].[DimCupon]</Value>
+      </Property>
+      <Property>
+        <Name>TableInfoObjectType</Name>
+        <Value
+          type="q4:string">0</Value>
+      </Property>
+      <Property>
+        <Name>DataSourceViewID</Name>
+      </Property>
+    </Properties>
+  </PipelineComponentMetadata>
+  <PipelineComponentMetadata
+    design-time-name="Package\Llenado de FactVentasPorCampania\Obtener ProductoKey">
+    <Properties>
+      <Property>
+        <Name>OverwriteParamsSQLProp</Name>
+        <Value
+          type="q2:string">false</Value>
+      </Property>
+      <Property>
+        <Name>UsedTableName</Name>
+        <Value
+          type="q3:string">[dbo].[DimProducto]</Value>
+      </Property>
+      <Property>
+        <Name>TableInfoObjectType</Name>
+        <Value
+          type="q4:string">0</Value>
+      </Property>
+      <Property>
+        <Name>DataSourceViewID</Name>
+      </Property>
+    </Properties>
+  </PipelineComponentMetadata>
+  <PipelineComponentMetadata
+>>>>>>> a53f88090525252c70d869e9dcb24e0825e604ab
     design-time-name="Package\Llenado de FactVentasPorCampania\Obetener ClienteKey">
     <Properties>
       <Property>
@@ -6378,6 +6587,7 @@ where [refTable].[VarianteId] = ? and [refTable].[ProductoId] = ?</property>
       </Property>
     </Properties>
   </PipelineComponentMetadata>
+<<<<<<< HEAD
   <PipelineComponentMetadata
     design-time-name="Package\Llenado de FactVentasPorCampania\Obtener ProductoKey">
     <Properties>
@@ -6424,5 +6634,7 @@ where [refTable].[VarianteId] = ? and [refTable].[ProductoId] = ?</property>
       </Property>
     </Properties>
   </PipelineComponentMetadata>
+=======
+>>>>>>> a53f88090525252c70d869e9dcb24e0825e604ab
 </Objects>]]></DTS:DesignTimeProperties>
 </DTS:Executable>
