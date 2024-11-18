@@ -11,8 +11,8 @@
   DTS:LocaleID="1033"
   DTS:ObjectName="FactReporteCampaniaFotoDiaria"
   DTS:PackageType="5"
-  DTS:VersionBuild="113"
-  DTS:VersionGUID="{322E7BFC-B3BA-46E7-A20A-AF2EF6EC78F4}">
+  DTS:VersionBuild="114"
+  DTS:VersionGUID="{4F1A7101-D08F-4E5B-A0D2-AAA436EB8D61}">
   <DTS:Property
     DTS:Name="PackageFormatVersion">8</DTS:Property>
   <DTS:ConnectionManagers>
@@ -27,7 +27,7 @@
           <DTS:Password
             DTS:Name="Password"
             Sensitive="1"
-            Encrypted="1">AQAAANCMnd8BFdERjHoAwE/Cl+sBAAAA0cnV3L9sZUGZvr3Q4+g2VgAAAAAIAAAARABUAFMAAAAQZgAAAAEAACAAAAA5s/4OJ4HQsoAMkJSjD2qGMwSR+bKe6Qb1y2ro6eq4NgAAAAAOgAAAAAIAACAAAAA3kRGdSsViSDi+xTZwPqW1ts6Axxtm/zwkrGSSFqdMjiAAAABExE5bewMpv+W2gSRPGn+LrthmKMeIpDutSasFm3L8p0AAAAAfc9G9HJy39EygLBWfFii4YQ0qmdXJt6/wfa73IDnl36Ke7f2JYOTK+RaX/mJOouO3pVdEVIbhPUHGb/InwlVP</DTS:Password>
+            Encrypted="1">AQAAANCMnd8BFdERjHoAwE/Cl+sBAAAAVjEO+z0Wqk6tj7LRX+YGJAAAAAAIAAAARABUAFMAAAAQZgAAAAEAACAAAAByGF6HBSlhNqm5muTUBGd5LNVVI2xv9L8bvyJm10NWxgAAAAAOgAAAAAIAACAAAABuVnCg4aGkdGhEXlKUrXtpVBFfbJLY/d1U50kizwT7yCAAAABm/w2AkjuvB0TszuHRvuTk59jUWnnWZR4ALbJXjfh5IkAAAAA/Xioa32bRKYpL9OGCMTyB+/MeDkvADpXjFDgxU5bfYf+ZYrqcqPh1VO/vyj63p+fp+w3OLX+beW8EV75uOE2I</DTS:Password>
         </DTS:ConnectionManager>
       </DTS:ObjectData>
     </DTS:ConnectionManager>
@@ -44,7 +44,7 @@
           <DTS:Password
             DTS:Name="Password"
             Sensitive="1"
-            Encrypted="1">AQAAANCMnd8BFdERjHoAwE/Cl+sBAAAA0cnV3L9sZUGZvr3Q4+g2VgAAAAAIAAAARABUAFMAAAAQZgAAAAEAACAAAACGdXAX3Qn1RyZ0/68peM9CxBWEGNP9YG6qTzCF7/rKUgAAAAAOgAAAAAIAACAAAABNmSkm4UlUTtAbSJKgZuk9TDUZbm3TFBaTj6HWks/B0SAAAAAf5aPo99ENc4BR129mb2lmMFavo/r87hYu5FJTHYyoJUAAAACRRXXCkujGuViUnxGvo/h7eS9xhfvzJYWMQHCIGsxg9PuOcouL5e3IR4p3xLnpHAF4+MMM9op+CgxciHesP2eq</DTS:Password>
+            Encrypted="1">AQAAANCMnd8BFdERjHoAwE/Cl+sBAAAAVjEO+z0Wqk6tj7LRX+YGJAAAAAAIAAAARABUAFMAAAAQZgAAAAEAACAAAAAhINlZOaTTkN3oIdaEEg26nIn6hTfWf2rqywgq3iMlJAAAAAAOgAAAAAIAACAAAABdDzCdWVZ+2gZuzPiEUqcPGZPkuKsZRp2ep6uBPgEpmSAAAAD+Hl+TUitb5Duv4TtqXC/tevfutH1yumHPOMPpqubw1kAAAAAfd/ovPtkfHybeFduzz8MZ662iUKQXp/0UVfjXf/aPQwK2xek2T89EOi0oqpxsd84NgHidPeHF1RIND30pDoXa</DTS:Password>
         </DTS:ConnectionManager>
       </DTS:ObjectData>
     </DTS:ConnectionManager>
@@ -3240,12 +3240,12 @@ where [refTable].[Fecha] = ?</property>
     </DTS:Executable>
   </DTS:Executables>
   <DTS:DesignTimeProperties><![CDATA[<?xml version="1.0"?>
-<!--Esta sección CDATA contiene la información de diseño del paquete. Esta sección incluye información como, por ejemplo, las coordenadas (x,y), el ancho y el alto.-->
-<!--Si edita manualmente esta sección y comete un error, puede eliminarlo. -->
-<!--El paquete podrá cargarse normalmente, pero se perderá la información de diseño anterior y el diseñador reorganizará los elementos automáticamente en la superficie de diseño.-->
+<!--This CDATA section contains the layout information of the package. The section includes information such as (x,y) coordinates, width, and height.-->
+<!--If you manually edit this section and make a mistake, you can delete it. -->
+<!--The package will still be able to load normally but the previous layout information will be lost and the designer will automatically re-arrange the elements on the design surface.-->
 <Objects
   Version="8">
-  <!--Cada uno de los nodos siguientes contiene propiedades que no afectan al comportamiento en tiempo de ejecución.-->
+  <!--Each node below will contain properties that do not affect runtime behavior.-->
   <Package
     design-time-name="Package">
     <LayoutInfo>
@@ -3264,13 +3264,13 @@ where [refTable].[Fecha] = ?</property>
       <GraphLayout
         Capacity="8" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml" xmlns:mssgm="clr-namespace:Microsoft.SqlServer.Graph.Model;assembly=Microsoft.SqlServer.Graph">
         <NodeLayout
-          Size="194,42"
-          Id="Package\Llenado de FactReporteCampaniaFotoDiaria\Obtener Campania Key"
-          TopLeft="514,193" />
-        <NodeLayout
           Size="205,42"
           Id="Package\Llenado de FactReporteCampaniaFotoDiaria\Obtener Fecha Envio Key"
           TopLeft="241,292" />
+        <NodeLayout
+          Size="194,42"
+          Id="Package\Llenado de FactReporteCampaniaFotoDiaria\Obtener Campania Key"
+          TopLeft="514,193" />
         <NodeLayout
           Size="274,42"
           Id="Package\Llenado de FactReporteCampaniaFotoDiaria\Lectura de metricas y llaves del negocio"
@@ -3299,6 +3299,30 @@ where [refTable].[Fecha] = ?</property>
           </EdgeLayout.Curve>
           <EdgeLayout.Labels>
             <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <EdgeLayout
+          Id="Package\Llenado de FactReporteCampaniaFotoDiaria.Paths[Lookup Match Output1]"
+          TopLeft="446,312.5">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="188,0"
+              Start="0,0"
+              End="180.5,0">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="180.5,0" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <mssgm:EdgeLabel
+              BoundingBox="42.05861328125,5,96.3827734375,11.609375"
+              RelativePosition="Any" />
           </EdgeLayout.Labels>
         </EdgeLayout>
         <EdgeLayout
@@ -3337,35 +3361,11 @@ where [refTable].[Fecha] = ?</property>
               RelativePosition="Any" />
           </EdgeLayout.Labels>
         </EdgeLayout>
-        <EdgeLayout
-          Id="Package\Llenado de FactReporteCampaniaFotoDiaria.Paths[Lookup Match Output1]"
-          TopLeft="446,312.5">
-          <EdgeLayout.Curve>
-            <mssgle:Curve
-              StartConnector="{assembly:Null}"
-              EndConnector="188,0"
-              Start="0,0"
-              End="180.5,0">
-              <mssgle:Curve.Segments>
-                <mssgle:SegmentCollection
-                  Capacity="5">
-                  <mssgle:LineSegment
-                    End="180.5,0" />
-                </mssgle:SegmentCollection>
-              </mssgle:Curve.Segments>
-            </mssgle:Curve>
-          </EdgeLayout.Curve>
-          <EdgeLayout.Labels>
-            <mssgm:EdgeLabel
-              BoundingBox="42.05861328125,5,96.3827734375,11.609375"
-              RelativePosition="Any" />
-          </EdgeLayout.Labels>
-        </EdgeLayout>
       </GraphLayout>
     </LayoutInfo>
   </TaskHost>
   <PipelineComponentMetadata
-    design-time-name="Package\Llenado de FactReporteCampaniaFotoDiaria\Obtener Campania Key">
+    design-time-name="Package\Llenado de FactReporteCampaniaFotoDiaria\Obtener Fecha Envio Key">
     <Properties>
       <Property>
         <Name>OverwriteParamsSQLProp</Name>
@@ -3375,7 +3375,7 @@ where [refTable].[Fecha] = ?</property>
       <Property>
         <Name>UsedTableName</Name>
         <Value
-          type="q3:string">[dbo].[DimCampania]</Value>
+          type="q3:string">[dbo].[DimTiempo]</Value>
       </Property>
       <Property>
         <Name>TableInfoObjectType</Name>
@@ -3388,17 +3388,17 @@ where [refTable].[Fecha] = ?</property>
     </Properties>
   </PipelineComponentMetadata>
   <PipelineComponentMetadata
-    design-time-name="Package\Llenado de FactReporteCampaniaFotoDiaria\Obtener Fecha Envio Key">
+    design-time-name="Package\Llenado de FactReporteCampaniaFotoDiaria\Obtener Campania Key">
     <Properties>
       <Property>
         <Name>OverwriteParamsSQLProp</Name>
         <Value
-          type="q2:boolean">false</Value>
+          type="q2:string">false</Value>
       </Property>
       <Property>
         <Name>UsedTableName</Name>
         <Value
-          type="q3:string">[dbo].[DimTiempo]</Value>
+          type="q3:string">[dbo].[DimCampania]</Value>
       </Property>
       <Property>
         <Name>TableInfoObjectType</Name>
